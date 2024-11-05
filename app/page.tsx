@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { CalendarDays, MapPin, Users, Zap, Building, ChartBar } from 'lucide-react'
+import { CalendarDays, MapPin, Users, Zap,  ChartBar } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -66,7 +66,7 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-8">Join Us at the Event</h2>
-          <p className="text-xl text-gray-600 mb-8">Don't miss this opportunity to be part of the proptech revolution!</p>
+          <p className="text-xl text-gray-600 mb-8">Don&apos;t miss this opportunity to be part of the proptech revolution!</p>
           <Link href="/register" className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition-colors duration-200">
             Register Now
           </Link>

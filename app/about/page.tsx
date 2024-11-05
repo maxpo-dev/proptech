@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const AboutPage = () => {
   return (
@@ -37,7 +38,7 @@ const AboutPage = () => {
         <h2 className="text-3xl font-bold text-blue-900 mb-4">About the Organizers</h2>
         <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8">
           <div className="md:w-1/3 mb-6 md:mb-0">
-            <img
+            <Image
               src="/images/maxpo-exhibitions-logo.png" // Replace with the actual path to the Maxpo logo
               alt="Maxpo Exhibitions Logo"
               className="w-full h-auto rounded-lg"

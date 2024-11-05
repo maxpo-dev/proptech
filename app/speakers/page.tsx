@@ -18,7 +18,7 @@ const speakers = [
                 <div className="p-6">
                   <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-4">
                     <span className="text-gray-500 text-lg">
-                      {speaker.name}'s Photo
+                      {speaker.name}&apos;s Photo
                     </span>
                   </div>
                   <h2 className="text-xl font-semibold mb-2">{speaker.name}</h2>
