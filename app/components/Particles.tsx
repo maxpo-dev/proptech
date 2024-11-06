@@ -38,7 +38,7 @@ export default function ParticlesComponent() {
               quantity: 4,
             },
             repulse: {
-              distance: 200,
+              distance: 100,
               duration: 0.4,
             },
           },
@@ -85,6 +85,17 @@ export default function ParticlesComponent() {
           },
         },
         detectRetina: true,
+        fullScreen: {
+          enable: false,
+          zIndex: 0
+        },
+      }}
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
       }}
     />
   );

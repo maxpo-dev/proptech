@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CalendarDays, MapPin } from 'lucide-react';
 import Image from 'next/image';
-import bg from '@/app/images/zq-lee-VbDjv8-8ibc-unsplash.jpg';
+import bg from '@/app/images/pixelcut-export (2).jpeg';
 import '@/app/styles/animations.css';
 import ParticlesComponent from './Particles';
 
@@ -12,7 +12,7 @@ export default function HeroSection() {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setContentVisible(true), 4000);
+    const timer = setTimeout(() => setContentVisible(true), 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -21,8 +21,8 @@ export default function HeroSection() {
       <Image
         src={bg}
         alt="Background"
-        layout="fill"
-        objectFit="cover"
+        fill
+        // objectFit="cover"
         quality={100}
         className="bg-black bg-opacity-90 animate-zoomInImage"
         priority
