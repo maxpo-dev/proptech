@@ -5,13 +5,13 @@ import Link from 'next/link';
 import { CalendarDays, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import bg from '@/app/images/zq-lee-VbDjv8-8ibc-unsplash.jpg';
-import '@/app/styles/animations.css'; // Import custom CSS for keyframes
+import '@/app/styles/animations.css';
+import ParticlesComponent from './Particles';
 
 export default function HeroSection() {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
-    // Show content after 4 seconds to match the background animation duration
     const timer = setTimeout(() => setContentVisible(true), 4000);
     return () => clearTimeout(timer);
   }, []);
@@ -29,8 +29,13 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       
+      {/* Particles component */}
+      <div className="absolute inset-0 z-10">
+        <ParticlesComponent />
+      </div>
+      
       {contentVisible && (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-fadeInContent">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">International Proptech Investment Expo</h1>
             <p className="text-xl mb-8">Shaping the Future of Real Estate Technology</p>
