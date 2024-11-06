@@ -1,17 +1,13 @@
-'use client'
-
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CalendarDays, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import bg from '@/app/images/zq-lee-VbDjv8-8ibc-unsplash.jpg';
-import '@/app/styles/animations.css'; // Import custom CSS for keyframes
 
 export default function HeroSection() {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
-    // Show content after 4 seconds to match the background animation duration
     const timer = setTimeout(() => setContentVisible(true), 4000);
     return () => clearTimeout(timer);
   }, []);

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import HeroSection from './components/Herosection';
-const { CalendarDays, MapPin, Users, Zap, ChartBar, ArrowRight } = require('lucide-react');
+const {  Users, Zap, ChartBar, ArrowRight } = require('lucide-react');
 
 function Home() {
   return (
@@ -8,7 +8,7 @@ function Home() {
 
       <HeroSection />
 
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      {/* <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">International Proptech Investment Expo</h1>
@@ -28,7 +28,7 @@ function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* Features Section */}
