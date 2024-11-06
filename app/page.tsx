@@ -7,7 +7,7 @@ export default function Home() {
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">International Proptech Conference & Investment Expo.</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6">International Proptech Investment Expo</h1>
             <p className="text-xl mb-8">Shaping the Future of Real Estate Technology</p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
               <div className="flex items-center">
