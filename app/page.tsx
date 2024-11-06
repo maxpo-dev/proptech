@@ -1,35 +1,11 @@
 import Link from 'next/link';
 import HeroSection from './components/Herosection';
-const {  Users, Zap, ChartBar, ArrowRight } = require('lucide-react');
+import { Users, Zap, ChartBar, ArrowRight } from 'lucide-react';
 
-function Home() {
+export default function Home() {
   return (
     <div>
-
       <HeroSection />
-
-      {/* <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">International Proptech Investment Expo</h1>
-            <p className="text-xl mb-8">Shaping the Future of Real Estate Technology</p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <div className="flex items-center">
-                <CalendarDays className="mr-2" />
-                <span>February 2025</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="mr-2" />
-                <span>Dubai, UAE</span>
-              </div>
-            </div>
-            <Link href="/register" className="mt-8 inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-md hover:bg-blue-50 transition-colors duration-200">
-              Register Now
-            </Link>
-          </div>
-        </div>
-      </section> */}
-
 
       {/* Features Section */}
       <section className="bg-white py-40">
@@ -67,10 +43,10 @@ function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r  from-blue-950 to-blue-800 py-40 ">
+      <section className="bg-gradient-to-r from-blue-950 to-blue-800 py-40">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-8">Join Us at the Event</h2>
-          <p className="text-xl mb-8">Don&apos;t miss this opportunity to be part of the proptech revolution!</p>
+          <h2 className="text-3xl font-bold mb-8 text-white">Join Us at the Event</h2>
+          <p className="text-xl mb-8 text-white">Don&apos;t miss this opportunity to be part of the proptech revolution!</p>
           <Link href="/register" className="inline-flex items-center bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors duration-200">
             Register Now
             <ArrowRight className="ml-2" />
@@ -80,6 +56,3 @@ function Home() {
     </div>
   )
 }
-
-
-module.exports = Home;
