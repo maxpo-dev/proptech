@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'; // Import Image component
+import logo from '@/app/images/Proptech logo-02.png'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -15,14 +17,22 @@ const navItems = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  // const logo = '/path-to-your-logo.png'; // Assuming the path is stored in a variable
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white ">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-blue-950 ">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Proptech Expo 2025
+            <Link href="/" className="flex items-center">
+              <Image
+                src={logo}
+                alt="Proptech Expo 2025 Logo"
+                // className="h-12 w-auto"
+                width={150}
+                height={48}
+              />
+              <span className="sr-only">Proptech Expo 2025</span>
             </Link>
           </div>
           <div className="hidden md:block">
@@ -31,7 +41,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:bg-blue-50 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="text-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </Link>
@@ -41,7 +51,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-gray-700 hover:text-blue-600"
+              className="text-white hover:text-blue-600"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
@@ -62,7 +72,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:bg-blue-50 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="text-gray-400">Email: info@proptechexpo.com</p>
+            <p className="text-gray-400">Email: proptechdubai@maxpo.ae</p>
             <p className="text-gray-400">Phone: +1 (555) 123-4567</p>
           </div>
           <div>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; 2025 International Proptech Conference & Investment Expo. All rights reserved.</p>
+          <p>&copy; 2024 International Proptech Conference & Investment Expo. All rights reserved.</p>
         </div>
       </div>
     </footer>

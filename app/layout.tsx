@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from '@/app/components/Header'
+import Header from './components/Header'
 import Footer from '@/app/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-gray-50 text-gray-900`}>
+      <body className={`${inter.className}`}>
         <Header />
-        <main className="pt-20">
+        <main className="pt-0">
           {children}
         </main>
         <Footer />
