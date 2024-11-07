@@ -4,7 +4,7 @@
 
 // import { useState } from 'react'
 import RegisterHeroSection from '../components/RegisterHerosection'
-import ExhibitorForm from '../components/exhibitor'
+// import ExhibitorForm from '../components/exhibitor'
 
 export default function Register() {
   // const [formData, setFormData] = useState({
