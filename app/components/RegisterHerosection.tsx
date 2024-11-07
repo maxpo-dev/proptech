@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { CalendarDays, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import bg from '@/app/images/pixelcut-export (2).jpeg';
