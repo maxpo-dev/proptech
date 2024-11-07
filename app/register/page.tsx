@@ -2,54 +2,62 @@
 
 'use client'
 
-import { useState } from 'react'
+// import { useState } from 'react'
 import RegisterHeroSection from '../components/RegisterHerosection'
+import ExhibitorForm from '../components/exhibitor'
 
 export default function Register() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    role: '',
-  })
-  const [message, setMessage] = useState('')
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   company: '',
+  //   role: '',
+  // })
+  // const [message, setMessage] = useState('')
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData(prevState => ({ ...prevState, [name]: value }))
-  }
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value } = e.target
+  //   setFormData(prevState => ({ ...prevState, [name]: value }))
+  // }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setMessage('')
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault()
+  //   setMessage('')
 
-    try {
-      const response = await fetch('/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+  //   try {
+  //     const response = await fetch('/api/register', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(formData),
+  //     })
 
-      const data = await response.json()
+  //     const data = await response.json()
 
-      if (response.ok) {
-        setMessage('Registration successful!')
-        setFormData({ name: '', email: '', company: '', role: '' })
-      } else {
-        setMessage(data.error || 'Registration failed. Please try again.')
-      }
-    } catch (error) {
-      console.error('Registration error:', error)
-      setMessage('An error occurred. Please try again.')
-    }
-  }
+  //     if (response.ok) {
+  //       setMessage('Registration successful!')
+  //       setFormData({ name: '', email: '', company: '', role: '' })
+  //     } else {
+  //       setMessage(data.error || 'Registration failed. Please try again.')
+  //     }
+  //   } catch (error) {
+  //     console.error('Registration error:', error)
+  //     setMessage('An error occurred. Please try again.')
+  //   }
+  // }
 
   return (
     <div>
       <RegisterHeroSection />
-    <div className="bg-gray-50 min-h-screen flex items-center justify-center">
+      <div className="flex justify-center items-center bg-blue-600 p-6 h-screen">
+  <ExhibitorForm />
+</div>
+
+
+     
+      
+    {/* <div className="bg-gray-50 min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 className="text-3xl font-bold text-center mb-6 text-black">Register for the Event</h1>
         {message && (
@@ -109,7 +117,7 @@ export default function Register() {
           </button>
         </form>
       </div>
-    </div>
-    </div>
+    </div>*/}
+    </div> 
   )
 }

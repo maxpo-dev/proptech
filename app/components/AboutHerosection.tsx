@@ -16,13 +16,36 @@ export default function AboutHeroSection() {
     return () => clearTimeout(timer);
   }, []);
 
+  const whoShouldAttend = [
+    'Property Development Firms',
+    'Fractional Ownership Platforms',
+    'Asset Management Companies',
+    'Legal Advisory Firms',
+    'Financial Institutions',
+    'PropTech Solutions Providers',
+    'Investment Advisory Services',
+    'Real Estate Analytics Firms',
+    'Property Management Software Companies',
+    'Exit Strategy Facilitators',
+  ];
+
+  const whyAttend = [
+    'Reach a targeted audience',
+    'Showcase Innovative solutions',
+    'Generate leads & sales',
+    'Enhance brand visibility',
+    'Network with Industry peers',
+    'Gain market insights',
+    'Position yourself as an industry expert',
+    'Build trust & credibility',
+  ];
+
   return (
     <section className="text-white min-h-screen flex items-center relative overflow-hidden">
       <Image
         src={bg}
         alt="Background"
         fill
-        // objectFit="cover"
         quality={100}
         className="bg-black bg-opacity-90 animate-zoomInImage"
         priority
@@ -33,25 +56,42 @@ export default function AboutHeroSection() {
       <div className="absolute inset-0 z-10">
         <ParticlesComponent />
       </div>
-      
+
       {contentVisible && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">About International Proptech Investment Expo</h1>
-            {/* <p className="text-xl mb-8">Shaping the Future of Real Estate Technology</p> */}
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
-              <div className="flex items-center">
-                <CalendarDays className="mr-2" />
-                <span>April 2025</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="mr-2" />
-                <span>Dubai, UAE</span>
-              </div>
+          {/* Grid layout for "Who Should Attend" and "Why Should Attend" */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+            {/* Who Should Attend Section */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-4 text-center text-black">Who Should Exhibit</h2>
+              <ul className="space-y-4 text-lg text-gray-800">
+                {whoShouldAttend.map((item, index) => (
+                  <li 
+                    key={index} 
+                    className="flex items-start transform transition-transform duration-300 hover:scale-105"
+                  >
+                    <span className="text-green-500 mr-4">✔</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <Link href="/register" className="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors duration-200">
-              Register Now
-            </Link>
+
+            {/* Why Should Attend Section */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-4 text-center text-black">Why Should Exhibit</h2>
+              <ul className="space-y-4 text-lg text-gray-800">
+                {whyAttend.map((item, index) => (
+                  <li 
+                    key={index} 
+                    className="flex items-start transform transition-transform duration-300 hover:scale-105"
+                  >
+                    <span className="text-green-500 mr-4">✔</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       )}

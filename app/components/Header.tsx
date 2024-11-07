@@ -4,16 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import Logo from "@/app/images/Proptech logo-02.png";
+import Logo from "@/app/images/PROPTECH_alex_logo_alex_logo-6.png";
 
 // Define navItems with links
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Schedule', href: '/schedule' },
+  { name: 'Why & Who should exhibit', href: '/about' },
+  // { name: 'Schedule', href: '/schedule' },
   { name: 'Speakers', href: '/speakers' },
   { name: 'Exhibitors', href: '/exhibitors' },
-  { name: 'Register', href: '/register' },
+  {name:"Partners", href:'/partners'},
+  { name: 'Get in touch', href: '/register' },
 ];
 
 export default function Header() {
@@ -40,8 +41,8 @@ export default function Header() {
               <Image
                 src={Logo}
                 alt="Proptech Expo 2025 Logo"
-                width={150}
-                height={48}
+                width={450}
+                height={50}
               />
               <span className="sr-only">Proptech Expo 2025</span>
             </Link>
