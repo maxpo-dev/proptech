@@ -3,6 +3,7 @@
 'use client'
 
 import { useState } from 'react'
+import RegisterHeroSection from '../components/RegisterHerosection'
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -46,15 +47,17 @@ export default function Register() {
   }
 
   return (
+    <div>
+      <RegisterHeroSection />
     <div className="bg-gray-50 min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-6">Register for the Event</h1>
+        <h1 className="text-3xl font-bold text-center mb-6 text-black">Register for the Event</h1>
         {message && (
           <div className={`mb-4 p-2 text-center rounded ${message.includes('successful') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
             {message}
           </div>
         )}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-slate-900">
           <div>
             <label htmlFor="name" className="block mb-1 font-medium">Name</label>
             <input
@@ -106,6 +109,7 @@ export default function Register() {
           </button>
         </form>
       </div>
+    </div>
     </div>
   )
 }

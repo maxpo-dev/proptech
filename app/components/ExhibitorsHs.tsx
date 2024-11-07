@@ -8,7 +8,7 @@ import bg from '@/app/images/pixelcut-export (2).jpeg';
 import '@/app/styles/animations.css';
 import ParticlesComponent from './Particles';
 
-export default function HeroSection() {
+export default function ExhibitorsHeroSection() {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
@@ -37,8 +37,8 @@ export default function HeroSection() {
       {contentVisible && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">International Proptech Investment Expo</h1>
-            <p className="text-xl mb-8">Shaping the Future of Real Estate Technology</p>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6">Our Exhibitors</h1>
+            {/* <p className="text-xl mb-8">Shaping the Future of Real Estate Technology</p> */}
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
               <div className="flex items-center">
                 <CalendarDays className="mr-2" />

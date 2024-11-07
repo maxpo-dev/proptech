@@ -24,7 +24,7 @@ export default function WhyAttend() {
       {
         root: null,
         rootMargin: '0px',
-        threshold: 0.8,
+        threshold: 0.5,
       }
     );
 

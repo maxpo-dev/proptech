@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Logo from '@/app/images/white logo.png'
+import AboutHeroSection from "../components/AboutHerosection";
 
 const AboutPage = () => {
   return (
-    <div className="bg-gray-100 py-12 px-4 mt-10">
+    <div>
+      <AboutHeroSection />
+    <div className="bg-gray-100 py-12 px-4">
       {/* Event Information Section */}
       <section className="container mx-auto bg-white rounded-lg shadow-md p-8 mb-12">
         <h2 className="text-3xl font-bold text-blue-900 mb-4">Event Information</h2>
@@ -62,6 +65,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 };

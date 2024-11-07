@@ -1,3 +1,5 @@
+import SpeakersHeroSection from "../components/SpeakersHs"
+
 const speakers = [
     { id: 1, name: 'John Doe', role: 'CEO, TechProp Solutions', bio: 'John is a visionary leader in the proptech industry with over 20 years of experience.' },
     { id: 2, name: 'Jane Smith', role: 'Blockchain Expert', bio: 'Jane is a renowned blockchain specialist, focusing on its applications in real estate.' },
@@ -9,9 +11,11 @@ const speakers = [
   
   export default function Speakers() {
     return (
+      <div>
+        <SpeakersHeroSection />
       <div className="bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-12">Our Esteemed Speakers</h1>
+          <h1 className="text-4xl font-bold text-center mb-12 text-black">Our Esteemed Speakers</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {speakers.map((speaker) => (
               <div key={speaker.id} className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -21,7 +25,7 @@ const speakers = [
                       {speaker.name}&apos;s Photo
                     </span>
                   </div>
-                  <h2 className="text-xl font-semibold mb-2">{speaker.name}</h2>
+                  <h2 className="text-xl font-semibold mb-2 text-slate-900">{speaker.name}</h2>
                   <p className="text-blue-600 mb-4">{speaker.role}</p>
                   <p className="text-gray-600">{speaker.bio}</p>
                 </div>
@@ -29,6 +33,7 @@ const speakers = [
             ))}
           </div>
         </div>
+      </div>
       </div>
     )
   }

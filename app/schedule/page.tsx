@@ -1,9 +1,10 @@
 import { Clock } from 'lucide-react'
+import ScheduleHeroSection from '../components/ScheduleHerosection'
 
 const scheduleData = [
   {
     day: 1,
-    date: 'February 15, 2025',
+    date: 'April 19, 2025',
     sessions: [
       { time: '09:00 AM - 09:30 AM', title: 'Opening Keynote: The Future of Proptech', speaker: 'John Doe' },
       { time: '09:45 AM - 10:30 AM', title: 'Panel: Blockchain in Real Estate Transactions', speaker: 'Jane Smith, Mike Johnson, David Brown' },
@@ -16,7 +17,7 @@ const scheduleData = [
   },
   {
     day: 2,
-    date: 'February 16, 2025',
+    date: 'April 20, 2025',
     sessions: [
       { time: '09:00 AM - 09:30 AM', title: 'Day 2 Keynote: Proptech Investment Landscape', speaker: 'David Brown' },
       { time: '09:45 AM - 10:30 AM', title: 'Workshop: Implementing Blockchain in Your Real Estate Business', speaker: 'Jane Smith' },
@@ -31,12 +32,14 @@ const scheduleData = [
 
 export default function Schedule() {
   return (
+    <div>
+      <ScheduleHeroSection />
     <div className="bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-12">Event Schedule</h1>
+        <h1 className="text-4xl font-bold text-center mb-12 text-black">Event Schedule</h1>
         {scheduleData.map((day) => (
           <div key={day.day} className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Day {day.day} - {day.date}</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-slate-800">Day {day.day} - {day.date}</h2>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               {day.sessions.map((session, index) => (
                 <div key={index} className={`p-6 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
@@ -44,7 +47,7 @@ export default function Schedule() {
                     <Clock className="mr-2 text-blue-600" size={20} />
                     <span className="text-blue-600 font-semibold">{session.time}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{session.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-slate-700">{session.title}</h3>
                   <p className="text-gray-600">Speaker(s): {session.speaker}</p>
                 </div>
               ))}
@@ -52,6 +55,7 @@ export default function Schedule() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   )
 }

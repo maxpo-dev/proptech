@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ExhibitorsHeroSection from '../components/ExhibitorsHs'
 
 const exhibitors = [
   { id: 1, name: 'TechProp Solutions', description: 'Leading provider of AI-powered property management software.', website: 'https://techpropsolutions.com' },
@@ -11,9 +12,11 @@ const exhibitors = [
 
 export default function Exhibitors() {
   return (
+    <div>
+      <ExhibitorsHeroSection />
     <div className="bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-12">Our Exhibitors</h1>
+        <h1 className="text-4xl font-bold text-center mb-12 text-black">Our Exhibitors</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {exhibitors.map((exhibitor) => (
             <div key={exhibitor.id} className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -23,7 +26,7 @@ export default function Exhibitors() {
                     {exhibitor.name} Logo
                   </span>
                 </div>
-                <h2 className="text-xl font-semibold text-center mb-2">{exhibitor.name}</h2>
+                <h2 className="text-xl font-semibold text-center mb-2 text-slate-900">{exhibitor.name}</h2>
                 <p className="text-gray-600 text-center mb-4">{exhibitor.description}</p>
                 <div className="text-center">
                   <Link 
@@ -40,6 +43,7 @@ export default function Exhibitors() {
           ))}
         </div>
       </div>
+    </div>
     </div>
   )
 }
