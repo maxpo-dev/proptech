@@ -1,4 +1,4 @@
-import { Cpu, Box, Brain, DollarSign, Eye, Database, Cloud, HardDrive, Bot, Home } from "lucide-react";
+import { Cpu, Box, Brain, DollarSign, Eye, Database, Cloud,  Bot, Home } from "lucide-react";
 
 export default function KeyTopicsSection() {
   const topics = [
