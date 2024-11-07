@@ -50,9 +50,9 @@ export default function Register() {
   return (
     <div>
       <RegisterHeroSection />
-      <div className="flex justify-center items-center bg-blue-600 p-6 h-screen">
+      {/* <div className="flex justify-center items-center bg-blue-600 p-6 h-screen">
   <ExhibitorForm />
-</div>
+</div> */}
 
 
      
