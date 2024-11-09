@@ -1,16 +1,43 @@
+"use client"
+
+import { useEffect, useState } from 'react';
 import HeroSection from './components/Herosection';
 import JoinUs from './components/join-us';
 import KeyTopicsSection from './components/Keytopics';
 import Image from 'next/image';
-import Aboutimg from '@/app/images/WhatsApp Image 2024-11-07 at 3.59.25 PM.jpeg'
+import Aboutimg from '@/app/images/WhatsApp Image 2024-11-07 at 3.59.25 PM.jpeg';
+// import WhatsAppChat from './components/WhatsApp';
+// import LiveChat from './components/WhatsApp';
+// import ChatWidget from './components/WhatsApp';
+import BrevoScript from './components/WhatsApp';
 
 export default function Home() {
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [lastScrollPos, setLastScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (currentScrollPos > lastScrollPos) {
+        // User is scrolling down
+        setIsScrollingDown(true);
+      } else {
+        // User is scrolling up
+        setIsScrollingDown(false);
+      }
+      setLastScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollPos]);
+
   return (
     <div>
       <HeroSection />
-      <div className="bg-gradient-to-r from-blue-950 to-blue-800 py-12 px-4">
-        <section className="container mx-auto bg-white rounded-lg shadow-md p-8 mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4">Event Information</h2>
+      <div>
+        <section className="bg-white shadow-md p-20 w-full py-40">
+          <h2 className="text-3xl font-bold text-blue-900 mb-4">Proptech Dubai</h2>
           
           <div className="flex flex-col lg:flex-row items-center lg:items-start">
             {/* Text content (60%) */}
@@ -32,25 +59,32 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Image (40%) */}
-            <div className="lg:w-2/5">
+            {/* Image (40%) with scroll-down animation */}
+            <div className="lg:w-2/5 overflow-hidden">
               <Image
                 src={Aboutimg}
                 alt="Event image"
                 width={1000}
                 height={1000}
-                className="rounded-lg shadow-lg pt-5"
+                className={`pl-14 pt-2 ${isScrollingDown ? 'animate-slide-left' : ''}`}
               />
             </div>
           </div>
         </section>
       </div>
-      
+
       <KeyTopicsSection />
 
       <div className=''>
         <JoinUs />
       </div>
+      <div >
+      
+      {/* Other components and content */}
+      
+      <BrevoScript />
     </div>
-  )
+    </div>
+    
+  );
 }

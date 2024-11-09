@@ -1,47 +1,44 @@
-import React from "react";
-// import Image from "next/image";
-// import Logo from '@/app/images/white logo.png'
-import AboutHeroSection from "../components/AboutHerosection";
+'use client'
 
-const AboutPage = () => {
+// import WhoShouldAttend from '@/app/components/WhoShouldAttend';
+// import WhyShouldAttend from '@/app/components/WhyShouldAttend';
+import AboutHeroSection from '@/app/components/AboutHerosection';
+// import Image from 'next/image';
+// import Keyimg from '@/app/images/Core Insights_Mesa de trabajo 1.png';
+import About from '../components/About';
+
+export default function Page() {
   return (
     <div>
+      {/* About Hero Section */}
       <AboutHeroSection />
-    {/* <div className="bg-gray-100 py-12 px-4"> */}
-      {/* Event Information Section */}
-      
 
-      {/* Organizers Section */}
-      {/* <section className="container mx-auto bg-blue-900 rounded-lg shadow-md p-8">
-        <h2 className="text-3xl font-bold text-white mb-4">About the Organizers</h2>
-        <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8">
-          <div className="md:w-1/3 mb-6 md:mb-0">
+      <About />
+
+      {/* <div className="bg-slate-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <div className='flex justify-center'>
             <Image
-              src={Logo}// Replace with the actual path to the Maxpo logo
-              alt="Maxpo Exhibitions Logo"
-              className="w-full h-auto rounded-lg"
+              src={Keyimg}
+              alt="Event image"
+              width={1000}
+              height={1000}
+              className="transform transition-transform duration-300 hover:scale-110" // Hover zoom effect
             />
           </div>
-          <div className="md:w-2/3">
-            <h3 className="text-2xl font-semibold text-white mb-3">Maxpo Exhibitions</h3>
-            <p className="text-slate-300 mb-4">
-              Maxpo Exhibitions is a leader in organizing high-profile events across various
-              sectors, with a particular focus on real estate and technology. Known for its
-              innovative approach and ability to bring together industry stakeholders, Maxpo
-              Exhibitions is dedicated to promoting new developments and fostering global
-              connections.
-            </p>
-            <p className="text-slate-300">
-              With extensive experience in hosting conferences and expos, Maxpo is the ideal
-              organizer to lead this Proptech event, ensuring a well-curated lineup of speakers,
-              workshops, and networking opportunities.
-            </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+          
+            <div className="w-full bg-white p-6 rounded-lg shadow-md">
+              <WhoShouldAttend />
+            </div>
+
+            <div className="w-full bg-white p-6 rounded-lg shadow-md">
+              <WhyShouldAttend />
+            </div>
           </div>
         </div>
-      </section> */}
-    {/* </div> */}
+      </div> */}
     </div>
   );
-};
-
-export default AboutPage;
+}

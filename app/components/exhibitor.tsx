@@ -59,7 +59,7 @@ const ExhibitorForm = () => {
   return (
     <div>
       <form ref={formRef} onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md max-w-md w-full">
-        <h1 className="text-2xl font-bold mb-6 text-gray-700">Exhibitor Registration</h1>
+        <h1 className="text-2xl font-bold mb-6 text-gray-700">Registration</h1>
 
         {success && (
           <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center">

@@ -15,9 +15,9 @@ export default function KeyTopicsSection() {
   ];
 
   return (
-    <section className=" bg-blue-800  py-20">
+    <section className=" bg-blue-800  py-40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 text-white  ">Core Insights</h2>
+        <h2 className="text-3xl font-bold text-start pb-4 mb-12 text-white  ">Core Insights</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {topics.map((topic) => (
             <div

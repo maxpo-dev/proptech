@@ -9,12 +9,12 @@ import Logo from "@/app/images/PROPTECH_alex_logo_alex_logo-6.png";
 // Define navItems with links
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Why & Who should exhibit', href: '/about' },
+  { name: 'About', href: '/about' },
   // { name: 'Schedule', href: '/schedule' },
   { name: 'Speakers', href: '/speakers' },
   { name: 'Exhibitors', href: '/exhibitors' },
   {name:"Partners", href:'/partners'},
-  { name: 'Get in touch', href: '/register' },
+  { name: 'Contact us', href: '/register' },
 ];
 
 export default function Header() {
@@ -56,7 +56,7 @@ export default function Header() {
                   className="text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group"
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-yellow-600 rounded-md transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right"></span>
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0091EB] to-[#00D4D5] rounded-md transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right"></span>
                 </Link>
               ))}
             </div>
