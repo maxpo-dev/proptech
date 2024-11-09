@@ -35,7 +35,7 @@ const ContactUs = () => {
             Contact Us
           </h1>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions about the International Proptech Investment Expo? We're here to help.
+            Have questions about the International Proptech Investment Expo? We&apos;re here to help.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ const ContactUs = () => {
               {isSubmitted ? (
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
-                  <p className="text-gray-600">Your message has been sent successfully. We'll get back to you soon.</p>
+                  <p className="text-gray-600">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
