@@ -7,7 +7,7 @@ import RegistrationTable from '@/app/admin/RegistrationTable';
 const prisma = new PrismaClient();
 
 export default async function AdminPage() {
-  const registrations = await prisma.registration.findMany({
+  const registrations = await prisma.contactForm.findMany({
     orderBy: { createdAt: 'desc' },
   });
 

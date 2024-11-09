@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
 import ExcelJS from 'exceljs';
@@ -6,10 +6,12 @@ import ExcelJS from 'exceljs';
 interface Registration {
   id: string;
   name: string;
+  jobTitle: string;
+  companyName: string;
   email: string;
   phone: string;
-  preferredCity: string;
-  preferredBudget: string;
+  country: string;
+  message: string;
   createdAt: Date;
 }
 
@@ -23,12 +25,15 @@ export default function DownloadButton({ registrations }: DownloadButtonProps) {
   const generateExcel = async () => {
     setIsGenerating(true);
 
+    // Retrieve the start and end date inputs
     const startDateInput = document.querySelector('input[type="datetime-local"]:first-of-type') as HTMLInputElement;
     const endDateInput = document.querySelector('input[type="datetime-local"]:last-of-type') as HTMLInputElement;
 
+    // Parse dates from the input values
     const startDate = startDateInput?.value ? new Date(startDateInput.value) : null;
     const endDate = endDateInput?.value ? new Date(endDateInput.value) : null;
 
+    // Filter registrations by date range
     const filteredRegistrations = registrations.filter((registration) => {
       const registrationDate = new Date(registration.createdAt);
       if (startDate && endDate) {
@@ -41,26 +46,31 @@ export default function DownloadButton({ registrations }: DownloadButtonProps) {
       return true;
     });
 
+    // Create workbook and worksheet
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Registrations');
 
+    // Define worksheet columns
     worksheet.columns = [
       { header: 'Name', key: 'name', width: 30 },
+      { header: 'Job Title', key: 'jobTitle', width: 20 },
+      { header: 'Company Name', key: 'companyName', width: 20 },
       { header: 'Email', key: 'email', width: 30 },
       { header: 'Phone', key: 'phone', width: 20 },
-      { header: 'Preferred City', key: 'preferredCity', width: 20 },
-      { header: 'Preferred Budget', key: 'preferredBudget', width: 20 },
+      { header: 'Country', key: 'country', width: 20 },
+      { header: 'Message', key: 'message', width: 40 },
       { header: 'Registration Date', key: 'createdAt', width: 30 },
     ];
 
+    // Add rows to the worksheet
     filteredRegistrations.forEach((registration) => {
       worksheet.addRow({
         ...registration,
-        preferredBudget: `₹${registration.preferredBudget.toLocaleString()}`,
         createdAt: new Date(registration.createdAt).toLocaleString(),
       });
     });
 
+    // Generate and download Excel file
     const buffer = await workbook.xlsx.writeBuffer();
     const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
     const url = URL.createObjectURL(blob);

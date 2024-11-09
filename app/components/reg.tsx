@@ -1,9 +1,7 @@
-'use client'
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
-const InputField = ({ label, id, type = 'text', placeholder }: { label: string; id: string; type?: string; placeholder: string }) => (
+const InputField = ({ label, id, type = 'text', placeholder, value, onChange }: { label: string; id: string; type?: string; placeholder: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void }) => (
   <div>
     <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">
       {label}
@@ -13,18 +11,52 @@ const InputField = ({ label, id, type = 'text', placeholder }: { label: string; 
       id={id}
       name={id}
       placeholder={placeholder}
+      value={value}
+      onChange={onChange}
       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+      required
     />
   </div>
 );
 
-const ContactUs = () => {
+export default function ContactUs() {
+  const [formData, setFormData] = useState({
+    name: '',
+    jobTitle: '',
+    companyName: '',
+    email: '',
+    phone: '',
+    country: '',
+    message: '',
+  });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically handle the form submission
-    setIsSubmitted(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setIsSubmitted(true);
+        setSubmitError('');
+      } else {
+        setSubmitError('Form submission failed. Please try again.');
+      }
+    } catch (error) {
+      setSubmitError('An error occurred. Please try again.');
+    }
   };
 
   return (
@@ -76,12 +108,12 @@ const ContactUs = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <InputField label="Name" id="name" placeholder="Your full name" />
-                  <InputField label="Job Title" id="jobTitle" placeholder="Your job title" />
-                  <InputField label="Company Name" id="companyName" placeholder="Your company name" />
-                  <InputField label="Email" id="email" type="email" placeholder="Your email address" />
-                  <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" />
-                  <InputField label="Country" id="country" placeholder="Your country" />
+                  <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
+                  <InputField label="Job Title" id="jobTitle" placeholder="Your job title" value={formData.jobTitle} onChange={handleChange} />
+                  <InputField label="Company Name" id="companyName" placeholder="Your company name" value={formData.companyName} onChange={handleChange} />
+                  <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
+                  <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
+                  <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Message
@@ -91,7 +123,10 @@ const ContactUs = () => {
                       name="message"
                       rows={4}
                       placeholder="How can we help you?"
+                      value={formData.message}
+                      onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                      required
                     />
                   </div>
                   <button
@@ -102,12 +137,11 @@ const ContactUs = () => {
                   </button>
                 </form>
               )}
+              {submitError && <p className="mt-4 text-red-600">{submitError}</p>}
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default ContactUs;
+}
