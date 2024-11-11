@@ -1,19 +1,19 @@
 import SpeakersHeroSection from "../components/SpeakersHs"
 
-const speakers = [
-    { id: 1, name: 'John Doe', role: 'CEO, TechProp Solutions', bio: 'John is a visionary leader in the proptech industry with over 20 years of experience.' },
-    { id: 2, name: 'Jane Smith', role: 'Blockchain Expert', bio: 'Jane is a renowned blockchain specialist, focusing on its applications in real estate.' },
-    { id: 3, name: 'Mike Johnson', role: 'AI in Real Estate Specialist', bio: 'Mike is pioneering the use of artificial intelligence in property valuation and management.' },
-    { id: 4, name: 'Sarah Lee', role: 'Smart Home Technology Expert', bio: 'Sarah is at the forefront of integrating IoT solutions into modern living spaces.' },
-    { id: 5, name: 'David Brown', role: 'Proptech Investor', bio: 'David has a keen eye for identifying and nurturing promising proptech startups.' },
-    { id: 6, name: 'Emily Chen', role: 'VR/AR in Real Estate Innovator', bio: 'Emily is revolutionizing property viewings and architectural visualization through VR and AR.' },
-  ]
+// const speakers = [
+//     { id: 1, name: 'John Doe', role: 'CEO, TechProp Solutions', bio: 'John is a visionary leader in the proptech industry with over 20 years of experience.' },
+//     { id: 2, name: 'Jane Smith', role: 'Blockchain Expert', bio: 'Jane is a renowned blockchain specialist, focusing on its applications in real estate.' },
+//     { id: 3, name: 'Mike Johnson', role: 'AI in Real Estate Specialist', bio: 'Mike is pioneering the use of artificial intelligence in property valuation and management.' },
+//     { id: 4, name: 'Sarah Lee', role: 'Smart Home Technology Expert', bio: 'Sarah is at the forefront of integrating IoT solutions into modern living spaces.' },
+//     { id: 5, name: 'David Brown', role: 'Proptech Investor', bio: 'David has a keen eye for identifying and nurturing promising proptech startups.' },
+//     { id: 6, name: 'Emily Chen', role: 'VR/AR in Real Estate Innovator', bio: 'Emily is revolutionizing property viewings and architectural visualization through VR and AR.' },
+//   ]
   
   export default function Speakers() {
     return (
       <div>
         <SpeakersHeroSection />
-      <div className="bg-gray-50 min-h-screen">
+      {/* <div className="bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold text-center mb-12 text-black">Our Esteemed Speakers</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -33,7 +33,7 @@ const speakers = [
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
       </div>
     )
   }

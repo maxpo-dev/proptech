@@ -37,9 +37,9 @@ export default function ExhibitorsHeroSection() {
       {contentVisible && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">Our Exhibitors</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6">comming soon</h1>
             {/* <p className="text-xl mb-8">Shaping the Future of Real Estate Technology</p> */}
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+            {/* <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
               <div className="flex items-center">
                 <CalendarDays className="mr-2" />
                 <span>April 2025</span>
@@ -51,7 +51,7 @@ export default function ExhibitorsHeroSection() {
             </div>
             <Link href="/register" className="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors duration-200">
               Register Now
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}
