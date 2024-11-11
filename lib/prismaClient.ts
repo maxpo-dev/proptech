@@ -1,6 +1,7 @@
-// lib/prismaClient.ts
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+const client = global.prismadb || new PrismaClient();
 
-export default prisma;
+if(process.env.NODE_ENV == 'production')global.prismadb = client;
+
+export default client;
