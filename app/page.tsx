@@ -10,9 +10,10 @@ import Aboutimg from '@/app/images/WhatsApp Image 2024-11-07 at 3.59.25 PM.jpeg'
 // import WhatsAppChat from './components/WhatsApp';
 // import LiveChat from './components/WhatsApp';
 // import ChatWidget from './components/WhatsApp';
-import BrevoScript from './components/WhatsApp';
+// import BrevoScript from './components/WhatsApp';
 // import VideoSection from './components/VideoSection';
 import VideoComponent from './components/VideoSection';
+import YourComponent from './components/WhatsApp';
 
 // import VOdeoSection from './components/VideoSection';
 
@@ -88,7 +89,7 @@ export default function Home() {
         <p className="text-xl text-center text-slate-800 mb-12 max-w-3xl mx-auto">
           Get a glimpse of the innovation and networking opportunities at the International Proptech Investment Expo.
         </p>
-        <div className='flex items-center justify-center '>
+      <div className='flex items-center justify-center '>
         <VideoComponent src="/video/Video_1.mp4" className="w-auto max-w-4xl h-auto" />
         </div>
       
@@ -101,7 +102,7 @@ export default function Home() {
       
       {/* Other components and content */}
       
-      <BrevoScript />
+      <YourComponent />
     </div>
     </div>
     
