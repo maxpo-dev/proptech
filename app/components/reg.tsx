@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+'use client'
+
+import React, { useState } from 'react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
 const InputField = ({ label, id, type = 'text', placeholder, value, onChange }: { label: string; id: string; type?: string; placeholder: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void }) => (
-  <div>
+  <div className="mb-4">
     <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">
       {label}
     </label>
@@ -13,11 +15,11 @@ const InputField = ({ label, id, type = 'text', placeholder, value, onChange }: 
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
       required
     />
   </div>
-);
+)
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -28,17 +30,17 @@ export default function ContactUs() {
     phone: '',
     country: '',
     message: '',
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [submitError, setSubmitError] = useState('');
+  })
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevData => ({ ...prevData, [name]: value }));
-  };
+    const { name, value } = e.target
+    setFormData(prevData => ({ ...prevData, [name]: value }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -46,18 +48,18 @@ export default function ContactUs() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
-      });
-      const data = await response.json();
+      })
+      const data = await response.json()
       if (data.success) {
-        setIsSubmitted(true);
-        setSubmitError('');
+        setIsSubmitted(true)
+        setSubmitError('')
       } else {
-        setSubmitError('Form submission failed. Please try again.');
+        setSubmitError(data.message || 'Form submission failed. Please try again.')
       }
     } catch (error) {
-      setSubmitError('An error occurred. Please try again.');
+      setSubmitError((error as Error).message || 'An error occurred. Please try again.')
     }
-  };
+  }
 
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -102,7 +104,7 @@ export default function ContactUs() {
 
             <div className="p-8">
               {isSubmitted ? (
-                <div className="text-center">
+                <div className="text-center" aria-live="polite">
                   <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
                   <p className="text-gray-600">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
                 </div>
@@ -114,7 +116,7 @@ export default function ContactUs() {
                   <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
                   <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
                   <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
-                  <div>
+                  <div className="mb-4">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Message
                     </label>
@@ -125,23 +127,23 @@ export default function ContactUs() {
                       placeholder="How can we help you?"
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
                       required
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200"
+                    className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200"
                   >
                     Send Message
                   </button>
                 </form>
               )}
-              {submitError && <p className="mt-4 text-red-600">{submitError}</p>}
+              {submitError && <p className="mt-4 text-red-600" aria-live="assertive">{submitError}</p>}
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

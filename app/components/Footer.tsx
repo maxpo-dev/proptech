@@ -8,8 +8,9 @@ export default function Footer() {
   const [email, setEmail] = useState('')
   const [subscribeStatus, setSubscribeStatus] = useState('')
 
-  const handleSubscribe = async (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setSubscribeStatus('Subscribing...')
     try {
       const response = await fetch('/api/submissions', {
         method: 'POST',
@@ -18,7 +19,7 @@ export default function Footer() {
         },
         body: JSON.stringify({ email }),
       })
-      const data = await response.json()
+      const data: { success: boolean } = await response.json()
       if (data.success) {
         setSubscribeStatus('Subscribed successfully!')
         setEmail('')
@@ -26,6 +27,7 @@ export default function Footer() {
         setSubscribeStatus('Subscription failed. Please try again.')
       }
     } catch (error) {
+      console.error('Subscription error:', error)
       setSubscribeStatus('An error occurred. Please try again.')
     }
   }
@@ -75,7 +77,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone size={16} className="mr-2 text-gray-400" />
-                <a href="tel:+15551234567" className="text-gray-400 hover:text-white transition-colors duration-200">9945580628</a>
+                <a href="tel:+919945580628" className="text-gray-400 hover:text-white transition-colors duration-200">9945580628</a>
               </li>
               <li className="flex items-start">
                 <MapPin size={16} className="mr-2 mt-1 text-gray-400" />

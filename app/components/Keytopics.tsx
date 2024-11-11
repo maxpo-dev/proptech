@@ -27,7 +27,7 @@ export default function KeyTopicsSection() {
               {topic.icon}
               <h3 className="text-xl font-semibold mb-2 text-black hover:text-white">{topic.name}</h3>
               <p className="text-gray-600 hover:text-white">
-                Explore the latest advancements and applications in {topic.name} for real estate.
+                Explore the latest advancements and applications in {topic.name} for real estate
               </p>
             </div>
           ))}
