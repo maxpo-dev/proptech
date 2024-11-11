@@ -38,3 +38,9 @@ next-env.d.ts
 node_modules
 .next
 prisma/*.db
+# next-video
+video/*
+!video/*.json
+!video/*.js
+!video/*.ts
+public/_next-video

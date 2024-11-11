@@ -6,10 +6,15 @@ import JoinUs from './components/join-us';
 import KeyTopicsSection from './components/Keytopics';
 import Image from 'next/image';
 import Aboutimg from '@/app/images/WhatsApp Image 2024-11-07 at 3.59.25 PM.jpeg';
+// import Vid from '@/public/_next-video/PROPERTY SHOW V02 LOW.mp4'
 // import WhatsAppChat from './components/WhatsApp';
 // import LiveChat from './components/WhatsApp';
 // import ChatWidget from './components/WhatsApp';
 import BrevoScript from './components/WhatsApp';
+// import VideoSection from './components/VideoSection';
+import VideoComponent from './components/VideoSection';
+
+// import VOdeoSection from './components/VideoSection';
 
 export default function Home() {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
@@ -74,6 +79,20 @@ export default function Home() {
       </div>
 
       <KeyTopicsSection />
+
+      {/* <VideoSection /> */}
+      <div className=" bg-gray-200 py-20">
+      <h2 className="text-4xl font-bold text-center text-black mb-8">
+          Experience Our Event
+        </h2>
+        <p className="text-xl text-center text-slate-800 mb-12 max-w-3xl mx-auto">
+          Get a glimpse of the innovation and networking opportunities at the International Proptech Investment Expo.
+        </p>
+        <div className='flex items-center justify-center '>
+        <VideoComponent src="/_next-video/Video_1.mp4" className="w-auto max-w-4xl h-auto" />
+        </div>
+      
+    </div>
 
       <div className=''>
         <JoinUs />

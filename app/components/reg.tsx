@@ -2,6 +2,9 @@
 
 import React, { useState } from 'react'
 import { Mail, Phone, MapPin } from 'lucide-react'
+import Image from 'next/image'
+import Logo from '@/app/images/logo_blue.png'
+// import CountryCodeDropdown from '@/app/components/CountryCodeDropdown'
 
 const InputField = ({ label, id, type = 'text', placeholder, value, onChange }: { label: string; id: string; type?: string; placeholder: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void }) => (
   <div className="mb-4">
@@ -28,6 +31,7 @@ export default function ContactUs() {
     companyName: '',
     email: '',
     phone: '',
+    // countryCode: '+971', // Default country code
     country: '',
     message: '',
   })
@@ -89,7 +93,8 @@ export default function ContactUs() {
                   <Phone className="w-6 h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p>9945580628</p>
+                    <p>+971 509431529</p>
+                    <p>+91 9945580628</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -98,6 +103,21 @@ export default function ContactUs() {
                     <h3 className="font-semibold">Address</h3>
                     <p>Maxpo Exhibitions, Dubai, UAE</p>
                   </div>
+                </div>
+              </div>
+              <div className="mt-8 pt-40  rounded-lg">
+                <h3 className="text-lg text-center font-semibold text-white pb-8 ">
+                  Organized by Maxpo Exhibitions
+                </h3>
+                <div className=" h-32 relative mx-auto p-4">
+                  <Image
+                    src={Logo}
+                    alt="Maxpo Exhibitions Logo"
+                    layout="fill"
+                    objectFit="contain"
+                    className='bg-blue-950 px-4'
+                    priority
+                  />
                 </div>
               </div>
             </div>
@@ -109,12 +129,12 @@ export default function ContactUs() {
                   <p className="text-gray-600">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4 text-black">
                   <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
                   <InputField label="Job Title" id="jobTitle" placeholder="Your job title" value={formData.jobTitle} onChange={handleChange} />
                   <InputField label="Company Name" id="companyName" placeholder="Your company name" value={formData.companyName} onChange={handleChange} />
                   <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
-                  <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
+                  <InputField label="Phone" id="phone" type="phone" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
                   <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
                   <div className="mb-4">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
