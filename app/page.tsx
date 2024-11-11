@@ -89,7 +89,7 @@ export default function Home() {
           Get a glimpse of the innovation and networking opportunities at the International Proptech Investment Expo.
         </p>
         <div className='flex items-center justify-center '>
-        <VideoComponent src="/_next-video/Video_1.mp4" className="w-auto max-w-4xl h-auto" />
+        <VideoComponent src="/video/Video_1.mp4" className="w-auto max-w-4xl h-auto" />
         </div>
       
     </div>
