@@ -1,7 +1,10 @@
 import { PrismaClient } from "@prisma/client";
 
-const client = global.prismadb || new PrismaClient();
+declare global {
+  var prisma: PrismaClient | undefined;
+}
 
-if(process.env.NODE_ENV == 'production')global.prismadb = client;
+const client = globalThis.prisma || new PrismaClient();
+if (process.env.NODE_ENV !== "production") globalThis.prisma = client;
 
 export default client;

@@ -1,15 +1,17 @@
-import { PrismaClient } from "@prisma/client";
+import { Suspense } from 'react';
+import prisma from '@/lib/prismaClient';
 import DateRangePicker from '@/app/exhibitordata/DateRangePicker';
 import DownloadButton from '@/app/exhibitordata/DownloadButton';
 import ExhibitorTable from '@/app/exhibitordata/ExhibitorTable';
 
-const prisma = new PrismaClient();
-
-export default async function AdminPage() {
-  const exhibitors = await prisma.subscription.findMany({
+async function fetchExhibitors() {
+  'use server'
+  return await prisma.subscription.findMany({
     orderBy: { createdAt: 'desc' },
   });
+}
 
+export default async function AdminPage() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6">Admin Dashboard - All Exhibitors</h1>
@@ -17,9 +19,21 @@ export default async function AdminPage() {
         <div className="pb-8">
           <DateRangePicker />
         </div>
-        <DownloadButton exhibitors={exhibitors} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ExhibitorData />
+        </Suspense>
       </div>
-      <ExhibitorTable exhibitors={exhibitors} />
     </div>
+  );
+}
+
+async function ExhibitorData() {
+  const exhibitors = await fetchExhibitors();
+  
+  return (
+    <>
+      <DownloadButton exhibitors={exhibitors} />
+      <ExhibitorTable exhibitors={exhibitors} />
+    </>
   );
 }
