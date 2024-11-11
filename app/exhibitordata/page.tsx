@@ -6,7 +6,7 @@ import ExhibitorTable from '@/app/exhibitordata/ExhibitorTable';
 const prisma = new PrismaClient();
 
 export default async function AdminPage() {
-  const exhibitors = await prisma.exhibitor.findMany({
+  const exhibitors = await prisma.subscription.findMany({
     orderBy: { createdAt: 'desc' },
   });
 

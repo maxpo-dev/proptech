@@ -80,14 +80,14 @@ export default function ContactUs() {
                   <Mail className="w-6 h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p>proptech@maxpo.ae</p>
+                    <p>proptechdubai@maxpo.ae</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Phone className="w-6 h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p>+971 4 123 4567</p>
+                    <p>9945580628</p>
                   </div>
                 </div>
                 <div className="flex items-start">
