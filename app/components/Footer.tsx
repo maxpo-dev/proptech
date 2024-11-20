@@ -65,7 +65,7 @@ export default function Footer() {
               <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-200">About</Link></li>
               <li><Link href="/speakers" className="text-gray-400 hover:text-white transition-colors duration-200">Speakers</Link></li>
               <li><Link href="/exhibitors" className="text-gray-400 hover:text-white transition-colors duration-200">Exhibitors</Link></li>
-              <li><Link href="/privacypolicy" className="text-gray-400 hover:text-white transition-colors duration-200">PrivacyPolicy</Link></li>
+              <li><Link href="/privacypolicy" className="text-gray-400 hover:text-white transition-colors duration-200">Privacy Policy</Link></li>
               <li><Link href="/register" className="text-gray-400 hover:text-white transition-colors duration-200">Contact Us</Link></li>
               {/* <li><Link href="/privacypolicy" className="text-gray-400 hover:text-white transition-colors duration-200">PrivacyPolicy</Link></li> */}
               
