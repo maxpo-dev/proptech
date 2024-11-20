@@ -136,10 +136,10 @@ const PrivacyPolicy = () => {
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">
             8. Updates to This Policy
           </h2>
-          <p className="text-gray-600">
-            We may update this Privacy Policy from time to time. Any changes
-            will be posted on this page with the "Last Updated" date at the top.
-          </p>
+          <p>
+  We may update this Privacy Policy from time to time. Any changes will be posted on this page with the &quot;Last Updated&quot; date at the top.
+</p>
+
         </section>
 
         <section>
