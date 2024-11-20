@@ -25,3 +25,27 @@ model ContactForm {
   message     String
   createdAt   DateTime @default(now())
 }
+
+model Visitor {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
+  email          String   
+  phone          String
+  preferredCity  String
+  preferredBudget String
+  createdAt      DateTime @default(now())
+}
+
+model Exhibitor {
+   id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  // name           String
+  companyname    String
+  city           String
+  contactperson  String
+  designation    String
+  email          String   
+  phone          String
+  // preferredCity  String
+  // preferredBudget String
+  createdAt      DateTime @default(now())
+}

@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
 import prisma from '@/lib/prismaClient';
-import DateRangePicker from '@/app/exhibitordata/DateRangePicker';
-import DownloadButton from '@/app/exhibitordata/DownloadButton';
-import ExhibitorTable from '@/app/exhibitordata/ExhibitorTable';
+import DateRangePicker from '@/app/subscribe/DateRangePicker';
+import DownloadButton from '@/app/subscribe/DownloadButton';
+import ExhibitorTable from '@/app/subscribe/ExhibitorTable';
 
 async function fetchExhibitors() {
   'use server'
