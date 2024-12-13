@@ -49,7 +49,7 @@ export default function HeroSection() {
     </div>
     <div className="max-w-3xl mx-auto text-center mt-2"> {/* Adjusted spacing */}
       <h1 className="text-4xl sm:text-5xl font-semibold font-serif mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
-        International Proptech Investment Expo
+        Future Proptech Summit
       </h1>
       <p
         className="text-xl mb-8 text-transparent bg-clip-text bg-gradient-to-r font-extrabold"
@@ -62,7 +62,7 @@ export default function HeroSection() {
       <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
         <div className="flex items-center">
           <CalendarDays className="mr-2" />
-          <span>19-20 April 2025</span>
+          <span>14-15 May 2025</span>
         </div>
         <div className="flex items-center">
           <MapPin className="mr-2" />

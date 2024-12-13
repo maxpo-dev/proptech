@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import Logo from "@/app/images/PROPTECH_alex_logo_alex_logo-6.png";
+import Logo from "@/app/images/PROPTECH_logo_6.png";
 
 // Define navItems with links
 const navItems = [
@@ -33,7 +33,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${scrolled ? 'bg-blue-950' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 h-20 ${scrolled ? 'bg-blue-950' : 'bg-transparent'}`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -41,8 +41,8 @@ export default function Header() {
               <Image
                 src={Logo}
                 alt="Proptech Expo 2025 Logo"
-                width={450}
-                height={50}
+                width={350}
+                height={30}
               />
               <span className="sr-only">Proptech Expo 2025</span>
             </Link>

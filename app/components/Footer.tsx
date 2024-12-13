@@ -37,7 +37,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold">International Proptech Investment Expo 2025</h2>
+            <h2 className="text-2xl font-bold">Future Proptech Summit</h2>
             <p className="text-gray-400">Shaping the Future of Real Estate Technology</p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">

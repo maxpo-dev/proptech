@@ -43,7 +43,7 @@ export default function Home() {
       <HeroSection />
       <div>
         <section className="bg-white shadow-md p-20 w-full py-40">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4">Proptech Dubai</h2>
+          <h2 className="text-3xl font-bold text-blue-900 mb-4">Future Proptech Summit</h2>
           
           <div className="flex flex-col lg:flex-row items-center lg:items-start">
             {/* Text content (60%) */}
@@ -61,7 +61,7 @@ export default function Home() {
               </p>
               <br />
               <p>
-                Join us at the <span className="font-bold text-black">International Proptech Investment Expo</span> Dubai in April 2025, organized by <span className="font-bold text-black">Maxpo Exhibitions.</span>
+                Join us at the <span className="font-bold text-black">Future Proptech Summit</span> Dubai in April 2025, organized by <span className="font-bold text-black">Maxpo Exhibitions.</span>
               </p>
             </div>
 
