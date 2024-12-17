@@ -11,7 +11,7 @@ export default function EventContent() {
             Interested in Taking Part?
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Join us for the International Proptech Conference & Investment Expo.
+            Join us for the Future Proptech Summit.
             A unique opportunity to showcase your innovations and network with key industry players.
           </p>
         </div>
