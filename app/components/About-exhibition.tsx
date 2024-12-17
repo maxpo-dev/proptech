@@ -17,13 +17,13 @@ export default function AboutExhibitionContent() {
         </div>
         <div className=" mx-auto space-y-6 text-lg">
           <p>
-            The Future PropTech Summit has established itself as Europe's premier real estate tech event. The next edition's two-day expo promises a cutting-edge showcase of innovative solutions and next-gen tech from startups and industry leaders worldwide.
+            The Future PropTech Summit has established itself as Europe&aposs premier real estate tech event. The next edition&aposs two-day expo promises a cutting-edge showcase of innovative solutions and next-gen tech from startups and industry leaders worldwide.
           </p>
           <p>
             With over 5,000 high-level professionals expected including industry big-wigs, policy makers, tech enthusiasts and more, the exhibition floor will be filled with opportunities to amplify brand visibility, forge connections, and seal exclusive business deals.
           </p>
           <p>
-            The dedicated startup zone allows budding entrepreneurs to pitch game-changing ideas to prospects and investors in a highly engaging environment. It's the ultimate launchpad for making your mark in the competitive real estate market.
+            The dedicated startup zone allows budding entrepreneurs to pitch game-changing ideas to prospects and investors in a highly engaging environment. It&aposs the ultimate launchpad for making your mark in the competitive real estate market.
           </p>
           <p>
             Get ready to experience the future of proptech at this must-attend event!

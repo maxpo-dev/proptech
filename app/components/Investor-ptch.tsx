@@ -18,13 +18,13 @@ export default function InvestorPitchContent() {
             The Investor Pitch session at the Future PropTech Summit is your golden opportunity to showcase your innovative proptech solution to a panel of industry-leading investors and potential partners.
           </p>
           <p>
-            Whether you're a startup with a groundbreaking idea or a scale-up looking for the next round of funding, our carefully curated pitch event provides the perfect platform to catapult your business to new heights.
+            Whether you&aposre a startup with a groundbreaking idea or a scale-up looking for the next round of funding, our carefully curated pitch event provides the perfect platform to catapult your business to new heights.
           </p>
           <p>
             Participants will have the chance to present their ideas in a high-energy, fast-paced environment, followed by a Q&A session with our esteemed panel of judges. This is your moment to shine and potentially secure the funding and partnerships that could transform your proptech vision into reality.
           </p>
           <p>
-            Don't miss this unparalleled opportunity to gain exposure, receive valuable feedback, and potentially walk away with investment offers that could revolutionize your business trajectory in the dynamic world of property technology.
+            Don&apost miss this unparalleled opportunity to gain exposure, receive valuable feedback, and potentially walk away with investment offers that could revolutionize your business trajectory in the dynamic world of property technology.
           </p>
         </div>
       </div>

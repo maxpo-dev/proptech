@@ -1,6 +1,6 @@
 import AboutConferenceContent from '@/app/components/About-conference'
 import ConferenceThemes from '@/app/components/conference-themes'
-import Header from '@/app/components/subnavi'
+// import Header from '@/app/components/subnavi'
 
 export default function AboutConference() {
   return (
