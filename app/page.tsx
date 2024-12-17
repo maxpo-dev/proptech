@@ -14,6 +14,8 @@ import Aboutimg from '@/app/images/WhatsApp Image 2024-11-07 at 3.59.25 PM.jpeg'
 // import VideoSection from './components/VideoSection';
 import VideoComponent from './components/VideoSection';
 import YourComponent from './components/WhatsApp';
+import ConferenceThemes from './components/conference-themes';
+import WhyAttend from './components/why-attend';
 
 // import VOdeoSection from './components/VideoSection';
 
@@ -43,25 +45,25 @@ export default function Home() {
       <HeroSection />
       <div>
         <section className="bg-white shadow-md p-20 w-full py-40">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4">Future Proptech Summit</h2>
+          <h2 className="text-3xl font-bold text-blue-900 mb-4">Welcome To Future Proptech Summit</h2>
           
           <div className="flex flex-col lg:flex-row items-center lg:items-start">
             {/* Text content (60%) */}
             <div className="lg:w-3/5 text-lg text-gray-700 mb-4 lg:mb-0 lg:pr-8">
               <p>
-                Proptech and Fractional Ownership in Dubai are rapidly transforming the real estate landscape. With government support, technological advancements, and increased accessibility through fractional ownership, Dubai is at the forefront of this industry revolution. Proptech has emerged as a driving force in Dubai&apos;s real estate market, revolutionizing the way properties are bought, sold, managed, and experienced. From AI-powered property valuation to blockchain-based transactions, proptech is reshaping the industry and offering innovative solutions for both investors and residents.
+              The global PropTech market is on the rise, valued at an impressive $33.57 billion in 2023 and set to soar to $89.93 billion by 2032, with a remarkable CAGR of 11.9% from 2024 to 2032! PropTech is revolutionizing the real estate landscape by seamlessly blending property management with cutting-edge digital technologies. Imagine software applications and advanced data analysis tools that not only streamline transactions but also enhance sustainability, boost investor returns, and elevate client experiences.
               </p>
               <br />
               <p>
-                The advancement in technologies such as artificial intelligence, machine learning, and digitization of property data assets is revolutionizing the real estate sector. Several enterprises and organizations are investing in the market for better returns in the real estate industry.
+              In Dubai, this transformation is even more exhilarating with the emergence of fractional ownership. Supported by dynamic government initiatives and technological breakthroughs, fractional ownership is making real estate more accessible than ever. This innovative approach opens doors for a wider range of investors, creating a vibrant and inclusive market. Experience the future of real estate with PropTech where opportunity meets innovation!
               </p>
               <br />
               <p>
-                Recent investments in Dubai&apos;s proptech sector have been substantial, with both local and international investors recognizing the immense potential of this emerging field. Startups and established companies alike are pouring resources into developing cutting-edge technologies that address the unique challenges and opportunities presented by Dubai&apos;s dynamic real estate market.
+              Featuring an expansive 3000+ square metre exhibition hall, attendees have the O opportunity to explore the latest proptech solutions and innovations from 100+ exhibi ors firsthand. From cutting-edge software platforms to groundbreaking hardware, our exhibition showcases the diverse range of technologies driving hange in the real estate industry.
               </p>
               <br />
               <p>
-                Join us at the <span className="font-bold text-black">Future Proptech Summit</span> Dubai in April 2025, organized by <span className="font-bold text-black">Maxpo Exhibitions.</span>
+              Join the Dubai Proptech Show 2025 to connect with like-minded professionals, gain valuable insights, and discover the latest and the greatest products, services and strategies shaping the future of the industry.
               </p>
             </div>
 
@@ -78,6 +80,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <ConferenceThemes />
 
       <KeyTopicsSection />
 
@@ -94,7 +97,7 @@ export default function Home() {
         </div>
       
     </div>
-
+     <WhyAttend />
       <div className=''>
         <JoinUs />
       </div>

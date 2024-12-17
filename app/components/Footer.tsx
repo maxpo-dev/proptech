@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Mail size={16} className="mr-2 text-gray-400" />
-                <a href="mailto:proptechdubai@maxpo.ae" className="text-gray-400 hover:text-white transition-colors duration-200">proptechdubai@maxpo.ae</a>
+                <a href="mailto:proptechdubai@maxpo.ae" className="text-gray-400 hover:text-white transition-colors duration-200">proptechsales@maxpo.ae</a>
               </li>
               <li className="flex items-center">
                 <Phone size={16} className="mr-2 text-gray-400" />

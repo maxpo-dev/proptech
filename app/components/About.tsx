@@ -144,7 +144,7 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex items-center space-x-2">
               <Calendar className="h-5 w-5 text-blue-600" />
-              <span className="text-gray-700">April 2025</span>
+              <span className="text-gray-700">May 2025</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="h-5 w-5 text-blue-600" />
