@@ -24,7 +24,7 @@ export default function InvestorPitchContent() {
             Participants will have the chance to present their ideas in a high-energy, fast-paced environment, followed by a Q&A session with our esteemed panel of judges. This is your moment to shine and potentially secure the funding and partnerships that could transform your proptech vision into reality.
           </p>
           <p>
-            Don&apost miss this unparalleled opportunity to gain exposure, receive valuable feedback, and potentially walk away with investment offers that could revolutionize your business trajectory in the dynamic world of property technology.
+            Don&apos;t miss this unparalleled opportunity to gain exposure, receive valuable feedback, and potentially walk away with investment offers that could revolutionize your business trajectory in the dynamic world of property technology.
           </p>
         </div>
       </div>
