@@ -59,7 +59,7 @@ export default function Home() {
               </p>
               <br />
               <p>
-              Featuring an expansive 3000+ square metre exhibition hall, attendees have the O opportunity to explore the latest proptech solutions and innovations from 100+ exhibi ors firsthand. From cutting-edge software platforms to groundbreaking hardware, our exhibition showcases the diverse range of technologies driving hange in the real estate industry.
+              Featuring an expansive 3000+ square metre exhibition hall, attendees have the opportunity to explore the latest proptech solutions and innovations from 100+ exhibi ors firsthand. From cutting-edge software platforms to groundbreaking hardware, our exhibition showcases the diverse range of technologies driving hange in the real estate industry.
               </p>
               <br />
               <p>
@@ -90,7 +90,7 @@ export default function Home() {
           Experience Our Event
         </h2>
         <p className="text-xl text-center text-slate-800 mb-12 max-w-3xl mx-auto">
-          Get a glimpse of the innovation and networking opportunities at the International Proptech Investment Expo.
+          Get a glimpse of the innovation and networking opportunities at the Future Proptech Summit.
         </p>
       <div className='flex items-center justify-center '>
         <VideoComponent src="/video/Video_1.mp4" className="w-auto max-w-4xl h-auto" />

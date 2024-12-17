@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import MainImg from '@/app/images/3x.jpg'
+import MainImg from '@/app/images/3x.jpg';
 
 export default function AboutConferenceContent() {
   return (
@@ -17,13 +17,13 @@ export default function AboutConferenceContent() {
         </div>
         <div className=" mx-auto space-y-6 text-lg">
           <p>
-            Get ready for an electrifying experience at the Future PropTech Summit! This year&aposs event promises a world class speaker lineup and an unparalleled gathering of industry titans, policymakers, investors, startups, and property developers.
+            Get ready for an electrifying experience at the Future PropTech Summit! This year&apos;s event promises a world-class speaker lineup and an unparalleled gathering of industry titans, policymakers, investors, startups, and property developers.
           </p>
           <p>
-            Brace yourself for thought-provoking discussions that encompass the real estate world&aposs most pressing challenges while exploring the latest trends and game-changing advancements in proptech.
+            Brace yourself for thought-provoking discussions that encompass the real estate world&apos;s most pressing challenges while exploring the latest trends and game-changing advancements in proptech.
           </p>
           <p>
-            Building on the overwhelming success of previous editions, #PTS25 will once again deliver a high-value, action-packed conference program. Participants will gain invaluable insights into policy and regulatory frameworks, as well as the technological disruptions creating lucrative investment opportunities in the real estate industry.
+            Building on the overwhelming success of previous editions, action-packed conference program. Participants will gain invaluable insights into policy and regulatory frameworks, as well as the technological disruptions creating lucrative investment opportunities in the real estate industry.
           </p>
           <p>
             With two days of power-packed presentations, panel discussions, Q&A sessions, and one-on-one meetings, the event offers unparalleled networking and business matchmaking opportunities. Prepare to forge indelible connections with like-minded visionaries spearheading the proptech revolution.
@@ -31,6 +31,5 @@ export default function AboutConferenceContent() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
