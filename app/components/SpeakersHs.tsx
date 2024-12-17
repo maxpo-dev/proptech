@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import bg from '@/app/images/pixelcut-export (2).jpeg';
 import '@/app/styles/animations.css';
-import ParticlesComponent from './Particles';
+// import ParticlesComponent from './Particles';
 
 export default function SpeakersHeroSection() {
   const [contentVisible, setContentVisible] = useState(false);
@@ -30,10 +30,10 @@ export default function SpeakersHeroSection() {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       
       {/* Particles component */}
-      <div className="absolute inset-0 z-10">
+      {/* <div className="absolute inset-0 z-10">
         <ParticlesComponent />
       </div>
-      
+       */}
       {contentVisible && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent">
           <div className="max-w-3xl mx-auto text-center">

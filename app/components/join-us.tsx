@@ -2,15 +2,15 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import ParticlesComponent from '@/app/components/Particles';
+// import ParticlesComponent from '@/app/components/Particles';
 
 export default function JoinUs() {
   return (
     <section className="bg-gradient-to-r from-blue-950 to-blue-800 py-20 sm:py-32  overflow-hidden">
       {/* Ensure particles background is positioned correctly */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <ParticlesComponent />
-      </div>
+      </div> */}
       
       {/* Main content placed above the particles */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

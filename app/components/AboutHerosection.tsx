@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import bg from '@/app/images/PP 2 (1).png';
 import '@/app/styles/animations.css';
-import ParticlesComponent from './Particles';
+// import ParticlesComponent from './Particles';
 
 export default function AboutHeroSection() {
   const [contentVisible, setContentVisible] = useState(false);
@@ -27,9 +27,9 @@ export default function AboutHeroSection() {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Particles component */}
-      <div className="absolute inset-0 z-10">
+      {/* <div className="absolute inset-0 z-10">
         <ParticlesComponent />
-      </div>
+      </div> */}
 
       {contentVisible && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent  p-10">
