@@ -47,7 +47,7 @@ export default function About() {
             <AboutSection title="Event Overview">
               <p className="text-gray-600 mb-4">
                 Join us for an event that explores how technology is reshaping the real estate industry. 
-                The International Proptech Conference & Investment Expo, organized by Maxpo Exhibitions, 
+                The Future Proptech Summit, organized by Maxpo Exhibitions, 
                 brings together industry leaders, investors, and innovators to connect, collaborate, and 
                 create a smarter future for real estate.
               </p>
