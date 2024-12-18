@@ -41,7 +41,7 @@ export default function AboutHeroSection() {
           {/* Additional info section */}
           <div className="text-start max-w-2xl rounded-lg shadow-md text-white">
             <p>
-            The Feature Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology. If you are passionate about innovation in the real estate and property sectors, this event is tailored for you.
+            The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology. If you are passionate about innovation in the real estate and property sectors, this event is tailored for you.
             </p>
           </div>
         </div>
