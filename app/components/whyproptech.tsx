@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Sprout, Lightbulb, Briefcase, ScrollText, Rocket, BuildingIcon as Buildings, PiggyBank, Brain, Home } from 'lucide-react'
+import { Sprout, Lightbulb, Briefcase, ScrollText, Rocket, BuildingIcon as Buildings, PiggyBank, Brain, Home } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 import Img from "@/app/images/1x.jpg"

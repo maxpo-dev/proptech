@@ -1,7 +1,7 @@
 "use client"
 
 import { MapPin } from 'lucide-react'
-import Link from "next/link"
+// import Link from "next/link"
 import Image from "next/image"
 import DubaiImg from "@/app/images/Dubai.jpg"
 
@@ -25,7 +25,7 @@ export default function DubaiSection() {
           Dubai: The Ideal Backdrop for PropTech Innovation
         </h2>
         <p className="text-lg text-gray-600 mb-8">
-          Dubai's dynamic real estate market and forward-thinking government policies make it the perfect venue for the Future PropTech Summit.
+          Dubai&apos;s dynamic real estate market and forward-thinking government policies make it the perfect venue for the Future PropTech Summit.
         </p>
 
         {/* Location Info */}

@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import HeroSection from '@/app/components/Herosection';
-import JoinUs from './components/join-us';
-import KeyTopicsSection from '@/app/components/Keytopics';
-import ConferenceThemes from './components/conference-themes';
-import WhyAttend from './components/why-attend';
+// import JoinUs from './components/join-us';
+// import KeyTopicsSection from '@/app/components/Keytopics';
+// import ConferenceThemes from './components/conference-themes';
+// import WhyAttend from './components/why-attend';
 import VideoComponent from './components/VideoSection';
-import YourComponent from './components/WhatsApp';
+// import YourComponent from './components/WhatsApp';
 import Ticket from "@/app/images/1.jpg"
 import Speakers from '@/app/images/4.jpg';
 import Exhibitors from '@/app/images/3.jpg';
