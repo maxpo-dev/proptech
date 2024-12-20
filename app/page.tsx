@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import HeroSection from '@/app/components/Herosection';
 // import JoinUs from './components/join-us';
@@ -20,23 +20,8 @@ import ShowcaseSection from './components/showcase-section';
 import DubaiSection from './components/dubai-section';
 
 export default function Home() {
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
-  const [lastScrollPos, setLastScrollPos] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      if (currentScrollPos > lastScrollPos) {
-        setIsScrollingDown(true);
-      } else {
-        setIsScrollingDown(false);
-      }
-      setLastScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollPos]);
+  
+  
 
   return (
     <div className='bg-gray-200 '>
