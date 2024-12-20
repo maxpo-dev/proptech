@@ -7,7 +7,7 @@ import DubaiImg from "@/app/images/Dubai.jpg"
 
 export default function DubaiSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-8 py-16">
+    <section className=" mx-auto px-4 md:px-8 py-16 ">
       {/* Image Section */}
       <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden mb-12">
         <Image

@@ -46,48 +46,43 @@ export default function ConferenceThemes() {
   ]
 
   return (
-    <div className="flex flex-col lg:flex-row ">
-      {/* Left Section - Image */}
-      <div className="lg:w-1/2 relative h-[300px] lg:h-auto">
-        <Image
-          src={Img}
-          alt="Conference"
-          
-          className="object-cover"
-          priority
-        />
+    <div className="flex flex-col lg:flex-row w-full  mx-auto">
+      {/* Container with fixed aspect ratio */}
+      <div className="w-full lg:w-1/2 aspect-square">
+        {/* Left Section - Image */}
+        <div className="relative w-full h-full">
+          <Image
+            src={Img}
+            alt="Conference"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
 
       {/* Right Section - Themes */}
-      <div className="lg:w-1/2 bg-gradient-to-br from-black via-blue-950 to-blue-900 p-8 lg:p-12">
-        <h2 className="text-4xl font-bold text-white mb-12">
+      <div className="w-full lg:w-1/2 aspect-square bg-gradient-to-br from-black via-blue-950 to-blue-900 p-8 lg:p-12 overflow-y-auto">
+        <h2 className="text-4xl font-bold text-white mb-8">
           Conference Themes
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6">
           {themes.map((theme, index) => (
-            <div key={index} className="flex items-center gap-4">
-              <theme.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
-              <span className="text-white text-lg">{theme.title}</span>
+            <div key={index} className="flex items-center gap-3">
+              <theme.icon className="w-6 h-6 text-white" strokeWidth={1.5} />
+              <span className="text-white text-base">{theme.title}</span>
             </div>
           ))}
         </div>
 
-        <div className="flex gap-4 mt-12">
+        <div className="mt-8">
           <Link 
             href="/book-tickets"
-            className="bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition-colors"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition-colors"
           >
             Book Tickets
           </Link>
-          
-          {/* <Link 
-            href="/learn-more" 
-            className="flex items-center text-white hover:text-blue-200 transition-colors"
-          >
-            Know More
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link> */}
         </div>
       </div>
     </div>
