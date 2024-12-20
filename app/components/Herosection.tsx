@@ -43,7 +43,7 @@ export default function HeroSection() {
           </div>
           <div className="max-w-3xl mx-auto text-center mt-2">
             <h1 className="text-4xl sm:text-5xl font-semibold font-serif mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
-              Future Proptech Summit
+            Future Proptech Summit 2025 
             </h1>
             <p
               className="text-xl mb-8 text-transparent bg-clip-text bg-gradient-to-r font-extrabold"
@@ -64,7 +64,7 @@ export default function HeroSection() {
               </div>
             </div>
             <Link href="/register" className="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors duration-200">
-              Register Now
+              Book Now
             </Link>
           </div>
         </div>

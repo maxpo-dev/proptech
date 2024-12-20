@@ -1,60 +1,23 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { FaPlay } from 'react-icons/fa';
+'use client'
 
 interface VideoComponentProps {
-  src: string;
-  className?: string;
+  src: string
+  poster?: string
+  className?: string
 }
 
-const VideoComponent: React.FC<VideoComponentProps> = ({ src, className }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  // Automatically play the video on load
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    }
-  }, []);
-
-  const handlePlayPause = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
+export default function VideoComponent({ src, poster, className = '' }: VideoComponentProps) {
   return (
-    <div className={`relative bg-black rounded-lg shadow-lg overflow-hidden ${className}`}>
+    <div className={`relative overflow-hidden rounded-lg shadow-lg ${className}`}>
       <video
-        ref={videoRef}
-        className="w-full h-full object-cover"
-        onClick={handlePlayPause}
-        autoPlay
-        muted
-        loop
+        src={src}
+        poster={poster}
+        className="w-full h-auto"
         playsInline
-        controls={isPlaying}
-      >
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {!isPlaying && (
-        <div
-          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 cursor-pointer"
-          onClick={handlePlayPause}
-        >
-          <FaPlay className="text-white text-4xl" />
-        </div>
-      )}
+        loop
+        autoPlay
+        muted // Ensures autoplay works on most browsers
+      />
     </div>
-  );
-};
-
-export default VideoComponent;
+  )
+}
