@@ -1,6 +1,6 @@
 "use client"
 
-import { MapPin } from 'lucide-react'
+// import { MapPin } from 'lucide-react'
 // import Link from "next/link"
 import Image from "next/image"
 import DubaiImg from "@/app/images/Dubai.jpg"
