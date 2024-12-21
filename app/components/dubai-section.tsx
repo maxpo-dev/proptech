@@ -29,7 +29,7 @@ export default function DubaiSection() {
         </p>
 
         {/* Location Info */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        {/* <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <div className="flex items-start gap-2">
             <MapPin className="w-6 h-6 mt-1 text-blue-600" />
             <div>
@@ -48,7 +48,7 @@ export default function DubaiSection() {
           >
             Get Directions
           </Link> */}
-        </div>
+        {/* </div>  */}
       </div>
     </section>
   )
