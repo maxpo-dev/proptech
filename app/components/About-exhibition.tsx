@@ -23,7 +23,7 @@ export default function AboutExhibitionContent() {
           With over 5,000 high-level professionals expected, including industry big-wigs, policymakers, tech enthusiasts, and more, the exhibition floor will be filled with opportunities to amplify brand visibility, forge connections, and seal exclusive business deals.
           </p>
           <p>
-          The dedicated startup zone allows budding entrepreneurs to pitch game-changing ideas to prospects and investors in a highly engaging environment. It's the ultimate launchpad for making your mark in the competitive real estate market.
+          The dedicated startup zone allows budding entrepreneurs to pitch game-changing ideas to prospects and investors in a highly engaging environment. It&apos;s the ultimate launchpad for making your mark in the competitive real estate market.
           </p>
           <p>
           Get ready to experience the future of proptech at this must-attend event!
