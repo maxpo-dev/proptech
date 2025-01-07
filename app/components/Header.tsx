@@ -27,7 +27,7 @@ const navItems = [
       { name: 'About the Exhibition', href: '/exhibition/about' },
       { name: 'Exhibitors', href: '/exhibition/exhibitors' },
       { name: 'Information Brochure', href: '/exhibition/brochure' },
-      { name: 'Exhibit at #pts25', href: '/exhibition/exhibit' },
+      // { name: 'Exhibit at #pts25', href: '/exhibition/exhibit' },
     ]
   },
   { 
