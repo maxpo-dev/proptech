@@ -40,7 +40,7 @@ export default function Footer() {
             <h2 className="text-2xl font-bold">Future Proptech Summit</h2>
             <p className="text-gray-400">Shaping the Future of Real Estate Technology</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="https://www.facebook.com/futureproptechsummit" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </a>
@@ -48,7 +48,7 @@ export default function Footer() {
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="https://www.linkedin.com/showcase/future-proptech-summit" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </a>
