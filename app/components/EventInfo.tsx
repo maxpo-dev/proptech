@@ -27,7 +27,7 @@ export default function EventContent() {
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
               <p className="text-2xl font-bold text-blue-600">2025</p>
-              <p className="text-gray-600">April 19-20</p>
+              <p className="text-gray-600">May 14-15</p>
             </div>
           </div>
 
