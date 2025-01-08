@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react'
+import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -44,10 +44,10 @@ export default function Footer() {
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              {/* <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
-              </a>
+              </a> */}
               <a href="https://www.linkedin.com/showcase/future-proptech-summit" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>

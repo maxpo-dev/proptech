@@ -78,7 +78,7 @@ export default function ConferenceThemes() {
 
         <div className="mt-8">
           <Link 
-            href="/book-tickets"
+            href="/register"
             className="inline-block bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition-colors"
           >
             Book Tickets
