@@ -7,8 +7,8 @@ import Footer from '@/app/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'International Proptech Conference & Investment Expo',
-  description: 'Join us in Dubai, Feb 2025 for the latest in Proptech and Fractional Ownership',
+  title: 'Future Proptech Summit',
+  description: 'Join us in Dubai, May 2025 for the latest in Proptech and Fractional Ownership',
 }
 
 export default function RootLayout({

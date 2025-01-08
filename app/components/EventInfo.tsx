@@ -51,10 +51,11 @@ export default function EventContent() {
               <p className="text-gray-600 mb-4">
                 Choose from various stand sizes to suit your needs. Early bird discounts available!
               </p>
-              <button className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200 flex items-center">
+              <p>Register now</p>
+              {/* <button className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200 flex items-center">
                 Book a Stand
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

@@ -64,7 +64,7 @@ export default function ShowcaseSection() {
 
       <div className="mt-12 text-center">
         <Link 
-          href="/apply-exhibit"
+          href="/register"
           className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 transition-colors"
         >
           Apply to Exhibit
