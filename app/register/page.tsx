@@ -10,14 +10,14 @@ import RegisterHeroSection from '../components/RegisterHerosection';
 export default function Register() {
   return (
     <div>
-      <RegisterHeroSection />
+      {/* <RegisterHeroSection /> */}
       {/* <div className='bg-slate-200'> */}
       {/* <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent py-14"> */}
         {/* Grid layout for the hero section */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 h-full"> */}
           
           {/* Left Side: EventInfo Component */}
-          <div className="">
+          <div className="pt-10">
             <EventContent />
           </div>
 
