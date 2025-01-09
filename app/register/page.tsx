@@ -5,7 +5,7 @@
 import EventContent from '../components/EventInfo';
 // import ExhibitorForm from '../components/exhibitor';
 import ContactUs from '../components/reg';
-import RegisterHeroSection from '../components/RegisterHerosection';
+// import RegisterHeroSection from '../components/RegisterHerosection';
 
 export default function Register() {
   return (
