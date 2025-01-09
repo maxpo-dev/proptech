@@ -114,9 +114,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 International Proptech Conference & Investment Expo. All rights reserved.</p>
+          <p>&copy; 2024 Future Proptech Summit. All rights reserved.</p>
         </div>
       </div>
     </footer>
+  )
   )
 }
