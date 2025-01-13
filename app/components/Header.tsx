@@ -41,7 +41,7 @@ const navItems = [
   //   ]
   // },
   { name: 'Investor Pitch', href: '/investor-pitch' },
-  { name: 'Get in Tech', href: '/register' },
+  { name: 'Get in Touch', href: '/register' },
 ];
 
 export default function Header() {
