@@ -15,9 +15,9 @@ const navItems = [
     href: '#',
     dropdown: [
       { name: 'About the Conference', href: '/conference/about' },
-      { name: 'Participants', href: '/conference/participants' },
-      { name: 'Speakers', href: '/conference/speakers' },
-      { name: 'Apply for Speaking', href: '/conference/apply' },
+      // { name: 'Participants', href: '/conference/participants' },
+      // { name: 'Speakers', href: '/conference/speakers' },
+      // { name: 'Apply for Speaking', href: '/conference/apply' },
     ]
   },
   { 
@@ -25,21 +25,21 @@ const navItems = [
     href: '#',
     dropdown: [
       { name: 'About the Exhibition', href: '/exhibition/about' },
-      { name: 'Exhibitors', href: '/exhibition/exhibitors' },
-      { name: 'Information Brochure', href: '/exhibition/brochure' },
+      // { name: 'Exhibitors', href: '/exhibition/exhibitors' },
+      // { name: 'Information Brochure', href: '/exhibition/brochure' },
       // { name: 'Exhibit at #pts25', href: '/exhibition/exhibit' },
     ]
   },
-  { 
-    name: 'Partners', 
-    href: '#',
-    dropdown: [
-      { name: 'Previous Partners', href: '/partners/previous' },
-      { name: 'Media Partners', href: '/partners/media' },
-      { name: 'Previous Media Partners', href: '/partners/previous-media' },
-      { name: 'Become a Partner', href: '/partners/become' },
-    ]
-  },
+  // { 
+  //   name: 'Partners', 
+  //   href: '#',
+  //   dropdown: [
+  //     { name: 'Previous Partners', href: '/partners/previous' },
+  //     { name: 'Media Partners', href: '/partners/media' },
+  //     { name: 'Previous Media Partners', href: '/partners/previous-media' },
+  //     { name: 'Become a Partner', href: '/partners/become' },
+  //   ]
+  // },
   { name: 'Investor Pitch', href: '/investor-pitch' },
   { name: 'Get in Tech', href: '/register' },
 ];
