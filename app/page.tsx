@@ -47,7 +47,7 @@ export default function Home() {
 
     <div className="lg:w-1/2 flex justify-center">
       <VideoComponent
-        src="https://www.futureproptechsummit.com/video/Video_1.mp4"
+        src="./video/Video_1n.mp4"
         className="w-full h-auto rounded-lg shadow-lg"
       />
     </div>
