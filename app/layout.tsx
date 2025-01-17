@@ -39,6 +39,19 @@ fbq('track', 'PageView');
             `,
           }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GV1DBDBMMV"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GV1DBDBMMV');
+          `}
+        </Script>
       </head>
       </head>
       <body className={`${inter.className}`}>
