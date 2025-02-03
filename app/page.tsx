@@ -18,6 +18,7 @@ import Link from 'next/link';
 import WhyProptech from './components/whyproptech';
 import ShowcaseSection from './components/showcase-section';
 import DubaiSection from './components/dubai-section';
+import SponsorsSection from './components/SponsorsSection';
 
 export default function Home() {
   
@@ -62,7 +63,7 @@ export default function Home() {
       { href: "/register", bg: "bg-blue-600", title: "Book your tickets", image: Ticket },
       { href: "/speakers", bg: "bg-green-600", title: "Speakers", image: Speakers },
       { href: "/exhibitors", bg: "bg-red-600", title: "Exhibitors", image: Exhibitors },
-      { href: "/contact", bg: "bg-purple-600", title: "Get In Touch", image: Getintech },
+      { href: "/register", bg: "bg-purple-600", title: "Get In Touch", image: Getintech },
     ].map((item, index) => (
       <Link key={index} href={item.href} className="block group">
         <div
@@ -94,6 +95,7 @@ export default function Home() {
       {/* <ConferenceThemes /> */}
       {/* <KeyTopicsSection /> */}
       <ShowcaseSection />
+      <SponsorsSection />
       {/* <div className="bg-gray-200 py-20">
         <h2 className="text-4xl font-bold text-center text-black mb-8">
           Experience Our Event
