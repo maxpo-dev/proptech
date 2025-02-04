@@ -56,7 +56,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
               <div className="flex items-center">
                 <CalendarDays className="mr-2" />
-                <span>14-15 May 2025</span>
+                <span>14-15 October 2025</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="mr-2" />
