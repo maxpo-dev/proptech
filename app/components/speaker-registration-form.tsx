@@ -16,7 +16,7 @@ export function SimpleSpeakerRegistrationForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target
     setFormData((prev) => ({
       ...prev,
@@ -29,7 +29,7 @@ export function SimpleSpeakerRegistrationForm() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch("/api/submit-registration", {
+      const response = await fetch("/api/speakerreg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export function SimpleSpeakerRegistrationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto">
+    <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto py-10">
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700">
           Full Name *
@@ -71,9 +71,10 @@ export function SimpleSpeakerRegistrationForm() {
           id="name"
           name="name"
           required
+          placeholder="Enter your full name"
           value={formData.name}
           onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 py-3"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
         />
       </div>
 
@@ -86,9 +87,10 @@ export function SimpleSpeakerRegistrationForm() {
           id="email"
           name="email"
           required
+          placeholder="Enter your work email"
           value={formData.email}
           onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 py-3"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
         />
       </div>
 
@@ -96,23 +98,16 @@ export function SimpleSpeakerRegistrationForm() {
         <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
           Phone *
         </label>
-        <div className="flex">
-          <select
-            name="countryCode"
-            className="mt-1 block w-20 rounded-l-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 py-3"
-          >
-            <option value="+44">+44</option>
-          </select>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            value={formData.phone}
-            onChange={handleChange}
-            className="mt-1 block w-full rounded-r-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 py-3"
-          />
-        </div>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          placeholder="Enter your phone number"
+          value={formData.phone}
+          onChange={handleChange}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
+        />
       </div>
 
       <div>
@@ -124,31 +119,11 @@ export function SimpleSpeakerRegistrationForm() {
           id="companyName"
           name="companyName"
           required
+          placeholder="Enter your company name"
           value={formData.companyName}
           onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 py-3"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
         />
-      </div>
-
-      <div>
-        <label htmlFor="industry" className="block text-sm font-medium text-gray-700">
-          Industry *
-        </label>
-        <select
-          id="industry"
-          name="industry"
-          required
-          value={formData.industry}
-          onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 py-3"
-        >
-          <option value="">Select Industry</option>
-          <option value="technology">Technology</option>
-          <option value="finance">Finance</option>
-          <option value="healthcare">Healthcare</option>
-          <option value="education">Education</option>
-          <option value="other">Other</option>
-        </select>
       </div>
 
       <div>
@@ -160,9 +135,10 @@ export function SimpleSpeakerRegistrationForm() {
           id="jobTitle"
           name="jobTitle"
           required
+          placeholder="Enter your job title"
           value={formData.jobTitle}
           onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 py-3"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
         />
       </div>
 
@@ -174,9 +150,10 @@ export function SimpleSpeakerRegistrationForm() {
           id="message"
           name="message"
           rows={3}
+          placeholder="Enter your message (optional)"
           value={formData.message}
           onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
         ></textarea>
       </div>
 
@@ -191,7 +168,7 @@ export function SimpleSpeakerRegistrationForm() {
           className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
         />
         <label htmlFor="termsAccepted" className="ml-2 block text-sm text-gray-900">
-          I confirm that I have read, understand and accept the Terms and Conditions and Privacy Policy
+          I confirm that I have read, understand and accept the Terms and Conditions and <a className="text-blue-400 underline" href="/privacypolicy">Privacy Policy</a>
         </label>
       </div>
 
@@ -207,4 +184,3 @@ export function SimpleSpeakerRegistrationForm() {
     </form>
   )
 }
-
