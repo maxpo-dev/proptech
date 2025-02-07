@@ -1,12 +1,24 @@
-'use client'
+"use client"
 
-import React, { useState } from 'react'
-import { Mail, Phone, MapPin } from 'lucide-react'
-import Image from 'next/image'
-import Logo from '@/app/images/logo_blue.png'
-// import CountryCodeDropdown from '@/app/components/CountryCodeDropdown'
+import type React from "react"
+import { useState } from "react"
+import { Mail, Phone, MapPin } from "lucide-react"
 
-const InputField = ({ label, id, type = 'text', placeholder, value, onChange }: { label: string; id: string; type?: string; placeholder: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void }) => (
+const InputField = ({
+  label,
+  id,
+  type = "text",
+  placeholder,
+  value,
+  onChange,
+}: {
+  label: string
+  id: string
+  type?: string
+  placeholder: string
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}) => (
   <div className="mb-4">
     <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">
       {label}
@@ -26,42 +38,58 @@ const InputField = ({ label, id, type = 'text', placeholder, value, onChange }: 
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
-    name: '',
-    jobTitle: '',
-    companyName: '',
-    email: '',
-    phone: '',
-    // countryCode: '+971', // Default country code
-    country: '',
-    message: '',
+    name: "",
+    jobTitle: "",
+    companyName: "",
+    email: "",
+    phone: "",
+    country: "",
+    message: "",
   })
+
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [submitError, setSubmitError] = useState('')
+  const [successMessage, setSuccessMessage] = useState("")
+  const [submitError, setSubmitError] = useState("")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData(prevData => ({ ...prevData, [name]: value }))
+    setFormData((prevData) => ({ ...prevData, [name]: value }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const response = await fetch("/api/mailcontact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       })
+
       const data = await response.json()
-      if (data.success) {
+
+      if (response.ok) {
         setIsSubmitted(true)
-        setSubmitError('')
+        setSuccessMessage(data.message || "Booking submitted successfully and email sent!")
+        setSubmitError("")
+
+        // Clear form data after successful submission
+        setFormData({
+          name: "",
+          jobTitle: "",
+          companyName: "",
+          email: "",
+          phone: "",
+          country: "",
+          message: "",
+        })
       } else {
-        setSubmitError(data.message || 'Form submission failed. Please try again.')
+        setSubmitError(data.message || "Form submission failed. Please try again.")
+        setSuccessMessage("")
       }
     } catch (error) {
-      setSubmitError((error as Error).message || 'An error occurred. Please try again.')
+      setSubmitError("An error occurred. Please try again.")
+      setSuccessMessage("")
     }
   }
 
@@ -69,16 +97,15 @@ export default function ContactUs() {
     <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-            Contact Us
-          </h1>
+          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Contact Us</h1>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions about the International Proptech Investment Expo? We&apos;re here to help.
+            Have questions about the International Proptech Investment Expo? We're here to help.
           </p>
         </div>
 
         <div className="bg-white shadow-xl rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
+            {/* Contact Info Section */}
             <div className="p-8 bg-blue-600 text-white">
               <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
               <div className="space-y-4">
@@ -105,37 +132,61 @@ export default function ContactUs() {
                   </div>
                 </div>
               </div>
-              <div className="mt-8 pt-40  rounded-lg">
-                <h3 className="text-lg text-center font-semibold text-white pb-8 ">
-                  Organized by Maxpo Exhibitions
-                </h3>
-                <div className=" h-32 relative mx-auto p-4">
-                  <Image
-                    src={Logo}
-                    alt="Maxpo Exhibitions Logo"
-                    layout="fill"
-                    objectFit="contain"
-                    className='bg-blue-950 px-4'
-                    priority
-                  />
-                </div>
-              </div>
             </div>
 
+            {/* Contact Form Section */}
             <div className="p-8">
               {isSubmitted ? (
-                <div className="text-center" aria-live="polite">
+                <div className="text-center">
                   <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
-                  <p className="text-gray-600">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
+                  <p className="text-gray-600">Your message has been sent successfully. We'll get back to you soon.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 text-black">
-                  <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
-                  <InputField label="Job Title" id="jobTitle" placeholder="Your job title" value={formData.jobTitle} onChange={handleChange} />
-                  <InputField label="Company Name" id="companyName" placeholder="Your company name" value={formData.companyName} onChange={handleChange} />
-                  <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
-                  <InputField label="Phone" id="phone" type="phone" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
-                  <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
+                  <InputField
+                    label="Name"
+                    id="name"
+                    placeholder="Your full name"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                  <InputField
+                    label="Job Title"
+                    id="jobTitle"
+                    placeholder="Your job title"
+                    value={formData.jobTitle}
+                    onChange={handleChange}
+                  />
+                  <InputField
+                    label="Company Name"
+                    id="companyName"
+                    placeholder="Your company name"
+                    value={formData.companyName}
+                    onChange={handleChange}
+                  />
+                  <InputField
+                    label="Email"
+                    id="email"
+                    type="email"
+                    placeholder="Your email address"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  <InputField
+                    label="Phone"
+                    id="phone"
+                    type="tel"
+                    placeholder="Your phone number"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                  <InputField
+                    label="Country"
+                    id="country"
+                    placeholder="Your country"
+                    value={formData.country}
+                    onChange={handleChange}
+                  />
                   <div className="mb-4">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Message
@@ -159,7 +210,8 @@ export default function ContactUs() {
                   </button>
                 </form>
               )}
-              {submitError && <p className="mt-4 text-red-600" aria-live="assertive">{submitError}</p>}
+              {successMessage && <p className="mt-4 text-green-600">{successMessage}</p>}
+              {submitError && <p className="mt-4 text-red-600">{submitError}</p>}
             </div>
           </div>
         </div>
@@ -167,3 +219,4 @@ export default function ContactUs() {
     </div>
   )
 }
+
