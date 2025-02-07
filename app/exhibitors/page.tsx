@@ -1,5 +1,5 @@
 // import { SimpleSpeakerRegistrationForm } from "@/app/components/speaker-registration-form"
-import { ExhibitorRegistrationForm } from "../components/exhibitor-registration-form"
+import ExhibitorRegistrationForm  from "../components/exhibitor-registration-form"
 
 export default function Home() {
   return (
