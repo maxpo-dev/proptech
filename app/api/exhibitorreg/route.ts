@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "info@futureproptechsummit.com, didital.maxpo@gmail.com", // Replace with your recipient email
+      to: "info@futureproptechsummit.com, digital.maxpo@gmail.com", // Replace with your recipient email
       subject: "New Exhibitor Registration for fps",
       html: `
         <h3>New Exhibitor Registration</h3>

@@ -60,24 +60,24 @@ export default function Home() {
 <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
     {[
-      { href: "/register", bg: "bg-blue-600", title: "Book your tickets", image: Ticket },
+      { href: "/register", bg: "bg-black", title: "Book your tickets", image: Ticket },
       { href: "/speakers", bg: "bg-green-600", title: "Speakers", image: Speakers },
       { href: "/exhibitors", bg: "bg-red-600", title: "Exhibitors", image: Exhibitors },
       { href: "/register", bg: "bg-purple-600", title: "Get In Touch", image: Getintech },
     ].map((item, index) => (
       <Link key={index} href={item.href} className="block group">
-        <div
-          className={`${item.bg} relative h-72 sm:h-80 rounded-xl overflow-hidden transition-transform transform group-hover:scale-105 shadow-lg`}
-        >
-          <Image
-            src={item.image}
-            alt={item.title}
-            layout="fill"
-            objectFit="cover"
-            className="transition-opacity group-hover:opacity-80"
-          />
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <span className="text-white text-xl sm:text-2xl lg:text-3xl font-semibold">
+        <div className="rounded-xl overflow-hidden shadow-lg transition-transform transform group-hover:scale-105">
+          <div className={`relative h-72 sm:h-80 ${item.bg}`}>
+            <Image
+              src={item.image}
+              alt={item.title}
+              layout="fill"
+              objectFit="cover"
+              className="bg-black opacity-90"
+            />
+          </div>
+          <div className="bg-blue-950 text-center py-4">
+            <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
               {item.title}
             </span>
           </div>
@@ -86,6 +86,7 @@ export default function Home() {
     ))}
   </div>
 </section>
+
 
 
 
