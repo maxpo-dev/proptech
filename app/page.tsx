@@ -31,7 +31,7 @@ export default function Home() {
   <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
     <div className="lg:w-1/2">
       <h2 className="text-3xl font-bold text-blue-900 mb-4">
-        Welcome To The Future Of Real Estate In Dubai: Future Proptech Summit.
+        Welcome To The Future Of Real Estate In Dubai: Future Proptech Summit
       </h2>
       <div className="text-lg text-gray-700">
         <p>
