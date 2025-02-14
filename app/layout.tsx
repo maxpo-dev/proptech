@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Future Proptech Summit',
-  description: 'Join us in Dubai, May 2025 for the latest in Proptech and Fractional Ownership',
+  description: 'Join us in Dubai, May 2025 for the latest in Proptech and Fractional Ownership.',
 }
 
 export default function RootLayout({
