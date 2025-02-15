@@ -12,23 +12,24 @@ const navItems = [
   { name: 'About', href: '/about' },
   { 
     name: 'Conference', 
-    href: '#',
-    dropdown: [
-      { name: 'About the Conference', href: '/conference/about' },
-      // { name: 'Participants', href: '/conference/participants' },
-      // { name: 'Speakers', href: '/conference/speakers' },
-      // { name: 'Apply for Speaking', href: '/conference/apply' },
-    ]
+    href:'/conference/about',
+    // href: '#',
+    // dropdown: [
+    //   { name: 'About the Conference', href: '/conference/about' },
+    //   // { name: 'Participants', href: '/conference/participants' },
+    //   // { name: 'Speakers', href: '/conference/speakers' },
+    //   // { name: 'Apply for Speaking', href: '/conference/apply' },
+    // ]
   },
   { 
     name: 'Exhibition', 
-    href: '#',
-    dropdown: [
-      { name: 'About the Exhibition', href: '/exhibition/about' },
-      // { name: 'Exhibitors', href: '/exhibition/exhibitors' },
-      // { name: 'Information Brochure', href: '/exhibition/brochure' },
-      // { name: 'Exhibit at #pts25', href: '/exhibition/exhibit' },
-    ]
+    href: '/exhibition/about',
+    // dropdown: [
+    //   { name: 'About the Exhibition', href: '/exhibition/about' },
+    //   // { name: 'Exhibitors', href: '/exhibition/exhibitors' },
+    //   // { name: 'Information Brochure', href: '/exhibition/brochure' },
+    //   // { name: 'Exhibit at #pts25', href: '/exhibition/exhibit' },
+    // ]
   },
   // { 
   //   name: 'Partners', 
