@@ -28,12 +28,12 @@ export default function ConferenceThemes() {
               className="rounded-lg shadow-lg"
             /> */}
 
-<Image
-  src={Confimg}
-  alt="Conference themes illustration"
-  fill
-  className="rounded-lg shadow-lg object-cover"
-/>
+            <Image
+               src={Confimg}
+               alt="Conference themes illustration"
+               fill
+               className="rounded-lg shadow-lg object-cover"
+            />
 
 
           </div>
