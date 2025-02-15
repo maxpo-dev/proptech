@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
+      {/* <head> */}
       <head>
         <Script
           id="fb-pixel"
@@ -58,7 +58,7 @@ fbq('track', 'PageView');
             gtag('config', 'G-GV1DBDBMMV');
           `}
         </Script>
-      </head>
+      {/* </head> */}
       </head>
       <body className={`${inter.className}`}>
       <Header />

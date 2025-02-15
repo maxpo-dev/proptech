@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import bg from '@/app/images/PP 2 (1).png';
 import '@/app/styles/animations.css';
+import Link from 'next/link';
 // import ParticlesComponent from './Particles';
 
 export default function AboutHeroSection() {
@@ -34,15 +35,19 @@ export default function AboutHeroSection() {
       {contentVisible && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent  p-10">
           {/* Heading */}
-          <h2 className="text-4xl sm:text-5xl font-semibold  mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
+          <h1 className="text-4xl sm:text-5xl font-semibold  mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
             About
-          </h2>
+          </h1>
 
           {/* Additional info section */}
           <div className="text-start max-w-2xl rounded-lg shadow-md text-white">
-            <p>
+            {/* <p>
             The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology. If you are passionate about innovation in the real estate and property sectors, this event is tailored for you.
-            </p>
+            </p> */}
+
+            <p>
+  The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and <Link href="/investor-pitch" className="text-blue-400 underline hover:text-blue-600 transition">invest</Link> in the future of real estate technology. If you are passionate about innovation in the real estate and property sectors, this event is tailored for you.
+</p>
           </div>
         </div>
       )}
