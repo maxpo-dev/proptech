@@ -17,14 +17,23 @@ export default function AboutHeroSection() {
 
   return (
     <section className="text-white min-h-screen flex items-center relative overflow-hidden">
-      <Image
+      {/* <Image
         src={bg}
         alt="Background"
         fill
         quality={100}
         className="bg-black bg-opacity-90 animate-zoomInImage"
         priority
-      />
+      /> */}
+      <Image
+  src={bg}
+  alt="Background"
+  fill
+  quality={100}
+  className="bg-black bg-opacity-90 animate-zoomInImage"
+  priority
+/>
+
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Particles component */}

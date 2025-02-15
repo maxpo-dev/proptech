@@ -77,9 +77,13 @@ export default function Home() {
             />
           </div>
           <div className="bg-blue-950 text-center py-4">
-            <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
+            {/* <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
               {item.title}
-            </span>
+            </span> */}
+            <span className="text-xl font-semibold text-white">
+  {item.title}
+</span>
+
           </div>
         </div>
       </Link>

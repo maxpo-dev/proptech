@@ -32,7 +32,7 @@ export default function HeroSection() {
       
       {contentVisible && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-30 animate-fadeInContent">
-          <div className="relative flex justify-center">
+          {/* <div className="relative flex justify-center">
             <Image
               src={logo1}
               alt="Proptech Expo 2025 Logo"
@@ -40,7 +40,17 @@ export default function HeroSection() {
               height={50}
               className="mx-auto"
             />
-          </div>
+          </div> */}
+
+          <div className="relative w-[150px] h-[50px] mx-auto">
+  <Image
+    src={logo1}
+    alt="Proptech Expo 2025 Logo"
+    fill
+    className="object-contain"
+    sizes="150px"
+  />
+</div>
           <div className="max-w-3xl mx-auto text-center mt-2">
             <h1 className="text-4xl sm:text-5xl font-semibold font-serif mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
             Future Proptech Summit 2025 
