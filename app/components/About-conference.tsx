@@ -7,13 +7,21 @@ export default function AboutConferenceContent() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-center mb-8">About the Future PropTech Summit</h1>
         <div className="mb-12 relative w-full h-[300px] md:h-[400px]">
-          <Image
+           <Image
+            src={MainImg}
+             alt="Future PropTech Summit"
+              fill
+               className="rounded-lg shadow-lg object-cover"
+           />
+
+          {/* <Image
             src={MainImg}
             alt="Future PropTech Summit"
             layout="fill"
             objectFit="cover"
             className="rounded-lg shadow-lg"
-          />
+          /> */}
+          
         </div>
         <div className=" mx-auto space-y-6 text-lg">
           <p>

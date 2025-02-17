@@ -20,13 +20,22 @@ export default function ConferenceThemes() {
         <h2 className="text-3xl font-bold text-center mb-8">Conference Themes</h2>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="relative h-[400px] md:h-[600px]">
-            <Image
+            {/* <Image
               src={Confimg}
               alt="Conference themes illustration"
               layout="fill"
               objectFit="cover"
               className="rounded-lg shadow-lg"
+            /> */}
+
+            <Image
+               src={Confimg}
+               alt="Conference themes illustration"
+               fill
+               className="rounded-lg shadow-lg object-cover"
             />
+
+
           </div>
           <div>
             <ul className="space-y-4">
