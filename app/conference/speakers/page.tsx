@@ -15,7 +15,7 @@ export default function SpeakersPage() {
             jobTitle="Group CEO"
             companyName="BNW Developments"
             linkedIn="https://www.linkedin.com/in/amitpuri75"
-            speakerImage="/image/speakers/AmitPuri.jpg"
+            speakerImage="/image/speakers/AmitPuri.JPG"
             companyLogo="/image/speakersCompanyLogo/BnW Developments - Stack Logo.png"
           />
 
