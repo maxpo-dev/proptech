@@ -45,7 +45,7 @@ export default function Exhibitors2025() {
                 Visit Website
               </a>
               <a
-                href="https://www.linkedin.com/company/smartvizx/"
+                href="https://www.linkedin.com/company/smartvizs-pvt-ltd-/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-100 transition"
