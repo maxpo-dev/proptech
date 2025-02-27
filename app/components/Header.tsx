@@ -31,15 +31,21 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState<string | null>(null);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdown when clicking outside (desktop only)
+  // Ref for detecting clicks outside the dropdown
+  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      const isClickInsideAnyDropdown = Object.values(dropdownRefs.current).some(
+        (ref) => ref && ref.contains(event.target as Node)
+      );
+
+      if (!isClickInsideAnyDropdown) {
         setDesktopDropdownOpen(null);
       }
     }
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -61,12 +67,19 @@ export default function Header() {
           <div className="hidden md:flex space-x-6">
             {navItems.map((item) =>
               item.dropdown ? (
-                <div key={item.name} className="relative" ref={dropdownRef}>
+                <div
+                  key={item.name}
+                  className="relative"
+                  ref={(el) => {
+                    if (el) dropdownRefs.current[item.name] = el;
+                  }}
+                >
                   <button
                     className="text-white px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1"
-                    onClick={() =>
-                      setDesktopDropdownOpen(desktopDropdownOpen === item.name ? null : item.name)
-                    }
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent immediate closing
+                      setDesktopDropdownOpen(desktopDropdownOpen === item.name ? null : item.name);
+                    }}
                   >
                     {item.name} <ChevronDown className="h-4 w-4" />
                   </button>
@@ -77,7 +90,7 @@ export default function Header() {
                           key={subItem.name}
                           href={subItem.href}
                           className="block px-4 py-2 text-gray-700 hover:bg-blue-100"
-                          onClick={() => setDesktopDropdownOpen(null)}
+                          onClick={() => setDesktopDropdownOpen(null)} // Close dropdown after selection
                         >
                           {subItem.name}
                         </Link>
