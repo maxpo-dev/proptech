@@ -17,6 +17,7 @@ export default function SpeakersPage() {
             linkedIn="https://www.linkedin.com/in/amitpuri75"
             speakerImage="/image/speakers/AmitPuri.JPG"
             companyLogo="/image/speakersCompanyLogo/BnW Developments - Stack Logo.png"
+            fullBio="Qualified as an Architect MBA, Amit has been working to contribute to the global real estate sector for two and a half decades. He has spent a decade in the region curating stories for mixed-use and retail assets. He believes in focusing on growing value through his varied expertise and network. He is currently the CEO at BNW Developments, where he sets direction with the Board to achieve profitable growth for his team of 300+ professionals. He oversees the function of sales, marketing, project design and delivery, HR, legal, technology, property management and experiential customer service. He is helping expand the company's market presence as well as share in the luxury branded residences domain and fostering partnerships with key stakeholders."
           />
 
           {/* Sam Achampong */}
@@ -27,7 +28,7 @@ export default function SpeakersPage() {
             linkedIn="https://www.linkedin.com/in/samachampong/"
             speakerImage="/image/speakers/Sam Achampong photo pic.jpg"
             companyLogo="/image/speakersCompanyLogo/CIPS_Logo_Blue_RGB.jpg"
-            biography="Sam is a senior executive with extensive experience across the Europe, Middle East and Africa (EMEA) region. He has held senior roles at Land Securities, Abu Dhabi Municipality, and MTN. He is an alumnus of the University of Oxford Business School and holds multiple degrees, including an MSc in International Procurement from the University of South Wales. Sam is a Fellow of the Chartered Institute of Procurement & Supply (CIPS) and a strong advocate for professional standards, diversity & inclusion, ESG, and sustainable supply chain practices."
+            fullBio="Sam is a senior executive with extensive experience across the Europe, Middle East and Africa (EMEA) region. He has held senior roles at Land Securities, Abu Dhabi Municipality, and MTN. He is an alumnus of the University of Oxford Business School and holds multiple degrees, including an MSc in International Procurement from the University of South Wales. Sam is a Fellow of the Chartered Institute of Procurement & Supply (CIPS) and a strong advocate for professional standards, diversity & inclusion, ESG, and sustainable supply chain practices."
           />
         </div>
       </div>
