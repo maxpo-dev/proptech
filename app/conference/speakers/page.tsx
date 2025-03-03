@@ -30,6 +30,17 @@ export default function SpeakersPage() {
             companyLogo="/image/speakersCompanyLogo/CIPS_Logo_Blue_RGB.jpg"
             fullBio="Sam is a senior executive with extensive experience across the Europe, Middle East and Africa (EMEA) region. He has held senior roles at Land Securities, Abu Dhabi Municipality, and MTN. He is an alumnus of the University of Oxford Business School and holds multiple degrees, including an MSc in International Procurement from the University of South Wales. Sam is a Fellow of the Chartered Institute of Procurement & Supply (CIPS) and a strong advocate for professional standards, diversity & inclusion, ESG, and sustainable supply chain practices."
           />
+
+          <SpeakerCard
+            name="Patrick Nessenthaler"
+            jobTitle="Professor of Real Estate Finance & Real Estate Program Director"
+            companyName="University of Louisville College of Business"
+            linkedIn=" https://www.linkedin.com/in/patricknessenthaler/"
+            speakerImage="/image/speakers/Primary Headshot (High Resolution).jpg"
+            companyLogo="/image/speakersCompanyLogo/U of L College of Business Logo.png"
+            fullBio="Patrick Nessenthaler is a seasoned real estate investment strategist with two decades of experience in the commercial real estate industry. He has successfully sourced, negotiated, and executed over $4 billion in complex debt and equity transactions across various asset classes.Patrick is a full-time professor of Real Estate Finance at the University of Louisville, where he is spearheading the establishment of the university’s first Center for Real Estate, dedicated to expanding education and research in the field. He also serves on the Advisory Board of the Kelley School of Business’ Center for Real Estate Studies. He also serves as a Partner & Co-Founder of CREnetics where Patrick leads the integration of innovative technology and non-traditional data to provide AI-powered insights, reshaping decision-making in the commercial real estate market. 
+Patrick is a sought-after speaker and educator, having lectured at leading universities and presented at numerous industry forums. Since 2017, he has organized CFA Society New York’s Annual Real Estate Outlook events and currently serves as Vice Chair of its Alternative Investments Group."
+          />
         </div>
       </div>
     </div>
