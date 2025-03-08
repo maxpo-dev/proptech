@@ -3,7 +3,7 @@ import Script from 'next/script'
 export default function FacebookComponent() {
   return (
     <div>
-      {/* Other component code */}
+      {/* Other component code can go here */}
       
       {/* Facebook Pixel Embed Code */}
       <Script id="facebook-pixel" strategy="afterInteractive">
@@ -20,17 +20,19 @@ export default function FacebookComponent() {
           fbq('track', 'PageView');
         `}
       </Script>
+      
+      {/* Fallback for users with JavaScript disabled */}
       <noscript>
-        <img 
-          height="1" 
-          width="1" 
+        <img
+          height="1"
+          width="1"
           style={{ display: 'none' }}
           src="https://www.facebook.com/tr?id=866319539007689&ev=PageView&noscript=1"
           alt=""
         />
       </noscript>
 
-      {/* Other component code */}
+      {/* Other component code can follow */}
     </div>
   )
 }
