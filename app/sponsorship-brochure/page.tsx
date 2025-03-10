@@ -8,7 +8,7 @@ const SponsorshipBrochure: React.FC = () => {
     <div
       style={{
         maxWidth: '600px',
-        margin: 'calc(2rem + 80px) auto 0', // Extra top margin for the fixed navbar
+        margin: 'calc(2rem + 80px) auto 0', // Extra top margin for the fixed navbar....
         padding: '2rem',
         textAlign: 'center',
       }}
