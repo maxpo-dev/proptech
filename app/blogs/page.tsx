@@ -13,7 +13,7 @@ export default function BlogsPage() {
     <div className="container mx-auto px-4 py-24 text-center flex flex-col items-center">
       {/* <h1 className="text-4xl font-bold mb-8 mt-16">Future PropTech Blogs</h1> */}
       
-      {/* Combined Image and Content in Centered Card */}
+      {/* Combined Image and Content in Centered Card... */}
       <article 
         className="bg-white shadow-lg rounded-lg p-4 w-1/2 md:w-1/3 text-center flex flex-col items-center cursor-pointer"
         onClick={navigateToDetails}
