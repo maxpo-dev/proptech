@@ -24,6 +24,7 @@ const navItems = [
     ],
   },
   { name: 'Investor Pitch', href: '/investor-pitch' },
+  { name: 'Blogs', href: '/blogs' },
   { name: 'Get in Touch', href: '/register' },
 ];
 
