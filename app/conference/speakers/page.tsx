@@ -52,6 +52,16 @@ export default function SpeakersPage() {
             companyLogo="/image/speakersCompanyLogo/RSG_EN_RGB_HORIZONTAL.png"
             fullBio="As a seasoned real estate development professional, Min Lee brings extensive experience managing projects of varying scales, from micro-developments to Giga-projects. His expertise spans across diverse markets and regions, including the UK, UAE, Korea, China, Qatar, Morocco, and KSA. Min Lee specializes in the development of hospitality and residential assets in major urban centers. He is recognized as a strategic thinker with a strong track record of successful project delivery. His ability to lead and inspire teams has consistently driven project success and excellence. His professional journey is marked by a commitment to quality, innovation, and sustainable development practices. In his current role as Sr. Director of Development at RSG, Min Lee leverages integrated development management and lean design & construction methodologies to optimize project outcomes. Additionally, Min Lee is deeply interested in exploring the applications of AI and ML in real estate to drive efficiency and innovation in the industry."
           />
+
+<SpeakerCard
+            name="Moataz Mosallam"
+            jobTitle="Partner- Head of Project & Development Services"
+            companyName="Knight Frank MENA"
+            linkedIn="https://www.linkedin.com/in/moataz-a-mosallam-729b2172/"
+            speakerImage="/image/speakers/PHOTO-2025-02-20-17-48-34.jpg"
+            companyLogo="/image/speakersCompanyLogo/knightfranklogo.svg"
+            fullBio="Moataz Heads our Project & Development services  team for UAE & Egypt, A construction spearhead, development and project management professional with over 15 years of experience in the MENA region of managing different kinds of developments, Programs and Projects for flagship clients. An Architectural Engineer by Background, Master's holder in Business administration (MBA) from University of Wales, (PMP) Accredited and Chartered Construction Manager MCIOB of the CIOB (UK) in addition to Harvard business school diploma in Leadership and management strategies."
+          />
         </div>
       </div>
     </div>
