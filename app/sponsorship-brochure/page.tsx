@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import sponsorImg1 from '@/public/image/brochure/Sponsorship Brochure_Updated-images-0.jpg';
-import sponsorImg2 from '@/public/image/brochure/Sponsorship Brochure_Updated-images-1.jpg';
+import sponsorImg1 from '@/public/image/brochure/sponcership brochure-01 (1).jpg';
+import sponsorImg2 from '@/public/image/brochure/sponcership brochure-02 (1).jpg';
 
 const SponsorshipBrochure: React.FC = () => {
   return (
