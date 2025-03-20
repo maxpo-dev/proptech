@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Logo from '@/app/images/PROPTECH_logo_alex_logo-3_alex_logo-3.png';
-import logo2 from "@/public/image/gulf news w.png"
+import logo2 from "@/public/image/gulfnews logo white logo 2.png"
 
 // Updated navItems array: After "Investor Pitch", we've added a "Partners" item with a dropdown containing "Media Partners".
 const navItems = [
@@ -79,12 +79,14 @@ export default function Header() {
               <Image
                 src={logo2}
                 alt="Proptech Expo 2025 Logo"
-                width={150}
+                width={180}
                 height={30}
+                className='ml-10'
               />
               <span className="sr-only">Proptech Expo 2025</span>
             </Link>
           </div>
+          
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
