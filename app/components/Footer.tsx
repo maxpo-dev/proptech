@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react'
+import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin, Youtube } from 'lucide-react'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -52,8 +52,12 @@ export default function Footer() {
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Instagram size={20} />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <Youtube size={20} />
                 <span className="sr-only">Instagram</span>
               </a>
             </div>
