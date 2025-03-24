@@ -6,7 +6,8 @@ import { CalendarDays, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import '@/app/styles/animations.css';
 import logo1 from '@/app/images/PROPTECH_logo_alex_logo-3_alex_logo-3.png';
-// import Video from '@/public/video/2x.mp4';
+// import logo2 from '@/public/image/gulf news w.png';
+import logo2 from '@/public/image/gulfnews logo white logo 2.png';
 
 export default function HeroSection() {
   const [contentVisible, setContentVisible] = useState(false);
@@ -32,28 +33,28 @@ export default function HeroSection() {
       
       {contentVisible && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-30 animate-fadeInContent">
-          {/* <div className="relative flex justify-center">
+          <div className="relative w-[150px] h-[50px] mx-auto mb-2">
+            <Image
+              src={logo2}
+              alt="Gulf News Logo"
+              fill
+              className="object-contain"
+              sizes="150px"
+            />
+          </div>
+          <div className="relative w-[150px] h-[50px] mx-auto">
             <Image
               src={logo1}
               alt="Proptech Expo 2025 Logo"
-              width={150}
-              height={50}
-              className="mx-auto"
+              fill
+              className="object-contain"
+              sizes="150px"
             />
-          </div> */}
-
-          <div className="relative w-[150px] h-[50px] mx-auto">
-  <Image
-    src={logo1}
-    alt="Proptech Expo 2025 Logo"
-    fill
-    className="object-contain"
-    sizes="150px"
-  />
-</div>
+          </div>
+          
           <div className="max-w-3xl mx-auto text-center mt-2">
             <h1 className="text-4xl sm:text-5xl font-semibold font-serif mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
-            Future Proptech Summit 2025 
+              Future Proptech Summit 2025 
             </h1>
             <p
               className="text-xl mb-8 text-transparent bg-clip-text bg-gradient-to-r font-extrabold"
@@ -82,4 +83,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
