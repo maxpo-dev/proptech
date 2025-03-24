@@ -19,7 +19,7 @@ export default function BlogsPage() {
         onClick={navigateToDetails}
       >
         <img 
-          src="/image/blogs/Future PropTech Summit 2025.jpeg" 
+          src="/image/blogs/1654x768 (1).jpg" 
           alt="Future of Real Estate in Dubai" 
           className="w-full h-auto rounded-lg shadow-md mb-4"
         />
@@ -33,6 +33,7 @@ export default function BlogsPage() {
           As a global leader in real estate innovation, Dubai is at the forefront of this transformation, championing initiatives 
           like fractional ownership and digital property transactions.
         </p>
+        <p className="text-gray-400 text-right mt-2">by Askar Ali</p>
         <button 
           className="mt-4 text-blue-500 hover:underline focus:outline-none" 
           onClick={(e) => {
