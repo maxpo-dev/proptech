@@ -62,6 +62,17 @@ export default function SpeakersPage() {
             companyLogo="/image/speakersCompanyLogo/knightfranklogo.svg"
             fullBio="Moataz Heads our Project & Development services  team for UAE & Egypt, A construction spearhead, development and project management professional with over 15 years of experience in the MENA region of managing different kinds of developments, Programs and Projects for flagship clients. An Architectural Engineer by Background, Master's holder in Business administration (MBA) from University of Wales, (PMP) Accredited and Chartered Construction Manager MCIOB of the CIOB (UK) in addition to Harvard business school diploma in Leadership and management strategies."
           />
+
+           {/* Syed Mazhar */}
+           <SpeakerCard
+            name="Syed Mazhar"
+            jobTitle="Director, HSSE Department"
+            companyName="AlBawani"
+            linkedIn=""
+            speakerImage="/image/speakers/Syed Mazhar.jpeg"
+            companyLogo="/image/speakersCompanyLogo/GIA-Gold-Sponsor-Al-Bawani.png"
+            fullBio="Syed Mazhar is Director, HSSE Department at AlBawani, the appointed Chair for IOSH UAE/KSA Branch, a Chartered Fellow Safety Professional and Authorized OHSE Trainer & Assessor for IOSH and NVQ Qualifications.He holds BBA, BSc in fire and safety engineering with professional OHSE Qualifications such as NVQ, NEBOSH, ISOs, IOSH, NASP and OSHA. He has over 18 years of experience in the field of HSE and previously worked with world well known organizations in the middle east."
+          />
         </div>
       </div>
     </div>
