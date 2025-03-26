@@ -73,6 +73,30 @@ export default function SpeakersPage() {
             companyLogo="/image/speakersCompanyLogo/GIA-Gold-Sponsor-Al-Bawani.png"
             fullBio="Syed Mazhar is Director, HSSE Department at AlBawani, the appointed Chair for IOSH UAE/KSA Branch, a Chartered Fellow Safety Professional and Authorized OHSE Trainer & Assessor for IOSH and NVQ Qualifications.He holds BBA, BSc in fire and safety engineering with professional OHSE Qualifications such as NVQ, NEBOSH, ISOs, IOSH, NASP and OSHA. He has over 18 years of experience in the field of HSE and previously worked with world well known organizations in the middle east."
           />
+
+           {/* Boris Segal */}
+           <SpeakerCard
+            name="Boris Segal"
+            jobTitle="Director of Strategic Digital Partnerships"
+            companyName="CBRE"
+            linkedIn="https://www.linkedin.com/in/segalboris/"
+            speakerImage="/image/speakers/Boris Segal-21-Largess.jpg"
+            companyLogo="/image/speakersCompanyLogo/CBRE_white.png"
+            fullBio="Boris Segal is a dynamic technology leader with a proven track record of driving
+innovation and delivering results in fast-paced environments.
+With over 25 years of experience, Boris has consistently been at the forefront of
+technological advancements, leading teams and managing critical business projects.
+Currently, Boris serves as the Director of Strategic Digital Partnerships at CBRE, where
+he oversees the company's relationships with partner venture capital firms and Proptech
+startups. He is responsible for piloting and implementing innovative Proptech solutions.
+His expertise includes change management and enhancing business models through
+technologies such as IoT, AR/VR, and AI.
+Before joining CBRE, Boris held leadership positions in startups and telecom
+companies, where he led technology integrations that improved operational efficiency
+and enhanced client experiences.
+Boris holds a Master of Science degree in Information Management from City University
+London and an MBA from Cass Business School."
+          />
         </div>
       </div>
     </div>
