@@ -4,7 +4,7 @@ export default function BlogDetailsPage() {
       {/* Separate div for Full-width Image with 80% Viewport Height */}
       <div className="w-full h-[88vh]">
         <img 
-          src="/image/blogs/1654x768 (1).jpg" 
+          src="/image/blogs/Future PropTech Summit 2025 Transforming Real Estate with AI and Innovation.jpg" 
           alt="Future PropTech Summit 2025" 
           className="w-full h-full object-cover"
         />
