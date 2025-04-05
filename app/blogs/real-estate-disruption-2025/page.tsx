@@ -1,14 +1,18 @@
 "use client";
 
+import Image from "next/image";
+
 export default function TechDisruptionBlogPage() {
   return (
     <div className="w-full px-4 py-24 text-center flex flex-col items-center">
       {/* Header image */}
-      <div className="w-full h-[88vh]">
-        <img
+      <div className="w-full h-[88vh] relative">
+        <Image
           src="/image/blogs/How Tech is Disrupting the Real Estate Market in 2025.jpg"
           alt="Tech disrupting real estate in 2025"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
       </div>
 
@@ -95,11 +99,15 @@ export default function TechDisruptionBlogPage() {
 
         <p className="text-gray-400 text-right mt-4">by Nazish Shah</p>
 
-        <img
-          src="/image/blogs/futureproptechblogfooter.jpg"
-          alt="Future PropTech Footer"
-          className="w-full h-auto rounded-lg shadow-md mt-6"
-        />
+        <div className="w-full mt-6 relative">
+          <Image
+            src="/image/blogs/futureproptechblogfooter.jpg"
+            alt="Future PropTech Footer"
+            width={800}
+            height={400}
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
       </article>
     </div>
   );

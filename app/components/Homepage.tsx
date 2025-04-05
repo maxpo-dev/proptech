@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const HomePage = () => {
   return (
@@ -32,7 +33,6 @@ const HomePage = () => {
         <div className="container mx-auto">
           <h3 className="text-3xl font-semibold text-center mb-8">Key Highlights</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Example Highlight Card */}
             <div className="bg-blue-50 p-6 rounded-lg shadow-md text-center">
               <h4 className="text-xl font-bold mb-2">Cutting-edge Tech Exhibits</h4>
               <p className="text-gray-600">
@@ -65,15 +65,33 @@ const HomePage = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <img src="/icons/iot-icon.png" alt="IoT" className="w-12 h-12 mb-4" />
+              <Image
+                src="/icons/iot-icon.png"
+                alt="IoT"
+                width={48}
+                height={48}
+                className="mb-4"
+              />
               <p className="text-xl font-semibold">IoT Integration</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="/icons/ai-icon.png" alt="AI" className="w-12 h-12 mb-4" />
+              <Image
+                src="/icons/ai-icon.png"
+                alt="AI"
+                width={48}
+                height={48}
+                className="mb-4"
+              />
               <p className="text-xl font-semibold">AI in Real Estate</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="/icons/blockchain-icon.png" alt="Blockchain" className="w-12 h-12 mb-4" />
+              <Image
+                src="/icons/blockchain-icon.png"
+                alt="Blockchain"
+                width={48}
+                height={48}
+                className="mb-4"
+              />
               <p className="text-xl font-semibold">Blockchain</p>
             </div>
           </div>

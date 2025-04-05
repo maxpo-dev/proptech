@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function BlogsPage() {
   const router = useRouter();
@@ -52,11 +53,15 @@ export default function BlogsPage() {
             className="bg-white shadow-lg rounded-lg p-4 w-full sm:w-auto text-center flex flex-col items-center cursor-pointer hover:shadow-xl transition"
             onClick={() => router.push(card.route)}
           >
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-48 object-cover rounded-lg shadow-md mb-4"
-            />
+            <div className="w-full h-48 relative mb-4">
+              <Image
+                src={card.image}
+                alt={card.title}
+                fill
+                className="object-cover rounded-lg shadow-md"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
             <h2 className="text-lg font-semibold mb-2">{card.title}</h2>
             <p className="text-gray-700 text-sm">{card.excerpt}</p>
             <p className="text-gray-400 text-xs mt-2">by {card.author}</p>
