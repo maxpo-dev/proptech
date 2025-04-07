@@ -52,11 +52,11 @@ export default function Footer() {
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="https://www.instagram.com/futureproptechsummit/" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="https://www.youtube.com/@futureproptechsummit" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Youtube size={20} />
                 <span className="sr-only">Instagram</span>
               </a>
