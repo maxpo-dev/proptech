@@ -90,9 +90,11 @@ export default function DubaiPropTechBlogPage() {
           <Image
             src="/image/blogs/futureproptechblogfooter.jpg"
             alt="Dubai PropTech Innovation"
-            fill
-            className="object-cover rounded-lg shadow-md"
-            sizes="100vw"
+            width={1600}
+            height={900}
+            // fill
+            className="w-full h-auto rounded-lg shadow-md mt-6"
+            // sizes="100vw"
           />
         </div>
       </article>
