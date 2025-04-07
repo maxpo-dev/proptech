@@ -1,10 +1,8 @@
-import Script from 'next/script'
+import Script from 'next/script';
 
 export default function FacebookComponent() {
   return (
     <div>
-      {/* Other component code can go here */}
-      
       {/* Facebook Pixel Embed Code */}
       <Script id="facebook-pixel" strategy="afterInteractive">
         {`
@@ -20,9 +18,10 @@ export default function FacebookComponent() {
           fbq('track', 'PageView');
         `}
       </Script>
-      
+
       {/* Fallback for users with JavaScript disabled */}
       <noscript>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           height="1"
           width="1"
@@ -31,8 +30,6 @@ export default function FacebookComponent() {
           alt=""
         />
       </noscript>
-
-      {/* Other component code can follow */}
     </div>
-  )
+  );
 }

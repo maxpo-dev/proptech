@@ -1,49 +1,82 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function BlogsPage() {
   const router = useRouter();
 
-  const navigateToDetails = () => {
-    router.push("/blogs/details");
-  };
+  const blogCards = [
+    {
+      image: "/image/blogs/Future PropTech Summit 2025 Transforming Real Estate with AI and Innovation.jpg",
+      title: "Welcome to the Future of Real Estate in Dubai",
+      excerpt:
+        "PropTech is driving change in real estate through AI, blockchain, IoT, and VR. Dubai is at the forefront of this innovation...",
+      route: "/blogs/details",
+      author: "Askar Ali",
+    },
+    {
+      image:
+        "/image/blogs/Dubai – The PropTech Powerhouse Driving the Future of Real Estate.jpg",
+      title: "Dubai – The PropTech Powerhouse",
+      excerpt:
+        "From AI-powered smart cities to blockchain-secured transactions, Dubai is setting global benchmarks in real estate tech...",
+      route: "/blogs/proptech-dubai",
+      author: "Nazish Shah",
+    },
+    {
+      image: "/image/blogs/Miami Florida's Proptech Capital Revolutionizing Real Estate.jpg",
+      title: "Miami: Florida’s PropTech Capital",
+      excerpt:
+        "Miami is emerging as Florida’s PropTech Capital with a booming startup scene, robust VC ecosystem, and global reach...",
+      route: "/blogs/proptech-miami",
+      author: "Nazish Shah",
+    },
+    {
+      image:
+        "/image/blogs/How Tech is Disrupting the Real Estate Market in 2025.jpg",
+      title: "How Tech is Disrupting Real Estate in 2025",
+      excerpt:
+        "AI, blockchain, and GenAI are transforming how we invest, manage, and buy property. Learn how PropTech is evolving in 2025...",
+      route: "/blogs/real-estate-disruption-2025",
+      author: "Nazish Shah",
+    },
+  ];
 
   return (
-    <div className="container mx-auto px-4 py-24 text-center flex flex-col items-center">
-      {/* <h1 className="text-4xl font-bold mb-8 mt-16">Future PropTech Blogs</h1> */}
-      
-      {/* Combined Image and Content in Centered Card... */}
-      <article 
-        className="bg-white shadow-lg rounded-lg p-4 w-1/2 md:w-1/3 text-center flex flex-col items-center cursor-pointer"
-        onClick={navigateToDetails}
-      >
-        <img 
-          src="/image/blogs/1654x768 (1).jpg" 
-          alt="Future of Real Estate in Dubai" 
-          className="w-full h-auto rounded-lg shadow-md mb-4"
-        />
-        <h2 className="text-xl font-semibold mb-3">Welcome to the Future of Real Estate in Dubai</h2>
-        <p className="text-gray-700 text-xs">
-          The global PropTech market, valued at $33.57 billion in 2023, is projected to soar to $89.93 billion by 2032, 
-          with an impressive CAGR of 11.9%. PropTech is driving unprecedented change in the real estate industry 
-          through AI, blockchain, IoT, and VR, enhancing transparency, efficiency, and investment opportunities.
-        </p>
-        <p className="text-gray-700 text-xs mt-3">
-          As a global leader in real estate innovation, Dubai is at the forefront of this transformation, championing initiatives 
-          like fractional ownership and digital property transactions.
-        </p>
-        <p className="text-gray-400 text-right mt-2">by Askar Ali</p>
-        <button 
-          className="mt-4 text-blue-500 hover:underline focus:outline-none" 
-          onClick={(e) => {
-            e.stopPropagation(); // Prevent triggering the card's onClick
-            navigateToDetails();
-          }}
-        >
-          Read More
-        </button>
-      </article>
+    <div className="container mx-auto px-4 py-24 text-center">
+      <h1 className="text-3xl font-bold mb-12">Latest PropTech Blogs</h1>
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
+        {blogCards.map((card, idx) => (
+          <article
+            key={idx}
+            className="bg-white shadow-lg rounded-lg p-4 w-full sm:w-auto text-center flex flex-col items-center cursor-pointer hover:shadow-xl transition"
+            onClick={() => router.push(card.route)}
+          >
+            <div className="w-full h-48 relative mb-4">
+              <Image
+                src={card.image}
+                alt={card.title}
+                fill
+                className="object-cover rounded-lg shadow-md"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
+            <h2 className="text-lg font-semibold mb-2">{card.title}</h2>
+            <p className="text-gray-700 text-sm">{card.excerpt}</p>
+            <p className="text-gray-400 text-xs mt-2">by {card.author}</p>
+            <button
+              className="mt-3 text-blue-500 hover:underline focus:outline-none"
+              onClick={(e) => {
+                e.stopPropagation();
+                router.push(card.route);
+              }}
+            >
+              Read More
+            </button>
+          </article>
+        ))}
+      </div>
     </div>
   );
 }
