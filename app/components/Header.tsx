@@ -189,7 +189,7 @@ export default function Header() {
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
-                          className="text-white hover:text-blue-600 block px-3 py-2 rounded-md text-sm"
+                          className="text-black hover:text-blue-600 block px-3 py-2 rounded-md text-sm"
                           onClick={() => {
                             setMobileDropdownOpen(null);
                             setMobileMenuOpen(false);
