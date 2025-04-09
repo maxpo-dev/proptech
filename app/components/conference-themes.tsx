@@ -10,7 +10,8 @@ const themes = [
   "Artificial Intelligence (AI) in Real Estate",
   "Future of Work",
   "Smart Cities and Urban Innovation",
-  "Future of Property Management"
+  "Future of Property Management",
+  "Fractional Ownership"
 ];
 
 export default function ConferenceThemes() {
