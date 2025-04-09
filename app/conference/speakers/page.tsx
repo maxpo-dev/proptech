@@ -81,7 +81,7 @@ export default function SpeakersPage() {
             companyName="CBRE"
             linkedIn="https://www.linkedin.com/in/segalboris/"
             speakerImage="/image/speakers/Boris Segal-21-Largess.jpg"
-            companyLogo="/image/speakersCompanyLogo/CBRE_white.png"
+            companyLogo="/image/speakersCompanyLogo/cbre.jpg"
             fullBio="Boris Segal is a dynamic technology leader with a proven track record of driving
 innovation and delivering results in fast-paced environments.
 With over 25 years of experience, Boris has consistently been at the forefront of
@@ -96,6 +96,16 @@ companies, where he led technology integrations that improved operational effici
 and enhanced client experiences.
 Boris holds a Master of Science degree in Information Management from City University
 London and an MBA from Cass Business School."
+          />
+
+<SpeakerCard
+            name="Hans Christensen"
+            jobTitle="Vice President - Dubai Technology Entrepreneur Campus"
+            companyName="DTEC (Dubai Technology Entrepreneur Campus)"
+            linkedIn=""
+            speakerImage="/image/speakers/Hans Picture.jpg"
+            companyLogo="/image/speakersCompanyLogo/DTEC Logo.jpg"
+            fullBio="Hans is a serial entrepreneur with as much experience as an entrepreneur as a corporate leader. The past decade he has helped build one of the largest entrepreneurial communities in the MENA region through offering investment, mentoring, and acceleration and a great space to set up their businesses, for the Dubai government."
           />
         </div>
       </div>
