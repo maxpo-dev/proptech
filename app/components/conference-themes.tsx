@@ -23,7 +23,7 @@ export default function ConferenceThemes() {
           <div className="relative h-[400px] md:h-[600px]">
             {/* <Image
               src={Confimg}
-              alt="Conference themes illustration"
+              alt="Conference themes illustration.."
               layout="fill"
               objectFit="cover"
               className="rounded-lg shadow-lg"
