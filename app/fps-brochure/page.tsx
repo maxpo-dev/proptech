@@ -1,15 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
-import img1 from '@/public/image/brochure/1x(1).jpg';
-import img2 from '@/public/image/brochure/2x.jpg';
-import img3 from '@/public/image/brochure/3x.jpg';
-import img4 from '@/public/image/brochure/3x.jpg';
-import img5 from '@/public/image/brochure/4x.jpg';
-import img6 from '@/public/image/brochure/5x.jpg';
-import img7 from '@/public/image/brochure/6x.jpg';
-import img8 from '@/public/image/brochure/7x.jpg';
+import img1 from '@/public/image/brochure/1x (3).jpg';
+import img2 from '@/public/image/brochure/2x (1).jpg';
+import img3 from '@/public/image/brochure/3x (1).jpg';
+import img4 from '@/public/image/brochure/4x (2).jpg';
+import img5 from '@/public/image/brochure/5x (1).jpg';
+import img6 from '@/public/image/brochure/6x (1).jpg';
+import img7 from '@/public/image/brochure/7x (1).jpg';
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8];
+const images = [img1, img2, img3, img4, img5, img6, img7];
 
 const FpsBrochure: React.FC = () => {
   return (
