@@ -10,7 +10,8 @@ const themes = [
   "Artificial Intelligence (AI) in Real Estate",
   "Future of Work",
   "Smart Cities and Urban Innovation",
-  "Future of Property Management"
+  "Future of Property Management",
+  "Fractional Ownership"
 ];
 
 export default function ConferenceThemes() {
@@ -22,7 +23,7 @@ export default function ConferenceThemes() {
           <div className="relative h-[400px] md:h-[600px]">
             {/* <Image
               src={Confimg}
-              alt="Conference themes illustration"
+              alt="Conference themes illustration.."
               layout="fill"
               objectFit="cover"
               className="rounded-lg shadow-lg"
