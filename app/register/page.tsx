@@ -2,7 +2,7 @@
 
 'use client'
 
-import EventContent from '../components/EventInfo';
+// import EventContent from '../components/EventInfo';
 // import ExhibitorForm from '../components/exhibitor';
 import ContactUs from '../components/reg';
 // import RegisterHeroSection from '../components/RegisterHerosection';
@@ -16,9 +16,9 @@ export default function Register() {
         {/* Grid layout for the hero section */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 h-full"> */}
           
-          {/* Left Side: EventInfo Component */}
+          {/* Left Side: EventInfo Components */}
           <div className="pt-10">
-            <EventContent />
+            {/* <EventContent /> */}
           </div>
 
           {/* Right Side: RegisterForm or other content */}
