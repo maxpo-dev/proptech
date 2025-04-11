@@ -15,7 +15,7 @@ export default function BlogDetailsPage() {
         />
       </div>
 
-      <article className="bg-white shadow-2xl rounded-lg p-6 w-full md:w-3/4 lg:w-2/3 text-center relative">
+      <article className="bg-white shadow-2xl rounded-lg p-6 w-full md:w-3/4 lg:w-2/3 text-center relative">                                                                                                                                                                                                                                                                                                                    
         <h2 className="text-2xl font-extrabold mb-4">
           Future PropTech Summit 2025: Transforming Real Estate with AI and Innovation
         </h2>
@@ -23,7 +23,7 @@ export default function BlogDetailsPage() {
         <p className="text-gray-800 text-base font-semibold mb-4">
           Welcome to the Future of Real Estate in Dubai.
         </p>
-
+                                                                                                                                                  
         <p className="text-gray-800 text-base font-semibold mb-4">
           The global PropTech market, valued at $33.57 billion in 2023, is projected to soar to $89.93 billion by 2032, with an impressive CAGR of 11.9%. PropTech is driving unprecedented change in the real estate industry through AI, blockchain, IoT, and VR, enhancing transparency, efficiency, and investment opportunities. As a global leader in real estate innovation, Dubai is at the forefront of this transformation, championing initiatives like fractional ownership and digital property transactions.
         </p>

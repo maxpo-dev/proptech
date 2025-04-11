@@ -2,7 +2,7 @@
 
 'use client'
 
-import EventContent from '../components/EventInfo';
+// import EventContent from '../components/EventInfo';
 // import ExhibitorForm from '../components/exhibitor';
 import ContactUs from '../components/reg';
 // import RegisterHeroSection from '../components/RegisterHerosection';
@@ -18,7 +18,7 @@ export default function Register() {
           
           {/* Left Side: EventInfo Component */}
           <div className="pt-10">
-            <EventContent />
+            {/* <EventContent /> */}
           </div>
 
           {/* Right Side: RegisterForm or other content */}
