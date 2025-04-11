@@ -16,7 +16,7 @@ export default function Register() {
         {/* Grid layout for the hero section */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 h-full"> */}
           
-          {/* Left Side: EventInfo Component */}
+          {/* Left Side: EventInfo Components */}
           <div className="pt-10">
             {/* <EventContent /> */}
           </div>
