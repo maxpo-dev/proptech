@@ -107,6 +107,7 @@ London and an MBA from Cass Business School."
             companyLogo="/image/speakersCompanyLogo/DTEC Logo.jpg"
             fullBio="Hans is a serial entrepreneur with as much experience as an entrepreneur as a corporate leader. The past decade he has helped build one of the largest entrepreneurial communities in the MENA region through offering investment, mentoring, and acceleration and a great space to set up their businesses, for the Dubai government."
           />
+          <SpeakerCard  name="Dr. Abdulla AlWahedi" jobTitle="Chief Executive Officer" companyName="Irtikaz Group" linkedIn="https://www.linkedin.com/in/abdullaalwahedi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" speakerImage="/image/speakers/400x400-01.jpg" companyLogo="/image/speakers/Logo.jpg" fullBio="Experienced Chief Executive Officer with a demonstrated history of working in the facilities management industry. Strong business development professional skilled in Operations Management, Facility Management (FM), Contract Management, and Business Development."          />
         </div>
       </div>
     </div>
