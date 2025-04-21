@@ -9,14 +9,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Future Proptech Summit',
-
   description: 'Join us in Dubai, October 2025 for the latest in Proptech and Fractional Ownership.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      
       <body className={`${inter.className}`}>
         <Header />
         <main className="pt-0">{children}</main>
@@ -41,22 +39,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        {/* Google Analytics */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-GV1DBDBMMV" strategy="afterInteractive" />
+        {/* Google Analytics (your exact script) */}
         <Script
-          id="google-analytics"
+          src="https://www.googletagmanager.com/gtag/js?id=G-GV1DBDBMMV"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'ad_storage': 'denied',
-                'analytics_storage': 'denied',
-                'wait_for_update': 500,
-              });
               gtag('js', new Date());
               gtag('config', 'G-GV1DBDBMMV');
             `,
@@ -66,6 +60,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-
-
-
