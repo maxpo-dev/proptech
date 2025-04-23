@@ -110,7 +110,7 @@ export default function BookTicketsForm() {
           </p>
           <form onSubmit={handleSubmit} className="space-y-6">
             <InputField label="Full Name" id="name" placeholder="Enter your full name" value={formData.name} onChange={handleChange} />
-            <InputField label="Email" id="email" type="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} />
+            <InputField label="Email" id="email" type="email" placeholder="Enter your Work email" value={formData.email} onChange={handleChange} />
             <InputField label="Company" id="company" placeholder="Enter your company name" value={formData.company} onChange={handleChange} />
             <InputField label="Designation" id="designation" placeholder="Enter your designation" value={formData.designation} onChange={handleChange} />
             <InputField label="Phone Number" id="phone" type="tel" placeholder="Enter your contact number" value={formData.phone} onChange={handleChange} />
