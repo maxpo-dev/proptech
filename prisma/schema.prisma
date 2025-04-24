@@ -49,3 +49,15 @@ model Exhibitor {
   // preferredBudget String
   createdAt      DateTime @default(now())
 }
+
+model Speaker {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  bio        String?
+  jobTitle   String?
+  company    String?
+  imageUrl   String?
+  speakersId String   @default("default")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}

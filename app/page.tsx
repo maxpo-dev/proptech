@@ -9,16 +9,24 @@ import HeroSection from '@/app/components/Herosection';
 // import WhyAttend from './components/why-attend';
 import VideoComponent from './components/VideoSection';
 // import YourComponent from './components/WhatsApp';
-import Ticket from "@/app/images/1.jpg"
-import Speakers from '@/app/images/4.jpg';
-import Exhibitors from '@/app/images/3.jpg';
-import Getintech from '@/app/images/2.jpg';
+
+// import Ticket from "@/app/images/1.jpg"
+// import Speakers from '@/app/images/4.jpg';
+// import Exhibitors from '@/app/images/3.jpg';
+// import Getintech from '@/app/images/2.jpg';
+
+import Ticket from "@/app/images/event-ticket-template.jpg"
+import Speakers from '@/app/images/speaker-big-stage.jpg';
+import Exhibitors from '@/app/images/digital-environment-scene.jpg';
+import Getintech from '@/app/images/businessman-holding-smartphone-with-message-calling-email-icon-concept-contact-support-people-contacting-information-business.jpg';
+
 // import Aboutimg from './images/WhatsApp Image 2024-11-07 at 3.59.25 PM.jpeg';
 import Link from 'next/link';
 import WhyProptech from './components/whyproptech';
 import ShowcaseSection from './components/showcase-section';
 import DubaiSection from './components/dubai-section';
 import SponsorsSection from './components/SponsorsSection';
+import HighlightedSpeakersMarquee from './components/HighlightedSpeakersMarquee';
 
 export default function Home() {
   
@@ -60,9 +68,10 @@ export default function Home() {
 <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
     {[
-      { href: "/register", bg: "bg-black", title: "Book your tickets", image: Ticket },
-      { href: "/speakers", bg: "bg-green-600", title: "Speakers", image: Speakers },
-      { href: "/exhibitors", bg: "bg-red-600", title: "Exhibitors", image: Exhibitors },
+      { href: "/book-tickets", bg: "bg-black", title: "Book your tickets", image: Ticket },
+
+      { href: "/speakers", bg: "bg-green-600", title: "Register as Speaker", image: Speakers },
+      { href: "/exhibitors", bg: "bg-red-600", title: "Register as Exhibitor", image: Exhibitors },
       { href: "/register", bg: "bg-purple-600", title: "Get In Touch", image: Getintech },
     ].map((item, index) => (
       <Link key={index} href={item.href} className="block group">
@@ -96,6 +105,12 @@ export default function Home() {
 
 
 <WhyProptech />
+<div className="container mx-auto px-4 py-8">
+  <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+    <HighlightedSpeakersMarquee />
+  </div>
+</div>
+
 
       {/* <ConferenceThemes /> */}
       {/* <KeyTopicsSection /> */}

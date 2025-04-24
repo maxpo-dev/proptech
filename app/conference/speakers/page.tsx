@@ -108,6 +108,32 @@ London and an MBA from Cass Business School."
             fullBio="Hans is a serial entrepreneur with as much experience as an entrepreneur as a corporate leader. The past decade he has helped build one of the largest entrepreneurial communities in the MENA region through offering investment, mentoring, and acceleration and a great space to set up their businesses, for the Dubai government."
           />
           <SpeakerCard  name="Dr. Abdulla AlWahedi" jobTitle="Chief Executive Officer" companyName="Irtikaz Group" linkedIn="https://www.linkedin.com/in/abdullaalwahedi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" speakerImage="/image/speakers/400x400-01.jpg" companyLogo="/image/speakers/Logo.jpg" fullBio="With over two decades of experience in the infrastructure and facilities management industry under his belt, Dr. Abdulla has developed country-wide renowned for his work. Before establishing Irtikaz Property Management, Abdulla held the titles of Chief Executive Officer of Khidmah and Senior Director at Emaar Facilities Management, where he oversaw the FM operations of iconic projects such as Burj Khalifa, The Dubai Mall and Emaar District Cooling. His experience as a Senior Engineer at Etihad Etisalat also gained him significant FM exposure in the Kingdom of Saudi Arabia. The determination to exceed boundaries is a characteristic ingrained within Dr. Abdulla; he is a graduate of both the British University in Dubai (PhD) and the Mohammed Bin Rashid Centre for Leadership Development, as well as a proud recipient of the esteemed Rashid Award for Academic Achievement"          />
+
+
+          {/* <SpeakerCard
+            name="Hans Christensen"
+            jobTitle="Vice President - Dubai Technology Entrepreneur Campus"
+            companyName="DTEC (Dubai Technology Entrepreneur Campus)"
+            linkedIn=""
+            speakerImage="/image/speakers/Hans Picture.jpg"
+            companyLogo="/image/speakersCompanyLogo/DTEC Logo.jpg"
+            fullBio="Hans is a serial entrepreneur with as much experience as an entrepreneur as a corporate leader. The past decade he has helped build one of the largest entrepreneurial communities in the MENA region through offering investment, mentoring, and acceleration and a great space to set up their businesses, for the Dubai government."
+          /> */}
+          <SpeakerCard  
+          name="Mohamed Moselhy"
+           jobTitle="Global Smart Cities Director" 
+           companyName=" Honeywell" 
+           linkedIn="https://www.linkedin.com/in/mohamed-moselhy-08a1ba21/" 
+           speakerImage="/image/speakers/Mohamed Moselhy Bio Photo.jpg" 
+           companyLogo="/image/speakersCompanyLogo/Honeywell_Logo_RGB_Red.jpg" 
+           fullBio=" Mohamed Moselhy is the Global Smart Cities Director at Honeywell, leading diverse global teams to shape the future of urban living from Dubai, UAE. He spearheads initiatives that integrate advanced technologies, including AI, data analytics and digital twin to drive sustainability, enhance urban resilience, and secure critical infrastructures. With a focus on innovation and impact, Mohamed partners with governments and communities worldwide to create smart, sustainable, and safe city environments that protect national security, enhance economic stability, and elevate the quality of life for citizens.
+
+Mohamed is part of Honeywell’s organization for more than 17 years focused on Defense, Automation, Energy, Sustainability, Smart Cities & Communities, Security and Safety industries and has held multi-positions in his career in engineering, operations, services, solutions design, sales, business development, vertical management & business management groups on commercial, defense and government programs across different global geographies.
+
+
+Mohamed holds a Bachelor of Science (B.Sc) degree in Electronics and Electrical Communications Engineering from Cairo University in Egypt and an Executive MBA from Hult International Business School with focus on International Business, He is a certified Six Sigma Greenbelt and completed successfully multiple leadership and strategic marketing programs and is certified on multiple security and safety systems for commercial and military applications and an active member of the American Society for Industrial Security (ASIS).  
+
+"          />
         </div>
       </div>
     </div>
