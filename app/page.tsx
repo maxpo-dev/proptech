@@ -1,26 +1,13 @@
 'use client'
 
-// import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import HeroSection from '@/app/components/Herosection';
-// import JoinUs from './components/join-us';
-// import KeyTopicsSection from '@/app/components/Keytopics';
-// import ConferenceThemes from './components/conference-themes';
-// import WhyAttend from './components/why-attend';
+
 import VideoComponent from './components/VideoSection';
-// import YourComponent from './components/WhatsApp';
-
-// import Ticket from "@/app/images/1.jpg"
-// import Speakers from '@/app/images/4.jpg';
-// import Exhibitors from '@/app/images/3.jpg';
-// import Getintech from '@/app/images/2.jpg';
-
 import Ticket from "@/app/images/event-ticket-template.jpg"
 import Speakers from '@/app/images/speaker-big-stage.jpg';
 import Exhibitors from '@/app/images/digital-environment-scene.jpg';
 import Getintech from '@/app/images/businessman-holding-smartphone-with-message-calling-email-icon-concept-contact-support-people-contacting-information-business.jpg';
-
-// import Aboutimg from './images/WhatsApp Image 2024-11-07 at 3.59.25 PM.jpeg';
 import Link from 'next/link';
 import WhyProptech from './components/whyproptech';
 import ShowcaseSection from './components/showcase-section';
@@ -86,9 +73,7 @@ export default function Home() {
             />
           </div>
           <div className="bg-blue-950 text-center py-4">
-            {/* <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
-              {item.title}
-            </span> */}
+           
             <span className="text-xl font-semibold text-white">
   {item.title}
 </span>
@@ -116,20 +101,7 @@ export default function Home() {
       {/* <KeyTopicsSection /> */}
       <ShowcaseSection />
       <SponsorsSection />
-      {/* <div className="bg-gray-200 py-20">
-        <h2 className="text-4xl font-bold text-center text-black mb-8">
-          Experience Our Event
-        </h2>
-        <p className="text-xl text-center text-slate-800 mb-12 max-w-3xl mx-auto">
-          Get a glimpse of the innovation and networking opportunities at the Future Proptech Summit.
-        </p>
-        <div className='flex items-center justify-center'>
-          <VideoComponent src="/video/Video_1.mp4" className="w-auto max-w-4xl h-auto" />
-        </div>
-      </div> */}
-      {/* <WhyAttend />  */}
-      {/* <JoinUs /> */}
-      {/* <YourComponent /> */}
+     
       <DubaiSection />
     </div>
   );

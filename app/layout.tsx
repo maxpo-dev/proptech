@@ -9,53 +9,44 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Future Proptech Summit',
-  description: 'Join us in Dubai, October 2025 for the latest in Proptech and Fractional Ownership.',
-}
+  description:
+    'Join us in Dubai, October 2025 for the latest in Proptech and Fractional Ownership.',
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className}`}>
+      <body className={inter.className}>
         <Header />
         <main className="pt-0">{children}</main>
         <Footer />
 
-        {/* Facebook Pixel Script */}
-        <Script
-          id="fb-pixel"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){
-              n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1331073398331992');
-              fbq('track', 'PageView');
-            `,
-          }}
-        />
-
-        {/* Google Analytics (your exact script) */}
+        {/* Google Analytics (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GV1DBDBMMV"
           strategy="afterInteractive"
         />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-GV1DBDBMMV');
-            `,
-          }}
-        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GV1DBDBMMV', { page_path: window.location.pathname });`}
+        </Script>
+
+        {/* Facebook Pixel */}
+        <Script id="fb-pixel" strategy="lazyOnload">
+          {`!function(f,b,e,v,n,t,s){
+              if(f.fbq)return; n=f.fbq=function(){
+                n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+              }; if(!f._fbq)f._fbq=n;
+              n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[];
+              t=b.createElement(e); t.async=!0; t.src=v;
+              s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)
+            }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1331073398331992');
+            fbq('track', 'PageView');`}
+        </Script>
       </body>
     </html>
   );
