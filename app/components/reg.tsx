@@ -1,8 +1,10 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 
 const InputField = ({
   label,
@@ -37,6 +39,8 @@ const InputField = ({
 )
 
 export default function ContactUs() {
+  const searchParams = useSearchParams()
+
   const [formData, setFormData] = useState({
     name: "",
     jobTitle: "",
@@ -45,11 +49,28 @@ export default function ContactUs() {
     phone: "",
     country: "",
     message: "",
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
   })
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [successMessage, setSuccessMessage] = useState("")
   const [submitError, setSubmitError] = useState("")
+
+  // Capture UTM params on load
+  useEffect(() => {
+    const utm_source = searchParams.get("utm_source") || ""
+    const utm_medium = searchParams.get("utm_medium") || ""
+    const utm_campaign = searchParams.get("utm_campaign") || ""
+
+    setFormData((prevData) => ({
+      ...prevData,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+    }))
+  }, [searchParams])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -73,7 +94,6 @@ export default function ContactUs() {
         setSuccessMessage(data.message || "Booking submitted successfully and email sent!")
         setSubmitError("")
 
-        // Clear form data after successful submission
         setFormData({
           name: "",
           jobTitle: "",
@@ -82,6 +102,9 @@ export default function ContactUs() {
           phone: "",
           country: "",
           message: "",
+          utm_source: "",
+          utm_medium: "",
+          utm_campaign: "",
         })
       } else {
         setSubmitError(data.message || "Form submission failed. Please try again.")
@@ -144,54 +167,14 @@ export default function ContactUs() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 text-black">
-                  <InputField
-                    label="Name"
-                    id="name"
-                    placeholder="Your full name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                  <InputField
-                    label="Job Title"
-                    id="jobTitle"
-                    placeholder="Your job title"
-                    value={formData.jobTitle}
-                    onChange={handleChange}
-                  />
-                  <InputField
-                    label="Company Name"
-                    id="companyName"
-                    placeholder="Your company name"
-                    value={formData.companyName}
-                    onChange={handleChange}
-                  />
-                  <InputField
-                    label="Email"
-                    id="email"
-                    type="email"
-                    placeholder="Your email address"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  <InputField
-                    label="Phone"
-                    id="phone"
-                    type="tel"
-                    placeholder="Your phone number"
-                    value={formData.phone}
-                    onChange={handleChange}
-                  />
-                  <InputField
-                    label="Country"
-                    id="country"
-                    placeholder="Your country"
-                    value={formData.country}
-                    onChange={handleChange}
-                  />
+                  <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
+                  <InputField label="Job Title" id="jobTitle" placeholder="Your job title" value={formData.jobTitle} onChange={handleChange} />
+                  <InputField label="Company Name" id="companyName" placeholder="Your company name" value={formData.companyName} onChange={handleChange} />
+                  <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
+                  <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
+                  <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
                   <div className="mb-4">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Message
-                    </label>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                     <textarea
                       id="message"
                       name="message"
@@ -203,10 +186,7 @@ export default function ContactUs() {
                       required
                     />
                   </div>
-                  <button
-                    type="submit"
-                    className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200"
-                  >
+                  <button type="submit" className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
                     Send Message
                   </button>
                 </form>
@@ -216,8 +196,18 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
+
+        {/* Social Media Links */}
+        {/* <div className="mt-12 text-center">
+          <h3 className="text-lg font-semibold mb-4 text-gray-700">Follow us on</h3>
+          <div className="flex justify-center space-x-6">
+            <Link href="https://www.facebook.com/futureproptechsummit" target="_blank" className="text-blue-600 hover:underline">Facebook</Link>
+            <Link href="https://www.linkedin.com/showcase/future-proptech-summit" target="_blank" className="text-blue-600 hover:underline">LinkedIn</Link>
+            <Link href="https://www.instagram.com/futureproptechsummit/" target="_blank" className="text-pink-500 hover:underline">Instagram</Link>
+            <Link href="https://www.youtube.com/@futureproptechsummit" target="_blank" className="text-red-600 hover:underline">YouTube</Link>
+          </div>
+        </div> */}
       </div>
     </div>
   )
 }
-
