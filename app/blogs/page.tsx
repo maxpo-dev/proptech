@@ -8,6 +8,15 @@ export default function BlogsPage() {
 
   const blogCards = [
     {
+      image:
+        "/image/blogs/Frame 1.jpg",
+      title: "Q&A Session With Patrick Nessenthaler",
+      excerpt:
+        "",
+      route: "/blogs/patricknessenthaler",
+      author: "Nazish Shah",
+    },
+    {
       image: "/image/blogs/Future PropTech Summit 2025 Transforming Real Estate with AI and Innovation.jpg",
       title: "Welcome to the Future of Real Estate in Dubai",
       excerpt:
@@ -41,15 +50,7 @@ export default function BlogsPage() {
       route: "/blogs/real-estate-disruption-2025",
       author: "Nazish Shah",
     },
-    {
-      image:
-        "/image/blogs/Frame 1.jpg",
-      title: "Q&A Session With Patrick Nessenthaler",
-      excerpt:
-        "",
-      route: "/blogs/patricknessenthaler",
-      author: "Nazish Shah",
-    },
+   
   ];
 
   return (
