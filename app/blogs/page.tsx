@@ -41,6 +41,15 @@ export default function BlogsPage() {
       route: "/blogs/real-estate-disruption-2025",
       author: "Nazish Shah",
     },
+    {
+      image:
+        "/image/blogs/Frame 1.jpg",
+      title: "Q&A Session With Patrick Nessenthaler",
+      excerpt:
+        "",
+      route: "/blogs/patricknessenthaler",
+      author: "Nazish Shah",
+    },
   ];
 
   return (
