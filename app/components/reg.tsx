@@ -54,11 +54,15 @@ export default function ContactUs() {
     utm_campaign: "",
   })
 
+  const [checkboxes, setCheckboxes] = useState({
+    termsAccepted: true,
+    consentGiven: true,
+  })
+
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [successMessage, setSuccessMessage] = useState("")
   const [submitError, setSubmitError] = useState("")
 
-  // Capture UTM params on load
   useEffect(() => {
     const utm_source = searchParams.get("utm_source") || ""
     const utm_medium = searchParams.get("utm_medium") || ""
@@ -77,8 +81,18 @@ export default function ContactUs() {
     setFormData((prevData) => ({ ...prevData, [name]: value }))
   }
 
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target
+    setCheckboxes((prev) => ({ ...prev, [name]: checked }))
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (!checkboxes.termsAccepted || !checkboxes.consentGiven) {
+      setSubmitError("Please accept the terms and give your consent to proceed.")
+      return
+    }
 
     try {
       const response = await fetch("/api/mailcontact", {
@@ -106,6 +120,11 @@ export default function ContactUs() {
           utm_medium: "",
           utm_campaign: "",
         })
+
+        setCheckboxes({
+          termsAccepted: true,
+          consentGiven: true,
+        })
       } else {
         setSubmitError(data.message || "Form submission failed. Please try again.")
         setSuccessMessage("")
@@ -129,7 +148,6 @@ export default function ContactUs() {
 
         <div className="bg-white shadow-xl rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
-            {/* Contact Info Section */}
             <div className="p-8 bg-blue-600 text-white">
               <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
               <div className="space-y-4">
@@ -158,12 +176,13 @@ export default function ContactUs() {
               </div>
             </div>
 
-            {/* Contact Form Section */}
             <div className="p-8">
               {isSubmitted ? (
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
-                  <p className="text-gray-600">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
+                  <p className="text-gray-600">
+                    Thank you for registering! <br /> You are now part of the Future Proptech Summit community. You will receive a confirmation email shortly. Our team will get in touch with you soon.
+                  </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 text-black">
@@ -186,8 +205,41 @@ export default function ContactUs() {
                       required
                     />
                   </div>
+
+                  <div className="mb-4">
+                    <label className="flex items-start space-x-2 text-sm text-gray-700">
+                      <input
+                        type="checkbox"
+                        name="termsAccepted"
+                        checked={checkboxes.termsAccepted}
+                        onChange={handleCheckboxChange}
+                        className="mt-1"
+                      />
+                      <span>
+                        I confirm that I have read, understand and accept the{" "}
+                        Terms & Conditions and{" "}
+                        <Link href="/privacypolicy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> of FutureProptechSummit.
+                      </span>
+                    </label>
+                  </div>
+                  <div className="mb-4">
+                    <label className="flex items-start space-x-2 text-sm text-gray-700">
+                      <input
+                        type="checkbox"
+                        name="consentGiven"
+                        checked={checkboxes.consentGiven}
+                        onChange={handleCheckboxChange}
+                        className="mt-1"
+                      />
+                      <span>
+                        I agree to allow FutureProptechSummit to contact me about their events and other marketing updates from time to time.
+                        Also, FutureProptechSummit may share my details with carefully vetted third parties and other participants to improve the overall event experience.
+                      </span>
+                    </label>
+                  </div>
+
                   <button type="submit" className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
-                    Send Message
+                    Submit
                   </button>
                 </form>
               )}
@@ -196,17 +248,6 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
-
-        {/* Social Media Links */}
-        {/* <div className="mt-12 text-center">
-          <h3 className="text-lg font-semibold mb-4 text-gray-700">Follow us on</h3>
-          <div className="flex justify-center space-x-6">
-            <Link href="https://www.facebook.com/futureproptechsummit" target="_blank" className="text-blue-600 hover:underline">Facebook</Link>
-            <Link href="https://www.linkedin.com/showcase/future-proptech-summit" target="_blank" className="text-blue-600 hover:underline">LinkedIn</Link>
-            <Link href="https://www.instagram.com/futureproptechsummit/" target="_blank" className="text-pink-500 hover:underline">Instagram</Link>
-            <Link href="https://www.youtube.com/@futureproptechsummit" target="_blank" className="text-red-600 hover:underline">YouTube</Link>
-          </div>
-        </div> */}
       </div>
     </div>
   )
