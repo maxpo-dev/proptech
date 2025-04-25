@@ -113,18 +113,9 @@ London and an MBA from Cass Business School."
            linkedIn="https://www.linkedin.com/in/abdullaalwahedi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
            speakerImage="/image/speakers/400x400-01.jpg" 
            companyLogo="/image/speakersCompanyLogo/Logo.jpg" 
-           fullBio="With over two decades of experience in the infrastructure and facilities management industry under his belt, Dr. Abdulla has developed country-wide renowned for his work. Before establishing Irtikaz Property Management, Abdulla held the titles of Chief Executive Officer of Khidmah and Senior Director at Emaar Facilities Management, where he oversaw the FM operations of iconic projects such as Burj Khalifa, The Dubai Mall and Emaar District Cooling. His experience as a Senior Engineer at Etihad Etisalat also gained him significant FM exposure in the Kingdom of Saudi Arabia. The determination to exceed boundaries is a characteristic ingrained within Dr. Abdulla; he is a graduate of both the British University in Dubai (PhD) and the Mohammed Bin Rashid Centre for Leadership Development, as well as a proud recipient of the esteemed Rashid Award for Academic Achievement"          />
+           fullBio="With over two decades of experience in the infrastructure and facilities management industry under his belt, Dr. Abdulla has developed country-wide renowned for his work. Before establishing Irtikaz Property Management, Abdulla held the titles of Chief Executive Officer of Khidmah and Senior Director at Emaar Facilities Management, where he oversaw the FM operations of iconic projects such as Burj Khalifa, The Dubai Mall and Emaar District Cooling. His experience as a Senior Engineer at Etihad Etisalat also gained him significant FM exposure in the Kingdom of Saudi Arabia. The determination to exceed boundaries is a characteristic ingrained within Dr. Abdulla; he is a graduate of both the British University in Dubai (PhD) and the Mohammed Bin Rashid Centre for Leadership Development, as well as a proud recipient of the esteemed Rashid Award for Academic Achievement"          
+           />
 
-
-          {/* <SpeakerCard
-            name="Hans Christensen"
-            jobTitle="Vice President - Dubai Technology Entrepreneur Campus"
-            companyName="DTEC (Dubai Technology Entrepreneur Campus)"
-            linkedIn=""
-            speakerImage="/image/speakers/Hans Picture.jpg"
-            companyLogo="/image/speakersCompanyLogo/DTEC Logo.jpg"
-            fullBio="Hans is a serial entrepreneur with as much experience as an entrepreneur as a corporate leader. The past decade he has helped build one of the largest entrepreneurial communities in the MENA region through offering investment, mentoring, and acceleration and a great space to set up their businesses, for the Dubai government."
-          /> */}
           <SpeakerCard  
           name="Mohamed Moselhy"
            jobTitle="Global Smart Cities Director" 
