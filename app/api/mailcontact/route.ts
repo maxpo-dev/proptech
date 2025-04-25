@@ -4,7 +4,18 @@ import nodemailer from "nodemailer"
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, jobTitle, companyName, email, phone, country, message } = body
+    const { 
+      name, 
+      jobTitle, 
+      companyName, 
+      email, 
+      phone, 
+      country, 
+      message, 
+      utm_source, 
+      utm_medium, 
+      utm_campaign 
+    } = body
 
     // Configure Nodemailer transport
     const transporter = nodemailer.createTransport({
@@ -15,10 +26,10 @@ export async function POST(req: NextRequest) {
       },
     })
 
-    // Email content
+    // Email content with UTM details included
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "info@futureproptechsummit.com, digital.maxpo@gmail.com",
+      to: "info@futureproptechsummit.com, digital.maxpo@gmail.com,",
       subject: "New contact info - Proptech",
       html: `
         <h1>New Enquiry</h1>
@@ -30,6 +41,11 @@ export async function POST(req: NextRequest) {
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
+        <hr/>
+        <h2>UTM Parameters</h2>
+        <p><strong>UTM Source:</strong> ${utm_source || "N/A"}</p>
+        <p><strong>UTM Medium:</strong> ${utm_medium || "N/A"}</p>
+        <p><strong>UTM Campaign:</strong> ${utm_campaign || "N/A"}</p>
       `,
     }
 
@@ -42,7 +58,9 @@ export async function POST(req: NextRequest) {
     )
   } catch (error) {
     console.error("Error:", error)
-    return NextResponse.json({ success: false, message: "Failed to submit booking or send email." }, { status: 500 })
+    return NextResponse.json(
+      { success: false, message: "Failed to submit booking or send email." },
+      { status: 500 },
+    )
   }
 }
-
