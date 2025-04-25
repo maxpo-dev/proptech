@@ -1,4 +1,8 @@
+# public/robots.txt
+
+# Allow all bots full access
 User-agent: *
 Allow: /
 
-Sitemap: https://yourwebsite.com/sitemap.xml
+# Point to your sitemap
+Sitemap: https://www.futureproptechsummit.com/sitemap.xml
