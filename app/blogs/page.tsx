@@ -63,7 +63,10 @@ export default function BlogsPage() {
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
-            <h2 className="text-lg font-semibold mb-2">{card.title}</h2>
+            {/* <h2 className="text-lg font-semibold text-black mb-2">{card.title}</h2> */}
+            <h2 className="text-lg font-semibold !text-black mb-2">{card.title}</h2>
+
+
             <p className="text-gray-700 text-sm min-h-[70px]">{card.excerpt}</p>
             <p className="text-gray-400 text-xs mt-2">by {card.author}</p>
             <button

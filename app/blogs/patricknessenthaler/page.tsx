@@ -10,16 +10,17 @@ export default function PatrickNessenthalerBlogPage() {
   return (
     <div className="w-full px-4 py-24 text-center flex flex-col items-center">
       {/* Optimized full-width hero image */}
-      <div className="w-full h-[88vh] relative">
-        <Image
-          src="/image/blogs/patrick.jpeg"
-          alt="Patrick Nessenthaler Q&A"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-      </div>
+      <div className="w-full h-[60vh] sm:h-[88vh] relative">
+  <Image
+    src="/image/blogs/patrick.jpeg"
+    alt="Patrick Nessenthaler Q&A"
+    fill
+    priority
+    sizes="100vw"
+    className="object-contain sm:object-cover"
+  />
+</div>
+
 
       <article className="bg-white shadow-2xl rounded-lg p-6 w-full md:w-3/4 lg:w-2/3 text-center relative">
         <h2 className="text-2xl font-extrabold mb-4">

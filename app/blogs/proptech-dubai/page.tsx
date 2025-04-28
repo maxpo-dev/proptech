@@ -4,12 +4,12 @@ export default function DubaiPropTechBlogPage() {
   return (
     <div className="w-full px-4 py-24 text-center flex flex-col items-center">
       {/* Optimized full-width image */}
-      <div className="w-full h-[88vh] relative">
+      <div className="w-full h-[60vh] sm:h-[88vh] relative">
         <Image
           src="/image/blogs/Dubai – The PropTech Powerhouse Driving the Future of Real Estate.jpg"
           alt="Dubai PropTech Powerhouse"
           fill
-          className="object-cover"
+          className="object-contain sm:object-cover"
           priority
           sizes="100vw"
         />

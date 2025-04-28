@@ -218,7 +218,7 @@ export default function ContactUs() {
                       <span>
                         I confirm that I have read, understand and accept the{" "}
                         Terms & Conditions and{" "}
-                        <Link href="/privacypolicy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> of FutureProptechSummit.
+                        <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> of Future Proptech Summit.
                       </span>
                     </label>
                   </div>
@@ -232,8 +232,8 @@ export default function ContactUs() {
                         className="mt-1"
                       />
                       <span>
-                        I agree to allow FutureProptechSummit to contact me about their events and other marketing updates from time to time.
-                        Also, FutureProptechSummit may share my details with carefully vetted third parties and other participants to improve the overall event experience.
+                        I agree to allow Future Proptech Summit to contact me about their events and other marketing updates from time to time.
+                        Also, Future Proptech Summit may share my details with carefully vetted third parties and other participants to improve the overall event experience.
                       </span>
                     </label>
                   </div>
