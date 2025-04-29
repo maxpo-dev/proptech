@@ -16,26 +16,30 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head />
       <body className={inter.className}>
         <Header />
         <main className="pt-0">{children}</main>
         <Footer />
 
-        {/* Google Analytics (gtag.js) */}
+        {/* Google Analytics (gtag.js) - NEW TAG G-ZL9QZ3DH16 */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-GV1DBDBMMV"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZL9QZ3DH16"
           strategy="afterInteractive"
         />
         <Script id="gtag-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
+          {`
+            window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-GV1DBDBMMV', { page_path: window.location.pathname });`}
+            gtag('config', 'G-ZL9QZ3DH16', { page_path: window.location.pathname });
+          `}
         </Script>
 
         {/* Facebook Pixel */}
         <Script id="fb-pixel" strategy="lazyOnload">
-          {`!function(f,b,e,v,n,t,s){
+          {`
+            !function(f,b,e,v,n,t,s){
               if(f.fbq)return; n=f.fbq=function(){
                 n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
               }; if(!f._fbq)f._fbq=n;
@@ -45,7 +49,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               s.parentNode.insertBefore(t,s)
             }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '1331073398331992');
-            fbq('track', 'PageView');`}
+            fbq('track', 'PageView');
+          `}
         </Script>
       </body>
     </html>
