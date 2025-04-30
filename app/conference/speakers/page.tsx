@@ -131,6 +131,19 @@ Mohamed is part of Honeywell’s organization for more than 17 years focused on 
 Mohamed holds a Bachelor of Science (B.Sc) degree in Electronics and Electrical Communications Engineering from Cairo University in Egypt and an Executive MBA from Hult International Business School with focus on International Business, He is a certified Six Sigma Greenbelt and completed successfully multiple leadership and strategic marketing programs and is certified on multiple security and safety systems for commercial and military applications and an active member of the American Society for Industrial Security (ASIS).  
 
 "          />
+
+
+
+<SpeakerCard  name="Ivanka Tancheva" 
+          jobTitle="Real Estate Specialist"
+           companyName="Savills Middle East" 
+           linkedIn="https://www.linkedin.com/in/ivanka-tancheva-849967194/" 
+           speakerImage="/image/speakers/Ivanka.jpeg" 
+           companyLogo="/image/speakersCompanyLogo/ivankalogo.jpg" 
+           fullBio="Ivanka Tancheva is a seasoned real estate agent with a profound understanding of the UAE and Abu Dhabi property markets. With years of experience at Savills Abu Dhabi, she has honed her skills in navigating the complexities of local real estate dynamics, offering clients insightful advice and bespoke solutions. Ivanka's keen market acumen and her ability to anticipate trends empower her clients to make informed decisions, whether they are buying, selling, or investing in properties. Her dedication to continuous learning ensures she stays ahead in the ever-evolving real estate landscape.
+
+Ivanka believes that AI will revolutionize the real estate industry by enhancing efficiency and accuracy in property valuations, streamlining client interactions, and offering personalized recommendations. AI's ability to process vast data sets quickly will provide deeper insights into market trends, enabling realtors to offer even more strategic advice. This technological advancement promises to transform the industry by making it more transparent and client focused."          
+           />
         </div>
       </div>
     </div>
