@@ -6,7 +6,6 @@ import Sponsor from './Sponsor'
 import Exhibitors from './Exhibitors'
 import Delegates from './Delegates'
 import Participants from './Participants'
-import ContactUs2 from './reg2'
 
 const options = [
   { label: 'Sponsor', key: 'sponsor' },
@@ -46,14 +45,10 @@ export default function ContactUs() {
       default:
         return (
           <div className="text-center mb-8">
-            {/* <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
               Have questions about the International Proptech Investment Expo?
             </h2>
-            <p className="text-gray-600">We're here to help.</p> */}
-
-
-
-            <ContactUs2 />
+            <p className="text-gray-600">We're here to help.</p>
           </div>
         )
     }
@@ -61,7 +56,7 @@ export default function ContactUs() {
 
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto mt-5">
+      <div className="max-w-4xl mx-auto">
         <div className="flex justify-center gap-4 flex-wrap mb-8">
           {options.map((opt) => (
             <button

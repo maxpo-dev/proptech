@@ -74,7 +74,7 @@ export default function SpeakersPage() {
             fullBio="Syed Mazhar is Director, HSSE Department at AlBawani, the appointed Chair for IOSH UAE/KSA Branch, a Chartered Fellow Safety Professional and Authorized OHSE Trainer & Assessor for IOSH and NVQ Qualifications.He holds BBA, BSc in fire and safety engineering with professional OHSE Qualifications such as NVQ, NEBOSH, ISOs, IOSH, NASP and OSHA. He has over 18 years of experience in the field of HSE and previously worked with world well known organizations in the middle east."
           />
 
-           {/* Boris Segal... */}
+           {/* Boris Segal.. */}
            <SpeakerCard
             name="Boris Segal"
             jobTitle="Director of Strategic Digital Partnerships"
