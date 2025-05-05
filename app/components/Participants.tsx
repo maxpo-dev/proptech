@@ -139,7 +139,7 @@ export default function Participants() {
         <div className="text-center mb-12">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">Participant Registration</h1>
           <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Join Future PropTech by registering as a participant.
+            Join Future PropTech Summit by registering as a participant.
           </p>
         </div>
 

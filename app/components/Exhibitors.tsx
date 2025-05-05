@@ -141,7 +141,7 @@ export default function Exhibitors() {
             Exhibitor Registration
           </h1>
           <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Fill out the form to exhibit at Future PropTech and connect with decision-makers in the property tech space.
+            Fill out the form to exhibit at Future PropTech Summit and connect with decision-makers in the property tech space.
           </p>
         </div>
 

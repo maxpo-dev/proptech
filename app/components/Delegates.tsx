@@ -139,7 +139,7 @@ export default function Delegates() {
         <div className="text-center mb-10">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">Delegate Registration</h1>
           <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Register now to attend Future PropTech as a delegate and gain full access to sessions, networking, and insights.
+            Register now to attend Future PropTech Summit as a delegate and gain full access to sessions, networking, and insights.
           </p>
         </div>
 
