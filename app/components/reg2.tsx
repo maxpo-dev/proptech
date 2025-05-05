@@ -142,7 +142,7 @@ export default function ContactUs2() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Enquire Now</h1>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-          Fill out the form to contact our team . We're here to help with sponsorships, registration, and event details.
+          Fill out the form to contact our team. We're here to help with sponsorships, registration, and event details.
           </p>
         </div>
 
