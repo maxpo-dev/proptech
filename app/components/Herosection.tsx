@@ -51,7 +51,7 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center">
                 <MapPin className="mr-2" />
-                <span>Dubai, UAE</span>
+                <span>Le Méridien Dubai Hotel & Conference Centre</span>
               </div>
             </div>
 <div className="mt-8 mb-8 flex justify-center">

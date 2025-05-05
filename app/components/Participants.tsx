@@ -137,26 +137,26 @@ export default function Participants() {
     <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Participant Registration</h1>
-          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            Join the International Proptech Investment Expo as a participant by submitting your details.
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">Participant Registration</h1>
+          <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            Join Future PropTech Summit by registering as a participant.
           </p>
         </div>
 
         <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-8 bg-blue-600 text-white">
+          <div className="flex flex-col md:flex-row">
+            <div className="p-6 sm:p-8 bg-blue-600 text-white flex-1">
               <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
-              <div className="space-y-4">
+              <div className="space-y-4 text-sm sm:text-base">
                 <div className="flex items-start">
-                  <Mail className="w-6 h-6 mr-3 mt-1" />
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p>proptechdubai@maxpo.ae</p>
+                    <p>info@futureproptechsummit.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Phone className="w-6 h-6 mr-3 mt-1" />
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
                     <p>+971 509431529</p>
@@ -164,16 +164,16 @@ export default function Participants() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <MapPin className="w-6 h-6 mr-3 mt-1" />
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Address</h3>
-                    <p>Maxpo Exhibitions, Dubai, UAE</p>
+                    <p>Le Méridien Dubai Hotel & Conference Centre</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="p-8">
+            <div className="p-6 sm:p-8 flex-1">
               {isSubmitted ? (
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
@@ -189,6 +189,7 @@ export default function Participants() {
                   <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
                   <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
                   <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
+
                   <div className="mb-4">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                     <textarea
@@ -203,33 +204,30 @@ export default function Participants() {
                     />
                   </div>
 
-                  <div className="mb-4">
-                    <label className="flex items-start space-x-2 text-sm text-gray-700">
-                      <input
-                        type="checkbox"
-                        name="termsAccepted"
-                        checked={checkboxes.termsAccepted}
-                        onChange={handleCheckboxChange}
-                        className="mt-1"
-                      />
-                      <span>
-                        I confirm I have read and accept the{" "}
-                        <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> and Terms & Conditions.
-                      </span>
+                  <div className="mb-4 flex items-start">
+                    <input
+                      type="checkbox"
+                      name="termsAccepted"
+                      checked={checkboxes.termsAccepted}
+                      onChange={handleCheckboxChange}
+                      className="mt-1 mr-2"
+                    />
+                    <label className="text-sm text-gray-700 flex-1">
+                      I confirm I have read and accept the{" "}
+                      <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> and Terms & Conditions.
                     </label>
                   </div>
-                  <div className="mb-4">
-                    <label className="flex items-start space-x-2 text-sm text-gray-700">
-                      <input
-                        type="checkbox"
-                        name="consentGiven"
-                        checked={checkboxes.consentGiven}
-                        onChange={handleCheckboxChange}
-                        className="mt-1"
-                      />
-                      <span>
-                        I agree to receive communication about the Future Proptech Summit and related updates.
-                      </span>
+
+                  <div className="mb-4 flex items-start">
+                    <input
+                      type="checkbox"
+                      name="consentGiven"
+                      checked={checkboxes.consentGiven}
+                      onChange={handleCheckboxChange}
+                      className="mt-1 mr-2"
+                    />
+                    <label className="text-sm text-gray-700 flex-1">
+                      I agree to receive communication about the Future Proptech Summit and related updates.
                     </label>
                   </div>
 
