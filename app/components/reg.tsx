@@ -20,16 +20,16 @@ export default function ContactUs() {
   const router = useRouter()
   const [selected, setSelected] = useState<string | null>(null)
 
-  // Read initial selection from query param
+  // Read initial selection from query param "type"
   useEffect(() => {
-    const selectedType = searchParams.get('register')
+    const selectedType = searchParams.get('type') // updated here
     setSelected(selectedType)
   }, [searchParams])
 
-  // Update query param in URL when a new option is selected
+  // Update query param in URL to "type"
   const handleSelect = (key: string) => {
     const params = new URLSearchParams(searchParams.toString())
-    params.set('register', key)
+    params.set('type', key) // updated here
     router.push(`/register?${params.toString()}`)
   }
 
@@ -46,13 +46,6 @@ export default function ContactUs() {
       default:
         return (
           <div className="text-center mb-8">
-            {/* <h2 className="text-2xl font-bold text-gray-800 mb-2">
-              Have questions about the International Proptech Investment Expo?
-            </h2>
-            <p className="text-gray-600">We're here to help.</p> */}
-
-
-
             <ContactUs2 />
           </div>
         )

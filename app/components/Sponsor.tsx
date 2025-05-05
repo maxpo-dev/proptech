@@ -139,7 +139,7 @@ export default function Sponsor() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Sponsor Registration</h1>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            Register to become a sponsor of the International Proptech Investment Expo.
+          Join Future PropTech as a sponsor and connect with top real estate tech leaders.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export default function Sponsor() {
                   <Mail className="w-6 h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p>proptechdubai@maxpo.ae</p>
+                    <p>info@futureproptechsummit.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -167,7 +167,7 @@ export default function Sponsor() {
                   <MapPin className="w-6 h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Address</h3>
-                    <p>Maxpo Exhibitions, Dubai, UAE</p>
+                    <p>Le Méridien Dubai Hotel & Conference Centre</p>
                   </div>
                 </div>
               </div>
