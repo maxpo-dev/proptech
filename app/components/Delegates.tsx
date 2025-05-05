@@ -134,29 +134,30 @@ export default function Delegates() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Delegate Registration</h1>
-          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-          Register now to attend Future PropTech as a delegate and gain full access to sessions, networking, and insights.
+        <div className="text-center mb-10">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">Delegate Registration</h1>
+          <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            Register now to attend Future PropTech as a delegate and gain full access to sessions, networking, and insights.
           </p>
         </div>
 
         <div className="bg-white shadow-xl rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-8 bg-blue-600 text-white">
-              <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
-              <div className="space-y-4">
+            {/* Contact Info */}
+            <div className="p-6 sm:p-8 bg-blue-600 text-white">
+              <h2 className="text-xl sm:text-2xl font-bold mb-6">Contact Us</h2>
+              <div className="space-y-4 text-sm sm:text-base">
                 <div className="flex items-start">
-                  <Mail className="w-6 h-6 mr-3 mt-1" />
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
                     <p>info@futureproptechsummit.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Phone className="w-6 h-6 mr-3 mt-1" />
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
                     <p>+971 509431529</p>
@@ -164,7 +165,7 @@ export default function Delegates() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <MapPin className="w-6 h-6 mr-3 mt-1" />
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Address</h3>
                     <p>Le Méridien Dubai Hotel & Conference Centre</p>
@@ -173,7 +174,8 @@ export default function Delegates() {
               </div>
             </div>
 
-            <div className="p-8">
+            {/* Form */}
+            <div className="p-6 sm:p-8">
               {isSubmitted ? (
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
@@ -189,7 +191,8 @@ export default function Delegates() {
                   <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
                   <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
                   <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
-                  <div className="mb-4">
+
+                  <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                     <textarea
                       id="message"
@@ -203,7 +206,7 @@ export default function Delegates() {
                     />
                   </div>
 
-                  <div className="mb-4">
+                  <div className="space-y-2">
                     <label className="flex items-start space-x-2 text-sm text-gray-700">
                       <input
                         type="checkbox"
@@ -217,8 +220,7 @@ export default function Delegates() {
                         <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> and Terms & Conditions.
                       </span>
                     </label>
-                  </div>
-                  <div className="mb-4">
+
                     <label className="flex items-start space-x-2 text-sm text-gray-700">
                       <input
                         type="checkbox"
@@ -228,7 +230,7 @@ export default function Delegates() {
                         className="mt-1"
                       />
                       <span>
-                        I agree to receive communication about the Future Proptech Summit and related updates.
+                        I agree to receive communication about the Future PropTech Summit and related updates.
                       </span>
                     </label>
                   </div>

@@ -134,29 +134,32 @@ export default function Exhibitors() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Exhibitor Registration</h1>
-          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-          Fill out the form to exhibit at Future PropTech and connect with decision-makers in the property tech space.
+        <div className="text-center mb-10 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
+            Exhibitor Registration
+          </h1>
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            Fill out the form to exhibit at Future PropTech and connect with decision-makers in the property tech space.
           </p>
         </div>
 
         <div className="bg-white shadow-xl rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-8 bg-blue-600 text-white">
-              <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
-              <div className="space-y-4">
+            {/* Contact Info */}
+            <div className="p-6 sm:p-8 bg-blue-600 text-white">
+              <h2 className="text-xl sm:text-2xl font-bold mb-5">Contact Us</h2>
+              <div className="space-y-4 text-sm sm:text-base">
                 <div className="flex items-start">
-                  <Mail className="w-6 h-6 mr-3 mt-1" />
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
                     <p>info@futureproptechsummit.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Phone className="w-6 h-6 mr-3 mt-1" />
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
                     <p>+971 509431529</p>
@@ -164,7 +167,7 @@ export default function Exhibitors() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <MapPin className="w-6 h-6 mr-3 mt-1" />
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold">Address</h3>
                     <p>Le Méridien Dubai Hotel & Conference Centre</p>
@@ -173,7 +176,8 @@ export default function Exhibitors() {
               </div>
             </div>
 
-            <div className="p-8">
+            {/* Form */}
+            <div className="p-6 sm:p-8">
               {isSubmitted ? (
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>

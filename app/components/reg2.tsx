@@ -137,38 +137,38 @@ export default function ContactUs2() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Enquire Now</h1>
-          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-          Fill out the form to contact our team. We're here to help with sponsorships, registration, and event details.
+        <div className="text-left sm:text-center mb-8 sm:mb-12 px-2">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">Enquire Now</h1>
+          <p className="mt-2 sm:mt-4 text-base sm:text-lg text-gray-600 max-w-xl mx-auto">
+            Fill out the form to contact our team. We're here to help with sponsorships, registration, and event details.
           </p>
         </div>
 
         <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-8 bg-blue-600 text-white">
-              <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
-              <div className="space-y-4">
+          <div className="flex flex-col md:flex-row">
+            <div className="p-6 sm:p-8 bg-blue-600 text-white flex-1">
+              <h2 className="text-2xl font-bold mb-6 text-left">Contact Us</h2>
+              <div className="space-y-4 text-sm sm:text-base text-left">
                 <div className="flex items-start">
-                  <Mail className="w-6 h-6 mr-3 mt-1" />
-                  <div>
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
+                  <div className="text-left">
                     <h3 className="font-semibold">Email</h3>
                     <p>info@futureproptechsummit.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Phone className="w-6 h-6 mr-3 mt-1" />
-                  <div>
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
+                  <div className="text-left">
                     <h3 className="font-semibold">Phone</h3>
                     <p>+971 509431529</p>
                     <p>+91 9945580628</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <MapPin className="w-6 h-6 mr-3 mt-1" />
-                  <div>
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
+                  <div className="text-left">
                     <h3 className="font-semibold">Address</h3>
                     <p>Le Méridien Dubai Hotel & Conference Centre</p>
                   </div>
@@ -176,7 +176,7 @@ export default function ContactUs2() {
               </div>
             </div>
 
-            <div className="p-8">
+            <div className="p-6 sm:p-8">
               {isSubmitted ? (
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
@@ -192,6 +192,7 @@ export default function ContactUs2() {
                   <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
                   <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
                   <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
+
                   <div className="mb-4">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1 text-left">Message</label>
                     <textarea
@@ -215,13 +216,14 @@ export default function ContactUs2() {
                         onChange={handleCheckboxChange}
                         className="mt-1"
                       />
-                      <span>
+                      <span className="text-left">
                         I confirm that I have read, understand and accept the{" "}
                         Terms & Conditions and{" "}
-                        <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> of Future Proptech Summit.
+                        <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link>.
                       </span>
                     </label>
                   </div>
+
                   <div className="mb-4">
                     <label className="flex items-start space-x-2 text-sm text-gray-700">
                       <input
@@ -231,20 +233,24 @@ export default function ContactUs2() {
                         onChange={handleCheckboxChange}
                         className="mt-1"
                       />
-                      <span>
-                        I agree to allow Future Proptech Summit to contact me about their events and other marketing updates from time to time.
-                        Also, Future Proptech Summit may share my details with carefully vetted third parties and other participants to improve the overall event experience.
+                      <span className="text-left">
+                        I consent to having my data processed for event communication.
                       </span>
                     </label>
                   </div>
 
-                  <button type="submit" className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
-                    Submit
-                  </button>
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      className="w-full py-3 px-6 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700 transition duration-200"
+                    >
+                      Submit
+                    </button>
+                  </div>
+
+                  {submitError && <p className="text-red-600 text-center">{submitError}</p>}
                 </form>
               )}
-              {successMessage && <p className="mt-4 text-green-600">{successMessage}</p>}
-              {submitError && <p className="mt-4 text-red-600">{submitError}</p>}
             </div>
           </div>
         </div>
