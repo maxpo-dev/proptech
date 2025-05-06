@@ -144,6 +144,20 @@ Mohamed holds a Bachelor of Science (B.Sc) degree in Electronics and Electrical 
 
 Ivanka believes that AI will revolutionize the real estate industry by enhancing efficiency and accuracy in property valuations, streamlining client interactions, and offering personalized recommendations. AI's ability to process vast data sets quickly will provide deeper insights into market trends, enabling realtors to offer even more strategic advice. This technological advancement promises to transform the industry by making it more transparent and client focused."          
            />
+
+
+                     {/* Lindsey */}
+          <SpeakerCard
+            name="Lindsey Malcolm"
+            jobTitle="Sustainability Lead, Middle East "
+            companyName="Turner & Townsend "
+            linkedIn="https://www.linkedin.com/in/lindsey-malcolm-b565ba22/"
+            speakerImage="/image/speakers/1_condensed.jpg"
+            companyLogo="/image/speakersCompanyLogo/lindseseycomplogo.jpg"
+            fullBio="Lindsey is the regional Sustainability Lead for Turner & Townsend in the Middle East. He is a Chartered Engineer with a diverse background in energy and environmental analysis, sustainable design and strategy development across a wide range of projects. He has almost two decades of experience working in the built environment across the UK, Europe, Middle East and Asia Pacific, developing and delivering low energy sustainable design solutions for numerous residential, commercial and cultural projects.
+
+Lindsey’s ethos is based on having a tangible environmental impact, working closely with people to affect change and delivering creative and robust technical solutions. He is a driven and passionate leader with an eye for detail and a curious nature. His expertise spans across diverse markets and regions, including the UK, UAE, Korea, China, Qatar, Morocco, and KSA. Min Lee specializes in the development of hospitality and residential assets in major urban centers. He is recognized as a strategic thinker with a strong track record of successful project delivery. His ability to lead and inspire teams has consistently driven project success and excellence. His professional journey is marked by a commitment to quality, innovation, and sustainable development practices. In his current role as Sr. Director of Development at RSG, Min Lee leverages integrated development management and lean design & construction methodologies to optimize project outcomes. Additionally, Min Lee is deeply interested in exploring the applications of AI and ML in real estate to drive efficiency and innovation in the industry."
+          />
         </div>
       </div>
     </div>
