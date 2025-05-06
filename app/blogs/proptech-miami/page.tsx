@@ -6,12 +6,12 @@ export default function MiamiPropTechBlogPage() {
   return (
     <div className="w-full px-4 py-24 text-center flex flex-col items-center">
       {/* Full-width image */}
-      <div className="relative w-full h-[88vh]">
+      <div className="w-full h-[60vh] sm:h-[88vh] relative">
         <Image 
           src="/image/blogs/Miami Florida's Proptech Capital Revolutionizing Real Estate.jpg" 
           alt="Miami PropTech Capital" 
           fill 
-          className="object-cover"
+          className="object-contain sm:object-cover"
         />
       </div>
 

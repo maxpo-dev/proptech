@@ -28,7 +28,8 @@ export async function POST(req: NextRequest) {
 
     // Email content with UTM details included
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      // from: process.env.EMAIL_USER,
+      from: `"Proptech- Enquire" <${process.env.EMAIL_USER}>`, // This shows 'proptech' in the header
       to: "info@futureproptechsummit.com, digital.maxpo@gmail.com,",
       subject: "New contact info - Proptech",
       html: `

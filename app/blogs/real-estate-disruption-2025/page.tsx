@@ -6,12 +6,12 @@ export default function TechDisruptionBlogPage() {
   return (
     <div className="w-full px-4 py-24 text-center flex flex-col items-center">
       {/* Header image */}
-      <div className="w-full h-[88vh] relative">
+      <div className="w-full h-[60vh] sm:h-[88vh] relative">
         <Image
           src="/image/blogs/How Tech is Disrupting the Real Estate Market in 2025.jpg"
           alt="Tech disrupting real estate in 2025"
           fill
-          className="object-cover"
+          className="object-contain sm:object-cover"
           priority
         />
       </div>

@@ -8,36 +8,37 @@ export default function BlogsPage() {
 
   const blogCards = [
     {
+      image: "/image/blogs/patrick.jpeg",
+      title: "Q&A Session With Patrick Nessenthaler",
+      excerpt: "Can you tell us about your role at the University of Louisville and your research focus in proptech...",
+      route: "/blogs/patricknessenthaler",
+      author: "Nazish Shah",
+    },
+    {
       image: "/image/blogs/Future PropTech Summit 2025 Transforming Real Estate with AI and Innovation.jpg",
       title: "Welcome to the Future of Real Estate in Dubai",
-      excerpt:
-        "PropTech is driving change in real estate through AI, blockchain, IoT, and VR. Dubai is at the forefront of this innovation...",
+      excerpt: "PropTech is driving change in real estate through AI, blockchain, IoT, and VR. Dubai is at the forefront of this innovation...",
       route: "/blogs/details",
       author: "Askar Ali",
     },
     {
-      image:
-        "/image/blogs/Dubai – The PropTech Powerhouse Driving the Future of Real Estate.jpg",
+      image: "/image/blogs/Dubai – The PropTech Powerhouse Driving the Future of Real Estate.jpg",
       title: "Dubai – The PropTech Powerhouse",
-      excerpt:
-        "From AI-powered smart cities to blockchain-secured transactions, Dubai is setting global benchmarks in real estate tech...",
+      excerpt: "From AI-powered smart cities to blockchain-secured transactions, Dubai is setting global benchmarks in real estate tech...",
       route: "/blogs/proptech-dubai",
       author: "Nazish Shah",
     },
     {
       image: "/image/blogs/Miami Florida's Proptech Capital Revolutionizing Real Estate.jpg",
       title: "Miami: Florida’s PropTech Capital",
-      excerpt:
-        "Miami is emerging as Florida’s PropTech Capital with a booming startup scene, robust VC ecosystem, and global reach...",
+      excerpt: "Miami is emerging as Florida’s PropTech Capital with a booming startup scene, robust VC ecosystem, and global reach...",
       route: "/blogs/proptech-miami",
       author: "Nazish Shah",
     },
     {
-      image:
-        "/image/blogs/How Tech is Disrupting the Real Estate Market in 2025.jpg",
+      image: "/image/blogs/How Tech is Disrupting the Real Estate Market in 2025.jpg",
       title: "How Tech is Disrupting Real Estate in 2025",
-      excerpt:
-        "AI, blockchain, and GenAI are transforming how we invest, manage, and buy property. Learn how PropTech is evolving in 2025...",
+      excerpt: "AI, blockchain, and GenAI are transforming how we invest, manage, and buy property. Learn how PropTech is evolving in 2025...",
       route: "/blogs/real-estate-disruption-2025",
       author: "Nazish Shah",
     },
@@ -50,7 +51,7 @@ export default function BlogsPage() {
         {blogCards.map((card, idx) => (
           <article
             key={idx}
-            className="bg-white shadow-lg rounded-lg p-4 w-full sm:w-auto text-center flex flex-col items-center cursor-pointer hover:shadow-xl transition"
+            className="bg-white shadow-lg rounded-lg p-4 w-full sm:w-auto text-center flex flex-col h-full justify-between items-center cursor-pointer hover:shadow-xl transition"
             onClick={() => router.push(card.route)}
           >
             <div className="w-full h-48 relative mb-4">
@@ -58,12 +59,15 @@ export default function BlogsPage() {
                 src={card.image}
                 alt={card.title}
                 fill
-                className="object-cover rounded-lg shadow-md"
+                className=" rounded-lg shadow-md"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
-            <h2 className="text-lg font-semibold mb-2">{card.title}</h2>
-            <p className="text-gray-700 text-sm">{card.excerpt}</p>
+            {/* <h2 className="text-lg font-semibold text-black mb-2">{card.title}</h2> */}
+            <h2 className="text-lg font-semibold !text-black mb-2">{card.title}</h2>
+
+
+            <p className="text-gray-700 text-sm min-h-[70px]">{card.excerpt}</p>
             <p className="text-gray-400 text-xs mt-2">by {card.author}</p>
             <button
               className="mt-3 text-blue-500 hover:underline focus:outline-none"

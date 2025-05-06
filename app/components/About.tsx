@@ -148,7 +148,7 @@ export default function About() {
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="h-5 w-5 text-blue-600" />
-              <span className="text-gray-700">Dubai, UAE</span>
+              <span className="text-gray-700">Le Méridien Dubai Hotel & Conference Centre</span>
             </div>
           </div>
         </div>

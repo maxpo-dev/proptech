@@ -74,7 +74,7 @@ export default function SpeakersPage() {
             fullBio="Syed Mazhar is Director, HSSE Department at AlBawani, the appointed Chair for IOSH UAE/KSA Branch, a Chartered Fellow Safety Professional and Authorized OHSE Trainer & Assessor for IOSH and NVQ Qualifications.He holds BBA, BSc in fire and safety engineering with professional OHSE Qualifications such as NVQ, NEBOSH, ISOs, IOSH, NASP and OSHA. He has over 18 years of experience in the field of HSE and previously worked with world well known organizations in the middle east."
           />
 
-           {/* Boris Segal. */}
+           {/* Boris Segal.. */}
            <SpeakerCard
             name="Boris Segal"
             jobTitle="Director of Strategic Digital Partnerships"
@@ -107,18 +107,15 @@ London and an MBA from Cass Business School."
             companyLogo="/image/speakersCompanyLogo/DTEC Logo.jpg"
             fullBio="Hans is a serial entrepreneur with as much experience as an entrepreneur as a corporate leader. The past decade he has helped build one of the largest entrepreneurial communities in the MENA region through offering investment, mentoring, and acceleration and a great space to set up their businesses, for the Dubai government."
           />
-          <SpeakerCard  name="Dr. Abdulla AlWahedi" jobTitle="Chief Executive Officer" companyName="Irtikaz Group" linkedIn="https://www.linkedin.com/in/abdullaalwahedi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" speakerImage="/image/speakers/400x400-01.jpg" companyLogo="/image/speakers/Logo.jpg" fullBio="With over two decades of experience in the infrastructure and facilities management industry under his belt, Dr. Abdulla has developed country-wide renowned for his work. Before establishing Irtikaz Property Management, Abdulla held the titles of Chief Executive Officer of Khidmah and Senior Director at Emaar Facilities Management, where he oversaw the FM operations of iconic projects such as Burj Khalifa, The Dubai Mall and Emaar District Cooling. His experience as a Senior Engineer at Etihad Etisalat also gained him significant FM exposure in the Kingdom of Saudi Arabia. The determination to exceed boundaries is a characteristic ingrained within Dr. Abdulla; he is a graduate of both the British University in Dubai (PhD) and the Mohammed Bin Rashid Centre for Leadership Development, as well as a proud recipient of the esteemed Rashid Award for Academic Achievement"          />
+          <SpeakerCard  name="Dr. Abdulla AlWahedi" 
+          jobTitle="Chief Executive Officer"
+           companyName="Irtikaz Group" 
+           linkedIn="https://www.linkedin.com/in/abdullaalwahedi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+           speakerImage="/image/speakers/400x400-01.jpg" 
+           companyLogo="/image/speakersCompanyLogo/Logo.jpg" 
+           fullBio="With over two decades of experience in the infrastructure and facilities management industry under his belt, Dr. Abdulla has developed country-wide renowned for his work. Before establishing Irtikaz Property Management, Abdulla held the titles of Chief Executive Officer of Khidmah and Senior Director at Emaar Facilities Management, where he oversaw the FM operations of iconic projects such as Burj Khalifa, The Dubai Mall and Emaar District Cooling. His experience as a Senior Engineer at Etihad Etisalat also gained him significant FM exposure in the Kingdom of Saudi Arabia. The determination to exceed boundaries is a characteristic ingrained within Dr. Abdulla; he is a graduate of both the British University in Dubai (PhD) and the Mohammed Bin Rashid Centre for Leadership Development, as well as a proud recipient of the esteemed Rashid Award for Academic Achievement"          
+           />
 
-
-          {/* <SpeakerCard
-            name="Hans Christensen"
-            jobTitle="Vice President - Dubai Technology Entrepreneur Campus"
-            companyName="DTEC (Dubai Technology Entrepreneur Campus)"
-            linkedIn=""
-            speakerImage="/image/speakers/Hans Picture.jpg"
-            companyLogo="/image/speakersCompanyLogo/DTEC Logo.jpg"
-            fullBio="Hans is a serial entrepreneur with as much experience as an entrepreneur as a corporate leader. The past decade he has helped build one of the largest entrepreneurial communities in the MENA region through offering investment, mentoring, and acceleration and a great space to set up their businesses, for the Dubai government."
-          /> */}
           <SpeakerCard  
           name="Mohamed Moselhy"
            jobTitle="Global Smart Cities Director" 
@@ -134,6 +131,33 @@ Mohamed is part of Honeywell’s organization for more than 17 years focused on 
 Mohamed holds a Bachelor of Science (B.Sc) degree in Electronics and Electrical Communications Engineering from Cairo University in Egypt and an Executive MBA from Hult International Business School with focus on International Business, He is a certified Six Sigma Greenbelt and completed successfully multiple leadership and strategic marketing programs and is certified on multiple security and safety systems for commercial and military applications and an active member of the American Society for Industrial Security (ASIS).  
 
 "          />
+
+
+
+<SpeakerCard  name="Ivanka Tancheva" 
+          jobTitle="Real Estate Specialist"
+           companyName="Savills Middle East" 
+           linkedIn="https://www.linkedin.com/in/ivanka-tancheva-849967194/" 
+           speakerImage="/image/speakers/Ivanka.jpeg" 
+           companyLogo="/image/speakersCompanyLogo/ivankalogo.jpg" 
+           fullBio="Ivanka Tancheva is a seasoned real estate agent with a profound understanding of the UAE and Abu Dhabi property markets. With years of experience at Savills Abu Dhabi, she has honed her skills in navigating the complexities of local real estate dynamics, offering clients insightful advice and bespoke solutions. Ivanka's keen market acumen and her ability to anticipate trends empower her clients to make informed decisions, whether they are buying, selling, or investing in properties. Her dedication to continuous learning ensures she stays ahead in the ever-evolving real estate landscape.
+
+Ivanka believes that AI will revolutionize the real estate industry by enhancing efficiency and accuracy in property valuations, streamlining client interactions, and offering personalized recommendations. AI's ability to process vast data sets quickly will provide deeper insights into market trends, enabling realtors to offer even more strategic advice. This technological advancement promises to transform the industry by making it more transparent and client focused."          
+           />
+
+
+                     {/* Lindsey */}
+          <SpeakerCard
+            name="Lindsey Malcolm"
+            jobTitle="Sustainability Lead, Middle East "
+            companyName="Turner & Townsend "
+            linkedIn="https://www.linkedin.com/in/lindsey-malcolm-b565ba22/"
+            speakerImage="/image/speakers/1_condensed.jpg"
+            companyLogo="/image/speakersCompanyLogo/lindseseycomplogo.jpg"
+            fullBio="Lindsey is the regional Sustainability Lead for Turner & Townsend in the Middle East. He is a Chartered Engineer with a diverse background in energy and environmental analysis, sustainable design and strategy development across a wide range of projects. He has almost two decades of experience working in the built environment across the UK, Europe, Middle East and Asia Pacific, developing and delivering low energy sustainable design solutions for numerous residential, commercial and cultural projects.
+
+Lindsey’s ethos is based on having a tangible environmental impact, working closely with people to affect change and delivering creative and robust technical solutions. He is a driven and passionate leader with an eye for detail and a curious nature. His expertise spans across diverse markets and regions, including the UK, UAE, Korea, China, Qatar, Morocco, and KSA. Min Lee specializes in the development of hospitality and residential assets in major urban centers. He is recognized as a strategic thinker with a strong track record of successful project delivery. His ability to lead and inspire teams has consistently driven project success and excellence. His professional journey is marked by a commitment to quality, innovation, and sustainable development practices. In his current role as Sr. Director of Development at RSG, Min Lee leverages integrated development management and lean design & construction methodologies to optimize project outcomes. Additionally, Min Lee is deeply interested in exploring the applications of AI and ML in real estate to drive efficiency and innovation in the industry."
+          />
         </div>
       </div>
     </div>

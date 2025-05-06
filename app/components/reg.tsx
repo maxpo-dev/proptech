@@ -1,212 +1,77 @@
-"use client"
+'use client'
 
-import type React from "react"
-import { useEffect, useState } from "react"
-import { Mail, Phone, MapPin } from "lucide-react"
-import Link from "next/link"
-import { useSearchParams } from "next/navigation"
+import { useSearchParams, useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import Sponsor from './Sponsor'
+import Exhibitors from './Exhibitors'
+import Delegates from './Delegates'
+import Participants from './Participants'
+import ContactUs2 from './reg2'
 
-const InputField = ({
-  label,
-  id,
-  type = "text",
-  placeholder,
-  value,
-  onChange,
-}: {
-  label: string
-  id: string
-  type?: string
-  placeholder: string
-  value: string
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}) => (
-  <div className="mb-4">
-    <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">
-      {label}
-    </label>
-    <input
-      type={type}
-      id={id}
-      name={id}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-      required
-    />
-  </div>
-)
+const options = [
+  { label: 'Sponsor', key: 'sponsor' },
+  { label: 'Exhibitors', key: 'exhibitors' },
+  { label: 'Delegates', key: 'delegates' },
+  { label: 'Participants', key: 'participants' },
+]
 
 export default function ContactUs() {
   const searchParams = useSearchParams()
+  const router = useRouter()
+  const [selected, setSelected] = useState<string | null>(null)
 
-  const [formData, setFormData] = useState({
-    name: "",
-    jobTitle: "",
-    companyName: "",
-    email: "",
-    phone: "",
-    country: "",
-    message: "",
-    utm_source: "",
-    utm_medium: "",
-    utm_campaign: "",
-  })
-
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [successMessage, setSuccessMessage] = useState("")
-  const [submitError, setSubmitError] = useState("")
-
-  // Capture UTM params on load
+  // Read initial selection from query param "type"
   useEffect(() => {
-    const utm_source = searchParams.get("utm_source") || ""
-    const utm_medium = searchParams.get("utm_medium") || ""
-    const utm_campaign = searchParams.get("utm_campaign") || ""
-
-    setFormData((prevData) => ({
-      ...prevData,
-      utm_source,
-      utm_medium,
-      utm_campaign,
-    }))
+    const selectedType = searchParams.get('type') // updated here
+    setSelected(selectedType)
   }, [searchParams])
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prevData) => ({ ...prevData, [name]: value }))
+  // Update query param in URL to "type"
+  const handleSelect = (key: string) => {
+    const params = new URLSearchParams(searchParams.toString())
+    params.set('type', key) // updated here
+    router.push(`/register?${params.toString()}`)
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    try {
-      const response = await fetch("/api/mailcontact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      })
-
-      const data = await response.json()
-
-      if (response.ok) {
-        setIsSubmitted(true)
-        setSuccessMessage(data.message || "Booking submitted successfully and email sent!")
-        setSubmitError("")
-
-        setFormData({
-          name: "",
-          jobTitle: "",
-          companyName: "",
-          email: "",
-          phone: "",
-          country: "",
-          message: "",
-          utm_source: "",
-          utm_medium: "",
-          utm_campaign: "",
-        })
-      } else {
-        setSubmitError(data.message || "Form submission failed. Please try again.")
-        setSuccessMessage("")
-      }
-    } catch (err) {
-      console.error("Error submitting form:", err)
-      setSubmitError("An error occurred. Please try again.")
-      setSuccessMessage("")
+  const renderComponent = () => {
+    switch (selected) {
+      case 'sponsor':
+        return <Sponsor />
+      case 'exhibitors':
+        return <Exhibitors />
+      case 'delegates':
+        return <Delegates />
+      case 'participants':
+        return <Participants />
+      default:
+        return (
+          <div className="text-center mb-8">
+            <ContactUs2 />
+          </div>
+        )
     }
   }
 
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Contact Us</h1>
-          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions about the International Proptech Investment Expo? We&apos;re here to help.
-          </p>
+      <div className="max-w-4xl mx-auto mt-5">
+        <div className="flex justify-center gap-4 flex-wrap mb-8">
+          {options.map((opt) => (
+            <button
+              key={opt.key}
+              onClick={() => handleSelect(opt.key)}
+              className={`px-5 py-2 rounded-full font-semibold transition ${
+                selected === opt.key
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-white text-blue-600 border border-blue-600 hover:bg-blue-100'
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
         </div>
 
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            {/* Contact Info Section */}
-            <div className="p-8 bg-blue-600 text-white">
-              <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <Mail className="w-6 h-6 mr-3 mt-1" />
-                  <div>
-                    <h3 className="font-semibold">Email</h3>
-                    <p>proptechdubai@maxpo.ae</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Phone className="w-6 h-6 mr-3 mt-1" />
-                  <div>
-                    <h3 className="font-semibold">Phone</h3>
-                    <p>+971 509431529</p>
-                    <p>+91 9945580628</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <MapPin className="w-6 h-6 mr-3 mt-1" />
-                  <div>
-                    <h3 className="font-semibold">Address</h3>
-                    <p>Maxpo Exhibitions, Dubai, UAE</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form Section */}
-            <div className="p-8">
-              {isSubmitted ? (
-                <div className="text-center">
-                  <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
-                  <p className="text-gray-600">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 text-black">
-                  <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
-                  <InputField label="Job Title" id="jobTitle" placeholder="Your job title" value={formData.jobTitle} onChange={handleChange} />
-                  <InputField label="Company Name" id="companyName" placeholder="Your company name" value={formData.companyName} onChange={handleChange} />
-                  <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
-                  <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
-                  <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
-                  <div className="mb-4">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      placeholder="How can we help you?"
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-                      required
-                    />
-                  </div>
-                  <button type="submit" className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
-                    Send Message
-                  </button>
-                </form>
-              )}
-              {successMessage && <p className="mt-4 text-green-600">{successMessage}</p>}
-              {submitError && <p className="mt-4 text-red-600">{submitError}</p>}
-            </div>
-          </div>
-        </div>
-
-        {/* Social Media Links */}
-        {/* <div className="mt-12 text-center">
-          <h3 className="text-lg font-semibold mb-4 text-gray-700">Follow us on</h3>
-          <div className="flex justify-center space-x-6">
-            <Link href="https://www.facebook.com/futureproptechsummit" target="_blank" className="text-blue-600 hover:underline">Facebook</Link>
-            <Link href="https://www.linkedin.com/showcase/future-proptech-summit" target="_blank" className="text-blue-600 hover:underline">LinkedIn</Link>
-            <Link href="https://www.instagram.com/futureproptechsummit/" target="_blank" className="text-pink-500 hover:underline">Instagram</Link>
-            <Link href="https://www.youtube.com/@futureproptechsummit" target="_blank" className="text-red-600 hover:underline">YouTube</Link>
-          </div>
-        </div> */}
+        <div className="bg-white p-6 rounded-lg shadow-md">{renderComponent()}</div>
       </div>
     </div>
   )

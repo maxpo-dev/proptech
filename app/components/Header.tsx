@@ -77,13 +77,15 @@ export default function Header() {
               <span className="sr-only">Proptech Expo 2025</span>
             </Link>
             <Link href="/" className="flex items-center">
-              <Image
-                src={logo2}
-                alt="Proptech Expo 2025 Logo"
-                width={180}
-                height={30}
-                className='ml-10'
-              />
+            <Image
+  src={logo2}
+  alt="Proptech Expo 2025 Logo"
+  width={180}
+  height={30}
+  className='ml-10'
+  priority // <-- 🔥 this is the magic line!
+/>
+
               <span className="sr-only">Proptech Expo 2025</span>
             </Link>
           </div>
