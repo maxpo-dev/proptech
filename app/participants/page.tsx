@@ -117,6 +117,70 @@ export default function ParticipantsPage() {
               className="w-auto max-h-48 object-contain"
             />
           </div>
+          <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/speakersCompanyLogo/lindseseycomplogo.jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+          <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/speakersCompanyLogo/ivankalogo.jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+          <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/exhibitor/Moderlab LOGO (1).jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+          <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/exhibitor/VR logo (1).jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+          <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/ab.jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+          <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/AIPressRoom_1500_1500_transparent-1.png"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div >
+          <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/ZEX PR Wire Icon - Colored.png"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div >
+
         </div>
       </div>
     </div>
