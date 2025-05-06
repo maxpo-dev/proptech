@@ -15,7 +15,7 @@ export default function ParticipantsPage() {
           {/* Logo 1 */}
           <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
             <Image
-              src="/image/speakers/Logo.jpg"
+              src="/image/speakersCompanyLogo/Logo.jpg"
               alt="Haier Biomedical"
               width={300}
               height={300}
