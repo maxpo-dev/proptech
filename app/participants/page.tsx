@@ -7,7 +7,7 @@ export default function ParticipantsPage() {
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">Participants</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Company Participants at Future PropTech Summit 2025.
+         Participants at the Future Proptech Summit 2025.
           </p>
         </div>
 
