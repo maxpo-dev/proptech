@@ -33,6 +33,7 @@ const navItems = [
     ],
   },
   { name: 'Blogs', href: '/blogs' },
+  { name: 'Participants', href: '/participants' },
   { name: 'Get in Touch', href: '/register' },
 ];
 
