@@ -2,6 +2,8 @@
 
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function HighlightedSpeakersMarquee() {
   const highlighted = [
@@ -62,41 +64,53 @@ export default function HighlightedSpeakersMarquee() {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 py-4 border-y border-gray-300 shadow-inner">
-      <Marquee speed={40} gradient={false} pauseOnHover>
-        {highlighted.map((speaker, index) => (
-          <div key={index} className="flex items-center space-x-3 mx-6">
-            {/* Speaker Image - increased size */}
-            <div
-              className="relative rounded-full overflow-hidden shadow-lg border border-white"
-              style={{ width: "6rem", height: "7.5rem" }}
-            >
-              <Image
-                src={speaker.image}
-                alt={speaker.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Speaker Details */}
-            <div className="flex flex-col text-gray-800">
-              <span className="text-sm font-semibold">{speaker.name}</span>
-              <span className="text-xs text-gray-600">{speaker.designation}</span>
-
-              {/* Company Logo - increased size */}
-              <div className="relative w-20 h-8 mt-2">
-                <Image 
-                  src={speaker.companyLogo}
-                  alt={`${speaker.name} company logo`}
+    <div>
+      <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 py-4 border-y border-gray-300 shadow-inner">
+        <Marquee speed={40} gradient={false} pauseOnHover>
+          {highlighted.map((speaker, index) => (
+            <div key={index} className="flex items-center space-x-3 mx-6">
+              {/* Speaker Image */}
+              <div
+                className="relative rounded-full overflow-hidden shadow-lg border border-white"
+                style={{ width: "6rem", height: "7.5rem" }}
+              >
+                <Image
+                  src={speaker.image}
+                  alt={speaker.name}
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
+
+              {/* Speaker Details */}
+              <div className="flex flex-col text-gray-800">
+                <span className="text-sm font-semibold">{speaker.name}</span>
+                <span className="text-xs text-gray-600">{speaker.designation}</span>
+
+                {/* Company Logo */}
+                <div className="relative w-20 h-8 mt-2">
+                  <Image
+                    src={speaker.companyLogo}
+                    alt={`${speaker.name} company logo`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
-      </Marquee>
+          ))}
+        </Marquee>
+        <div className="flex justify-center mt-6">
+        <Link href="/conference/speakers">
+          <button className="px-6 py-3 bg-blue-600 text-white rounded-2xl hover:bg-blue-700 hover:scale-105 transition-transform duration-300">
+            View All
+          </button>
+        </Link>
+      </div>
+      </div>
+
+      {/* Centered View All Button */}
+   
     </div>
   );
 }
