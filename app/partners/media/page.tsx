@@ -6,6 +6,7 @@ import Image from "next/image";
 import AutomatedBuildings from "@/app/components/AutomatedBuildings";
 import ZexPrWire from "@/app/components/ZexPrWire";
 import AIPressRoom from "@/app/components/AIPressRoom";
+import PropertyNewsInternational from "@/app/components/PropertyNewsInternational";
 
 export default function MediaPartnersPage() {
   return (
@@ -16,6 +17,8 @@ export default function MediaPartnersPage() {
       <ZexPrWire />
 
       <AIPressRoom />
+
+      <PropertyNewsInternational />
 
       
     </div>
