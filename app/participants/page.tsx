@@ -119,7 +119,7 @@ export default function ParticipantsPage() {
           </div>
           <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
             <Image
-              src="/image/speakersCompanyLogo/lindseseycomplogo.jpg"
+              src="/image/speakersCompanyLogo/Untitled-4-01.jpg"
               alt="Impact"
               width={300}
               height={300}
