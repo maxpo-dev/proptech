@@ -48,15 +48,16 @@ export default function SpeakerCard({
       <p className="text-sm text-gray-500">{companyName}</p>
 
       {/* Company Logo */}
-      <div className="flex justify-center mt-4">
-        <Image
-          src={companyLogo}
-          alt={`${companyName} Logo`}
-          width={160}
-          height={100}
-          className="w-35 h-auto object-contain"
-        />
-      </div>
+      <div className="w-40 h-24 flex items-center justify-center mx-auto mt-4">
+  <Image
+    src={companyLogo}
+    alt={`${companyName} Logo`}
+    width={160}
+    height={100}
+    className="max-w-full max-h-full object-contain"
+  />
+</div>
+
 
       {/* Biography */}
       <p className="mt-4 text-sm text-gray-700 text-left">
