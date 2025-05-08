@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import aiPressRoomLogo from "@/public/image/partners/AIPressRoom_1500_1500_transparent-1.png";
+import propertyNewsLogo from "@/public/image/partners/PN-Black.png";
 
-export default function AIPressRoom() {
+export default function PropertyNewsInternational() {
   return (
     <div className="bg-white text-black font-serif">
       <main className="container mx-auto py-16 px-4">
@@ -12,15 +12,15 @@ export default function AIPressRoom() {
           <div className="relative max-w-4xl bg-gray-100 p-8 rounded-lg shadow-2xl flex flex-col md:flex-row items-center">
 
             {/* Top-right Badge */}
-            <div className="absolute top-4 right-4 bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-md z-10">
+            <div className="absolute top-4 right-4 bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-md">
               Media Partner
             </div>
 
             {/* Logo Section */}
             <div className="md:w-1/3 flex justify-center mb-8 md:mb-0">
               <Image
-                src={aiPressRoomLogo}
-                alt="AI PressRoom Logo"
+                src={propertyNewsLogo}
+                alt="Property News International Logo"
                 width={300}
                 height={300}
                 className="object-contain"
@@ -29,20 +29,22 @@ export default function AIPressRoom() {
 
             {/* Details Section */}
             <div className="md:w-2/3 md:pl-10">
-              <h2 className="text-4xl font-bold mb-4">AI PressRoom</h2>
+              <h2 className="text-4xl font-bold mb-4">
+                Property News International
+              </h2>
               <p className="text-xl mb-4">
                 Website:{" "}
                 <a
-                  href="https://aipressroom.com"
+                  href="https://www.propertynewsint.com"
                   className="text-blue-600 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  AIPressRoom - Trusted AI News, Interviews, Events & Insights
+                  www.propertynewsint.com
                 </a>
               </p>
               <p className="text-lg leading-relaxed">
-                AIPressRoom spotlights AI innovation through exclusive interviews, global event coverage, expert insights, and press releases.
+                Property News International is a global media platform that delivers daily news about real estate, construction, and development from around the world. It is a key source for decision-makers, investors, property developers, and real estate companies. We cover upcoming projects, major updates, expert insights, exclusive features, and interviews with global real estate leaders, all focused on the business of building the future.
               </p>
             </div>
           </div>

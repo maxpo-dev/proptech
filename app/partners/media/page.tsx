@@ -1,23 +1,24 @@
 "use client";
 
-import Image from "next/image";
-// Ensure the logo image is placed at the correct path.
-// import automatedBuildingsLogo from "@/public/image/partners/Asset-22-1024x264.png";
 import AutomatedBuildings from "@/app/components/AutomatedBuildings";
 import ZexPrWire from "@/app/components/ZexPrWire";
 import AIPressRoom from "@/app/components/AIPressRoom";
+import PropertyNewsInternational from "@/app/components/PropertyNewsInternational";
 
 export default function MediaPartnersPage() {
   return (
-    <div className="bg-white text-black font-serif">
+    <div className="bg-white text-black font-serif pt-32"> {/* Add top padding here */}
+      {/* Hero Section */}
+      <section className="text-center mb-12">
+        <h1 className="mt-8 text-5xl font-bold mb-4">
+          Media Partners
+        </h1>
+      </section>
 
       <AutomatedBuildings />
-
       <ZexPrWire />
-
       <AIPressRoom />
-
-      
+      <PropertyNewsInternational />
     </div>
   );
 }
