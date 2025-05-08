@@ -161,7 +161,7 @@ export default function Delegates() {
                   <div>
                     <h3 className="font-semibold">Phone</h3>
                     <p>+971 509431529</p>
-                    <p>+91 9945580628</p>
+                    <p>+91 7780985893</p>
                   </div>
                 </div>
                 <div className="flex items-start">

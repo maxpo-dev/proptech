@@ -87,7 +87,7 @@ export default function Footer() {
                 <a href="tel:+971509431529" className="text-gray-400 hover:text-white transition-colors duration-200">+971 509431529</a>
               </li>
               <li className="flex items-center">
-                <a href="tel:+919945580628" className="text-gray-400 hover:text-white transition-colors duration-200 pl-6">+91 9945580628</a>
+                <a href="tel:+919945580628" className="text-gray-400 hover:text-white transition-colors duration-200 pl-6">+91  7780985893</a>
               </li>
               <li className="flex items-start">
                 <MapPin size={16} className="mr-2 mt-1 text-gray-400" />
