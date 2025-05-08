@@ -1,21 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { FaLinkedin } from "react-icons/fa"; // ✅ Import LinkedIn icon
+import { FaLinkedin } from "react-icons/fa";
 import zexPrWireLogo from "@/public/image/partners/ZEX PR Wire Icon - Colored.png";
 
 export default function ZexPrWire() {
   return (
     <div className="bg-white text-black font-serif">
       <main className="container mx-auto py-16 px-4">
-        {/* Hero Section */}
-        {/* <section className="text-center mb-12">
-          <h1 className="mt-8 text-5xl font-bold mb-4">Media Partner</h1>
-        </section> */}
-
         {/* Partner Card */}
         <section className="flex justify-center">
-          <div className="max-w-4xl bg-gray-100 p-8 rounded-lg shadow-2xl flex flex-col md:flex-row items-center">
+          <div className="relative max-w-4xl bg-gray-100 p-8 rounded-lg shadow-2xl flex flex-col md:flex-row items-center">
+            {/* Top-right Badge */}
+            <div className="absolute top-4 right-4 bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-md z-10">
+              Media Partner
+            </div>
+
             {/* Logo Section */}
             <div className="md:w-1/3 flex justify-center mb-8 md:mb-0">
               <a
@@ -47,7 +47,6 @@ export default function ZexPrWire() {
                   www.zexprwire.com
                 </a>
               </p>
-
               <p className="text-lg leading-relaxed mb-4">
                 ZEX PR WIRE® is a Press Release Distribution SAAS platform,
                 which syndicates press release content to Tier 1, 2 & 3 media
@@ -57,7 +56,6 @@ export default function ZexPrWire() {
                 and marketing firms to conduct and manage PR campaigns for their
                 clients.
               </p>
-
               <div className="text-lg">
                 <p className="font-semibold mb-2">Social Media:</p>
                 <div className="flex space-x-4">

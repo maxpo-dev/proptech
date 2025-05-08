@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import propertyNewsLogo from "@/public/image/partners/PN-Black.png"; // Update with actual image path and filename
+import propertyNewsLogo from "@/public/image/partners/PN-Black.png";
 
 export default function PropertyNewsInternational() {
   return (
@@ -9,7 +9,13 @@ export default function PropertyNewsInternational() {
       <main className="container mx-auto py-16 px-4">
         {/* Single Card for Partner Details */}
         <section className="flex justify-center">
-          <div className="max-w-4xl bg-gray-100 p-8 rounded-lg shadow-2xl flex flex-col md:flex-row items-center">
+          <div className="relative max-w-4xl bg-gray-100 p-8 rounded-lg shadow-2xl flex flex-col md:flex-row items-center">
+
+            {/* Top-right Badge */}
+            <div className="absolute top-4 right-4 bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-md">
+              Media Partner
+            </div>
+
             {/* Logo Section */}
             <div className="md:w-1/3 flex justify-center mb-8 md:mb-0">
               <Image
@@ -20,6 +26,7 @@ export default function PropertyNewsInternational() {
                 className="object-contain"
               />
             </div>
+
             {/* Details Section */}
             <div className="md:w-2/3 md:pl-10">
               <h2 className="text-4xl font-bold mb-4">
