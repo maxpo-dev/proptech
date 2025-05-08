@@ -179,8 +179,7 @@ export default function ParticipantsPage() {
               height={300}
               className="w-auto max-h-48 object-contain"
             />
-          </div >
-
+          </div>
         </div>
       </div>
     </div>
