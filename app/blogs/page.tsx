@@ -44,7 +44,7 @@ export default function BlogsPage() {
     },
     //gamechanger
    {
-  image: "/image/blogs/Blogs (1).png", // Use a new image if available
+  image: "/image/blogs/Blogs (2).png", // Use a new image if available
   title: "Why Dubai is a Game-changer in PropTech",
   excerpt: "Dubai is revolutionizing real estate with blockchain, AI, and forward-thinking strategies. Discover how it's shaping the future of PropTech...",
   route: "/blogs/gamechanger",
