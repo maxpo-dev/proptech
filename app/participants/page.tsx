@@ -195,7 +195,7 @@ export default function ParticipantsPage() {
     onClick={() => router.push("/register?type=participants")}
     className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-blue-700"
   >
-    Learn More
+    Enquiry Now
   </button>
 </div>
 

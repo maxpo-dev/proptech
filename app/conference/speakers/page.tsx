@@ -35,7 +35,7 @@ const SpeakersPage: React.FC = () => {
         <div className="mt-12 text-center">
           <Link href="/register">
             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-blue-700">
-              Learn More
+              Enquire Now
             </button>
           </Link>
         </div>

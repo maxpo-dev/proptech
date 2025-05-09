@@ -33,7 +33,7 @@ export default function SpeakerCard({
   return (
     <>
       <div className="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 transform hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] group h-full flex flex-col">
-        {/* Speaker Image - First Layer */}
+        {/* Speaker Image with Logo Overlay - First Layer */}
         <div className="relative w-full pt-[100%] overflow-hidden">
           <div className="absolute inset-0">
             <Image
@@ -46,6 +46,19 @@ export default function SpeakerCard({
               priority
             />
           </div>
+
+          {/* Company Logo Overlay - Bottom Center Circular */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center">
+            <div className="relative w-12 h-12">
+              <Image
+                src={logoError ? "/placeholder.svg?height=60&width=60" : companyLogo}
+                alt={`${companyName} Logo`}
+                fill
+                className="object-contain"
+                onError={() => setLogoError(true)}
+              />
+            </div>
+          </div>
         </div>
 
         {/* Speaker Details - Second Layer */}
@@ -54,18 +67,6 @@ export default function SpeakerCard({
             <h2 className="text-lg font-bold text-gray-900 line-clamp-1">{name}</h2>
             <p className="text-sm text-gray-600 line-clamp-1">{jobTitle}</p>
             <p className="text-sm text-gray-500 line-clamp-1">{companyName}</p>
-          </div>
-
-          {/* Company Logo */}
-          <div className="h-16 flex items-center justify-center my-3 bg-gray-50 rounded p-2">
-            <Image
-              src={logoError ? "/placeholder.svg?height=60&width=120" : companyLogo}
-              alt={`${companyName} Logo`}
-              width={120}
-              height={60}
-              className="max-h-full max-w-full object-contain"
-              onError={() => setLogoError(true)}
-            />
           </div>
 
           <div className="mt-auto flex items-center justify-between">
@@ -112,22 +113,24 @@ export default function SpeakerCard({
                     onError={() => setImageError(true)}
                   />
                 </div>
+
+                {/* Company Logo in Modal - Bottom Center Circular */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center">
+                  <div className="relative w-12 h-12">
+                    <Image
+                      src={logoError ? "/placeholder.svg?height=60&width=60" : companyLogo}
+                      alt={`${companyName} Logo`}
+                      fill
+                      className="object-contain"
+                      onError={() => setLogoError(true)}
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="mt-4 w-full text-center">
                 <h3 className="font-semibold text-gray-900">{jobTitle}</h3>
                 <p className="text-gray-600">{companyName}</p>
-
-                <div className="h-16 flex items-center justify-center mt-2 bg-gray-50 rounded p-2">
-                  <Image
-                    src={logoError ? "/placeholder.svg?height=60&width=120" : companyLogo}
-                    alt={`${companyName} Logo`}
-                    width={120}
-                    height={60}
-                    className="max-h-full max-w-full object-contain"
-                    onError={() => setLogoError(true)}
-                  />
-                </div>
 
                 {linkedIn && (
                   <Link
