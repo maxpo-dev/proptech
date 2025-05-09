@@ -34,13 +34,13 @@ export default function SpeakerCard({
     <>
       <div className="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 transform hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] group h-full flex flex-col">
         {/* Speaker Image - First Layer */}
-        <div className="relative w-full pt-[75%] overflow-hidden">
+        <div className="relative w-full pt-[100%] overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src={imageError ? "/placeholder.svg?height=300&width=400" : speakerImage}
+              src={imageError ? "/placeholder.svg?height=400&width=400" : speakerImage}
               alt={name}
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover object-center transition-transform duration-300 group-hover:scale-110"
               onError={() => setImageError(true)}
               priority
