@@ -42,6 +42,15 @@ export default function BlogsPage() {
       route: "/blogs/real-estate-disruption-2025",
       author: "Nazish Shah",
     },
+    //gamechanger
+   {
+  image: "/image/blogs/Blogs (1).png", // Use a new image if available
+  title: "Why Dubai is a Game-changer in PropTech",
+  excerpt: "Dubai is revolutionizing real estate with blockchain, AI, and forward-thinking strategies. Discover how it's shaping the future of PropTech...",
+  route: "/blogs/gamechanger",
+  author: "Nazish Shah",
+},
+
   ];
 
   return (
