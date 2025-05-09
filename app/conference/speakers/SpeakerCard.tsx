@@ -84,7 +84,7 @@ export default function SpeakerCard({
 
       {/* Modal with full speaker details */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-3xl">
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-auto">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold">{name}</DialogTitle>
           </DialogHeader>
