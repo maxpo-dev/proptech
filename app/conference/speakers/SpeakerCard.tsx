@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Linkedin } from "lucide-react"
+import { motion } from "framer-motion"
 
 interface SpeakerCardProps {
   name: string
@@ -47,8 +48,20 @@ export default function SpeakerCard({
             />
           </div>
 
-          {/* Company Logo Overlay - Bottom Center Circular (pushed down) */}
-          <div className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center">
+          {/* Company Logo Overlay - Bottom Center Circular (continuous bounce) */}
+          <motion.div
+            className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center"
+            initial={{ y: 0 }}
+            animate={{
+              y: [0, -10, 0],
+              transition: {
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+              },
+            }}
+          >
             <div className="relative w-12 h-12">
               <Image
                 src={logoError ? "/placeholder.svg?height=60&width=60" : companyLogo}
@@ -58,7 +71,7 @@ export default function SpeakerCard({
                 onError={() => setLogoError(true)}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Speaker Details - Second Layer */}
@@ -114,8 +127,20 @@ export default function SpeakerCard({
                   />
                 </div>
 
-                {/* Company Logo in Modal - Bottom Center Circular (pushed down) */}
-                <div className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center">
+                {/* Company Logo in Modal - Bottom Center Circular (continuous bounce) */}
+                <motion.div
+                  className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center"
+                  initial={{ y: 0 }}
+                  animate={{
+                    y: [0, -10, 0],
+                    transition: {
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatType: "mirror",
+                      ease: "easeInOut",
+                    },
+                  }}
+                >
                   <div className="relative w-12 h-12">
                     <Image
                       src={logoError ? "/placeholder.svg?height=60&width=60" : companyLogo}
@@ -125,7 +150,7 @@ export default function SpeakerCard({
                       onError={() => setLogoError(true)}
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
 
               <div className="mt-4 w-full text-center">
