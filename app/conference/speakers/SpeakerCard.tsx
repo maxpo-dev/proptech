@@ -33,13 +33,14 @@ export default function SpeakerCard({
       <div className="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 transform hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] group">
         {/* Speaker Image */}
         <div className="relative w-full aspect-[4/3] overflow-hidden">
-  <Image
-    src={speakerImage || "/placeholder.svg"}
-    alt={name}
-    fill
-    className="object-cover transition-transform duration-300 group-hover:scale-110"
-  />
-</div>
+          <Image
+            src={speakerImage || "/placeholder.svg"}
+            alt={name}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+
         {/* Speaker Details */}
         <div className="p-4">
           <h2 className="text-lg font-bold text-gray-900 line-clamp-1">{name}</h2>
@@ -67,14 +68,16 @@ export default function SpeakerCard({
               View More
             </Button>
 
-            <Link
-              href={linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 transition-transform duration-300 hover:scale-110"
-            >
-              <Linkedin size={20} />
-            </Link>
+            {linkedIn && (
+              <Link
+                href={linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 transition-transform duration-300 hover:scale-110"
+              >
+                <Linkedin size={20} />
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -92,7 +95,7 @@ export default function SpeakerCard({
                 <Image src={speakerImage || "/placeholder.svg"} alt={name} fill className="object-cover" />
               </div>
 
-              <div className="mt-4 w-full">
+              <div className="mt-4 w-full text-center">
                 <h3 className="font-semibold text-gray-900">{jobTitle}</h3>
                 <p className="text-gray-600">{companyName}</p>
 
@@ -106,21 +109,23 @@ export default function SpeakerCard({
                   />
                 </div>
 
-                <Link
-                  href={linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 text-blue-600 hover:text-blue-800 mt-4"
-                >
-                  <Linkedin size={20} />
-                  <span>LinkedIn Profile</span>
-                </Link>
+                {linkedIn && (
+                  <Link
+                    href={linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 text-blue-600 hover:text-blue-800 mt-4"
+                  >
+                    <Linkedin size={20} />
+                    <span>LinkedIn Profile</span>
+                  </Link>
+                )}
               </div>
             </div>
 
             <div className="md:col-span-2">
               <h3 className="text-lg font-semibold mb-2">Biography</h3>
-              <p className="text-gray-700">{fullBio}</p>
+              <p className="text-gray-700 whitespace-pre-line">{fullBio}</p>
             </div>
           </div>
         </DialogContent>
