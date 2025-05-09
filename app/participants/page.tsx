@@ -1,6 +1,15 @@
+"use client"
 import Image from "next/image"
 
+import Participants from "../components/Participants";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
+
 export default function ParticipantsPage() {
+  const router = useRouter();
+
+  const [showParticipants, setShowParticipants] = useState(false);
   return (
     <div className="bg-[#f0f4ff] min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-[70px]">
       <div className="max-w-7xl mx-auto">
@@ -181,6 +190,16 @@ export default function ParticipantsPage() {
             />
           </div>
         </div>
+        <div className="mt-12 flex justify-center">
+  <button
+    onClick={() => router.push("/register?type=participants")}
+    className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-blue-700"
+  >
+    Enquiry Now
+  </button>
+</div>
+
+
       </div>
     </div>
   )
