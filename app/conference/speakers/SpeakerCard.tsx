@@ -47,8 +47,8 @@ export default function SpeakerCard({
             />
           </div>
 
-          {/* Company Logo Overlay - Bottom Center Circular */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center">
+          {/* Company Logo Overlay - Bottom Center Circular (pushed down) */}
+          <div className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center">
             <div className="relative w-12 h-12">
               <Image
                 src={logoError ? "/placeholder.svg?height=60&width=60" : companyLogo}
@@ -114,8 +114,8 @@ export default function SpeakerCard({
                   />
                 </div>
 
-                {/* Company Logo in Modal - Bottom Center Circular */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center">
+                {/* Company Logo in Modal - Bottom Center Circular (pushed down) */}
+                <div className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center">
                   <div className="relative w-12 h-12">
                     <Image
                       src={logoError ? "/placeholder.svg?height=60&width=60" : companyLogo}
