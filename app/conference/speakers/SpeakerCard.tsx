@@ -27,38 +27,48 @@ export default function SpeakerCard({
   fullBio,
 }: SpeakerCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [imageError, setImageError] = useState(false)
+  const [logoError, setLogoError] = useState(false)
 
   return (
     <>
-      <div className="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 transform hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] group">
-        {/* Speaker Image */}
-        <div className="relative w-full aspect-[4/3] overflow-hidden">
-          <Image
-            src={speakerImage || "/placeholder.svg"}
-            alt={name}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
-          />
+      <div className="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 transform hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] group h-full flex flex-col">
+        {/* Speaker Image - First Layer */}
+        <div className="relative w-full pt-[75%] overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              src={imageError ? "/placeholder.svg?height=300&width=400" : speakerImage}
+              alt={name}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-center transition-transform duration-300 group-hover:scale-110"
+              onError={() => setImageError(true)}
+              priority
+            />
+          </div>
         </div>
 
-        {/* Speaker Details */}
-        <div className="p-4">
-          <h2 className="text-lg font-bold text-gray-900 line-clamp-1">{name}</h2>
-          <p className="text-sm text-gray-600 line-clamp-1">{jobTitle}</p>
-          <p className="text-sm text-gray-500 line-clamp-1">{companyName}</p>
+        {/* Speaker Details - Second Layer */}
+        <div className="p-4 flex-grow flex flex-col">
+          <div className="flex-grow">
+            <h2 className="text-lg font-bold text-gray-900 line-clamp-1">{name}</h2>
+            <p className="text-sm text-gray-600 line-clamp-1">{jobTitle}</p>
+            <p className="text-sm text-gray-500 line-clamp-1">{companyName}</p>
+          </div>
 
           {/* Company Logo */}
-          <div className="h-12 flex items-center mt-2">
+          <div className="h-16 flex items-center justify-center my-3 bg-gray-50 rounded p-2">
             <Image
-              src={companyLogo || "/placeholder.svg"}
+              src={logoError ? "/placeholder.svg?height=60&width=120" : companyLogo}
               alt={`${companyName} Logo`}
-              width={35}
-              height={65}
-              className="max-h-full object-contain"
+              width={120}
+              height={60}
+              className="max-h-full max-w-full object-contain"
+              onError={() => setLogoError(true)}
             />
           </div>
 
-          <div className="mt-4 flex items-center justify-between">
+          <div className="mt-auto flex items-center justify-between">
             <Button
               variant="outline"
               size="sm"
@@ -91,21 +101,31 @@ export default function SpeakerCard({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
             <div className="flex flex-col items-center">
-              <div className="relative w-full aspect-square overflow-hidden rounded-lg">
-                <Image src={speakerImage || "/placeholder.svg"} alt={name} fill className="object-cover" />
+              <div className="relative w-full pt-[100%] overflow-hidden rounded-lg">
+                <div className="absolute inset-0">
+                  <Image
+                    src={imageError ? "/placeholder.svg?height=400&width=400" : speakerImage}
+                    alt={name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-cover object-center"
+                    onError={() => setImageError(true)}
+                  />
+                </div>
               </div>
 
               <div className="mt-4 w-full text-center">
                 <h3 className="font-semibold text-gray-900">{jobTitle}</h3>
                 <p className="text-gray-600">{companyName}</p>
 
-                <div className="h-16 flex items-center justify-center mt-2">
+                <div className="h-16 flex items-center justify-center mt-2 bg-gray-50 rounded p-2">
                   <Image
-                    src={companyLogo || "/placeholder.svg"}
+                    src={logoError ? "/placeholder.svg?height=60&width=120" : companyLogo}
                     alt={`${companyName} Logo`}
                     width={120}
                     height={60}
-                    className="max-h-full object-contain"
+                    className="max-h-full max-w-full object-contain"
+                    onError={() => setLogoError(true)}
                   />
                 </div>
 
