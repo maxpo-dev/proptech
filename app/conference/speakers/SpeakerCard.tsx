@@ -78,8 +78,8 @@ export default function SpeakerCard({
         <div className="p-4 flex-grow flex flex-col">
           <div className="flex-grow">
             <h2 className="text-lg font-bold text-gray-900 line-clamp-1">{name}</h2>
-            <p className="text-sm text-gray-600 line-clamp-1">{jobTitle}</p>
-            <p className="text-sm text-gray-500 line-clamp-1">{companyName}</p>
+            <p className="text-sm text-gray-800 font-semibold line-clamp-1">{jobTitle}</p>
+            <p className="text-xs text-gray-500 mt-1 italic line-clamp-1">{companyName}</p>
           </div>
 
           <div className="mt-auto flex items-center justify-between">
@@ -154,8 +154,8 @@ export default function SpeakerCard({
               </div>
 
               <div className="mt-4 w-full text-center">
-                <h3 className="font-semibold text-gray-900">{jobTitle}</h3>
-                <p className="text-gray-600">{companyName}</p>
+                <h3 className="font-semibold text-gray-900 text-base">{jobTitle}</h3>
+                <p className="text-sm text-gray-600 italic">{companyName}</p>
 
                 {linkedIn && (
                   <Link
