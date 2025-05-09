@@ -43,7 +43,7 @@ export interface Speaker {
       name: "Dong Min Lee",
       jobTitle: "Senior Director - Development",
       companyName: "Red Sea Global",
-      linkedIn: "",
+      linkedIn: "https://sa.linkedin.com/in/min-lee-real-estate",
       speakerImage: "/image/speakers/Min Lee.jpg",
       companyLogo: "/image/speakersCompanyLogo/RSG_EN_RGB_HORIZONTAL.png",
       fullBio:
@@ -63,7 +63,7 @@ export interface Speaker {
       name: "Syed Mazhar",
       jobTitle: "Director, HSSE Department",
       companyName: "AlBawani",
-      linkedIn: "",
+      linkedIn: "https://sa.linkedin.com/in/syed-mazhar-chair-iosh-uae-branch-cfiosh-928466a6",
       speakerImage: "/image/speakers/Syed Mazhar.jpeg",
       companyLogo: "/image/speakersCompanyLogo/GIA-Gold-Sponsor-Al-Bawani.png",
       fullBio:
@@ -83,7 +83,7 @@ export interface Speaker {
       name: "Hans Christensen",
       jobTitle: "Vice President - Dubai Technology Entrepreneur Campus",
       companyName: "DTEC (Dubai Technology Entrepreneur Campus)",
-      linkedIn: "",
+      linkedIn: "linkedin.com/in/hans-christensen-719986",
       speakerImage: "/image/speakers/Hans Picture.jpg",
       companyLogo: "/image/speakersCompanyLogo/DTEC Logo.jpg",
       fullBio:
