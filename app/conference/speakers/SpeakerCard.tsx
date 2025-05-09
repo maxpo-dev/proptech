@@ -52,8 +52,8 @@ export default function SpeakerCard({
             <Image
               src={companyLogo || "/placeholder.svg"}
               alt={`${companyName} Logo`}
-              width={80}
-              height={40}
+              width={35}
+              height={65}
               className="max-h-full object-contain"
             />
           </div>
