@@ -1,6 +1,6 @@
 import React from 'react';
 import { Building2, Users, Lightbulb, Target, Calendar, MapPin } from 'lucide-react';
-import Aboutimg from '@/app/images/zq-lee-VbDjv8-8ibc-unsplash.jpg'
+import Aboutimg from '@/app/images/zq-lee-VbDjv8-8ibc-unsplash.jpg';
 import Image from 'next/image';
 
 const AboutSection = ({ title, children }: { title: string; children: React.ReactNode }) => (
@@ -35,10 +35,10 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-40 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-40">
           <div>
             <Image 
-              src= {Aboutimg}
+              src={Aboutimg}
               alt="Proptech Conference" 
               className="rounded-lg shadow-lg"
             />
@@ -139,6 +139,7 @@ export default function About() {
           </ul>
         </AboutSection>
 
+        {/* Event Details Card */}
         <div className="bg-blue-100 rounded-lg p-8 mt-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Event Details</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -151,6 +152,16 @@ export default function About() {
               <span className="text-gray-700">Le Méridien Dubai Hotel & Conference Centre</span>
             </div>
           </div>
+        </div>
+
+        {/* Register CTA Button Outside the Card */}
+        <div className="text-center mt-8">
+          <a
+            href="http://localhost:3000/register"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
+          >
+            Register Now
+          </a>
         </div>
       </div>
     </div>

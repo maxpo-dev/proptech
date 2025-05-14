@@ -67,7 +67,7 @@ export default function ShowcaseSection() {
           href="/register"
           className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 transition-colors"
         >
-          Apply to Exhibit
+          Apply to Exhibition
         </Link>
       </div>
     </section>

@@ -5,7 +5,12 @@ import logo from '@/public/image/exhibitor/VR logo (1).jpg';
 
 const SmartVizX = () => {
   return (
-    <div className="bg-white shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row items-center md:items-start p-8 w-full max-w-7xl mx-auto">
+    <div className="bg-white shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row items-center md:items-start p-8 w-full max-w-7xl mx-auto relative">
+      {/* Startup Exhibitor Banner */}
+      <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 text-sm font-semibold rounded-md shadow-md">
+        Startup Exhibitor
+      </div>
+
       {/* Logo Section */}
       <div className="flex-shrink-0 w-48 h-48 mb-6 md:mb-0 md:mr-10 overflow-hidden rounded-xl shadow-md transform transition duration-300 hover:scale-105 bg-white">
         <Image

@@ -56,7 +56,7 @@ export default function ZexPrWire() {
                 and marketing firms to conduct and manage PR campaigns for their
                 clients.
               </p>
-              <div className="text-lg">
+              {/* <div className="text-lg">
                 <p className="font-semibold mb-2">Social Media:</p>
                 <div className="flex space-x-4">
                   <a
@@ -68,7 +68,7 @@ export default function ZexPrWire() {
                     <FaLinkedin />
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
