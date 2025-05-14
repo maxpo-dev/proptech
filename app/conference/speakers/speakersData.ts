@@ -8,6 +8,16 @@ export interface Speaker {
     fullBio: string;
   }
   const speakers: Speaker[] = [
+            {
+      name: "Mohamad Ibrahim Hoteit",
+      jobTitle: "Director - Real Estate Development Department",
+      companyName: "Ras Al Khaimah Municipality",
+      linkedIn: "https://www.linkedin.com/in/mohamad-hoteit-4218011a",
+      speakerImage: "/image/speakers/MH. Image.png",
+      companyLogo: "/image/speakersCompanyLogo/download.jpg",
+      fullBio:
+        "Mohamad Hoteit is the Director of Real Estate Sector Development for the Government of Ras Al Khaimah, where he is responsible for formulating strategic plans, regulatory frameworks, and initiatives to support the sustainable growth of the Emirate’s real estate sector. With over 15 years of experience across the GCC, Mohamad’s background spans real estate strategy, investment advisory, market research, economic analysis, and financial modelling. Throughout his career, he has worked across both public and private sectors, advising on and supporting the planning and development of major mixed-use projects including residential communities, commercial offices, retail assets, hospitality developments, industrial zones, tourism destinations, and infrastructure projects. His experience includes conducting feasibility studies, highest and best use analyses, demand forecasting, regulatory assessments, and portfolio optimization for entities operating in the UAE, Qatar, Saudi Arabia, and other regional markets.",
+    },
     {
       name: "Mohamed Moselhy",
       jobTitle: "Global Smart Cities Director",
@@ -129,16 +139,7 @@ export interface Speaker {
       fullBio:
         "Qualified as an Architect MBA, Amit has been working to contribute to the global real estate sector for two and a half decades. He has spent a decade in the region curating stories for mixed-use and retail assets. He believes in focusing on growing value through his varied expertise and network. He is currently the CEO at BNW Developments, where he sets direction with the Board to achieve profitable growth for his team of 300+ professionals. He oversees the function of sales, marketing, project design and delivery, HR, legal, technology, property management and experiential customer service. He is helping expand the company's market presence as well as share in the luxury branded residences domain and fostering partnerships with key stakeholders.",
     },
-        {
-      name: "Mohamad Ibrahim Hoteit",
-      jobTitle: "Director - Real Estate Development Department",
-      companyName: "Ras Al Khaimah Municipality",
-      linkedIn: "https://www.linkedin.com/in/mohamad-hoteit-4218011a",
-      speakerImage: "/image/speakers/MH. Image.png",
-      companyLogo: "/image/speakersCompanyLogo/download.jpg",
-      fullBio:
-        "Mohamad Hoteit is the Director of Real Estate Sector Development for the Government of Ras Al Khaimah, where he is responsible for formulating strategic plans, regulatory frameworks, and initiatives to support the sustainable growth of the Emirate’s real estate sector. With over 15 years of experience across the GCC, Mohamad’s background spans real estate strategy, investment advisory, market research, economic analysis, and financial modelling. Throughout his career, he has worked across both public and private sectors, advising on and supporting the planning and development of major mixed-use projects including residential communities, commercial offices, retail assets, hospitality developments, industrial zones, tourism destinations, and infrastructure projects. His experience includes conducting feasibility studies, highest and best use analyses, demand forecasting, regulatory assessments, and portfolio optimization for entities operating in the UAE, Qatar, Saudi Arabia, and other regional markets.",
-    },
+
   ];
   
   export default speakers;
