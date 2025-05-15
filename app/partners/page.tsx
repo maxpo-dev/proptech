@@ -17,7 +17,7 @@ const PartnersPage: React.FC = () => {
   return (
     <div className="bg-background text-foreground font-sans pt-32 pb-20 scroll-smooth">
       {/* Page Heading and Navigation */}
-      <section className="text-center mb-12 px-4 mt-16">
+      <section className="text-center mb-8 px-4 mt-12 sm:mt-16">
         <h1 className="text-5xl font-bold text-primary border-b-4 border-accent inline-block pb-3">
           Partners
         </h1>
@@ -26,12 +26,12 @@ const PartnersPage: React.FC = () => {
         </p>
         {/* Horizontal Navigation */}
         <nav className="mt-8">
-          <div className="flex flex-row flex-wrap justify-center gap-4 px-6 py-4 max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-3 max-w-md mx-auto px-2">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="bg-primary text-primary-foreground px-6 py-3 rounded-full text-base font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 transform hover:scale-105"
+                className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm sm:text-base font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
               >
                 {item.label}
               </a>

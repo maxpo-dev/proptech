@@ -51,6 +51,16 @@ export default function BlogsPage() {
   author: "Nazish Shah",
 },
 
+// german-proptech
+{
+  image: "/image/blogs/News Scalara.png", // Use the correct image path
+  title: "Germany's PropTech Ecosystem: Precision Meets Innovation in Real Estate",
+  excerpt: "Germany is emerging as a European PropTech leader by fusing engineering precision with digital innovation. Discover Berlin's startup rise, Munich's investments, and more...",
+  route: "/blogs/german-proptech",
+  author: "Nazish Shah",
+},
+
+
   ];
 
   return (
