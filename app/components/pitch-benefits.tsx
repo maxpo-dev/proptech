@@ -44,7 +44,7 @@ export default function PitchBenefits() {
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Buttons */}
         <div className="text-center mt-8">
           <a
             href="/register?type=sponsor"
