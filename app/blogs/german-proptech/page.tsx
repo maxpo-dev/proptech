@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function GermanPropTech() {
   return (
     <div className="w-full px-4 py-24 text-center flex flex-col items-center">
-      {/* Full-width image */}
+      {/* Full-width images */}
       <div className="w-full h-[70vh] sm:h-[100vh] relative">
         <Image 
           src="/image/blogs/News Scalara.png" 
