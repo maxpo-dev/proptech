@@ -37,7 +37,7 @@ export default function SponsorsSection() {
   return (
     <section className="bg-gray-50 py-20">
       <div className="max-w-screen-lg mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold mb-12 text-gray-900">Our Previous Sponsors</h2>
+        <h2 className="text-4xl font-extrabold mb-12 text-gray-900">Sponsors from Our Past Events</h2>
 
         {/* Sponsors Scroll */}
         <div className="relative overflow-hidden">

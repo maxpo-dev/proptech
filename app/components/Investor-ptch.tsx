@@ -1,19 +1,21 @@
 import Image from 'next/image';
-import Inimg from '@/app/images/6x.jpg'
+import Inimg from '@/app/images/6x.jpg';
 
 export default function InvestorPitchContent() {
   return (
-    <section className="py-40 bg-white text-black">
+    <section className="pt-28 pb-10 bg-white text-black"> {/* Reduced bottom padding */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-center mb-8">Investor Pitch at Future PropTech Summit</h1>
         <div className="mb-12 relative w-full h-[300px] md:h-[400px]">
           <Image
             src={Inimg}
-            alt="Investor Pitch at Future PropTech Summit"  
+            alt="Investor Pitch at Future PropTech Summit"
             className="rounded-lg shadow-lg"
+            fill
+            style={{ objectFit: 'cover' }}
           />
         </div>
-        <div className="mx-auto space-y-6 lg:py-40 text-lg">
+        <div className="mx-auto space-y-6 text-lg">
           <p>
             The Investor Pitch session at the Future PropTech Summit is your golden opportunity to showcase your innovative proptech solution to a panel of industry-leading investors and potential partners.
           </p>
@@ -29,6 +31,5 @@ export default function InvestorPitchContent() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -15,7 +15,7 @@ const navItems = [
     name: 'Exhibition',
     dropdown: [
       { name: 'Exhibition Overview', href: '/exhibition/about' },
-      { name: 'Exhibitors 2025', href: '/exhibition/exhibitors-2025' },
+      { name: 'Exhibitors', href: '/exhibition/exhibitors' },
     ],
   },
   {
@@ -26,12 +26,13 @@ const navItems = [
     ],
   },
   { name: 'Investor Pitch', href: '/investor-pitch' },
-  {
-    name: 'Partners',
-    dropdown: [
-      { name: 'Media Partners', href: '/partners/media' },
-    ],
-  },
+   { name: 'Partners', href: '/partners' },
+  // {
+  //   name: 'Partners',
+  //   dropdown: [
+  //     { name: 'Media Partners', href: '/partners/media' },
+  //   ],
+  // },
   { name: 'Blogs', href: '/blogs' },
   { name: 'Participants', href: '/participants' },
   { name: 'Get in Touch', href: '/register' },
