@@ -10,7 +10,7 @@ export default function Exhibitors2025() {
 
         {/* Add Enquiry Button */}
         <div className="mb-8">
-          <Link href="/contact" passHref>
+          <Link href="/register" passHref>
             <button className="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700 transition duration-200">
               Enquire Now
             </button>

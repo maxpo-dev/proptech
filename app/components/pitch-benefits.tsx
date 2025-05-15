@@ -44,10 +44,10 @@ export default function PitchBenefits() {
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Buttons */}
         <div className="text-center mt-8">
           <a
-            href="http://localhost:3000/register?type=exhibitors"
+            href="/register?type=sponsor"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
           >
             Register as Investor
