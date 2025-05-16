@@ -11,19 +11,19 @@ interface SpeakersGridProps {
 export default function SpeakersGrid({ speakers }: SpeakersGridProps) {
   const [isClient, setIsClient] = useState(true)
 
-  // Split speakers into rows of 2 for better layout control
+  // Split speakers into rows of 4 for better layout control
   const rows: Speaker[][] = []
-  for (let i = 0; i < speakers.length; i += 2) {
-    rows.push(speakers.slice(i, i + 2))
+  for (let i = 0; i < speakers.length; i += 4) {
+    rows.push(speakers.slice(i, i + 4))
   }
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="flex flex-col space-y-12">
+      <div className="flex flex-col space-y-8">
         {rows.map((row, rowIndex) => (
-          <div key={`row-${rowIndex}`} className="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+          <div key={`row-${rowIndex}`} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {row.map((speaker) => (
-              <div key={speaker.name} className="flex-1">
+              <div key={speaker.name}>
                 <SpeakerCard
                   name={speaker.name}
                   jobTitle={speaker.jobTitle}
@@ -35,8 +35,11 @@ export default function SpeakersGrid({ speakers }: SpeakersGridProps) {
                 />
               </div>
             ))}
-            {/* If we have an odd number of speakers in the last row, add an empty div to maintain layout */}
-            {row.length === 1 && <div className="flex-1 hidden md:block"></div>}
+            {/* Fill in empty slots if needed to maintain grid */}
+            {row.length < 4 &&
+              Array.from({ length: 4 - row.length }).map((_, i) => (
+                <div key={`empty-${i}`} className="hidden lg:block"></div>
+              ))}
           </div>
         ))}
       </div>

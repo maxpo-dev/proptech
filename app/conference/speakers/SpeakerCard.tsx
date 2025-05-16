@@ -33,30 +33,30 @@ export default function SpeakerCard({
 
   return (
     <>
-      <div className="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 transform hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] group h-full flex flex-col">
-        {/* Speaker Image with Logo Overlay - First Layer */}
-        <div className="relative w-full pt-[100%] overflow-hidden">
+      <div className="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group h-full flex flex-col">
+        {/* Speaker Image with Logo Overlay */}
+        <div className="relative w-full pt-[120%] overflow-visible">
           <div className="absolute inset-0">
             <Image
               src={imageError ? "/placeholder.svg?height=400&width=400" : speakerImage}
               alt={name}
               fill
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover object-center transition-transform duration-300 group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, 25vw"
+              className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
               onError={() => setImageError(true)}
               priority
             />
           </div>
 
-          {/* Company Logo Overlay - Bottom Center Circular (continuous bounce) */}
+          {/* Centered, Half-outside Logo with Margin Adjustment */}
           <motion.div
-            className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center"
+            className="absolute -bottom-8 left-1/2 -translate-x-1/2 ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
             initial={{ y: 0 }}
             animate={{
               y: [0, -10, 0],
               transition: {
                 duration: 1.5,
-                repeat: Infinity,
+                repeat: Number.POSITIVE_INFINITY,
                 repeatType: "mirror",
                 ease: "easeInOut",
               },
@@ -74,8 +74,8 @@ export default function SpeakerCard({
           </motion.div>
         </div>
 
-        {/* Speaker Details - Second Layer */}
-        <div className="p-4 flex-grow flex flex-col">
+        {/* Speaker Details */}
+        <div className="p-5 pt-10 flex-grow flex flex-col">
           <div className="flex-grow">
             <h2 className="text-lg font-bold text-gray-900 line-clamp-1">{name}</h2>
             <p className="text-sm text-gray-800 font-semibold line-clamp-1">{jobTitle}</p>
@@ -97,7 +97,7 @@ export default function SpeakerCard({
                 href={linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 transition-transform duration-300 hover:scale-110"
+                className="text-blue-600 hover:text-blue-800 transition-transform duration-300 hover:scale-105"
               >
                 <Linkedin size={20} />
               </Link>
@@ -108,14 +108,14 @@ export default function SpeakerCard({
 
       {/* Modal with full speaker details */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-auto">
+        <DialogContent className="max-w-3xl max-h-[100vh] overflow-auto">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold">{name}</DialogTitle>
           </DialogHeader>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
             <div className="flex flex-col items-center">
-              <div className="relative w-full pt-[100%] overflow-hidden rounded-lg">
+              <div className="relative w-full pt-[100%] overflow-visible rounded-lg">
                 <div className="absolute inset-0">
                   <Image
                     src={imageError ? "/placeholder.svg?height=400&width=400" : speakerImage}
@@ -127,15 +127,15 @@ export default function SpeakerCard({
                   />
                 </div>
 
-                {/* Company Logo in Modal - Bottom Center Circular (continuous bounce) */}
+                {/* Centered, Half-outside Logo with Margin Adjustment in Modal */}
                 <motion.div
-                  className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center"
+                  className="absolute -bottom-8 left-1/2 -translate-x-1/2 ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
                   initial={{ y: 0 }}
                   animate={{
                     y: [0, -10, 0],
                     transition: {
                       duration: 1.5,
-                      repeat: Infinity,
+                      repeat: Number.POSITIVE_INFINITY,
                       repeatType: "mirror",
                       ease: "easeInOut",
                     },
@@ -153,7 +153,7 @@ export default function SpeakerCard({
                 </motion.div>
               </div>
 
-              <div className="mt-4 w-full text-center">
+              <div className="mt-10 w-full text-center">
                 <h3 className="font-semibold text-gray-900 text-base">{jobTitle}</h3>
                 <p className="text-sm text-gray-600 italic">{companyName}</p>
 
