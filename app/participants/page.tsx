@@ -22,6 +22,15 @@ export default function ParticipantsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Logo 1 */}
+                              <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/speakersCompanyLogo/download.jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
           <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
             <Image
               src="/image/speakersCompanyLogo/Logo.jpg"
@@ -99,6 +108,7 @@ export default function ParticipantsPage() {
           </div>
 
           {/* Logo 8 */}
+
           <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
             <Image
               src="/image/speakersCompanyLogo/knightfranklogo.svg"
@@ -189,15 +199,7 @@ export default function ParticipantsPage() {
               className="w-auto max-h-48 object-contain"
             />
           </div>
-                    <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
-            <Image
-              src="/image/speakersCompanyLogo/download.jpg"
-              alt="Impact"
-              width={300}
-              height={300}
-              className="w-auto max-h-48 object-contain"
-            />
-          </div>
+
         </div>
         <div className="mt-12 flex justify-center">
   <button
