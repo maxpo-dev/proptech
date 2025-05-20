@@ -7,6 +7,13 @@ import Link from "next/link";
 
 export default function HighlightedSpeakersMarquee() {
   const highlighted = [
+                {
+      name: "Mohamad Ibrahim Hoteit",
+      designation: "Director - Real Estate Development Department",
+      image: "/image/speakers/MH. Image.png",
+      companyLogo: "/image/speakersCompanyLogo/download.jpg",
+    },
+    
     {
       name: "Amit Puri",
       designation: "Group CEO",
