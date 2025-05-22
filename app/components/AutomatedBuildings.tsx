@@ -16,13 +16,19 @@ export default function AutomatedBuildings() {
 
             {/* Logo Section */}
             <div className="w-full md:w-1/3 flex justify-center items-center">
-              <Image
-                src={automatedBuildingsLogo}
-                alt="AutomatedBuildings.com Logo"
-                width={250}
-                height={100}
-                className="object-contain max-h-24 sm:max-h-32 max-w-full"
-              />
+              <a
+                href="https://www.automatedbuildings.com/index.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={automatedBuildingsLogo}
+                  alt="AutomatedBuildings.com Logo"
+                  width={250}
+                  height={100}
+                  className="object-contain max-h-24 sm:max-h-32 max-w-full"
+                />
+              </a>
             </div>
 
             {/* Content Section */}

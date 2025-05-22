@@ -17,19 +17,25 @@ export default function AIPressRoom() {
 
             {/* Logo Section */}
             <div className="w-full md:w-1/3 flex justify-center items-center">
-              <Image
-                src={aiPressRoomLogo}
-                alt="AI PressRoom Logo"
-                width={250}
-                height={250}
-                className="object-contain max-h-24 sm:max-h-32"
-              />
+              <a
+                href="https://aipressroom.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={aiPressRoomLogo}
+                  alt="AI PressRoom Logo"
+                  width={250}
+                  height={250}
+                  className="object-contain max-h-24 sm:max-h-32"
+                />
+              </a>
             </div>
 
             {/* Content Section */}
             <div className="w-full md:w-2/3 text-center md:text-left">
               <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-4">
-                AI PressRoom
+                AIPressRoom
               </h2>
 
               <p className="text-sm sm:text-base mb-3">
