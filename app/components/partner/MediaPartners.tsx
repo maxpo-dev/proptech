@@ -6,6 +6,8 @@ import ZexPrWire from "@/app/components/ZexPrWire";
 import AIPressRoom from "@/app/components/AIPressRoom";
 import PropertyNewsInternational from "@/app/components/PropertyNewsInternational";
 import RemTimes from "@/app/components/RemTimes";
+import MiddleEastFacility from "../MiddleEastFacility";
+import BuildAustralia from "../BuildAustralia";
 
 export default function MediaPartners() {
   return (
@@ -18,6 +20,9 @@ export default function MediaPartners() {
       <AIPressRoom />
       <PropertyNewsInternational />
       <RemTimes />
+      <MiddleEastFacility />
+      <BuildAustralia />
+
     </section>
   );
 }
