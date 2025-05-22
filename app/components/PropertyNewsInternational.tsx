@@ -17,13 +17,19 @@ export default function PropertyNewsInternational() {
 
             {/* Logo Section */}
             <div className="w-full md:w-1/3 flex justify-center items-center">
-              <Image
-                src={propertyNewsLogo}
-                alt="Property News International Logo"
-                width={250}
-                height={250}
-                className="object-contain max-h-24 sm:max-h-32"
-              />
+              <a
+                href="https://www.propertynewsint.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={propertyNewsLogo}
+                  alt="Property News International Logo"
+                  width={250}
+                  height={250}
+                  className="object-contain max-h-24 sm:max-h-32"
+                />
+              </a>
             </div>
 
             {/* Details Section */}
