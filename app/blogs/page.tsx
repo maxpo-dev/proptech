@@ -59,6 +59,15 @@ export default function BlogsPage() {
   route: "/blogs/german-proptech",
   author: "Nazish Shah",
 },
+// Sheikh Hamdan
+{
+  image: "/image/blogs/Blogs (5).png", // Use the correct image path
+  title: "Sheikh Hamdan Launches ‘Dubai PropTech Hub’ to Position Dubai as a Global Real Estate Technology Leader",
+  excerpt: "His Highness Sheikh Hamdan has unveiled the Dubai PropTech Hub to accelerate digital innovation, support over 200 startups, and attract Dhs 1 billion in investments by 2030—positioning Dubai as a global real estate technology leader.",
+  route: "/blogs/sheikhhamdan",
+  author: "Nazish Shah",
+}
+
 
 
   ];
