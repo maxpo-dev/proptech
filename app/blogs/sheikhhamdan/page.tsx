@@ -5,20 +5,22 @@ import Image from "next/image";
 export default function SheikhHamdanBlogPage() {
   return (
     <div className="w-full px-4 py-24 text-center flex flex-col items-center">
-      {/* Header image */}
+      {/* Hero Image */}
       <div className="w-full h-[70vh] sm:h-[100vh] relative">
         <Image
-          src="/image/blogs/Blogs (5).png" // Update path accordingly
+          src="/image/blogs/Blogs (5).png"
           alt="Sheikh Hamdan launches Dubai PropTech Hub"
           fill
           className="object-contain sm:object-cover"
           priority
+          sizes="100vw"
         />
       </div>
 
+      {/* Blog Article */}
       <article className="bg-white shadow-2xl rounded-lg p-6 w-full md:w-3/4 lg:w-2/3 text-left relative">
         <h1 className="text-2xl font-extrabold mb-4">
-          Sheikh Hamdan Launches ‘Dubai PropTech Hub’ to Position Dubai as a Global Real Estate Technology Leader
+          H.H.Sheikh Hamdan Launches ‘Dubai PropTech Hub’ to Position Dubai as a Global Real Estate Technology Leader
         </h1>
 
         <p className="text-gray-800 text-base mb-4">
@@ -38,7 +40,7 @@ export default function SheikhHamdanBlogPage() {
         </p>
 
         <p className="text-gray-800 text-base mb-4">
-          Sheikh Hamdan stated: “Dubai has laid a strong foundation for a fully integrated digital economy. The Dubai PropTech Hub is a strategic step to further accelerate digital transformation across one of our most vital sectors — real estate,”. “This initiative will create an environment that empowers entrepreneurs and innovators, strengthens investor confidence, and enhances Dubai’s global competitiveness.”
+          Sheikh Hamdan stated: “Dubai has laid a strong foundation for a fully integrated digital economy. The Dubai PropTech Hub is a strategic step to further accelerate digital transformation across one of our most vital sectors — real estate.” “This initiative will create an environment that empowers entrepreneurs and innovators, strengthens investor confidence, and enhances Dubai’s global competitiveness.”
         </p>
 
         <p className="text-gray-800 text-base mb-4">
@@ -57,8 +59,23 @@ export default function SheikhHamdanBlogPage() {
           As cities worldwide embrace digital transformation, Dubai continues to lead by example, placing real estate at the center of its smart, tech-driven future.
         </p>
 
+        <p className="text-lg font-bold mt-4">Want to be part of the transformation?</p>
+        <p className="text-base mt-1">
+          Discover it live at{" "}
+          <a
+            href="https://www.futureproptechsummit.com"
+            className="text-blue-500 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Future PropTech Summit 2025
+          </a>
+          .
+        </p>
+
         <p className="text-gray-400 text-right mt-4">by Nazish Shah</p>
 
+        {/* Footer Image */}
         <div className="w-full mt-6 relative">
           <Image
             src="/image/blogs/futureproptechblogfooter.jpg"
