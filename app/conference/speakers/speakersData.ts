@@ -139,6 +139,17 @@ export interface Speaker {
       fullBio:
         "Qualified as an Architect MBA, Amit has been working to contribute to the global real estate sector for two and a half decades. He has spent a decade in the region curating stories for mixed-use and retail assets. He believes in focusing on growing value through his varied expertise and network. He is currently the CEO at BNW Developments, where he sets direction with the Board to achieve profitable growth for his team of 300+ professionals. He oversees the function of sales, marketing, project design and delivery, HR, legal, technology, property management and experiential customer service. He is helping expand the company's market presence as well as share in the luxury branded residences domain and fostering partnerships with key stakeholders.",
     },
+    {
+  name: "Dr. Michael Waters",
+  jobTitle: "Programme Director - MSc Real Estate",
+  companyName: "Heriot-Watt University",
+  linkedIn: "https://www.linkedin.com/in/dr-michael-waters-ph-d-mrics-71b43622",
+  speakerImage: "/image/speakers/\Michael-Waters_Associate.jpg", // Update this path based on your actual image filename
+  companyLogo: "/image/speakersCompanyLogo/heriot_watt_university_logo.jpg", // Update this path based on your actual logo filename
+  fullBio:
+    "Dr. Michael Waters is an Associate Professor in Real Estate at Heriot-Watt University Dubai and heads the MSc Real Estate programmes across all global campuses, having launched the Dubai programmes since 2009. Dr. Michael Waters has been working in real estate academia since 2004. Whilst being a professor at Heriot-Watt University Dubai, he also undertakes various endeavors within the Real Estate Industry, which include being an APC Assessor at The Royal Institution of Chartered Surveyors and an elected board member for CoreNet Global Middle East Chapter.",
+}
+
 
   ];
   
