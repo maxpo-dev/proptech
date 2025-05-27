@@ -8,6 +8,8 @@ import PropertyNewsInternational from "@/app/components/PropertyNewsInternationa
 import RemTimes from "@/app/components/RemTimes";
 import MiddleEastFacility from "../MiddleEastFacility";
 import BuildAustralia from "../BuildAustralia";
+import BusinessFocusMagazine from "../BusinessFocusMagazine";
+import EntrepreneurME from "../EntrepreneurME";
 
 export default function MediaPartners() {
   return (
@@ -22,6 +24,9 @@ export default function MediaPartners() {
       <RemTimes />
       <MiddleEastFacility />
       <BuildAustralia />
+      <BusinessFocusMagazine />
+      <EntrepreneurME />
+
 
     </section>
   );
