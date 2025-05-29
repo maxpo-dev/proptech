@@ -11,7 +11,7 @@ export default function MoatazMosallamBlogPage() {
       {/* Hero Image */}
       <div className="w-full h-[70vh] sm:h-[100vh] relative">
         <Image
-          src="/image/blogs/Q&A Session.png"
+          src="/image/blogs/Moataz Mosallam-1.png"
           alt="Q&A with Moataz A. Mosallam"
           fill
           priority

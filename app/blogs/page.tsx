@@ -8,6 +8,13 @@ export default function BlogsPage() {
 
   const blogCards = [
     {
+  image: "/image/blogs/Moataz Mosallam-1.png",
+  title: "Q&A Session With Moataz A. Mosallam: PropTech, Smart Cities, and AI-Driven Real Estate",
+  excerpt: "In this insightful session, Moataz A. Mosallam of Knight Frank shares how smart buildings, AI, and PropTech are transforming real estate—from investment strategies to the development of future-ready smart cities.",
+  route: "/blogs/moatazq&a",
+  author: "Nazish Shah",
+},
+    {
       image: "/image/blogs/patrick.jpeg",
       title: "Q&A Session With Patrick Nessenthaler",
       excerpt: "Can you tell us about your role at the University of Louisville and your research focus in proptech...",
@@ -67,13 +74,7 @@ export default function BlogsPage() {
   route: "/blogs/sheikhhamdan",
   author: "Nazish Shah",
 },
-{
-  image: "/image/blogs/Q&A Session.png",
-  title: "Q&A Session With Moataz A. Mosallam: PropTech, Smart Cities, and AI-Driven Real Estate",
-  excerpt: "In this insightful session, Moataz A. Mosallam of Knight Frank shares how smart buildings, AI, and PropTech are transforming real estate—from investment strategies to the development of future-ready smart cities.",
-  route: "/blogs/moatazq&a",
-  author: "Nazish Shah",
-}
+
 
 
 
