@@ -148,7 +148,18 @@ export interface Speaker {
   companyLogo: "/image/speakersCompanyLogo/heriot_watt_university_logo.jpg", // Update this path based on your actual logo filename
   fullBio:
     "Dr. Michael Waters is an Associate Professor in Real Estate at Heriot-Watt University Dubai and heads the MSc Real Estate programmes across all global campuses, having launched the Dubai programmes since 2009. Dr. Michael Waters has been working in real estate academia since 2004. Whilst being a professor at Heriot-Watt University Dubai, he also undertakes various endeavors within the Real Estate Industry, which include being an APC Assessor at The Royal Institution of Chartered Surveyors and an elected board member for CoreNet Global Middle East Chapter.",
+},
+{
+  name: "Tim Shelton FRICS",
+  jobTitle: "Founder & Managing Director",
+  companyName: "The Foresight Collective",
+  linkedIn: "", // Add LinkedIn URL if available
+  speakerImage: "/image/speakers/Tim Shelton Photo.jpg", // Update this path based on your actual image filename
+  companyLogo: "/image/speakersCompanyLogo/rics.jpg", // Update this path based on your actual logo filename
+  fullBio:
+    "A Fellow of RICS, Tim has been a chartered surveyor for over 20 years, beginning his career as a Quantity Surveyor in the UK before transitioning into senior leadership roles in digital transformation, innovation, and strategic advisory. Tim has been based in the Middle East for over 15 years, holding both client-side and consulting roles in the UAE and Qatar, and has worked on major capital programs, including the FIFA World Cup 2022.\n\nAs the Operations Director for Technology and Advisory at Omnium International, he leads the firm’s digital transformation strategy, alongside providing advisory services to clients, focusing on AI adoption, data-driven decision-making, and innovative technology solutions. Previously, he held senior leadership roles at Arcadis, where he was instrumental in driving commercial strategies, product innovation, and AI-enabled business models on a global scale. His expertise spans business process automation, technology integration, and digital governance, positioning him as a key advocate for the digital future of the built environment.\n\nIn addition to his corporate leadership, Tim is a visiting lecturer, mentor, and published author on smart cities and innovation. He has worked closely with government agencies, startups, and academic institutions, shaping the regional discourse on sustainability and emerging technologies. Tim’s appointment to the RICS UAE Advisory Board underscores his commitment to advancing professional standards, fostering innovation, and supporting the growth of RICS membership in the UAE."
 }
+
 
 
   ];

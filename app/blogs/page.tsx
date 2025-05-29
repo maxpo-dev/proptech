@@ -66,7 +66,15 @@ export default function BlogsPage() {
   excerpt: "His Highness Sheikh Hamdan has unveiled the Dubai PropTech Hub to accelerate digital innovation, support over 200 startups, and attract Dhs 1 billion in investments by 2030—positioning Dubai as a global real estate technology leader.",
   route: "/blogs/sheikhhamdan",
   author: "Nazish Shah",
+},
+{
+  image: "/image/blogs/Q&A Session.png",
+  title: "Q&A Session With Moataz A. Mosallam: PropTech, Smart Cities, and AI-Driven Real Estate",
+  excerpt: "In this insightful session, Moataz A. Mosallam of Knight Frank shares how smart buildings, AI, and PropTech are transforming real estate—from investment strategies to the development of future-ready smart cities.",
+  route: "/blogs/moatazq&a",
+  author: "Nazish Shah",
 }
+
 
 
 
