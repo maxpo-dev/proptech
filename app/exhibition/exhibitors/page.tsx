@@ -1,6 +1,7 @@
 import SmartVizX from '@/app/components/SmartVizX';
 import Moderlab from '@/app/components/Moderlab';
 import Link from 'next/link';
+import Shuttrd from '@/app/components/Shuttrd';
 
 export default function Exhibitors2025() {
   return (
@@ -16,6 +17,10 @@ export default function Exhibitors2025() {
             </button>
           </Link>
         </div>
+
+                <section className="p-4">
+          <Shuttrd />
+        </section>
 
         <section className="p-4">
           <SmartVizX />

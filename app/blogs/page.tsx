@@ -7,6 +7,15 @@ export default function BlogsPage() {
   const router = useRouter();
 
   const blogCards = [
+// DarVenturesInvests
+{
+  image: "/image/blogs/Blogs again.png", // Update with actual image path if different
+  title: "Dar Ventures Invests in Pi Labs’ Latest Built Environment Technology Fund",
+  excerpt: "Dar Ventures, the VC arm of Dar and Sidara, backs Pi Labs' £100M fund to drive AI-powered innovation and sustainability in the global built environment.",
+  route: "/blogs/darventuresinvests",
+  author: "Nazish Shah",
+},
+
     {
   image: "/image/blogs/Moataz Mosallam-1.png",
   title: "Q&A Session With Moataz A. Mosallam: PropTech, Smart Cities, and AI-Driven Real Estate",
