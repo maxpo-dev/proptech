@@ -17,6 +17,7 @@ export default function MediaPartners() {
       {/* <h2 className="text-4xl font-bold text-center mb-10 text-blue-600">
         Media Partners
       </h2> */}
+      
       <AutomatedBuildings />
       <ZexPrWire />
       <AIPressRoom />
