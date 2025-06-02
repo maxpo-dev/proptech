@@ -58,8 +58,6 @@ export default function Sponsor() {
     consentGiven: true,
   })
 
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [successMessage, setSuccessMessage] = useState("")
   const [submitError, setSubmitError] = useState("")
 
   useEffect(() => {
@@ -100,36 +98,16 @@ export default function Sponsor() {
         body: JSON.stringify(formData),
       })
 
-      const data = await response.json()
-
       if (response.ok) {
-        setIsSubmitted(true)
-        setSuccessMessage(data.message || "Booking submitted successfully and email sent!")
-        setSubmitError("")
-        setFormData({
-          name: "",
-          jobTitle: "",
-          companyName: "",
-          email: "",
-          phone: "",
-          country: "",
-          message: "",
-          utm_source: "",
-          utm_medium: "",
-          utm_campaign: "",
-        })
-        setCheckboxes({
-          termsAccepted: true,
-          consentGiven: true,
-        })
+        // Redirect to thank you page with type param
+        window.location.href = "/register/thankyou?type=sponsor"
       } else {
+        const data = await response.json()
         setSubmitError(data.message || "Form submission failed. Please try again.")
-        setSuccessMessage("")
       }
     } catch (err) {
       console.error("Error submitting form:", err)
       setSubmitError("An error occurred. Please try again.")
-      setSuccessMessage("")
     }
   }
 
@@ -176,75 +154,66 @@ export default function Sponsor() {
 
             {/* Form Section */}
             <div className="p-6 sm:p-8 w-full md:w-1/2">
-              {isSubmitted ? (
-                <div className="text-center">
-                  <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
-                  <p className="text-gray-600">
-                    You are now registered as a sponsor. A confirmation email has been sent, and our team will contact you shortly.
-                  </p>
+              <form onSubmit={handleSubmit} className="space-y-4 text-black">
+                <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
+                <InputField label="Job Title" id="jobTitle" placeholder="Your job title" value={formData.jobTitle} onChange={handleChange} />
+                <InputField label="Company Name" id="companyName" placeholder="Your company name" value={formData.companyName} onChange={handleChange} />
+                <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
+                <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
+                <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
+
+                <div className="mb-4">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    placeholder="How can we help you?"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-sm sm:text-base"
+                    required
+                  />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 text-black">
-                  <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
-                  <InputField label="Job Title" id="jobTitle" placeholder="Your job title" value={formData.jobTitle} onChange={handleChange} />
-                  <InputField label="Company Name" id="companyName" placeholder="Your company name" value={formData.companyName} onChange={handleChange} />
-                  <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
-                  <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
-                  <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
 
-                  <div className="mb-4">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      placeholder="How can we help you?"
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-sm sm:text-base"
-                      required
+                <div className="mb-4 text-sm text-gray-700 space-y-2">
+                  <label className="flex items-start space-x-2">
+                    <input
+                      type="checkbox"
+                      name="termsAccepted"
+                      checked={checkboxes.termsAccepted}
+                      onChange={handleCheckboxChange}
+                      className="mt-1"
                     />
-                  </div>
+                    <span>
+                      I confirm that I have read, understand and accept the{" "}
+                      Terms & Conditions and{" "}
+                      <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link>.
+                    </span>
+                  </label>
+                  <label className="flex items-start space-x-2">
+                    <input
+                      type="checkbox"
+                      name="consentGiven"
+                      checked={checkboxes.consentGiven}
+                      onChange={handleCheckboxChange}
+                      className="mt-1"
+                    />
+                    <span>
+                      I agree to receive communication from Future Proptech Summit, and allow sharing of my details with trusted partners to enhance event experience.
+                    </span>
+                  </label>
+                </div>
 
-                  <div className="mb-4 text-sm text-gray-700 space-y-2">
-                    <label className="flex items-start space-x-2">
-                      <input
-                        type="checkbox"
-                        name="termsAccepted"
-                        checked={checkboxes.termsAccepted}
-                        onChange={handleCheckboxChange}
-                        className="mt-1"
-                      />
-                      <span>
-                        I confirm that I have read, understand and accept the{" "}
-                        Terms & Conditions and{" "}
-                        <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link>.
-                      </span>
-                    </label>
-                    <label className="flex items-start space-x-2">
-                      <input
-                        type="checkbox"
-                        name="consentGiven"
-                        checked={checkboxes.consentGiven}
-                        onChange={handleCheckboxChange}
-                        className="mt-1"
-                      />
-                      <span>
-                        I agree to receive communication from Future Proptech Summit, and allow sharing of my details with trusted partners to enhance event experience.
-                      </span>
-                    </label>
-                  </div>
+                <button
+                  type="submit"
+                  className="w-full py-2 px-4 rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
+                >
+                  Submit
+                </button>
 
-                  <button
-                    type="submit"
-                    className="w-full py-2 px-4 rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
-                  >
-                    Submit
-                  </button>
-                </form>
-              )}
-              {successMessage && <p className="mt-4 text-green-600 text-sm">{successMessage}</p>}
-              {submitError && <p className="mt-4 text-red-600 text-sm">{submitError}</p>}
+                {submitError && <p className="mt-4 text-red-600 text-sm">{submitError}</p>}
+              </form>
             </div>
           </div>
         </div>

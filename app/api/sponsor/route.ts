@@ -31,6 +31,7 @@ export async function POST(req: NextRequest) {
       // from: process.env.EMAIL_USER,
       from: `"Proptech- Sponsor" <${process.env.EMAIL_USER}>`, // This shows 'proptech' in the header
       to: "info@futureproptechsummit.com, digital.maxpo@gmail.com,",
+    
       subject: "New Sponsor - Proptech",
       html: `
         <h1>New Enquiry</h1>

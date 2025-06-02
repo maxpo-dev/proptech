@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { Mail, Phone, MapPin } from "lucide-react"
 import Link from "next/link"
-import { useSearchParams } from "next/navigation"
+import { useSearchParams, useRouter } from "next/navigation"
 
 const InputField = ({
   label,
@@ -39,6 +39,7 @@ const InputField = ({
 
 export default function Exhibitors() {
   const searchParams = useSearchParams()
+  const router = useRouter()
 
   const [formData, setFormData] = useState({
     name: "",
@@ -58,8 +59,6 @@ export default function Exhibitors() {
     consentGiven: true,
   })
 
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [successMessage, setSuccessMessage] = useState("")
   const [submitError, setSubmitError] = useState("")
 
   useEffect(() => {
@@ -94,7 +93,7 @@ export default function Exhibitors() {
     }
 
     try {
-      const response = await fetch("/api/exhibitor", {
+      const response = await fetch("/api/exhibitor", {  // <-- Adjust API endpoint accordingly
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -103,45 +102,23 @@ export default function Exhibitors() {
       const data = await response.json()
 
       if (response.ok) {
-        setIsSubmitted(true)
-        setSuccessMessage(data.message || "Exhibitor form submitted successfully!")
-        setSubmitError("")
-        setFormData({
-          name: "",
-          jobTitle: "",
-          companyName: "",
-          email: "",
-          phone: "",
-          country: "",
-          message: "",
-          utm_source: "",
-          utm_medium: "",
-          utm_campaign: "",
-        })
-        setCheckboxes({
-          termsAccepted: true,
-          consentGiven: true,
-        })
+        router.push("/register/thankyou?type=exhibitors") // redirect after success
       } else {
         setSubmitError(data.message || "Form submission failed. Please try again.")
-        setSuccessMessage("")
       }
     } catch (err) {
       console.error("Error submitting form:", err)
       setSubmitError("An error occurred. Please try again.")
-      setSuccessMessage("")
     }
   }
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-10 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
-            Exhibitor Registration
-          </h1>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Fill out the form to exhibit at Future PropTech Summit and connect with decision-makers in the property tech space.
+        <div className="text-center mb-10">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">Exhibitor Registration</h1>
+          <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            Register now to showcase your solutions at the Future PropTech Summit and connect with industry leaders.
           </p>
         </div>
 
@@ -149,7 +126,7 @@ export default function Exhibitors() {
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Contact Info */}
             <div className="p-6 sm:p-8 bg-blue-600 text-white">
-              <h2 className="text-xl sm:text-2xl font-bold mb-5">Contact Us</h2>
+              <h2 className="text-xl sm:text-2xl font-bold mb-6">Contact Us</h2>
               <div className="space-y-4 text-sm sm:text-base">
                 <div className="flex items-start">
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
@@ -178,71 +155,62 @@ export default function Exhibitors() {
 
             {/* Form */}
             <div className="p-6 sm:p-8">
-              {isSubmitted ? (
-                <div className="text-center">
-                  <h2 className="text-2xl font-bold text-green-600 mb-4">Thank You!</h2>
-                  <p className="text-gray-600">
-                    Your exhibitor registration was successful! <br /> We'll be in touch shortly with further information.
-                  </p>
+              <form onSubmit={handleSubmit} className="space-y-4 text-black">
+                <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
+                <InputField label="Job Title" id="jobTitle" placeholder="Your job title" value={formData.jobTitle} onChange={handleChange} />
+                <InputField label="Company Name" id="companyName" placeholder="Your company name" value={formData.companyName} onChange={handleChange} />
+                <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
+                <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
+                <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    placeholder="Tell us about your exhibition interests"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                    required
+                  />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 text-black">
-                  <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
-                  <InputField label="Job Title" id="jobTitle" placeholder="Your job title" value={formData.jobTitle} onChange={handleChange} />
-                  <InputField label="Company Name" id="companyName" placeholder="Your company name" value={formData.companyName} onChange={handleChange} />
-                  <InputField label="Email" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={handleChange} />
-                  <InputField label="Phone" id="phone" type="tel" placeholder="Your phone number" value={formData.phone} onChange={handleChange} />
-                  <InputField label="Country" id="country" placeholder="Your country" value={formData.country} onChange={handleChange} />
-                  <div className="mb-4">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      placeholder="Let us know your booth preferences or questions"
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-                      required
+
+                <div className="space-y-2">
+                  <label className="flex items-start space-x-2 text-sm text-gray-700">
+                    <input
+                      type="checkbox"
+                      name="termsAccepted"
+                      checked={checkboxes.termsAccepted}
+                      onChange={handleCheckboxChange}
+                      className="mt-1"
                     />
-                  </div>
+                    <span>
+                      I confirm I have read and accept the{" "}
+                      <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> and Terms & Conditions.
+                    </span>
+                  </label>
 
-                  <div className="mb-4">
-                    <label className="flex items-start space-x-2 text-sm text-gray-700">
-                      <input
-                        type="checkbox"
-                        name="termsAccepted"
-                        checked={checkboxes.termsAccepted}
-                        onChange={handleCheckboxChange}
-                        className="mt-1"
-                      />
-                      <span>
-                        I confirm I have read and accept the{" "}
-                        <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> and Terms & Conditions.
-                      </span>
-                    </label>
-                  </div>
-                  <div className="mb-4">
-                    <label className="flex items-start space-x-2 text-sm text-gray-700">
-                      <input
-                        type="checkbox"
-                        name="consentGiven"
-                        checked={checkboxes.consentGiven}
-                        onChange={handleCheckboxChange}
-                        className="mt-1"
-                      />
-                      <span>
-                        I agree to receive communication about the Future Proptech Summit and related updates.
-                      </span>
-                    </label>
-                  </div>
+                  <label className="flex items-start space-x-2 text-sm text-gray-700">
+                    <input
+                      type="checkbox"
+                      name="consentGiven"
+                      checked={checkboxes.consentGiven}
+                      onChange={handleCheckboxChange}
+                      className="mt-1"
+                    />
+                    <span>
+                      I agree to receive communication about the Future PropTech Summit and related updates.
+                    </span>
+                  </label>
+                </div>
 
-                  <button type="submit" className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
-                    Submit
-                  </button>
-                </form>
-              )}
-              {successMessage && <p className="mt-4 text-green-600">{successMessage}</p>}
+                <button type="submit" className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
+                  Submit
+                </button>
+              </form>
+
               {submitError && <p className="mt-4 text-red-600">{submitError}</p>}
             </div>
           </div>
