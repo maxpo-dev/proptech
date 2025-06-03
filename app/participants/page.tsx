@@ -199,6 +199,105 @@ export default function ParticipantsPage() {
               className="w-auto max-h-48 object-contain"
             />
           </div>
+                    <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/speakersCompanyLogo/Stake Logo.png"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+                              <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/speakersCompanyLogo/rics.jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+
+                                        <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/speakersCompanyLogo/heriot_watt_university_logo.jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+
+
+                                                  <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/exhibitor/Original Logo.png"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+
+                                                            <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/PN-Black.png"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+
+                                                                      <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/REM Times logo_2023.png"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+
+                                                                                <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/MEFMA Bilingual Logo-01trans.png"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+
+       <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/Build logo HR.jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+
+           <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/BFM 1000x600.png"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+
+                     <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/entrepreneurme.jpg"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
 
         </div>
         <div className="mt-12 flex justify-center">
