@@ -8,6 +8,17 @@ export interface Speaker {
     fullBio: string;
   }
   const speakers: Speaker[] = [
+{
+  name: "Sarah Hewerdine",
+  jobTitle: "Director of Marketing",
+  companyName: "Stake",
+  linkedIn: "https://www.linkedin.com/in/sarahhewerdine",
+  speakerImage: "/image/speakers/Sarah Hewerdine_Headshot.PNG", // Replace with actual image path
+  companyLogo: "/image/speakersCompanyLogo/Stake Logo.png", // Replace with actual logo path
+  fullBio:
+    "Sarah Hewerdine is a leader in the UAE Proptech industry known for her expertise in real estate marketplace dynamics, scaling businesses and driving hypergrowth across both new business verticals and high-growth startups. Sarah was previously the property commentator for The Business Breakfast on Dubai Eye 103.8, providing expert insights on current market trends. She is currently the Director of Marketing at Stake, a real estate investment platform and one of the Middle East’s fastest growing fintechs. Additionally, Sarah serves as a Board of Director at Gulf for Good, a UAE-based nonprofit focused on enhancing children’s education in developing countries.",
+},
+
             {
       name: "Mohamad Ibrahim Hoteit",
       jobTitle: "Director - Real Estate Development Department",
