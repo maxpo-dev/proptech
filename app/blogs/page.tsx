@@ -7,7 +7,14 @@ export default function BlogsPage() {
   const router = useRouter();
 
   const blogCards = [
-// DarVenturesInvests
+
+    {
+  image: "/image/blogs/News LUMOVIEW.png", // Make sure the image exists at this path
+  title: "German PropTech Lumoview Secures €3M to Scale Fast, Automated Building Analytics",
+  excerpt: "Lumoview, a German startup spun out of DLR, raises €3M to scale its AI-driven platform that enables fast, data-based retrofits and sustainability in the built environment.",
+  route: "/blogs/german-proptech-lumoview",
+  author: "Nazish Shah",
+},// DarVenturesInvests
 {
   image: "/image/blogs/Blogs again.png", // Update with actual image path if different
   title: "Dar Ventures Invests in Pi Labs’ Latest Built Environment Technology Fund",
