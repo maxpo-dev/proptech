@@ -5,6 +5,12 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void
+  }
+}
+
 const ThankYouPage = () => {
   const [showCheckmark, setShowCheckmark] = useState(false)
   const searchParams = useSearchParams()
@@ -21,10 +27,15 @@ const ThankYouPage = () => {
 
   const heading = titleMap[type] || 'Registration'
 
-  useEffect(() => {
-    const timer = setTimeout(() => setShowCheckmark(true), 300)
-    return () => clearTimeout(timer)
-  }, [])
+useEffect(() => {
+  if (typeof window !== "undefined" && window.gtag && type === "exhibitors") {
+    window.gtag("event", "conversion_event_submit_lead_form_1", {
+      // You can optionally add more parameters here
+    });
+  }
+}, [type]);
+
+
 
 //   if (type && !validTypes.includes(type)) {
  if (!type || !validTypes.includes(type)) {
