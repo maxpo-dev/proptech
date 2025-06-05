@@ -8,6 +8,17 @@ export interface Speaker {
     fullBio: string;
   }
   const speakers: Speaker[] = [
+    {
+  name: "Dr. Damien Nouvel",
+  jobTitle: "Real Estate Strategist and Advisor",
+  companyName: "Alandalus Property",
+  linkedIn: "https://www.linkedin.com/in/ddnouvel",
+  speakerImage: "/image/speakers/DR.png", // Replace with actual image path
+  companyLogo: "/image/speakersCompanyLogo/AlandalusProperty_Logo.png", // Replace with actual logo path
+  fullBio:
+    "Dr. Damien Nouvel is a real estate strategist and advisor with over 20 years of experience across the Middle East and Europe. He specializes in commercial development, urban economics, and investment strategy, and has advised leading firms including Emaar, Aldar, and Knight Frank. A former Associate Professor at ESPI in France, Damien is also a regular commentator on CNBC Arabia and Qatar Television, known for his insights into regional market trends. He currently serves as Business Development Consultant at Alandalus Property in Saudi Arabia.",
+},
+
 {
   name: "Sarah Hewerdine",
   jobTitle: "Director of Marketing",
