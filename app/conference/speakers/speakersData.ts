@@ -8,16 +8,7 @@ export interface Speaker {
     fullBio: string;
   }
   const speakers: Speaker[] = [
-    {
-  name: "Dr. Damien Nouvel",
-  jobTitle: "Real Estate Strategist and Advisor",
-  companyName: "Alandalus Property",
-  linkedIn: "https://www.linkedin.com/in/ddnouvel",
-  speakerImage: "/image/speakers/DR.png", // Replace with actual image path
-  companyLogo: "/image/speakersCompanyLogo/AlandalusProperty_Logo.png", // Replace with actual logo path
-  fullBio:
-    "Dr. Damien Nouvel is a real estate strategist and advisor with over 20 years of experience across the Middle East and Europe. He specializes in commercial development, urban economics, and investment strategy, and has advised leading firms including Emaar, Aldar, and Knight Frank. A former Associate Professor at ESPI in France, Damien is also a regular commentator on CNBC Arabia and Qatar Television, known for his insights into regional market trends. He currently serves as Business Development Consultant at Alandalus Property in Saudi Arabia.",
-},
+
 
 {
   name: "Sarah Hewerdine",
@@ -180,7 +171,17 @@ export interface Speaker {
   companyLogo: "/image/speakersCompanyLogo/rics.jpg", // Update this path based on your actual logo filename
   fullBio:
     "A Fellow of RICS, Tim has been a chartered surveyor for over 20 years, beginning his career as a Quantity Surveyor in the UK before transitioning into senior leadership roles in digital transformation, innovation, and strategic advisory. Tim has been based in the Middle East for over 15 years, holding both client-side and consulting roles in the UAE and Qatar, and has worked on major capital programs, including the FIFA World Cup 2022.\n\nAs the Operations Director for Technology and Advisory at Omnium International, he leads the firm’s digital transformation strategy, alongside providing advisory services to clients, focusing on AI adoption, data-driven decision-making, and innovative technology solutions. Previously, he held senior leadership roles at Arcadis, where he was instrumental in driving commercial strategies, product innovation, and AI-enabled business models on a global scale. His expertise spans business process automation, technology integration, and digital governance, positioning him as a key advocate for the digital future of the built environment.\n\nIn addition to his corporate leadership, Tim is a visiting lecturer, mentor, and published author on smart cities and innovation. He has worked closely with government agencies, startups, and academic institutions, shaping the regional discourse on sustainability and emerging technologies. Tim’s appointment to the RICS UAE Advisory Board underscores his commitment to advancing professional standards, fostering innovation, and supporting the growth of RICS membership in the UAE."
-}
+},
+    {
+  name: "Dr. Damien Nouvel",
+  jobTitle: "Real Estate Strategist and Advisor",
+  companyName: "",
+  linkedIn: "https://www.linkedin.com/in/ddnouvel",
+  speakerImage: "/image/speakers/DR.png", // Replace with actual image path
+  companyLogo: "", // Replace with actual logo path
+  fullBio:
+    "Dr. Damien Nouvel is a real estate strategist and advisor with over 20 years of experience across the Middle East and Europe. He specializes in commercial development, urban economics, and investment strategy, and has advised leading firms including Emaar, Aldar, and Knight Frank. A former Associate Professor at ESPI in France, Damien is also a regular commentator on CNBC Arabia and Qatar Television, known for his insights into regional market trends. He currently serves as Business Development Consultant at Alandalus Property in Saudi Arabia.",
+},
 
 
 

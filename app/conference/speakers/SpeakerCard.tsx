@@ -1,21 +1,26 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Linkedin } from "lucide-react"
-import { motion } from "framer-motion"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface SpeakerCardProps {
-  name: string
-  jobTitle: string
-  companyName: string
-  linkedIn: string
-  speakerImage: string
-  companyLogo: string
-  fullBio: string
+  name: string;
+  jobTitle: string;
+  companyName: string;
+  linkedIn: string;
+  speakerImage: string;
+  companyLogo: string;
+  fullBio: string;
 }
 
 export default function SpeakerCard({
@@ -27,9 +32,9 @@ export default function SpeakerCard({
   companyLogo,
   fullBio,
 }: SpeakerCardProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [imageError, setImageError] = useState(false)
-  const [logoError, setLogoError] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   return (
     <>
@@ -38,7 +43,11 @@ export default function SpeakerCard({
         <div className="relative w-full pt-[120%] overflow-visible">
           <div className="absolute inset-0">
             <Image
-              src={imageError ? "/placeholder.svg?height=400&width=400" : speakerImage}
+              src={
+                imageError
+                  ? "/placeholder.svg?height=400&width=400"
+                  : speakerImage
+              }
               alt={name}
               fill
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -49,37 +58,45 @@ export default function SpeakerCard({
           </div>
 
           {/* Centered, Half-outside Logo with Margin Adjustment */}
-          <motion.div
-            className="absolute -bottom-8 left-1/2 -translate-x-1/2 ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
-            initial={{ y: 0 }}
-            animate={{
-              y: [0, -10, 0],
-              transition: {
-                duration: 1.5,
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "mirror",
-                ease: "easeInOut",
-              },
-            }}
-          >
-            <div className="relative w-12 h-12">
-              <Image
-                src={logoError ? "/placeholder.svg?height=60&width=60" : companyLogo}
-                alt={`${companyName} Logo`}
-                fill
-                className="object-contain"
-                onError={() => setLogoError(true)}
-              />
-            </div>
-          </motion.div>
+          {logoError ? null : (
+            <motion.div
+              className="absolute -bottom-8 left-1/2 -translate-x-1/2 ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
+              initial={{ y: 0 }}
+              animate={{
+                y: [0, -10, 0],
+                transition: {
+                  duration: 1.5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  repeatType: "mirror",
+                  ease: "easeInOut",
+                },
+              }}
+            >
+              <div className="relative w-12 h-12">
+                <Image
+                  src={companyLogo}
+                  alt={`${companyName} Logo`}
+                  fill
+                  className="object-contain"
+                  onError={() => setLogoError(true)}
+                />
+              </div>
+            </motion.div>
+          )}
         </div>
 
         {/* Speaker Details */}
         <div className="p-5 pt-10 flex-grow flex flex-col">
           <div className="flex-grow">
-            <h2 className="text-lg font-bold text-gray-900 line-clamp-1">{name}</h2>
-            <p className="text-sm text-gray-800 font-semibold line-clamp-1">{jobTitle}</p>
-            <p className="text-xs text-gray-500 mt-1 italic line-clamp-1">{companyName}</p>
+            <h2 className="text-lg font-bold text-gray-900 line-clamp-1">
+              {name}
+            </h2>
+            <p className="text-sm text-gray-800 font-semibold line-clamp-1">
+              {jobTitle}
+            </p>
+            <p className="text-xs text-gray-500 mt-1 italic line-clamp-1">
+              {companyName}
+            </p>
           </div>
 
           <div className="mt-auto flex items-center justify-between">
@@ -118,7 +135,11 @@ export default function SpeakerCard({
               <div className="relative w-full pt-[100%] overflow-visible rounded-lg">
                 <div className="absolute inset-0">
                   <Image
-                    src={imageError ? "/placeholder.svg?height=400&width=400" : speakerImage}
+                    src={
+                      imageError
+                        ? "/placeholder.svg?height=400&width=400"
+                        : speakerImage
+                    }
                     alt={name}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
@@ -143,7 +164,11 @@ export default function SpeakerCard({
                 >
                   <div className="relative w-12 h-12">
                     <Image
-                      src={logoError ? "/placeholder.svg?height=60&width=60" : companyLogo}
+                      src={
+                        logoError
+                          ? "/placeholder.svg?height=60&width=60"
+                          : companyLogo
+                      }
                       alt={`${companyName} Logo`}
                       fill
                       className="object-contain"
@@ -154,7 +179,9 @@ export default function SpeakerCard({
               </div>
 
               <div className="mt-10 w-full text-center">
-                <h3 className="font-semibold text-gray-900 text-base">{jobTitle}</h3>
+                <h3 className="font-semibold text-gray-900 text-base">
+                  {jobTitle}
+                </h3>
                 <p className="text-sm text-gray-600 italic">{companyName}</p>
 
                 {linkedIn && (
@@ -179,5 +206,5 @@ export default function SpeakerCard({
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }
