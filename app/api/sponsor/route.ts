@@ -4,20 +4,20 @@ import nodemailer from "nodemailer"
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { 
-      name, 
-      jobTitle, 
-      companyName, 
-      email, 
-      phone, 
-      country, 
-      message, 
-      utm_source, 
-      utm_medium, 
-      utm_campaign 
+    const {
+      name,
+      jobTitle,
+      companyName,
+      email,
+      phone,
+      country,
+      message,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      type = "sponsor",
     } = body
 
-    // Configure Nodemailer transport
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -26,44 +26,50 @@ export async function POST(req: NextRequest) {
       },
     })
 
-    // Email content with UTM details included
-    const mailOptions = {
-      // from: process.env.EMAIL_USER,
-      from: `"Proptech- Sponsor" <${process.env.EMAIL_USER}>`, // This shows 'proptech' in the header
-      // to: "info@futureproptechsummit.com, digital.maxpo@gmail.com,",
-        to: "info@futureproptechsummit.com, digital.maxpo@gmail.com,",
-    
-      subject: "New Sponsor - Proptech",
+    await transporter.sendMail({
+      from: `"Proptech - ${type}" <${process.env.EMAIL_USER}>`,
+      // to: "avalasandeep89@gmail.com",
+         to: "info@futureproptechsummit.com, digital.maxpo@gmail.com,",
+      subject: `New ${type} - Proptech`,
       html: `
-        <h1>New Enquiry</h1>
+        <h1>New ${type} Submission</h1>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Job Title:</strong> ${jobTitle}</p>
         <p><strong>Company:</strong> ${companyName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Country:</strong> ${country}</p>
         <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        <p><strong>Message:</strong> ${message}</p>
         <hr/>
         <h2>UTM Parameters</h2>
-        <p><strong>UTM Source:</strong> ${utm_source || "N/A"}</p>
-        <p><strong>UTM Medium:</strong> ${utm_medium || "N/A"}</p>
-        <p><strong>UTM Campaign:</strong> ${utm_campaign || "N/A"}</p>
+        <p><strong>Source:</strong> ${utm_source || "N/A"}</p>
+        <p><strong>Medium:</strong> ${utm_medium || "N/A"}</p>
+        <p><strong>Campaign:</strong> ${utm_campaign || "N/A"}</p>
       `,
-    }
+    })
 
-    // Send email
-    await transporter.sendMail(mailOptions)
+    // Send to Google Apps Script
+    await fetch(process.env.GOOGLE_APPS_SCRIPT_URL!, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        jobTitle,
+        companyName,
+        email,
+        phone,
+        country,
+        message,
+        utm_source,
+        utm_medium,
+        utm_campaign,
+        type: "sponsor",
+      }),
+    })
 
-    return NextResponse.json(
-      { success: true, message: "Booking submitted successfully and email sent!" },
-      { status: 200 },
-    )
+    return NextResponse.json({ success: true, message: "Submission successful!" }, { status: 200 })
   } catch (error) {
-    console.error("Error:", error)
-    return NextResponse.json(
-      { success: false, message: "Failed to submit booking or send email." },
-      { status: 500 },
-    )
+    console.error("Sponsor API Error:", error)
+    return NextResponse.json({ success: false, message: "Submission failed." }, { status: 500 })
   }
 }

@@ -93,16 +93,19 @@ export default function Exhibitors() {
     }
 
     try {
-      const response = await fetch("/api/exhibitor", {  // <-- Adjust API endpoint accordingly
+      const response = await fetch("/api/exhibitor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          type: "exhibitor", // ✅ Required for Google Sheets tab selection
+        }),
       })
 
       const data = await response.json()
 
       if (response.ok) {
-        router.push("/register/thankyou?type=exhibitors") // redirect after success
+        router.push("/register/thankyou?type=exhibitors")
       } else {
         setSubmitError(data.message || "Form submission failed. Please try again.")
       }

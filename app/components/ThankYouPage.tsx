@@ -1,4 +1,3 @@
-
 'use client'
 
 import React, { useEffect, useState } from 'react'
@@ -27,18 +26,19 @@ const ThankYouPage = () => {
 
   const heading = titleMap[type] || 'Registration'
 
-useEffect(() => {
-  if (typeof window !== "undefined" && window.gtag && type === "exhibitors") {
-    window.gtag("event", "conversion_event_submit_lead_form_1", {
-      // You can optionally add more parameters here
-    });
-  }
-}, [type]);
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag && type === 'exhibitors') {
+      window.gtag('event', 'conversion_event_submit_lead_form_1')
+    }
 
+    const timer = setTimeout(() => {
+      setShowCheckmark(true)
+    }, 100)
 
+    return () => clearTimeout(timer)
+  }, [type])
 
-//   if (type && !validTypes.includes(type)) {
- if (!type || !validTypes.includes(type)) {
+  if (!type || !validTypes.includes(type)) {
     return (
       <div className="min-h-[60vh] flex flex-col justify-center items-center text-center px-4">
         <h1 className="text-3xl font-bold text-red-600 mb-2">Invalid Registration Type</h1>
@@ -83,12 +83,7 @@ useEffect(() => {
     },
   }
 
-  const { title, bold, description, date } = messages[type] || {
-    title: 'Thank You for Registering!',
-    bold: 'You are now part of our community',
-    description: 'Our team will be in touch with you soon.',
-    date: 'Event details will be shared shortly.',
-  }
+  const { title, bold, description, date } = messages[type]
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start text-center px-4 py-12 bg-white mt-8">
@@ -98,7 +93,11 @@ useEffect(() => {
       </div>
 
       {/* Checkmark */}
-      <div className="bg-[#172554] rounded-full w-24 h-24 flex items-center justify-center mt-6 mb-6">
+      <div
+        className={`bg-[#172554] rounded-full w-24 h-24 flex items-center justify-center mt-6 mb-6 transition-opacity duration-500 ${
+          showCheckmark ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-14 w-14 text-white"
@@ -109,23 +108,12 @@ useEffect(() => {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          {showCheckmark && (
-            <>
-              <path
-                d="M5 13l4 4L19 7"
-                strokeDasharray="22"
-                strokeDashoffset="22"
-                style={{ animation: 'drawCheck 0.5s ease forwards' }}
-              />
-              <style jsx>{`
-                @keyframes drawCheck {
-                  to {
-                    stroke-dashoffset: 0;
-                  }
-                }
-              `}</style>
-            </>
-          )}
+          <path
+            d="M5 13l4 4L19 7"
+            strokeDasharray="22"
+            strokeDashoffset={showCheckmark ? '0' : '22'}
+            style={{ transition: 'stroke-dashoffset 0.5s ease' }}
+          />
         </svg>
       </div>
 

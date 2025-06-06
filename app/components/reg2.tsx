@@ -52,6 +52,7 @@ export default function ContactUs2() {
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
+    type: "register",
   })
 
   const [checkboxes, setCheckboxes] = useState({
@@ -102,7 +103,6 @@ export default function ContactUs2() {
       const data = await response.json()
 
       if (response.ok) {
-        // Redirect to thank you page with query param on success
         router.push('/register/thankyou?type=enquire')
       } else {
         setSubmitError(data.message || "Form submission failed. Please try again.")
@@ -130,14 +130,14 @@ export default function ContactUs2() {
               <div className="space-y-4 text-sm sm:text-base text-left">
                 <div className="flex items-start">
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
-                  <div className="text-left">
+                  <div>
                     <h3 className="font-semibold">Email</h3>
                     <p>info@futureproptechsummit.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
-                  <div className="text-left">
+                  <div>
                     <h3 className="font-semibold">Phone</h3>
                     <p>+971 509431529</p>
                     <p>+91 7780985893</p>
@@ -145,7 +145,7 @@ export default function ContactUs2() {
                 </div>
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 sm:w-6 sm:h-6 mr-3 mt-1" />
-                  <div className="text-left">
+                  <div>
                     <h3 className="font-semibold">Address</h3>
                     <p>Le Méridien Dubai Hotel & Conference Centre</p>
                   </div>
@@ -185,7 +185,7 @@ export default function ContactUs2() {
                       onChange={handleCheckboxChange}
                       className="mt-1"
                     />
-                    <span className="text-left">
+                    <span>
                       I confirm that I have read, understand and accept the{" "}
                       Terms & Conditions and{" "}
                       <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link>.
@@ -202,7 +202,7 @@ export default function ContactUs2() {
                       onChange={handleCheckboxChange}
                       className="mt-1"
                     />
-                    <span className="text-left">
+                    <span>
                       I consent to having my data processed for event communication.
                     </span>
                   </label>
