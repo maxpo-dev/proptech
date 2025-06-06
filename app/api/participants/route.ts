@@ -23,10 +23,10 @@ export async function POST(req: NextRequest) {
     const timeout = setTimeout(() => controller.abort(), 8000);
 
     try {
-      const scriptResponse = await fetch(process.env.GOOGLE_APPS_SCRIPT_URL!, {
+       const scriptResponse = await fetch(process.env.GOOGLE_APPS_SCRIPT_URL!, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...body, type: "participant" }),
+        body: JSON.stringify({ ...body, type: "participants" }), 
         signal: controller.signal,
       });
 

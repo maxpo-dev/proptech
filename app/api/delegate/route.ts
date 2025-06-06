@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail(mailOptions);
 
     // 2. Log to Google Sheets (Apps Script Web App)
-    const sheetResponse = await fetch("https://script.google.com/macros/s/AKfycbx8sNZ95rNOSaj4gtAO_1hYC9UfyEdgpGmJ1RIK3waL8f3DbqfLA2r0A7hLOaFRZM-d/exec", {
+ const sheetResponse = await fetch(process.env.GOOGLE_APPS_SCRIPT_URL!, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -65,8 +65,9 @@ export async function POST(req: NextRequest) {
         utm_source,
         utm_medium,
         utm_campaign,
+        type: "delegate",
       }),
-    });
+    })
 
     if (!sheetResponse.ok) {
       console.error("Failed to log to Google Sheets");

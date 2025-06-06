@@ -1,23 +1,15 @@
-import { type NextRequest, NextResponse } from "next/server"
+// app/api/mailcontact/route.ts
+import { NextRequest, NextResponse } from "next/server"
 import nodemailer from "nodemailer"
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json()
-    const { 
-      name, 
-      jobTitle, 
-      companyName, 
-      email, 
-      phone, 
-      country, 
-      message, 
-      utm_source, 
-      utm_medium, 
-      utm_campaign 
-    } = body
+    const {
+      name, jobTitle, companyName, email, phone, country,
+      message, utm_source, utm_medium, utm_campaign, type = "register"
+    } = await req.json()
 
-    // Configure Nodemailer transport
+    // 1. Send email
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -26,42 +18,52 @@ export async function POST(req: NextRequest) {
       },
     })
 
-    // Email content with UTM details included
-    const mailOptions = {
-      // from: process.env.EMAIL_USER,
-      from: `"Proptech- Enquire" <${process.env.EMAIL_USER}>`, // This shows 'proptech' in the header
-      to: "info@futureproptechsummit.com, digital.maxpo@gmail.com,",
-      subject: "New contact info - Proptech",
-      html: `
-        <h1>New Enquiry</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Job Title:</strong> ${jobTitle}</p>
-        <p><strong>Company:</strong> ${companyName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Country:</strong> ${country}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-        <hr/>
-        <h2>UTM Parameters</h2>
-        <p><strong>UTM Source:</strong> ${utm_source || "N/A"}</p>
-        <p><strong>UTM Medium:</strong> ${utm_medium || "N/A"}</p>
-        <p><strong>UTM Campaign:</strong> ${utm_campaign || "N/A"}</p>
-      `,
-    }
+    const html = `
+      <h1>New Enquiry Submission</h1>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Job Title:</strong> ${jobTitle}</p>
+      <p><strong>Company Name:</strong> ${companyName}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Country:</strong> ${country}</p>
+      <p><strong>Message:</strong> ${message}</p>
+      <hr>
+      <h2>UTM Info</h2>
+      <p>Source: ${utm_source}</p>
+      <p>Medium: ${utm_medium}</p>
+      <p>Campaign: ${utm_campaign}</p>
+    `
 
-    // Send email
-    await transporter.sendMail(mailOptions)
+    await transporter.sendMail({
+      from: `"Enquiry" <${process.env.EMAIL_USER}>`,
+      // to: "avalasandeep89@gmail.com",
+        to: "info@futureproptechsummit.com, digital.maxpo@gmail.com,",
+      subject: "New Enquiry - Future Proptech Summit",
+      html,
+    })
 
-    return NextResponse.json(
-      { success: true, message: "Booking submitted successfully and email sent!" },
-      { status: 200 },
-    )
-  } catch (error) {
-    console.error("Error:", error)
-    return NextResponse.json(
-      { success: false, message: "Failed to submit booking or send email." },
-      { status: 500 },
-    )
+    // 2. Send to Google Apps Script (for Excel/Sheets logging)
+    await fetch(process.env.GOOGLE_APPS_SCRIPT_URL!, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        jobTitle,
+        companyName,
+        email,
+        phone,
+        country,
+        message,
+        utm_source,
+        utm_medium,
+        utm_campaign,
+        type:"register"
+      }),
+    })
+
+    return NextResponse.json({ success: true })
+  } catch (err) {
+    console.error("Error submitting form:", err)
+    return NextResponse.json({ success: false, message: "Submission failed" }, { status: 500 })
   }
 }
