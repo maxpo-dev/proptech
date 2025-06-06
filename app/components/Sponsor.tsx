@@ -51,6 +51,7 @@ export default function Sponsor() {
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
+    type: "sponsor", // Correct type
   })
 
   const [checkboxes, setCheckboxes] = useState({
@@ -61,15 +62,11 @@ export default function Sponsor() {
   const [submitError, setSubmitError] = useState("")
 
   useEffect(() => {
-    const utm_source = searchParams.get("utm_source") || ""
-    const utm_medium = searchParams.get("utm_medium") || ""
-    const utm_campaign = searchParams.get("utm_campaign") || ""
-
-    setFormData((prevData) => ({
-      ...prevData,
-      utm_source,
-      utm_medium,
-      utm_campaign,
+    setFormData((prev) => ({
+      ...prev,
+      utm_source: searchParams.get("utm_source") || "",
+      utm_medium: searchParams.get("utm_medium") || "",
+      utm_campaign: searchParams.get("utm_campaign") || "",
     }))
   }, [searchParams])
 
@@ -99,14 +96,12 @@ export default function Sponsor() {
       })
 
       if (response.ok) {
-        // Redirect to thank you page with type param
         window.location.href = "/register/thankyou?type=sponsor"
       } else {
         const data = await response.json()
         setSubmitError(data.message || "Form submission failed. Please try again.")
       }
     } catch (err) {
-      console.error("Error submitting form:", err)
       setSubmitError("An error occurred. Please try again.")
     }
   }
@@ -123,7 +118,6 @@ export default function Sponsor() {
 
         <div className="bg-white shadow-xl rounded-lg overflow-hidden">
           <div className="flex flex-col md:flex-row">
-            {/* Contact Info Section */}
             <div className="p-6 sm:p-8 bg-blue-600 text-white w-full md:w-1/2">
               <h2 className="text-xl sm:text-2xl font-bold mb-6">Contact Details</h2>
               <div className="space-y-4 text-sm sm:text-base">
@@ -152,7 +146,6 @@ export default function Sponsor() {
               </div>
             </div>
 
-            {/* Form Section */}
             <div className="p-6 sm:p-8 w-full md:w-1/2">
               <form onSubmit={handleSubmit} className="space-y-4 text-black">
                 <InputField label="Name" id="name" placeholder="Your full name" value={formData.name} onChange={handleChange} />
@@ -178,37 +171,19 @@ export default function Sponsor() {
 
                 <div className="mb-4 text-sm text-gray-700 space-y-2">
                   <label className="flex items-start space-x-2">
-                    <input
-                      type="checkbox"
-                      name="termsAccepted"
-                      checked={checkboxes.termsAccepted}
-                      onChange={handleCheckboxChange}
-                      className="mt-1"
-                    />
+                    <input type="checkbox" name="termsAccepted" checked={checkboxes.termsAccepted} onChange={handleCheckboxChange} className="mt-1" />
                     <span>
-                      I confirm that I have read, understand and accept the{" "}
-                      Terms & Conditions and{" "}
-                      <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link>.
+                      I accept the{" "}
+                      <Link href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">Privacy Policy</Link> and Terms & Conditions.
                     </span>
                   </label>
                   <label className="flex items-start space-x-2">
-                    <input
-                      type="checkbox"
-                      name="consentGiven"
-                      checked={checkboxes.consentGiven}
-                      onChange={handleCheckboxChange}
-                      className="mt-1"
-                    />
-                    <span>
-                      I agree to receive communication from Future Proptech Summit, and allow sharing of my details with trusted partners to enhance event experience.
-                    </span>
+                    <input type="checkbox" name="consentGiven" checked={checkboxes.consentGiven} onChange={handleCheckboxChange} className="mt-1" />
+                    <span>I agree to receive communication and allow data sharing with event partners.</span>
                   </label>
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full py-2 px-4 rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
-                >
+                <button type="submit" className="w-full py-2 px-4 rounded-md text-white bg-blue-600 hover:bg-blue-700 transition">
                   Submit
                 </button>
 
