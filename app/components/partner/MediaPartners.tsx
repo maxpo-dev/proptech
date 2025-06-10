@@ -10,6 +10,7 @@ import MiddleEastFacility from "../MiddleEastFacility";
 import BuildAustralia from "../BuildAustralia";
 import BusinessFocusMagazine from "../BusinessFocusMagazine";
 import EntrepreneurME from "../EntrepreneurME";
+import TimesofAI from "../TimesofAI";
 
 export default function MediaPartners() {
   return (
@@ -27,6 +28,8 @@ export default function MediaPartners() {
       <BuildAustralia />
       <BusinessFocusMagazine />
       <EntrepreneurME />
+      <TimesofAI />
+
 
 
     </section>
