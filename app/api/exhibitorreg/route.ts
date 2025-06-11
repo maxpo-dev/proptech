@@ -1,12 +1,24 @@
+import { InternalEmailHandler } from "@/app/components/emailHandlers/InternalEmail";
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
-    const { companyName, contactName, email, phone, website, boothSize, productCategory, specialRequirements } = await req.json();
+    const {
+      companyName,
+      contactName,
+      email,
+      phone,
+      website,
+      boothSize,
+      productCategory,
+      specialRequirements,
+    } = await req.json();
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "mail.maxpo.ae",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER, // Your Gmail
         pass: process.env.EMAIL_PASS, // App Password
@@ -32,7 +44,10 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.json({ message: "Email sent successfully" }, { status: 200 });
+    return NextResponse.json(
+      { message: "Email sent successfully" },
+      { status: 200 }
+    );
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json({ error: "Error sending email" }, { status: 500 });
