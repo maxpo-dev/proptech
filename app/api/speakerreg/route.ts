@@ -7,7 +7,9 @@ export async function POST(req: Request) {
 
     // Nodemailer transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+            host: "mail.maxpo.ae",
+      port: 465,
+      secure: true ,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -17,7 +19,7 @@ export async function POST(req: Request) {
     // Email options
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "info@futureproptechsummit.com, digital.maxpo@gmail.com", // Change to the recipient email
+      to:process.env.TO_USER, // Change to the recipient email
       subject: "New Speaker Registration",
       text: `
         Name: ${name}

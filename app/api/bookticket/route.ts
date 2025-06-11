@@ -6,7 +6,9 @@ export async function POST(req: NextRequest) {
     const { name, email, company, designation, phone } = await req.json()
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "mail.maxpo.ae",
+      port: 465,
+      secure: true ,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -15,7 +17,7 @@ export async function POST(req: NextRequest) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "info@futureproptechsummit.com, digital.maxpo@gmail.com",
+      to: process.env.TO_USER,
       subject: "New Visitor Ticket Booking",
       html: `
         <h2>Visitor Ticket Booking</h2>
