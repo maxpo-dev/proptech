@@ -7,6 +7,14 @@ export default function BlogsPage() {
   const router = useRouter();
 
   const blogCards = [
+    {
+  image: "/image/blogs/Blogs (6).png", // Make sure this image exists at the specified path
+  title: "BEEAH Expands into Real Estate with Focus on Sustainable Urban Living",
+  excerpt: "UAE-based sustainability leader BEEAH enters the real estate sector, aiming to redefine sustainable urban living through innovation, smart mobility, and eco-conscious design.",
+  route: "/blogs/Beeah",
+  author: "Nazish Shah",
+},
+
 
     {
   image: "/image/blogs/News LUMOVIEW.png", // Make sure the image exists at this path
@@ -14,7 +22,8 @@ export default function BlogsPage() {
   excerpt: "Lumoview, a German startup spun out of DLR, raises €3M to scale its AI-driven platform that enables fast, data-based retrofits and sustainability in the built environment.",
   route: "/blogs/german-proptech-lumoview",
   author: "Nazish Shah",
-},// DarVenturesInvests
+},
+// DarVenturesInvests
 {
   image: "/image/blogs/Blogs again.png", // Update with actual image path if different
   title: "Dar Ventures Invests in Pi Labs’ Latest Built Environment Technology Fund",
