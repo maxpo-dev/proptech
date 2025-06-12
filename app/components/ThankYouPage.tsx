@@ -15,13 +15,13 @@ const ThankYouPage = () => {
   const searchParams = useSearchParams()
   const type = (searchParams.get('type') ?? '').toLowerCase()
 
-  const validTypes = ['sponsor', 'exhibitors', 'delegates', 'participants', 'enquire']
+  const validTypes = ['sponsor', 'exhibitors', 'delegates', 'participants', 'enquiry']
   const titleMap: Record<string, string> = {
     sponsor: 'Sponsor',
     exhibitors: 'Exhibitor',
     delegates: 'Delegate',
     participants: 'Participant',
-    enquire: 'Enquiry',
+    enquiry: 'Enquiry',
   }
 
   const heading = titleMap[type] || 'Registration'
@@ -75,7 +75,7 @@ const ThankYouPage = () => {
       description: 'Our team will be in touch with you soon.',
       date: '14 October – 15 October 2025 · Le Méridien Dubai Hotel & Conference Centre',
     },
-    enquire: {
+    enquiry: {
       title: 'Thank You For Your Enquiry!',
       bold: 'You are now part of the Revolution EV community',
       description: 'Our team will be in touch with you soon.',

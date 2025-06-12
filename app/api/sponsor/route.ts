@@ -1,4 +1,5 @@
 import { InternalEmailHandler } from "@/app/components/emailHandlers/InternalEmail"
+import { ThankYouEmailHandler } from "@/app/components/emailHandlers/thankYouEmail"
 import { type NextRequest, NextResponse } from "next/server"
 import nodemailer from "nodemailer"
 
@@ -31,11 +32,22 @@ export async function POST(req: NextRequest) {
 
       const internalEmailHtml=InternalEmailHandler({ formType: "Sponsor", formData: body });
     await transporter.sendMail({
-      from: `"Proptech - ${type}" <${process.env.EMAIL_USER}>`,
+      from:`"Future Proptech Summit-Sponsor" <${process.env.EMAIL_USER}>`,
       to: process.env.TO_USER,
       subject: `New ${type} - Proptech`,
       html: internalEmailHtml,
     })
+
+        const thankYouHtml=ThankYouEmailHandler({name})
+    
+        const thankYouMailOptions = {
+          from: `"Future Proptech Summit-Sponsor" <${process.env.EMAIL_USER}>`,
+          to: email,
+          subject: "Thank you for submitting your details -Future Proptech Summit",
+          html: thankYouHtml,
+        };
+    
+        await transporter.sendMail(thankYouMailOptions);
 
     // Send to Google Apps Script
     await fetch(process.env.GOOGLE_APPS_SCRIPT_URL!, {

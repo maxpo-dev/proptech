@@ -26,9 +26,9 @@ export async function POST(req: NextRequest) {
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: "info@futureproptechsummit.com, digital.maxpo@gmail.com, ", // Replace with your recipient email
-      subject: "New Exhibitor Registration for fps",
+      from: `"Future Proptech Summit-Exhibitor" <${process.env.EMAIL_USER}>`,
+      to: process.env.TO_USER, // Replace with your recipient email
+      subject: "New Exhibitor- Future Proptech Summit",
       html: `
         <h3>New Exhibitor Registration</h3>
         <p><strong>Company Name:</strong> ${companyName}</p>
