@@ -1,4 +1,5 @@
 import { InternalEmailHandler } from "@/app/components/emailHandlers/InternalEmail";
+import { ThankYouEmailHandler } from "@/app/components/emailHandlers/thankYouEmail";
 import { type NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import * as XLSX from "xlsx";
@@ -75,10 +76,10 @@ export async function POST(req: NextRequest) {
 
       const internalEmailHtml=InternalEmailHandler({ formType: "Participant", formData: body });
     const mailOptions = {
-      from: `"Proptech Participant" <${process.env.EMAIL_USER}>`,
+      from: `"Future Proptech Summit-Participant" <${process.env.EMAIL_USER}>`,
       // to: "avalasandeep89@gmail.com",
          to: process.env.TO_USER,
-      subject: "New Participant - Proptech",
+      subject: "New Participant - Future Proptech Summit",
       html: internalEmailHtml,
       // attachments: [
       //   {
@@ -87,6 +88,16 @@ export async function POST(req: NextRequest) {
       //   },
       // ],
     };
+        const thankYouHtml=ThankYouEmailHandler({name})
+    
+        const thankYouMailOptions = {
+          from: `"Future Proptech Summit-Participant" <${process.env.EMAIL_USER}>`,
+          to: email,
+          subject: "Thank you for submitting your details -Future Proptech Summit",
+          html: thankYouHtml,
+        };
+    
+        await transporter.sendMail(thankYouMailOptions);
 
     await transporter.sendMail(mailOptions);
 

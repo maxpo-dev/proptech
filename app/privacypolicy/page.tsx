@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
           Privacy Policy
         </h1>
         <p className="text-center text-gray-500 mb-8">
-          Last Updated: <strong>November 20, 2024</strong>
+          Last Updated: <strong>November 20, 2024</strong>  
         </p>
 
         <section className="mb-10">

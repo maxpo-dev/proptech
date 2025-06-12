@@ -36,7 +36,7 @@ export const InternalEmailHandler = ({
     <div style="font-family: Arial, sans-serif; background-color: #f4f7fa; padding: 30px; max-width: 650px; margin: auto;">
       <div style="background-color: #ffffff; border-radius: 10px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
         <h2 style="color: #003f5c; border-bottom: 3px solid #faa41a; padding-bottom: 10px; margin-bottom: 30px;">
-          New Proptech ${formType} Registration
+          New Future Proptech ${formType} Registration
         </h2>
 
         <table style="width: 100%; font-size: 15px; border-collapse: collapse;">

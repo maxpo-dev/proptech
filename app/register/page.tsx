@@ -1,14 +1,14 @@
 'use client'
 
 import { Suspense } from 'react'
-import ContactUs from '../components/reg'
+import RegisterPage from '../components/register/registerPage'
 
 export default function Register() {
   return (
     <div>
       <div className="pt-10">
         <Suspense fallback={<div>Loading...</div>}>
-          <ContactUs />
+          <RegisterPage />
         </Suspense>
       </div>
     </div>
