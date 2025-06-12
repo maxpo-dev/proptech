@@ -182,6 +182,17 @@ export interface Speaker {
   fullBio:
     "Dr. Damien Nouvel is a real estate strategist and advisor with over 20 years of experience across the Middle East and Europe. He specializes in commercial development, urban economics, and investment strategy, and has advised leading firms including Emaar, Aldar, and Knight Frank. A former Associate Professor at ESPI in France, Damien is also a regular commentator on CNBC Arabia and Qatar Television, known for his insights into regional market trends. He currently serves as Business Development Consultant at Alandalus Property in Saudi Arabia.",
 },
+{
+  name: "Norhan Bayomi",
+  jobTitle: "Co-Founder, Lamaar.AI",
+  companyName: "Lamaar.AI",
+  linkedIn: "https://www.linkedin.com/in/norhan-bayomi",
+  speakerImage: "/image/speakers/Norhan Bayomi.jpg", // Replace with actual image path
+  companyLogo: "/image/speakersCompanyLogo/norh-logo.jpg", // Replace with actual logo path
+  fullBio:
+    "Norhan is an AI innovator, Scientist, and Entrepreneur. She is also the co-founder and CPO at Lamarr.AI. Norhan received her PhD from Building Technology from MIT in 2022 and masters from the same program in 2017. Norhan is also a Research Scientist at MIT and lead researcher at the Urban Metabolism Group. Norhan’s research fuses artificial intelligence, design, and technology to tackle problems in the built environment. Named after Hollywood icon and inventor, Hedy Lamarr, Lamarr provides a rapid solution for building envelope inspection and related energy efficiency assessment via drones, and artificial intelligence as fast as having an MRI scan for your building. Through an automated workflow, Lamarr’s technology provides actionable data for retrofit strategies that architects and urban development stakeholders can use immediately.",
+},
+
 
 
 
