@@ -319,6 +319,16 @@ export default function ParticipantsPage() {
             />
           </div>
 
+                                         <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Image
+              src="/image/partners/NED by Al Ghurair Orange.png"
+              alt="Impact"
+              width={300}
+              height={300}
+              className="w-auto max-h-48 object-contain"
+            />
+          </div>
+
         </div>
         <div className="mt-12 flex justify-center">
   <button
