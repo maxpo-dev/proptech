@@ -92,6 +92,16 @@ export interface Speaker {
         "As a seasoned real estate development professional, Min Lee brings extensive experience managing projects of varying scales, from micro-developments to Giga-projects. His expertise spans across diverse markets and regions, including the UK, UAE, Korea, China, Qatar, Morocco, and KSA. Min Lee specializes in the development of hospitality and residential assets in major urban centers. He is recognized as a strategic thinker with a strong track record of successful project delivery. His ability to lead and inspire teams has consistently driven project success and excellence. His professional journey is marked by a commitment to quality, innovation, and sustainable development practices. In his current role as Sr. Director of Development at RSG, Min Lee leverages integrated development management and lean design & construction methodologies to optimize project outcomes. Additionally, Min Lee is deeply interested in exploring the applications of AI and ML in real estate to drive efficiency and innovation in the industry.",
     },
     {
+  name: "Norhan Bayomi",
+  jobTitle: "Co-Founder",
+  companyName: "Lamaar.AI",
+  linkedIn: "https://www.linkedin.com/in/norhan-bayomi",
+  speakerImage: "/image/speakers/Norhan Bayomi.jpg", // Replace with actual image path
+  companyLogo: "/image/speakersCompanyLogo/norh-logo.jpg", // Replace with actual logo path
+  fullBio:
+    "Norhan is an AI innovator, Scientist, and Entrepreneur. She is also the co-founder and CPO at Lamarr.AI. Norhan received her PhD from Building Technology from MIT in 2022 and masters from the same program in 2017. Norhan is also a Research Scientist at MIT and lead researcher at the Urban Metabolism Group. Norhan’s research fuses artificial intelligence, design, and technology to tackle problems in the built environment. Named after Hollywood icon and inventor, Hedy Lamarr, Lamarr provides a rapid solution for building envelope inspection and related energy efficiency assessment via drones, and artificial intelligence as fast as having an MRI scan for your building. Through an automated workflow, Lamarr’s technology provides actionable data for retrofit strategies that architects and urban development stakeholders can use immediately.",
+},
+    {
       name: "Hans Christensen",
       jobTitle: "Vice President - Dubai Technology Entrepreneur Campus",
       companyName: "DTEC (Dubai Technology Entrepreneur Campus)",
@@ -182,6 +192,8 @@ export interface Speaker {
   fullBio:
     "Dr. Damien Nouvel is a real estate strategist and advisor with over 20 years of experience across the Middle East and Europe. He specializes in commercial development, urban economics, and investment strategy, and has advised leading firms including Emaar, Aldar, and Knight Frank. A former Associate Professor at ESPI in France, Damien is also a regular commentator on CNBC Arabia and Qatar Television, known for his insights into regional market trends. He currently serves as Business Development Consultant at Alandalus Property in Saudi Arabia.",
 },
+
+
 
 
 
