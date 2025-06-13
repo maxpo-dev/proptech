@@ -91,7 +91,7 @@ export async function POST(req: NextRequest) {
         const thankYouHtml=ThankYouEmailHandler({name})
     
         const thankYouMailOptions = {
-          from: `"Future Proptech Summit-Participant" <${process.env.EMAIL_USER}>`,
+          from: `"Future Proptech Summit" <${process.env.EMAIL_USER}>`,
           to: email,
           subject: "Thank you for submitting your details -Future Proptech Summit",
           html: thankYouHtml,
