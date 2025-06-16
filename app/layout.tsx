@@ -4,6 +4,7 @@ import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Script from 'next/script';
+import ClientAnalytics from './components/clientAnalytics';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             fbq('track', 'PageView');
           `}
         </Script>
+         <ClientAnalytics />
       </body>
     </html>
   );
