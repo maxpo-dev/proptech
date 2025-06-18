@@ -12,7 +12,8 @@ interface TicketingPageProps {
 export default function TicketingPage({ onBookNow }: TicketingPageProps) {
   const [groupQuantity, setGroupQuantity] = useState(3)
 
-  const formatPrice = (amount: number) => `£${amount.toFixed(2)}`
+const formatPrice = (amount: number) => `$${amount.toFixed(2)}`
+
 
   const ticketOptions = [
     {
