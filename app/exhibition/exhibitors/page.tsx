@@ -2,6 +2,7 @@ import SmartVizX from '@/app/components/SmartVizX';
 import Moderlab from '@/app/components/Moderlab';
 import Link from 'next/link';
 import Shuttrd from '@/app/components/Shuttrd';
+import Accolade from '@/app/components/Accolade';
 
 export default function Exhibitors2025() {
   return (
@@ -28,6 +29,10 @@ export default function Exhibitors2025() {
 
         <section className="p-4">
           <Moderlab />
+        </section>
+
+                <section className="p-4">
+          <Accolade />
         </section>
       </div>
     </main>
