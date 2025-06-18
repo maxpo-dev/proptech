@@ -8,7 +8,7 @@ import TextField from "./textField";
 import PhoneInputField from "./phoneInputFiled";
 import { countries } from "./utils/countries";
 import { validationSchema } from "./utils/formValidationSchema";
-
+import { event } from "@/lib/gtag";
 
 type FormTypes =
   | "enquiry"
@@ -43,6 +43,13 @@ const FormSection = ({ type }: { type: FormTypes }) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
+
+      event({
+        action: "form_submit",
+        category: "lead",
+        label: type, 
+      });
+
       if (!res.ok) throw new Error("Failed to submit");
       router.push(`/register/thankyou?type=${type}`);
     } catch (error) {
@@ -136,11 +143,12 @@ const FormSection = ({ type }: { type: FormTypes }) => {
             />
             <p>
               I confirm that I have read, understand and accept the{" "}
-              <a  className="underline" >
-                Terms and Conditions
-              </a>{" "}
-              and{" "}
-              <a href="https://www.maxpo.ae/privacy" target="_blank" className="underline">
+              <a className="underline">Terms and Conditions</a> and{" "}
+              <a
+                href="https://www.maxpo.ae/privacy"
+                target="_blank"
+                className="underline"
+              >
                 Privacy Policy
               </a>
               .<span className="text-red-500">*</span>
@@ -161,10 +169,11 @@ const FormSection = ({ type }: { type: FormTypes }) => {
               className="mr-2 mt-1 font-semibold"
             />
             <p>
-              I consent to having my data processed for event communication.<span className="text-red-500">*</span>
+              I consent to having my data processed for event communication.
+              <span className="text-red-500">*</span>
             </p>
           </label>
-            <ErrorMessage
+          <ErrorMessage
             name="consent2"
             component="p"
             className="text-xs text-red-500 mt-1"
