@@ -55,10 +55,10 @@ export default function Home() {
 <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
     {[
-      { href: "/book-tickets", bg: "bg-black", title: "Book your tickets", image: Ticket },
+      { href: "/register?type=delegates", bg: "bg-black", title: "Book your tickets", image: Ticket },
 
-      { href: "/speakers", bg: "bg-green-600", title: "Register as Speaker", image: Speakers },
-      { href: "/exhibitors", bg: "bg-red-600", title: "Register as Exhibitor", image: Exhibitors },
+      { href: "/register?type=participants", bg: "bg-green-600", title: "Register as Participant", image: Speakers },
+      { href: "/register?type=exhibitors", bg: "bg-red-600", title: "Register as Exhibitor", image: Exhibitors },
       { href: "/register", bg: "bg-purple-600", title: "Get In Touch", image: Getintech },
     ].map((item, index) => (
       <Link key={index} href={item.href} className="block group">
