@@ -143,7 +143,7 @@ export default function SpeakerCard({
                     alt={name}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
-                    className="object-cover object-center"
+                    className="object-contain object-center"
                     onError={() => setImageError(true)}
                   />
                 </div>

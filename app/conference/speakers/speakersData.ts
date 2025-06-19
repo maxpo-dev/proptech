@@ -192,6 +192,43 @@ export interface Speaker {
   fullBio:
     "Dr. Damien Nouvel is a real estate strategist and advisor with over 20 years of experience across the Middle East and Europe. He specializes in commercial development, urban economics, and investment strategy, and has advised leading firms including Emaar, Aldar, and Knight Frank. A former Associate Professor at ESPI in France, Damien is also a regular commentator on CNBC Arabia and Qatar Television, known for his insights into regional market trends. He currently serves as Business Development Consultant at Alandalus Property in Saudi Arabia.",
 },
+{
+  name: "Samit Sheth",
+  jobTitle: "AI Adoption Lead – Europe, Middle East & Africa Director, Consulting",
+  companyName: "",
+  linkedIn: "https://www.linkedin.com/in/samitsheth", // Replace with correct LinkedIn if needed
+  speakerImage: "/image/speakers/GetAttachmentThumbnail.jpg", // Replace with actual image path
+  companyLogo: "/image/speakersCompanyLogo/jones-lang-lasalle-logo-png_seeklogo-260987.png", // Replace with actual logo path
+  fullBio: `Samit Sheth is a visionary in the future of real estate and the built environment, specializing in the integration of technology to enhance tenant and resident experiences. With a background in high-profile mixed-use developments, hospitality, residential, and corporate real estate, he focuses on leveraging digital innovation to redefine how people interact with their living and working environments.
+
+His expertise includes:
+  •  Smart & Connected Communities: Utilizing PropTech and intelligent building strategies to create seamless, tech-enabled spaces.
+  •  Next-Generation Resident & Tenant Experience: Implementing super apps that enhance community engagement, placemaking, and quality of life.
+  •  Data-Driven Property Management: Leveraging AI, business intelligence, and digital platforms to optimize operations and elevate tenant satisfaction.
+  •  Technology-Integrated Design & Development: Shaping future-ready spaces that blend digital convenience with real-world functionality.
+
+Through industry collaboration and innovation, Sam is helping redefine how technology enhances the resident and tenant journey, creating smarter, more connected communities.`,
+},
+{
+  name: "Bilal Moti",
+  jobTitle: "Founder and Chairman of Windmills Group",
+  companyName: "Windmills Group",
+  linkedIn: "https://www.linkedin.com/in/bilalmoti", // Ensure this is correct
+  speakerImage: "/image/speakers/Bilal-Moti.png", // Replace with actual image path
+  companyLogo: "/image/speakersCompanyLogo/Windmills Group Logo.png", // Replace with actual logo path
+  fullBio: `Mr. Moti is an accomplished professional with over 38 years of experience in banking, asset management, brokerage, and real estate valuation. His leadership in the GCC region, particularly in the UAE, Saudi Arabia, Oman, Qatar, and Pakistan, has had a lasting impact on both the financial and real estate sectors. In his role as Chairman of Windmills Real Estate Valuation Services in Dubai, he has guided the company to become one of the top-rated firms in the UAE, consistently recognized for excellence by RERA and the Dubai Land Department.
+
+In addition to his leadership at Windmills, Mr. Moti holds influential roles as Vice Chairman of the Dubai Chamber Real Estate Valuation Group and Board Member of the Dubai Chamber Brokerage and Property Management Group, further demonstrating his commitment to the growth and development of the industry.
+
+Some career highlights include:
+
+• Leading Windmills Group to become a Gold-rated valuation firm, awarded by RERA and Dubai Land Department for 4 consecutive years.
+• Spearheading strategic business developments across the GCC region, generating significant industry recognition and partnerships with leading banks and government organizations.
+• Delivering keynotes and moderating high-profile industry events, including ICAI Dubai & Abu Dhabi, Cityscape Dubai, International Property Show (IPS), Realtek Summit, Dubai Fintech Summit and the HCT Innovation Month.`,
+},
+
+
+
 
 
 
