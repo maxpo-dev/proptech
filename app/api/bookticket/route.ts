@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
     const { name, email, company, designation, phone } = await req.json()
 
     const transporter = nodemailer.createTransport({
-      host: "mail.maxpo.ae",
+      host: process.env.EMAIL_HOST,
       port: 465,
       secure: true ,
       auth: {

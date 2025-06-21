@@ -43,6 +43,7 @@ export const InternalEmailHandler = ({
           <tr><td style="padding: 8px 0;"><strong style="color: #003f5c;">Name:</strong></td><td>${name}</td></tr>
           <tr><td style="padding: 8px 0;"><strong style="color: #003f5c;">Job Title:</strong></td><td>${jobTitle}</td></tr>
           <tr><td style="padding: 8px 0;"><strong style="color: #003f5c;">Company:</strong></td><td>${companyName}</td></tr>
+          <tr><td style="padding: 8px 0;"><strong style="color: #003f5c;">Type:</strong></td><td>${formType}</td></tr>
           <tr><td style="padding: 8px 0;"><strong style="color: #003f5c;">Email:</strong></td><td>${email}</td></tr>
           <tr><td style="padding: 8px 0;"><strong style="color: #003f5c;">Phone:</strong></td><td>${phone}</td></tr>
           <tr><td style="padding: 8px 0;"><strong style="color: #003f5c;">Country:</strong></td><td>${country}</td></tr>
