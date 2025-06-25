@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import ContactUsBanner from "./contactUsBanner";
 import FormSection from "./formSection";
+import TicketingPage from "./ticketingPageProps";
 
 type FormTypes =
   | "enquiry"
@@ -12,7 +13,7 @@ type FormTypes =
   | "participants";
 
 export default function RegisterForm({
-  type="enquiry",
+  type = "enquiry",
   title = "Register",
   description = "Please fill out the form below to register for the event.",
 }: {
@@ -20,6 +21,16 @@ export default function RegisterForm({
   title: string;
   description: string;
 }) {
+  const [onSubmit, setOnSubmit] = useState(false);
+  
+  useEffect(() => {
+    // Reset if not delegates tab
+    if (type !== "delegates") {
+      setOnSubmit(false);
+    }
+  }, [type]);
+  if (type == "delegates" && !onSubmit)
+    return <TicketingPage setOnSubmit={setOnSubmit} />;
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
