@@ -54,31 +54,31 @@ const ThankYouPage = () => {
     sponsor: {
       title: 'Thank You For Your Sponsor Registration!',
       bold: 'You are now part of the Future PropTech Summit community',
-      description: 'Our team will be in touch with you soon.',
+      description: 'Our team will get touch with you soon.',
       date: '14 October – 15 October 2025 · Le Méridien Dubai Hotel & Conference Centre',
     },
     exhibitors: {
       title: 'Thank You For Your Exhibitors Registration!',
       bold: 'You are now part of the Future PropTech Summit community',
-      description: 'Our team will be in touch with you soon.',
+      description: 'Our team will get touch with you soon.',
       date: '14 October – 15 October 2025 · Le Méridien Dubai Hotel & Conference Centre',
     },
     delegates: {
       title: 'Thank You For Your Delegate Registration!',
       bold: 'You are now part of the Future PropTech Summit community',
-      description: 'Our team will be in touch with you soon.',
+      description: 'Our team will get touch with you soon.',
       date: '14 October – 15 October 2025 · Le Méridien Dubai Hotel & Conference Centre',
     },
     participants: {
       title: 'Thank You For Your Participants Registration!',
       bold: 'You are now part of the Future PropTech Summit community',
-      description: 'Our team will be in touch with you soon.',
+      description: 'Our team will get touch with you soon.',
       date: '14 October – 15 October 2025 · Le Méridien Dubai Hotel & Conference Centre',
     },
     enquiry: {
       title: 'Thank You For Your Enquiry!',
       bold: 'You are now part of the Revolution EV community',
-      description: 'Our team will be in touch with you soon.',
+      description: 'Our team will get touch with you soon.',
       date: '23 October – 24 October 2025 · World Trade Centre Kuala Lumpur',
     },
   }
@@ -93,7 +93,7 @@ const ThankYouPage = () => {
       </div>
 
       {/* Checkmark */}
-      <div
+      {/* <div
         className={`bg-[#172554] rounded-full w-24 h-24 flex items-center justify-center mt-6 mb-6 transition-opacity duration-500 ${
           showCheckmark ? 'opacity-100' : 'opacity-0'
         }`}
@@ -115,7 +115,7 @@ const ThankYouPage = () => {
             style={{ transition: 'stroke-dashoffset 0.5s ease' }}
           />
         </svg>
-      </div>
+      </div> */}
 
       {/* Messages */}
       <h3 className="text-2xl font-bold mb-2 text-gray-900">{title}</h3>
