@@ -3,12 +3,15 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import DelgatesModal from "./delegatesModal";
+import { useState } from "react";
 
 interface TicketingPageProps {
   setOnSubmit: (value: boolean) => void;
 }
 
-export default function TicketingPage({ setOnSubmit }: TicketingPageProps) {
+export default function TicketingPage() {
+  const [modalOpen, setModalOpen] = useState(false);
   const vipPass = {
     id: "vip",
     title: "VIP Delegate Pass",
@@ -31,6 +34,11 @@ export default function TicketingPage({ setOnSubmit }: TicketingPageProps) {
   };
 
   return (
+    <>
+         <DelgatesModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     <section className="max-w-5xl mx-auto px-4 py-16">
       {/* Header */}
       <div className="text-center mb-12">
@@ -66,7 +74,7 @@ export default function TicketingPage({ setOnSubmit }: TicketingPageProps) {
 
             {/* CTA Button */}
             <Button
-              onClick={() => setOnSubmit(true)}
+              onClick={() => setModalOpen(true)}
               className="w-full bg-[#173A81] hover:bg-to-blue-700 text-white font-semibold py-2.5 text-sm rounded-xl shadow transition-all duration-300"
             >
               {vipPass.buttonText}
@@ -91,5 +99,6 @@ export default function TicketingPage({ setOnSubmit }: TicketingPageProps) {
         </div>
       </Card>
     </section>
+    </>
   );
 }

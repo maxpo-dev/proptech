@@ -21,16 +21,10 @@ export default function RegisterForm({
   title: string;
   description: string;
 }) {
-  const [onSubmit, setOnSubmit] = useState(false);
   
-  useEffect(() => {
-    // Reset if not delegates tab
-    if (type !== "delegates") {
-      setOnSubmit(false);
-    }
-  }, [type]);
-  if (type == "delegates" && !onSubmit)
-    return <TicketingPage setOnSubmit={setOnSubmit} />;
+ 
+  if (type == "delegates")
+    return <TicketingPage />
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
