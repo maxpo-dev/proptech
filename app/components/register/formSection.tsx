@@ -36,22 +36,27 @@ const FormSection = ({ type }: { type: FormTypes }) => {
   const [submitting, setSubmitting] = React.useState(false);
 
   const handleSubmit = async (values: any) => {
+    setSubmitting(true);
+    router.push(`/register/thankyou?type=${type}`);
+
     try {
-      setSubmitting(true);
-      const res = await fetch(`/api/${type}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-
-      event({
-        action: "form_submit",
-        category: "lead",
-        label: type, 
-      });
-
-      if (!res.ok) throw new Error("Failed to submit");
-      router.push(`/register/thankyou?type=${type}`);
+      setTimeout(() => {
+        fetch(`/api/${type}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(values),
+        })
+          .then(() => {
+            event({
+              action: "form_submit",
+              category: "lead",
+              label: type,
+            });
+          })
+          .catch((error) => {
+            console.error("Background submission error:", error);
+          });
+      }, 100);
     } catch (error) {
       console.error("Error:", error);
       alert("There was a problem submitting the form.");
