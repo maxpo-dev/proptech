@@ -37,9 +37,6 @@ export const ThankYouEmailHandler = ({
           <tr>
             <td style="padding: 40px 30px;">
               <div style="text-align: center; margin-bottom: 30px;">
-                <div style="display: inline-block; background-color: #00214d; border-radius: 50%; padding: 15px; margin-bottom: 20px;">
-                  <img src="https://img.icons8.com/ios-filled/50/ffffff/checkmark.png" width="30" height="30" alt="check" style="display: block;" />
-                </div>
 
                 <div style="color: #1e1e1e; line-height: 1.6; font-size: 16px;">
                   <p style="margin-bottom: 20px;">
