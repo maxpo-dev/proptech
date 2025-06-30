@@ -57,7 +57,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-between gap-4 py-4">
           {/* Logos */}
-          <div className="flex flex-col sm:flex-row items-center sm:space-x-6 space-y-2 sm:space-y-0">
+          <div className="flex flex-row items-center md:w-full lg:w-auto md:justify-between lg:justify-start sm:space-x-6 space-y-2 sm:space-y-0">
             <Link href="/" className="flex items-center">
               <Image
                 src={Logo}
@@ -68,7 +68,7 @@ export default function Header() {
               />
               <span className="sr-only">Proptech Expo 2025</span>
             </Link>
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center pr-5">
               <Image
                 src={logo2}
                 alt="Gulf News Logo"

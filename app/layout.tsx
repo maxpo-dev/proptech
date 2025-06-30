@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </noscript>
 
         <Header />
-        <main className="pt-0">{children}</main>
+        <main className="pt-12 md:pt-20 lg:pt-10">{children}</main>
         <Footer />
 
         {/* Google Analytics (gtag.js) */}
