@@ -6,7 +6,7 @@ import ZexPrWire from "@/app/components/ZexPrWire";
 import AIPressRoom from "@/app/components/AIPressRoom";
 import PropertyNewsInternational from "@/app/components/PropertyNewsInternational";
 import RemTimes from "@/app/components/RemTimes";
-import MiddleEastFacility from "../MiddleEastFacility";
+
 import BuildAustralia from "../BuildAustralia";
 import BusinessFocusMagazine from "../BusinessFocusMagazine";
 import EntrepreneurME from "../EntrepreneurME";
@@ -14,7 +14,7 @@ import TimesofAI from "../TimesofAI";
 
 export default function MediaPartners() {
   return (
-    <section className="px-6">
+    <section className="md:px-6">
       {/* <h2 className="text-4xl font-bold text-center mb-10 text-blue-600">
         Media Partners
       </h2> */}
@@ -24,7 +24,7 @@ export default function MediaPartners() {
       <AIPressRoom />
       <PropertyNewsInternational />
       <RemTimes />
-      <MiddleEastFacility />
+     
       <BuildAustralia />
       <BusinessFocusMagazine />
       <EntrepreneurME />
