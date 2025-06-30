@@ -176,7 +176,7 @@ const speakers: Speaker[] = [
   {
     name: "Tim Shelton",
     jobTitle: "Advisory Board Member for RICS UAE",
-    companyName: "The Foresight Collective",
+    companyName: "RICS",
     linkedIn: "", // Add LinkedIn URL if available
     speakerImage: "/image/speakers/Tim Shelton Photo.jpg", // Update this path based on your actual image filename
     companyLogo: "/image/speakersCompanyLogo/rics.jpg", // Update this path based on your actual logo filename
@@ -184,7 +184,7 @@ const speakers: Speaker[] = [
 As Operations Director (Technology and Advisory) at Omnium International and an Advisory Board Member for RICS UAE, Tim leads initiatives that drive innovation, data-centricity, and AI adoption in project and cost management. He oversees the development of scalable digital solutions and advisory services that improve efficiency, enhance decision-making, and strengthen governance for real estate and infrastructure clients.
 Tim is passionate about crafting high-impact partnerships that bridge industry silos and accelerate the sector’s shift towards smarter, more collaborative delivery models. He is a firm advocate for platform thinking and ecosystem-led innovation that enables professional services firms to evolve their role and unlock recurring value.
 A vocal proponent of industry transformation, Tim believes in aligning people, process, and technology to future-proof the sector. He champions workforce enablement through partnerships with educational institutions to develop emerging skills and support nationalisation goals across the region.
-Through public speaking and thought leadership, Tim continues to influence the dialogue on how the CRE industry must adapt - creating scalable, inclusive, and performance-driven approaches to meet the demands of tomorrow’s built environment`,
+Through public speaking and thought leadership, Tim continues to influence the dialogue on how the CRE industry must adapt - creating scalable, inclusive, and performance-driven approaches to meet the demands of tomorrow’s built environment.`,
   },
   {
     name: "Dr. Damien Nouvel",
@@ -200,7 +200,7 @@ Through public speaking and thought leadership, Tim continues to influence the d
     name: "Samit Sheth",
     jobTitle:
       "AI Adoption Lead – Europe, Middle East & Africa Director, Consulting",
-    companyName: "",
+    companyName: "JLL",
     linkedIn: "https://www.linkedin.com/in/samitsheth", // Replace with correct LinkedIn if needed
     speakerImage: "/image/speakers/GetAttachmentThumbnail.jpg", // Replace with actual image path
     companyLogo:
@@ -242,6 +242,20 @@ Some career highlights include:
     companyLogo: "/image/speakersCompanyLogo/arada.png", // Replace with actual logo path
     fullBio: ` Mayank has over two decades of diverse technology experience across Financial Services, IT Services, Healthcare, Real Estate, Hospitality, and Entertainment industries. He has worked with prestigious brands such as Prudential (US), technology giant Cognizant, and global health care Fortis.
 Prior to joining Arada, Mayank briefly served as Chief Information Officer at Emaar. He has held leadership roles in Technology, Corporate Strategy, and Business Intelligence and is recognized for his expertise in digital transformation, business growth, and customer experience enhancement.`,
+  },
+  {
+    name: "Makram Hani",
+    jobTitle: "Founder and CEO",
+    companyName: "Arms & McGregor International",
+    linkedIn: "linkedin.com/in/makramhani", // Ensure this is correct
+    speakerImage: "/image/speakers/makramHani.jpeg", // Replace with actual image path
+    companyLogo: "/image/speakersCompanyLogo/arms.jpg", // Replace with actual logo path
+    fullBio: `Makram is a dynamic entrepreneur, investor, and founder of multiple successful start-ups, with a $2B+ transaction record and a multimillion-dollar investment portfolio.
+An accomplished author, speaker, and corporate trainer, he brings global business expertise. He is the Founder and CEO of Arms & McGregor International®, leading its divisions—Leisure, Ventures, Vacations, Investments, and Realty®. He also founded REI Capital (real estate investment) and BBP (media and tech), and co-founded several brokerages, including Nibitt, Haus Ville, Clemson Porter Properties, DOP, and Morgan’s International Realty.
+
+His investment group includes companies like Standpoint, D Drones &OPT. Makram holds strategic roles as Executive Board Member and Regional Chair of FIBREE, Co-Founder of GM Capital, and COO of Blocksquare.
+
+A thought leader, he has authored four books, 200+ articles and papers, and delivered 100+ webinars, courses, and training. His visionary concept, "Real Estate 6.0," aims to revolutionize the asset class by boosting liquidity, transparency, and accessibility while eliminating inefficiencies.`,
   },
 ];
 

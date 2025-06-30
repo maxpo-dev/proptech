@@ -9,7 +9,7 @@ import MediaPartners from "../components/partner/MediaPartners";
 const PartnersPage: React.FC = () => {
   const navItems: { href: string; label: string }[] = [
     { href: "#media", label: "Media Partners" },
-    { href: "#strategic", label: "Strategic Partners" },
+    // { href: "#strategic", label: "Strategic Partners" },
     { href: "#association", label: "Association Partners" },
     { href: "#government", label: "Government Partners" },
   ];
@@ -53,14 +53,14 @@ const PartnersPage: React.FC = () => {
         </section>
 
         {/* Strategic Partners */}
-        <section id="strategic" className="px-4">
+        {/* <section id="strategic" className="px-4">
           <h2 className="text-4xl font-bold text-primary text-center mb-8">
             Strategic Partners
           </h2>
           <div className="bg-card rounded-lg shadow-md p-6 text-center">
             <p className="text-muted-foreground text-lg">Coming soon...</p>
           </div>
-        </section>
+        </section> */}
 
         {/* Association Partners */}
         <section id="association" className="px-4">
