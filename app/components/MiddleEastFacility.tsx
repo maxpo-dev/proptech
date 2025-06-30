@@ -34,7 +34,7 @@ export default function MiddleEastFacility() {
             </div>
 
             {/* Description */}
-            <div className="w-full md:w-2/3 text-center md:text-left space-y-4">
+            <div className="w-full md:w-2/3 text-center md:text-left space-y-4 md:p-5">
               <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 break-words">
                 Middle East Facility Management Association (MEFMA)
               </h2>

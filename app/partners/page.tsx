@@ -2,6 +2,7 @@
 
 import React from "react";
 import MediaPartners from "../components/partner/MediaPartners";
+import AssociatePartners from "../components/partner/AssociatePartner";
 // import StrategicPartners from "../components/partners/StrategicPartners";
 // import AssociationPartners from "../components/partners/AssociationPartners";
 // import GovernmentPartners from "../components/partners/GovernmentPartners";
@@ -47,7 +48,7 @@ const PartnersPage: React.FC = () => {
           <h2 className="text-4xl font-bold text-primary text-center mb-8">
             Media Partners
           </h2>
-          <div className="bg-card rounded-lg shadow-md p-6">
+          <div className="bg-card rounded-lg shadow-md md:p-6">
             <MediaPartners />
           </div>
         </section>
@@ -67,8 +68,8 @@ const PartnersPage: React.FC = () => {
           <h2 className="text-4xl font-bold text-primary text-center mb-8">
             Association Partners
           </h2>
-          <div className="bg-card rounded-lg shadow-md p-6 text-center">
-            <p className="text-muted-foreground text-lg">Coming soon...</p>
+          <div className="bg-card rounded-lg shadow-md md:p-6 text-center">
+            <AssociatePartners />
           </div>
         </section>
 
