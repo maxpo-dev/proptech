@@ -12,7 +12,7 @@ export default function MiddleEastFacility() {
           <div className="relative w-full max-w-5xl bg-gray-100 p-6 sm:p-8 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6 md:gap-12 transition-transform hover:scale-[1.01] hover:shadow-3xl">
             {/* Badge */}
             <div className="absolute top-4 right-4 bg-blue-700 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full shadow-md z-10">
-              Supporting Partner
+              Association Partner
             </div>
 
             {/* Logo */}

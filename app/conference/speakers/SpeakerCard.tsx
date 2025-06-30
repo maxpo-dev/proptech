@@ -60,7 +60,7 @@ export default function SpeakerCard({
           {/* Centered, Half-outside Logo with Margin Adjustment */}
           {logoError ? null : (
             <motion.div
-              className="absolute -bottom-8 left-1/2 -translate-x-1/2 ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
+              className="absolute -bottom-8 left-1/2  ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
               initial={{ y: 0 }}
               animate={{
                 y: [0, -10, 0],
@@ -149,8 +149,9 @@ export default function SpeakerCard({
                 </div>
 
                 {/* Centered, Half-outside Logo with Margin Adjustment in Modal */}
+                {logoError ? null : (
                 <motion.div
-                  className="absolute -bottom-8 left-1/2 -translate-x-1/2 ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
+                  className="absolute -bottom-8 left-1/2  ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
                   initial={{ y: 0 }}
                   animate={{
                     y: [0, -10, 0],
@@ -176,6 +177,7 @@ export default function SpeakerCard({
                     />
                   </div>
                 </motion.div>
+                )}
               </div>
 
               <div className="mt-10 w-full text-center">
