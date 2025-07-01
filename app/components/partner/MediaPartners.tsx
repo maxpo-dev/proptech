@@ -11,6 +11,8 @@ import BuildAustralia from "../BuildAustralia";
 import BusinessFocusMagazine from "../BusinessFocusMagazine";
 import EntrepreneurME from "../EntrepreneurME";
 import TimesofAI from "../TimesofAI";
+import { mediaPartnersData } from "./partnerData";
+import PartnerCard from "./partnerCard";
 
 export default function MediaPartners() {
   return (
@@ -29,8 +31,11 @@ export default function MediaPartners() {
       <BusinessFocusMagazine />
       <EntrepreneurME />
       <TimesofAI />
-
-
+      {
+        mediaPartnersData.map((partner, index) => (
+            <PartnerCard key={index} {...partner} />
+        ))
+      }
 
     </section>
   );
