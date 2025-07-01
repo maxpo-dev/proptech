@@ -124,7 +124,10 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Poppins", sans-serif;
+   @apply font-sans bg-background text-foreground;
   }
 }
 
+@theme inline {
+  --font-sans: var(--font-dm-sans);
+}

@@ -1,22 +1,31 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Script from 'next/script';
-import ClientAnalytics from './components/clientAnalytics';
+import type { Metadata } from "next";
+import { DM_Sans, Inter } from "next/font/google";
+import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Script from "next/script";
+import ClientAnalytics from "./components/clientAnalytics";
 
-const inter = Inter({ subsets: ['latin'] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'Future Proptech Summit',
+  title: "Future Proptech Summit",
   description:
-    'Join us in Dubai, October 2025 for the latest in Proptech and Fractional Ownership.',
+    "Join us in Dubai, October 2025 for the latest in Proptech and Fractional Ownership.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${dmSans.variable} font-sans scroll-smooth`}>
       <head>
         {/* Google Tag Manager */}
         <Script id="gtm-init" strategy="beforeInteractive">
@@ -29,19 +38,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
       </head>
-      <body className={inter.className}>
+      <body>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PSM4BL87"
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+            style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
 
         <Header />
-        <main className="pt-12 md:pt-20 lg:pt-10">{children}</main>
+        <main className="mt-16 md:mt-20 lg:mt-20">{children}</main>
         <Footer />
 
         {/* Google Analytics (gtag.js) */}
@@ -74,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             fbq('track', 'PageView');
           `}
         </Script>
-         <ClientAnalytics />
+        <ClientAnalytics />
       </body>
     </html>
   );

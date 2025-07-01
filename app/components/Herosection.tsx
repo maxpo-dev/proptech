@@ -29,11 +29,11 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
       
       {contentVisible && (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-30 animate-fadeInContent">
+        <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8 relative z-30 animate-fadeInContent">
          
           
           <div className="max-w-3xl mx-auto text-center mt-2">
-            <h1 className="text-4xl sm:text-5xl font-semibold font-serif mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
+            <h1 className="text-4xl sm:text-5xl font-semibold  mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
               Future Proptech Summit 2025 
             </h1>
             <p
