@@ -249,7 +249,7 @@ export default function Header() {
                 Register Now
               </button>
             </Link>
-            <Link href="/register?type=delegate">
+            <Link href="/register?type=delegates">
               <button
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full bg-white text-blue-950 font-bold py-2 px-4 my-2 rounded"
