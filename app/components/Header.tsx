@@ -1,12 +1,14 @@
 "use client";
-
+import dynamic from "next/dynamic";
+const DelegateSection = dynamic(() => import("./header/delegateSection"), {
+  ssr: false,
+});
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "@/app/images/PROPTECH_logo_alex_logo-3_alex_logo-3.png";
 import logo2 from "@/public/image/gulfnews logo white logo 2.png";
-import DelegateSection from "./header/delegateSection";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -271,7 +273,9 @@ export default function Header() {
 
       {/* DelegateSection only on md+ */}
       <div className="hidden md:block">
-        <DelegateSection />
+        <Suspense fallback={null}>
+          <DelegateSection />
+        </Suspense>
       </div>
     </header>
   );
