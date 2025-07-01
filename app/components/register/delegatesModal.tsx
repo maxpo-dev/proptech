@@ -13,7 +13,7 @@ export default function DelgatesModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+    <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
       <div className="relative w-full max-w-lg md:max-w-3xl  bg-white border border-blue-400 rounded-lg p-6 max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
         <button
