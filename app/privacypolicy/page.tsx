@@ -2,151 +2,132 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-gray-50 min-h-screen py-20">
+    <div className="bg-gray-50 min-h-screen py-10">
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
         <h1 className="text-4xl font-bold text-center text-blue-600 mb-6">
           Privacy Policy
         </h1>
         <p className="text-center text-gray-500 mb-8">
-          Effective Date: <strong>01 May 2025</strong>
+          Effective Date: <strong>01.05.2025</strong>
         </p>
 
         <p className="text-gray-600 mb-6">
-          Welcome to <strong>Future PropTech Summit</strong>, organized by Maxpo Exhibitions Pvt Ltd. We value your trust and are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website, register for our event, or engage with our services related to the Future PropTech Summit.
+          Welcome to <strong>Future PropTech Summit</strong>, organized by Maxpo Exhibitions Pvt Ltd. We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website, register for the summit, or engage with our services related to the Future PropTech Summit.
         </p>
 
         {/* Section 1 */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            1. Information We Collect
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">1. Information We Collect</h2>
 
           <h3 className="text-xl font-medium text-blue-500 mb-2">Personal Information</h3>
-          <p className="text-gray-600 mb-4">
-            We may collect the following when you register or interact with our website:
-          </p>
+          <p className="text-gray-600 mb-4">We may collect the following details when you register or interact with our website:</p>
           <ul className="list-disc ml-6 text-gray-600 space-y-2 mb-6">
-            <li>Name</li>
-            <li>Email address</li>
-            <li>Contact number</li>
-            <li>City and country of residence</li>
-            <li>Job title and organization</li>
-            <li>Industry segment and interests related to PropTech (e.g., real estate, smart cities, building automation)</li>
+            <li>Full Name</li>
+            <li>Email Address</li>
+            <li>Contact Number</li>
+            <li>City and Country of Residence</li>
+            <li>Job Title and Organization</li>
+            <li>Industry Segment (e.g., real estate, smart buildings, IoT, fintech)</li>
+            <li>Areas of Interest in PropTech (e.g., AI, sustainability, digital twins)</li>
           </ul>
 
           <h3 className="text-xl font-medium text-blue-500 mb-2">Non-Personal Information</h3>
           <p className="text-gray-600 mb-4">We may also collect:</p>
           <ul className="list-disc ml-6 text-gray-600 space-y-2">
-            <li>Device and browser type</li>
+            <li>Device type and browser</li>
             <li>IP address</li>
-            <li>Pages visited and session duration</li>
-            <li>Referring URLs</li>
+            <li>Pages visited and time spent</li>
+            <li>Referring websites or URLs</li>
           </ul>
         </section>
 
         {/* Section 2 */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            2. How We Use Your Information
-          </h2>
-          <p className="text-gray-600 mb-4">Your information is used to:</p>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">2. How We Use Your Information</h2>
+          <p className="text-gray-600 mb-4">Your data may be used to:</p>
           <ul className="list-disc ml-6 text-gray-600 space-y-2">
-            <li>Facilitate PropTech industry-related inquiries and connect you with exhibitors</li>
-            <li>Register and manage your participation in Future PropTech Summit</li>
-            <li>Send event updates, reminders, newsletters, or promotional materials</li>
-            <li>Provide customer support and respond to queries</li>
-            <li>Improve the event website, app experience, and marketing strategies</li>
-            <li>Generate analytics and reports for event optimization</li>
+            <li>Manage your registration and participation in the Future PropTech Summit</li>
+            <li>Connect you with relevant exhibitors, sponsors, or networking sessions</li>
+            <li>Send event-related updates, reminders, and promotional communications</li>
+            <li>Deliver customer service and respond to your inquiries</li>
+            <li>Improve our website, app functionality, and marketing performance</li>
+            <li>Generate insights and analytics for event planning and optimization</li>
           </ul>
         </section>
 
         {/* Section 3 */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            3. Sharing Your Information
-          </h2>
-          <p className="text-gray-600 mb-4">We do not sell your personal data. However, we may share it with:</p>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">3. Sharing Your Information</h2>
+          <p className="text-gray-600 mb-4">We do not sell your personal data. We may share it with:</p>
           <ul className="list-disc ml-6 text-gray-600 space-y-2">
-            <li>Trusted PropTech industry partners (exhibitors, sponsors) for networking or follow-ups</li>
-            <li>Service providers helping with event logistics, registration, or digital tools</li>
-            <li>Legal or regulatory bodies if required by law</li>
+            <li>Trusted event partners (e.g., sponsors, exhibitors) for post-event follow-up or networking</li>
+            <li>Service providers supporting event logistics, apps, digital tools, or registration systems</li>
+            <li>Legal authorities if required to comply with applicable laws</li>
           </ul>
         </section>
 
         {/* Section 4 */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            4. Cookies and Tracking Technologies
-          </h2>
-          <p className="text-gray-600 mb-4">We use cookies and similar technologies to:</p>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">4. Cookies and Tracking Technologies</h2>
+          <p className="text-gray-600 mb-4">We use cookies and tracking tools to:</p>
           <ul className="list-disc ml-6 text-gray-600 space-y-2">
-            <li>Remember your preferences and registration details</li>
-            <li>Provide content tailored to your PropTech industry interests</li>
-            <li>Track website usage for analytics and performance improvement</li>
+            <li>Remember your login and preferences</li>
+            <li>Serve personalized content relevant to PropTech topics</li>
+            <li>Monitor website usage and user experience</li>
           </ul>
           <p className="text-gray-600 mt-4">
-            You can adjust your browser settings to manage or disable cookies.
+            You can modify or disable cookies in your browser settings.
           </p>
         </section>
 
         {/* Section 5 */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            5. Data Security
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">5. Data Security</h2>
           <p className="text-gray-600">
-            We implement appropriate security measures (encryption, firewalls, secure servers) to protect your personal data. However, no online method is 100% secure.
+            We implement appropriate physical, technical, and administrative safeguards (firewalls, secure servers, encryption) to protect your personal information. However, no method of transmission over the internet is 100% secure.
           </p>
         </section>
 
         {/* Section 6 */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            6. Your Rights
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">6. Your Rights</h2>
           <p className="text-gray-600 mb-4">You have the right to:</p>
-          <ul className="list-disc ml-6 text-gray-600 space-y-2">
-            <li>Access or correct your personal data</li>
-            <li>Request deletion or restrict processing of your data</li>
-            <li>Withdraw consent at any time</li>
-            <li>Request data deletion</li>
+          <ul className="list-disc ml-6 text-gray-600 space-y-2 mb-4">
+            <li>Access or update your personal data</li>
+            <li>Request correction or deletion of your data</li>
+            <li>Withdraw consent or object to certain processing</li>
+            <li>Request restriction of data use</li>
           </ul>
-          <p className="text-gray-600 mt-4">
-            To exercise these rights, email us at:{" "}
-            <strong className="text-blue-500">info@revolutionevmalaysia.com</strong>
+          <p className="text-gray-600">
+            To exercise these rights, please email us at:{" "}
+            <strong className="text-blue-500">info@futureproptechsummit.com</strong>
           </p>
         </section>
 
         {/* Section 7 */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            7. Third-Party Links
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">7. Third-Party Links</h2>
           <p className="text-gray-600">
-            Our site or emails may contain links to third-party websites (e.g., partner brands, sponsors). We are not responsible for their privacy practices. Please review their policies.
+            Our site and emails may contain links to third-party websites (such as partner companies, sponsors, or PropTech tools). We are not responsible for their privacy practices. Please review their privacy policies before submitting any data.
           </p>
         </section>
 
         {/* Section 8 */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            8. Changes to This Policy
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">8. Changes to This Policy</h2>
           <p className="text-gray-600">
-            We may revise this Privacy Policy periodically. All changes will be updated on this page with a new effective date.
+            We may update this policy occasionally. Any changes will be posted here with a revised effective date. Please check this page periodically.
           </p>
         </section>
 
         {/* Section 9 */}
         <section>
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            9. Contact Us
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">9. Contact Us</h2>
           <p className="text-gray-600 mb-4">
-            For questions or concerns regarding your privacy:
+            For questions or concerns about your data and privacy:
           </p>
           <ul className="list-disc ml-6 text-gray-600 space-y-2">
-            <li>Email: <strong className="text-blue-500">info@revolutionevmalaysia.com</strong></li>
+            <li>Email: <strong className="text-blue-500">info@futureproptechsummit.com</strong></li>
             <li>
               Address:{" "}
               <strong className="text-blue-500">
