@@ -148,9 +148,12 @@ const FormSection = ({ type }: { type: FormTypes }) => {
             />
             <p>
               I confirm that I have read, understand and accept the{" "}
-              <a className="underline">Terms and Conditions</a> and{" "}
+              <a href="/terms" target="_blank" className="underline">
+                Terms and Conditions
+              </a>{" "}
+              and{" "}
               <a
-                href="https://www.maxpo.ae/privacy"
+                href="/privacypolicy"
                 target="_blank"
                 className="underline"
               >
