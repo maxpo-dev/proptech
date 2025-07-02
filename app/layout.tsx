@@ -50,7 +50,7 @@ export default function RootLayout({
         </noscript>
 
         <Header />
-        <main className="mt-16 md:mt-20 lg:mt-20">{children}</main>
+        <main className="pt-16 md:pt-20 lg:pt-30">{children}</main>
         <Footer />
 
         {/* Google Analytics (gtag.js) */}
