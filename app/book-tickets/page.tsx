@@ -126,7 +126,7 @@ export default function BookTicketsForm() {
                 required
               />
               <label htmlFor="consent" className="ml-2 text-gray-800 text-base">
-                I agree to the <a href="/privacypolicy" className="text-blue-700 underline">terms and conditions</a>.
+                I agree to the <a href="/terms" className="text-blue-700 underline">terms and conditions</a>.
               </label>
             </div>
 

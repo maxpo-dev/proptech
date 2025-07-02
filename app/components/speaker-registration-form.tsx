@@ -168,7 +168,7 @@ export function SimpleSpeakerRegistrationForm() {
           className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
         />
         <label htmlFor="termsAccepted" className="ml-2 block text-sm text-gray-900">
-          I confirm that I have read, understand and accept the Terms and Conditions and <a className="text-blue-400 underline" href="/privacypolicy">Privacy Policy</a>
+          I confirm that I have read, understand and accept the   <a className="text-blue-400 underline" href="/terms">Terms and Conditions</a> and <a className="text-blue-400 underline" href="/privacypolicy">Privacy Policy</a>
         </label>
       </div>
 
