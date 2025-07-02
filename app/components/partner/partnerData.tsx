@@ -4,7 +4,7 @@ export const mediaPartnersData = [
   {
     partnerName: "Eye of Riyadh",
     logo: eyeRiyadhLogo,
-    websiteUrl: "https:// www.eyeofriyadh.com/",
+    websiteUrl: "https://www.eyeofriyadh.com/",
     websiteDisplayText: "www.eyeofriyadh.com",
     badgeText: "Media Partner",
     description: `Eye of Riyadh is the leading platform for strategic marketing and digital visibility. With deep expertise in media, branding, and digital outreach, Eye of Riyadh crafts tailored marketing solutions for companies, organizations, and institutions—connecting them directly with decision-makers, B2B stakeholders, and high-intent audiences.

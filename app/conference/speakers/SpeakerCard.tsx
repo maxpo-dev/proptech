@@ -125,12 +125,12 @@ export default function SpeakerCard({
 
       {/* Modal with full speaker details */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-3xl max-h-[100vh] overflow-auto">
+        <DialogContent className="max-w-3xl max-h-[100vh] overflow-auto  z-[10000]">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold">{name}</DialogTitle>
           </DialogHeader>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4  z-[10000]">
             <div className="flex flex-col items-center">
               <div className="relative w-full pt-[100%] overflow-visible rounded-lg">
                 <div className="absolute inset-0">
