@@ -37,7 +37,7 @@ export default function ConferenceThemes() {
       {/* Themes List */}
       <div className="w-full lg:w-1/2 bg-white p-6 lg:p-10 rounded-xl shadow-inner flex flex-col justify-start">
         <div>
-          <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl  font-bold text-gray-900 mb-6">
             Conference Themes
           </h2>
           <div className="flex flex-col gap-4">

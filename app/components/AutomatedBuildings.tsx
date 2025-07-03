@@ -5,7 +5,7 @@ import automatedBuildingsLogo from "@/public/image/partners/Asset-22-1024x264.pn
 
 export default function AutomatedBuildings() {
   return (
-    <div className="bg-white text-black font-sans">
+    <div className="bg-white text-black ">
       <main className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <section className="flex justify-center">
           <div className="relative w-full max-w-5xl bg-gray-100 p-6 sm:p-8 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6 box-border">
