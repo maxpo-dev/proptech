@@ -5,7 +5,7 @@ import remtimesLogo from "@/public/image/partners/REM Times logo_2023.png";
 
 export default function RemTimes() {
   return (
-    <div className="bg-white text-black font-serif">
+    <div className="bg-white text-black ">
       <main className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         {/* Partner Card */}
         <section className="flex justify-center">

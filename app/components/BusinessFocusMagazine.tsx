@@ -5,7 +5,7 @@ import businessFocusLogo from "@/public/image/partners/BFM 1000x600.png"; // Mak
 
 export default function BusinessFocusMagazine() {
   return (
-    <div className="bg-white text-black font-serif">
+    <div className="bg-white text-black ">
       <main className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         {/* Partner Card */}
         <section className="flex justify-center">

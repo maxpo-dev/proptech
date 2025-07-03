@@ -37,7 +37,7 @@ export default function PartnersHeroSection() {
       {contentVisible && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent">
           <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-semibold font-serif mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
+          <h1 className="text-4xl sm:text-5xl font-semibold  mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
   coming soon
 </h1>
 {/* <p

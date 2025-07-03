@@ -5,7 +5,7 @@ import entrepreneurLogo from "@/public/image/partners/entrepreneurme.jpg"; // Up
 
 export default function EntrepreneurME() {
   return (
-    <div className="bg-white text-black font-serif">
+    <div className="bg-white text-black ">
       <main className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         {/* Partner Card */}
         <section className="flex justify-center">

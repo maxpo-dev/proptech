@@ -11,12 +11,12 @@ const PartnersPage: React.FC = () => {
   const navItems: { href: string; label: string }[] = [
     { href: "#media", label: "Media Partners" },
     // { href: "#strategic", label: "Strategic Partners" },
-    { href: "#association", label: "Association Partners" },
+    { href: "#association", label: "Supporting Partners" },
     { href: "#government", label: "Government Partners" },
   ];
 
   return (
-    <div className="bg-background text-foreground font-sans pt-32 pb-20 scroll-smooth">
+    <div className="bg-background text-foreground pt-32 pb-20 scroll-smooth">
       {/* Page Heading and Navigation */}
       <section className="text-center mb-8 px-4 mt-12 sm:mt-16">
         <h1 className="text-5xl font-bold text-primary border-b-4 border-accent inline-block pb-3">
@@ -63,10 +63,10 @@ const PartnersPage: React.FC = () => {
           </div>
         </section> */}
 
-        {/* Association Partners */}
+        {/* Supporting Partners */}
         <section id="association" className="px-4">
           <h2 className="text-4xl font-bold text-primary text-center mb-8">
-            Association Partners
+            Supporting Partners
           </h2>
           <div className="bg-card rounded-lg shadow-md md:p-6 text-center">
             <AssociatePartners />

@@ -102,7 +102,7 @@ export default function BookTicketsForm() {
 
       {!success ? (
         <div className="relative z-10 bg-white bg-opacity-90 shadow-2xl rounded-2xl p-12 max-w-3xl mx-auto border border-gray-300 mt-12">
-          <h2 className="text-4xl font-serif font-bold text-center text-gray-900 mb-8 tracking-wide">
+          <h2 className="text-4xl  font-bold text-center text-gray-900 mb-8 tracking-wide">
             Book Your Tickets
           </h2>
           <p className="text-lg text-center text-gray-700 mb-8">
@@ -142,7 +142,7 @@ export default function BookTicketsForm() {
         </div>
       ) : (
         <div className="relative z-10 max-w-xl w-full p-10 bg-white bg-opacity-95 rounded-2xl shadow-2xl text-center border border-gray-200">
-          <h3 className="text-3xl font-serif font-bold text-green-700 mb-4">🎉 Thank you for registering!</h3>
+          <h3 className="text-3xl  font-bold text-green-700 mb-4">🎉 Thank you for registering!</h3>
           <p className="text-lg text-gray-800">
             We’ve received your details and will be in touch soon with more information. <br />
             Stay tuned for updates and get ready to experience the future of PropTech!

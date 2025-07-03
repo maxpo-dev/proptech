@@ -5,7 +5,7 @@ import aiPressRoomLogo from "@/public/image/partners/AIPressRoom_1500_1500_trans
 
 export default function AIPressRoom() {
   return (
-    <div className="bg-white text-black font-sans">
+    <div className="bg-white text-black ">
       <main className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
         {/* Card Container */}
         <section className="flex justify-center">
