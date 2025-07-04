@@ -25,7 +25,7 @@ const DelegateSection = () => {
       {/* Book Your Stand */}
       <div
         className="flex-1 flex justify-center items-center p-3 cursor-pointer transition-all duration-300
-          bg-white text-blue-950 font-semibold hover:bg-cyan-500 hover:text-blue-950"
+          bg-white text-blue-950 font-semibold hover:bg-blue-500 hover:text-white "
         onClick={() => router.push("/register")}
       >
         <p className="text-sm">Book Your Stand</p>
