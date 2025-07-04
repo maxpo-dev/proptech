@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef, Suspense } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import Logo from "@/app/images/PROPTECH_logo_alex_logo-3_alex_logo-3.png";
+import Logo from "@/public/image/logo.png";
 import logo2 from "@/public/image/gulfnews logo white logo 2.png";
 
 const navItems = [
@@ -66,14 +66,11 @@ export default function Header() {
             <Image
               src={Logo}
               alt="Proptech Expo 2025 Logo"
-              width={150}
-              height={30}
-              className="h-10 w-auto object-contain"
+              width={357}
+              height={76}
+              className="h-16 w-auto object-contain"
             />
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold text-white ml-2 leading-tight truncate">
-              Future Proptech <br />
-              Summit
-            </h2>
+           
           </Link>
           <Link href="/" className="hidden md:flex items-center">
             <Image
