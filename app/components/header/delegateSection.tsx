@@ -6,40 +6,29 @@ import React from "react";
 const DelegateSection = () => {
   const router = useRouter();
   const pathName = usePathname();
-  const params=useSearchParams()
-  const searchParams = params.get("type");
 
-  const isRegisterPage = pathName.includes("register");
-  const isDelegatePage = searchParams === "delegates";
   const isThankYouPage = pathName.includes("thankyou");
-
-  // Don't render on thank you pages
   if (isThankYouPage) return null;
 
   return (
-    <div className="w-full bg-white flex justify-center items-center divide-x divide-gray-300 shadow-md ">
+    <div className="w-full bg-black flex justify-center items-center shadow-md divide-x divide-gray-800">
       {/* Delegate Pass */}
       <div
-        className={
-          isDelegatePage
-            ? "bg-blue-950 text-white flex-1 border flex justify-center items-center p-1 cursor-pointer"
-            : "bg-white flex-1 border flex justify-center hover:border-white items-center p-1 cursor-pointer text-gray-800 hover:bg-blue-950 hover:text-white transition "
-        }
+        className="flex-1 flex justify-center items-center p-3 cursor-pointer transition-all duration-300
+          bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold
+          hover:from-cyan-500 hover:to-blue-400"
         onClick={() => router.push("/register?type=delegates")}
       >
-        <p className="text-sm font-semibold">Get Delegate Pass</p>
+        <p className="text-sm">Get Delegate Pass</p>
       </div>
 
       {/* Book Your Stand */}
       <div
-        className={
-          isRegisterPage && !isDelegatePage
-            ? "bg-blue-950 text-white flex-1 flex justify-center border items-center p-1 cursor-pointer"
-            : "bg-white flex-1 flex justify-center border hover:border-white items-center p-1 cursor-pointer text-gray-800 hover:bg-blue-950 hover:text-white transition"
-        }
+        className="flex-1 flex justify-center items-center p-3 cursor-pointer transition-all duration-300
+          bg-white text-blue-950 font-semibold hover:bg-blue-500 hover:text-white "
         onClick={() => router.push("/register")}
       >
-        <p className="text-sm font-semibold">Book Your Stand</p>
+        <p className="text-sm">Book Your Stand</p>
       </div>
     </div>
   );

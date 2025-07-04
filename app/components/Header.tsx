@@ -92,7 +92,7 @@ export default function Header() {
             {/* Register Button (Desktop Only) */}
             <Link href="/register" className="hidden lg:block">
               <button className="bg-white text-blue-950 font-bold py-2 px-4 rounded text-sm sm:text-base">
-                Register
+                Register Now
               </button>
             </Link>
 
