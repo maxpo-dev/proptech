@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import Inimg from '@/app/images/6x.jpg';
-
+import Inimg from '@/public/image/investor/investor.jpeg'
 export default function InvestorPitchContent() {
   return (
-    <section className="pt-28 pb-10 bg-white text-black"> {/* Reduced bottom padding */}
+    <section className=" mt-40 pb-10 bg-white text-black"> {/* Reduced bottom padding */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-center mb-8">Investor Pitch at Future PropTech Summit</h1>
         <div className="mb-12 relative w-full h-[300px] md:h-[400px]">
