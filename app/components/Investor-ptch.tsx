@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import Inimg from '@/app/images/6x.jpg';
-
+import Inimg from '@/public/image/investor/investor.jpeg'
 export default function InvestorPitchContent() {
   return (
     <section className="pt-28 pb-10 bg-white text-black"> {/* Reduced bottom padding */}
