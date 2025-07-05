@@ -64,7 +64,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen pB-12 pt-20 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen pb-12 pt-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto mt-5">
         <div className="flex justify-center gap-4 flex-wrap mb-8">
           {options.map((opt) => (
