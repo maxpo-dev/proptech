@@ -27,7 +27,7 @@ export const ThankYouEmailHandler = ({
           <tr>
             <td align="center" style="padding: 0;">
               <img
-                src="https://cloud1.email2go.io/4825f2b20fb569c346c060a2f8c31c18/551c9a9795ff706e1194e66538a039701af035586efdfaf8bfc6e55c32fdacac.png"
+                src="https://cloud1.email2go.io/4825f2b20fb569c346c060a2f8c31c18/ac24ccc3221f90aa320bbdea0bc2ea9688b1fc8b4dee9034269a0bc86b47a9b2.png"
                 alt="Banner"
                 style="display: block; width: 100%; height: auto; border: 0;"
               />
