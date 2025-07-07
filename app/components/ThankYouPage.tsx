@@ -77,9 +77,9 @@ const ThankYouPage = () => {
     },
     enquiry: {
       title: 'Thank You For Your Enquiry!',
-      bold: 'You are now part of the Revolution EV community',
+      bold: 'You are now part of the Future PropTech Summit community',
       description: 'Our team will get in touch with you soon.',
-      date: '23 October – 24 October 2025 · World Trade Centre Kuala Lumpur',
+      date: '14 October – 15 October 2025 · Le Méridien Dubai Hotel & Conference Centre',
     },
   }
 
