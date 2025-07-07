@@ -76,7 +76,7 @@ const ThankYouPage = () => {
       date: '14 October – 15 October 2025 · Le Méridien Dubai Hotel & Conference Centre',
     },
     enquiry: {
-      title: 'Thank You For Your Enquiry!',
+      title: 'Thank You For Your Enquiry Registration!',
       bold: 'You are now part of the Future PropTech Summit community',
       description: 'Our team will get in touch with you soon.',
       date: '14 October – 15 October 2025 · Le Méridien Dubai Hotel & Conference Centre',
