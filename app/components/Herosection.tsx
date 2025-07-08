@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CalendarDays, MapPin } from "lucide-react";
+import Image from "next/image";
 import "@/app/styles/animations.css";
 import CountdownTimer from "@/app/components/CountdownTimer";
+import Poster from "@/public/image/landingPage/poster.webp";
 
 export default function HeroSection() {
   const [contentVisible, setContentVisible] = useState(false);
@@ -14,32 +16,46 @@ export default function HeroSection() {
     const timer = setTimeout(() => {
       setShowVideo(true);
       setContentVisible(true);
-    }, 1000); // Delay video loading
+    }, 700); // Delay video and content loading
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden text-white">
+      {/* Lightweight image shown until video is ready */}
+      {!showVideo && (
+        <Image
+          src={Poster} // Optimized lightweight image
+          alt="Hero Poster"
+          fill
+          priority
+          
+          className="absolute left-0 top-0 z-0 object-cover"
+        />
+      )}
+
+      {/* Video after delay */}
       {showVideo && (
         <video
           autoPlay
           loop
           muted
           playsInline
-          preload="metadata"
-          poster="/images/4x.jpg" // use compressed WebP or JPEG
+          preload="none"
           className="absolute left-0 top-0 z-0 size-full object-cover"
         >
           <source src="/video/2x.mp4" type="video/mp4" />
         </video>
       )}
 
+      {/* Overlay */}
       <div className="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
 
+      {/* Hero Content */}
       {contentVisible && (
         <div className="animate-fadeInContent container relative z-30 mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="mx-auto mt-2 max-w-3xl text-center">
-            <h1 className="mb-6 text-4xl font-semibold  transition-transform duration-200 ease-in-out hover:scale-105 sm:text-5xl">
+            <h1 className="mb-6 text-4xl font-semibold transition-transform duration-200 ease-in-out hover:scale-105 sm:text-5xl">
               Future Proptech Summit 2025
             </h1>
             <p
@@ -65,7 +81,6 @@ export default function HeroSection() {
                 <CountdownTimer targetDate="2025-10-14T00:00:00" />
               </div>
             </div>
-
             <div className="mt-4 flex justify-center space-x-4">
               <Link
                 href="/about"

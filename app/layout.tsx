@@ -27,6 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} scroll-smooth font-sans`}>
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         {/* Google Tag Manager */}
         <Script id="gtm-init" strategy="beforeInteractive">
           {`
