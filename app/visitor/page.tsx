@@ -3,8 +3,8 @@
 import Image from 'next/image'
 import RegistrationForm from "@/app/components/ui/RegistrationForm"
 import ExhibitionDetails from "@/app/components/ExhibitionDetails"
-import bgImage from "@/app/images/bg.jpg"
-import logo from "@/app/images/white logo.png"
+import bgImage from "@/public/images/bg.jpg"
+import logo from "@/public/images/white logo.png"
 
 export default function Visitor() {
   return (

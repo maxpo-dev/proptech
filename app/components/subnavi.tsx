@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import Logo from "@/app/images/PROPTECH_logo_alex_logo-3_alex_logo-3.png";
+import Logo from "@/public/images/PROPTECH_logo_alex_logo-3_alex_logo-3.png";
 
 // Updated navItems array: Notice that "Partners" is placed after "Investor Pitch" and contains the "Media Partners" link.
 const navItems = [

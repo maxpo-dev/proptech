@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import MainImg from '@/app/images/3x.jpg';
+import MainImg from '@/public/images/3x.jpg';
 
 export default function AboutConferenceContent() {
   return (

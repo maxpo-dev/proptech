@@ -4,10 +4,10 @@ import Image from 'next/image';
 import HeroSection from '@/app/components/Herosection';
 
 import VideoComponent from './components/VideoSection';
-import Ticket from "@/app/images/event-ticket-template.jpg"
-import Speakers from '@/app/images/speaker-big-stage.jpg';
-import Exhibitors from '@/app/images/digital-environment-scene.jpg';
-import Getintech from '@/app/images/businessman-holding-smartphone-with-message-calling-email-icon-concept-contact-support-people-contacting-information-business.jpg';
+import Ticket from "@/public/images/event-ticket-template.jpg"
+import Speakers from '@/public/images/speaker-big-stage.jpg';
+import Exhibitors from '@/public/images/digital-environment-scene.jpg';
+import Getintech from '@/public/images/businessman-holding-smartphone-with-message-calling-email-icon-concept-contact-support-people-contacting-information-business.jpg';
 import Link from 'next/link';
 import WhyProptech from './components/whyproptech';
 import ShowcaseSection from './components/showcase-section';

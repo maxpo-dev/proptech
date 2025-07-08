@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import bg from '@/app/images/WhatsApp Image 2024-11-07 at 3.59.25 PM (1).jpeg';
+import bg from '@/public/images/WhatsApp Image 2024-11-07 at 3.59.25 PM (1).jpeg';
 import '@/app/styles/animations.css';
 // import ParticlesComponent from './Particles';
 

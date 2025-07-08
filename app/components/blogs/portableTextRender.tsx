@@ -1,9 +1,10 @@
 import { PortableText } from "@portabletext/react";
+import Image from "next/image";
 
 const components = {
   types: {
     image: ({ value }: any) => (
-      <img src={value.asset.url} alt={value.alt || ""} className="my-4" />
+      <Image src={value.asset.url} alt={value.alt || ""} className="my-4" />
     ),
   },
   marks: {

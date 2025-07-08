@@ -1,5 +1,6 @@
 import PortableTextRenderer from "@/app/components/blogs/portableTextRender";
 import { getBlogPostBySlug } from "@/sanity/lib/blogs"; // Update this to your actual fetch function
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 export default async function BlogPostPage({ params }: { params: { blogId: string } }) {
@@ -21,7 +22,7 @@ export default async function BlogPostPage({ params }: { params: { blogId: strin
 
       {/* Main Image */}
       {blog.mainImage && (
-        <img
+        <Image
           src={blog.mainImage}
           alt={blog.title}
           className="mb-10 h-auto w-full rounded-md object-cover"

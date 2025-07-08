@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Confimg from '@/app/images/1x.jpg'
+import Confimg from '@/public/images/1x.jpg'
 
 const themes = [
   "Sustainability and Green Initiatives",

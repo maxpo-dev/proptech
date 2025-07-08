@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import bg from '@/app/images/PP 2 (1).png';
+import bg from '@/public/images/PP 2 (1).png';
 import '@/app/styles/animations.css';
 import Link from 'next/link';
 // import ParticlesComponent from './Particles';

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import MainImg from '@/app/images/4x.jpg';
+import MainImg from '@/public/images/4x.jpg';
 
 export default function AboutExhibitionContent() {
   return (

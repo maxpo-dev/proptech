@@ -1,6 +1,6 @@
 import React from 'react';
 import { Building2, Users, Lightbulb, Target, Calendar, MapPin } from 'lucide-react';
-import Aboutimg from '@/app/images/zq-lee-VbDjv8-8ibc-unsplash.jpg';
+import Aboutimg from '@/public/images/zq-lee-VbDjv8-8ibc-unsplash.jpg';
 import Image from 'next/image';
 
 const AboutSection = ({ title, children }: { title: string; children: React.ReactNode }) => (

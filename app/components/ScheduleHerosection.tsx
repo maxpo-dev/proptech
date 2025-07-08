@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CalendarDays, MapPin } from 'lucide-react';
 import Image from 'next/image';
-import bg from '@/app/images/pixelcut-export (2).jpeg';
+import bg from '@/public/images/pixelcut-export (2).jpeg';
 import '@/app/styles/animations.css';
 // import ParticlesComponent from './Particles';
 

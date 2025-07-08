@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Cpu, Box, Brain, DollarSign, Eye,Bot, Home, Building, ShoppingBag, HardDrive, BarChart, TreePine, Users, Cog, Ruler } from 'lucide-react';
-import Vrimg from '@/app/images/2x.jpg'
+import Vrimg from '@/public/images/2x.jpg'
 
 export default function KeyTopicsSection() {
   const topics = [

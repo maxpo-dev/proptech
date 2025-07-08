@@ -1,11 +1,11 @@
 'use client'
 import Image from 'next/image';
-import Hands from "@/app/images/hand-shake.png";
-import Key from "@/app/images/key.png";
-import Sales from "@/app/images/sales.png";
-import Developer from "@/app/images/consulting.png";
-import Feald from "@/app/images/field.png";
-import Realestate from "@/app/images/real-estate.png";
+import Hands from "@/public/images/hand-shake.png";
+import Key from "@/public/images/key.png";
+import Sales from "@/public/images/sales.png";
+import Developer from "@/public/images/consulting.png";
+import Feald from "@/public/images/field.png";
+import Realestate from "@/public/images/real-estate.png";
 
 export default function ExhibitionDetails() {
   const details = [

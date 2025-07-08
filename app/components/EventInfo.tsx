@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { MapPin, Calendar, Users } from 'lucide-react';
-import img from "@/app/images/c(1).jpg";
+import img from "@/public/images/c(1).jpg";
 
 export default function EventContent() {
   return (

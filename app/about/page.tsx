@@ -4,7 +4,7 @@
 // import WhyShouldAttend from '@/app/components/WhyShouldAttend';
 import AboutHeroSection from '@/app/components/AboutHerosection';
 // import Image from 'next/image';
-// import Keyimg from '@/app/images/Core Insights_Mesa de trabajo 1.png';
+// import Keyimg from '@/public/images/Core Insights_Mesa de trabajo 1.png';
 import About from '../components/About';
 
 export default function Page() {

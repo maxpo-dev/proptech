@@ -3,7 +3,7 @@
 
 import { Sprout, Lightbulb, Briefcase, ScrollText, Rocket, BuildingIcon as Buildings, PiggyBank, Brain, Home, PieChart } from 'lucide-react';
 import Image from 'next/image';
-import Img from '@/app/images/1x.jpg';
+import Img from '@/public/images/1x.jpg';
 
 export default function ConferenceThemes() {
   const themes = [

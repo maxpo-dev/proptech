@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import DubaiImg from '@/app/images/Dubai.jpg'
+import DubaiImg from '@/public/images/Dubai.jpg'
 
 export default function DubaiSection() {
   return (
