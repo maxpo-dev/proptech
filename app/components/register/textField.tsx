@@ -79,7 +79,7 @@ const TextField: React.FC<TextFieldProps> = ({
     <div className="mb-4 w-full">
       <label
         htmlFor={props.id || props.name}
-        className="block text-sm font-semibold text-black mb-1"
+        className="mb-1 block text-sm font-semibold text-black"
       >
         {label} {required ? <span className="text-red-500">*</span> : null}
       </label>

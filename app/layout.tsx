@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${dmSans.variable} font-sans scroll-smooth`}>
+    <html lang="en" className={`${dmSans.variable} scroll-smooth font-sans`}>
       <head>
         {/* Google Tag Manager */}
         <Script id="gtm-init" strategy="beforeInteractive">
@@ -50,7 +50,7 @@ export default function RootLayout({
         </noscript>
 
         <Header />
-        <main className="pt-16 md:pt-20 lg:pt-30">{children}</main>
+        <main className="lg:pt-30 pt-16 md:pt-20">{children}</main>
         <Footer />
 
         {/* Google Analytics (gtag.js) */}

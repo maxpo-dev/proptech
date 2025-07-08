@@ -61,20 +61,20 @@ export default function WhyAttend() {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 text-black">Why Attend?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 className="mb-12 text-center text-3xl font-bold text-black">Why Attend?</h2>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="text-center transform transition-transform duration-500 ease-in-out hover:scale-105"
+              className="text-center transition-transform duration-500 ease-in-out hover:scale-105"
             >
               <feature.icon
-                className={`mx-auto h-12 w-12 text-orange-600 mb-4 opacity-0 ${
+                className={`mx-auto mb-4 size-12 text-orange-600 opacity-0 ${
                   isVisible ? 'animate-fadeIn' : ''
                 }`}
                 style={{ animationDelay: `${index * 1000}ms` }}
               />
-              <h3 className="text-xl font-semibold mb-2 text-black">{feature.title}</h3>
+              <h3 className="mb-2 text-xl font-semibold text-black">{feature.title}</h3>
               <p
                 className={`text-gray-900 opacity-0 ${
                   isVisible ? 'animate-fadeIn' : ''

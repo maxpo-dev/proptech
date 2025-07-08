@@ -36,14 +36,14 @@ const sponsors = [
 export default function SponsorsSection() {
   return (
     <section className="bg-gray-50 py-20">
-      <div className="max-w-screen-lg mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold mb-12 text-gray-900">Sponsors from Our Past Events</h2>
+      <div className="mx-auto max-w-screen-lg px-6 text-center">
+        <h2 className="mb-12 text-4xl font-extrabold text-gray-900">Sponsors from Our Past Events</h2>
 
         {/* Sponsors Scroll */}
         <div className="relative overflow-hidden">
-          <div className="flex space-x-8 animate-marquee">
+          <div className="animate-marquee flex space-x-8">
             {sponsors.map((sponsor, index) => (
-              <div key={index} className="flex-shrink-0">
+              <div key={index} className="shrink-0">
                 <Image
                   src={sponsor}
                   alt={`Sponsor ${index + 1}`}

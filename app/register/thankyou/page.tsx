@@ -164,7 +164,7 @@ import ThankYouPage from "@/app/components/ThankYouPage";
 
 export default function ThankYouWrapper() {
   return (
-    <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
+    <Suspense fallback={<div className="py-20 text-center">Loading...</div>}>
       <ThankYouPage />
     </Suspense>
   );

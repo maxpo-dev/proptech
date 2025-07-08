@@ -64,17 +64,17 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen pb-12 pt-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto mt-5">
-        <div className="flex justify-center gap-4 flex-wrap mb-8">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+      <div className="mx-auto mt-5 max-w-6xl">
+        <div className="mb-8 flex flex-wrap justify-center gap-4">
           {options.map((opt) => (
             <button
               key={opt.key}
               onClick={() => handleSelect(opt.key)}
-              className={`px-5 py-2 rounded-full font-semibold transition ${
+              className={`rounded-full px-5 py-2 font-semibold transition ${
                 selected === opt.key
                   ? "bg-blue-600 text-white"
-                  : "bg-white text-blue-600 border border-blue-600 hover:bg-blue-100"
+                  : "border border-blue-600 bg-white text-blue-600 hover:bg-blue-100"
               }`}
             >
               {opt.label}
@@ -82,7 +82,7 @@ export default function RegisterPage() {
           ))}
         </div>
 
-        <div className="bg-white p-3 md:p-6 rounded-lg shadow-md">
+        <div className="rounded-lg bg-white p-3 shadow-md md:p-6">
           <RegisterForm
             type={(selected as FormTypes) || "enquiry"}
             {...selectedForm}

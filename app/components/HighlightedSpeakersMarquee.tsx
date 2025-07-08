@@ -72,13 +72,13 @@ export default function HighlightedSpeakersMarquee() {
 
   return (
     <div>
-      <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 py-4 border-y border-gray-300 shadow-inner">
+      <div className="border-y border-gray-300 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 py-4 shadow-inner">
         <Marquee speed={40} gradient={false} pauseOnHover>
           {highlighted.map((speaker, index) => (
-            <div key={index} className="flex items-center space-x-3 mx-6">
+            <div key={index} className="mx-6 flex items-center space-x-3">
               {/* Speaker Image */}
               <div
-                className="relative rounded-full overflow-hidden shadow-lg border border-white"
+                className="relative overflow-hidden rounded-full border border-white shadow-lg"
                 style={{ width: "6rem", height: "7.5rem" }}
               >
                 <Image
@@ -95,7 +95,7 @@ export default function HighlightedSpeakersMarquee() {
                 <span className="text-xs text-gray-600">{speaker.designation}</span>
 
                 {/* Company Logo */}
-                <div className="relative w-20 h-8 mt-2">
+                <div className="relative mt-2 h-8 w-20">
                   <Image
                     src={speaker.companyLogo}
                     alt={`${speaker.name} company logo`}
@@ -107,9 +107,9 @@ export default function HighlightedSpeakersMarquee() {
             </div>
           ))}
         </Marquee>
-        <div className="flex justify-center mt-6">
+        <div className="mt-6 flex justify-center">
         <Link href="/conference/speakers">
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-2xl hover:bg-blue-700 hover:scale-105 transition-transform duration-300">
+          <button className="rounded-2xl bg-blue-600 px-6 py-3 text-white transition-transform duration-300 hover:scale-105 hover:bg-blue-700">
             View All
           </button>
         </Link>

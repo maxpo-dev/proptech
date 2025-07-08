@@ -12,14 +12,14 @@ export default function DateRangePicker() {
         type="datetime-local"
         value={startDate}
         onChange={(e) => setStartDate(e.target.value)}
-        className="border border-gray-300 rounded px-2 py-1"
+        className="rounded border border-gray-300 px-2 py-1"
       />
       <span>to</span>
       <input
         type="datetime-local"
         value={endDate}
         onChange={(e) => setEndDate(e.target.value)}
-        className="border border-gray-300 rounded px-2 py-1"
+        className="rounded border border-gray-300 px-2 py-1"
       />
     </div>
   );

@@ -6,17 +6,17 @@ import entrepreneurLogo from "@/public/image/partners/entrepreneurme.jpg"; // Up
 export default function EntrepreneurME() {
   return (
     <div className="bg-white text-black ">
-      <main className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <main className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
         {/* Partner Card */}
         <section className="flex justify-center">
-          <div className="relative w-full max-w-5xl bg-gray-100 p-6 sm:p-8 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6 md:gap-12 transition-transform hover:scale-[1.01] hover:shadow-3xl">
+          <div className="hover:shadow-3xl relative flex w-full max-w-5xl flex-col items-center gap-6 rounded-2xl bg-gray-100 p-6 shadow-2xl transition-transform hover:scale-[1.01] sm:p-8 md:flex-row md:gap-12">
             {/* Badge */}
-            <div className="absolute top-4 right-4 bg-[#2563EB] text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full shadow-md z-10">
+            <div className="absolute right-4 top-4 z-10 rounded-full bg-[#2563EB] px-3 py-1 text-xs font-semibold text-white shadow-md sm:text-sm">
               Media Partner
             </div>
 
             {/* Logo */}
-            <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+            <div className="flex w-full justify-center md:w-1/3 md:justify-start">
               <a
                 href="https://www.entrepreneur.com/en-ae"
                 target="_blank"
@@ -28,14 +28,14 @@ export default function EntrepreneurME() {
                   alt="Entrepreneur Middle East Logo"
                   width={300}
                   height={300}
-                  className="object-contain w-auto h-auto max-h-24 sm:max-h-32 mx-auto md:mx-0"
+                  className="mx-auto size-auto max-h-24 object-contain sm:max-h-32 md:mx-0"
                 />
               </a>
             </div>
 
             {/* Description */}
-            <div className="w-full md:w-2/3 text-center md:text-left space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#2563EB] break-words">
+            <div className="w-full space-y-4 text-center md:w-2/3 md:text-left">
+              <h2 className="break-words text-2xl font-bold text-[#2563EB] sm:text-3xl">
                 Entrepreneur ME
               </h2>
 
@@ -43,7 +43,7 @@ export default function EntrepreneurME() {
                 Website:{" "}
                 <a
                   href="https://www.entrepreneur.com/en-ae"
-                  className="text-[#2563EB] hover:underline break-words"
+                  className="break-words text-[#2563EB] hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -51,21 +51,21 @@ export default function EntrepreneurME() {
                 </a>
               </p>
 
-              <p className="text-sm sm:text-base leading-relaxed text-gray-700">
+              <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                 Entrepreneur Middle East is the guide for the region&apos;s entrepreneurs
                 and business-minded readership. It is the flagship publication of BNC
                 Publishing, officially licensed by the US-based business and growth title,
                 Entrepreneur.
               </p>
 
-              <p className="text-sm sm:text-base leading-relaxed text-gray-700">
+              <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                 Launched in February 2014 together with its subsidiary, Entrepreneur Al
                 Arabiya, Entrepreneur Middle East is now considered an authoritative read
                 in the MENA region for business people, government entities, technology
                 enthusiasts, and startup founders.
               </p>
 
-              <p className="text-sm sm:text-base leading-relaxed text-gray-700">
+              <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                 <strong>Entrepreneur Middle East</strong> – Start, run and grow your business.
               </p>
             </div>

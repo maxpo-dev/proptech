@@ -12,7 +12,7 @@ export default function VideoComponent({ src, poster, className = '' }: VideoCom
       <video
         src={src}
         poster={poster}
-        className="w-full h-auto"
+        className="h-auto w-full"
         playsInline
         loop
         autoPlay

@@ -2,8 +2,8 @@ import { SimpleSpeakerRegistrationForm } from "@/app/components/speaker-registra
 
 export default function Home() {
   return (
-    <main className=" mx-auto py-40 px-4 text-black bg-slate-200">
-      <h1 className="text-3xl font-bold mb-6 text-center">Speaker Registration</h1>
+    <main className=" mx-auto bg-slate-200 px-4 py-40 text-black">
+      <h1 className="mb-6 text-center text-3xl font-bold">Speaker Registration</h1>
       <SimpleSpeakerRegistrationForm />
     </main>
   )

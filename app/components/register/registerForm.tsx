@@ -26,21 +26,21 @@ export default function RegisterForm({
   if (type == "delegates")
     return <TicketingPage />
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 capitalize">
+    <div className="bg-gradient-to-b from-blue-50 to-white px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 text-center">
+          <h1 className="text-3xl font-extrabold capitalize text-gray-900 sm:text-4xl">
             {title}
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-gray-600 sm:text-lg">
             {description}
           </p>
         </div>
 
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden">
+        <div className="overflow-hidden rounded-lg bg-white shadow-xl">
           <div className="flex flex-col md:flex-row">
             <ContactUsBanner />
-            <div className="p-6 sm:p-8 w-full ">
+            <div className="w-full p-6 sm:p-8 ">
               <FormSection type={type} />
             </div>
           </div>

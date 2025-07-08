@@ -29,14 +29,14 @@ export default function BlogGridClient({ posts }: BlogGridClientProps) {
           height={isFeatured ? 600 : 300}
           className={imageClasses}
         />
-        <div className="bg-white p-4 md:p-6 flex flex-col align-center ">
+        <div className="align-center flex flex-col bg-white p-4 md:p-6 ">
           <p className="text-sm text-sky-500">
             Posted on {new Date(post.publishedAt).toLocaleString("en-IN")}
           </p>
-          <h2 className={`font-semibold text-black mt-2 ${isFeatured ? "text-xl" : "text-base"}`}>
+          <h2 className={`mt-2 font-semibold text-black ${isFeatured ? "text-xl" : "text-base"}`}>
             {post.title}
           </h2>
-          <p className="text-sm text-gray-500 mt-1">
+          <p className="mt-1 text-sm text-gray-500">
             by {post.author?.name || post.author || "Unknown"}
           </p>
         </div>
@@ -49,9 +49,9 @@ export default function BlogGridClient({ posts }: BlogGridClientProps) {
       {/* Header */}
      
       {/* Grid Layout */}
-      <div className="container mx-auto py-10 md:py-10 px-3 " style={{scrollBehavior: "smooth"}}>
-       <h1 className="text-3xl font-bold mb-12 text-center">Latest PropTech Blogs</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 ">
+      <div className="container mx-auto px-3 py-10 md:py-10 " style={{scrollBehavior: "smooth"}}>
+       <h1 className="mb-12 text-center text-3xl font-bold">Latest PropTech Blogs</h1>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-4 ">
           {/* Featured Post */}
           <div className="col-span-1 lg:col-span-3 ">{posts[0] && renderCard(posts[0], 0)}</div>
 
@@ -62,7 +62,7 @@ export default function BlogGridClient({ posts }: BlogGridClientProps) {
         </div>
 
         {/* Remaining Posts */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {posts.slice(3).map((post, idx) => renderCard(post, idx + 3))}
         </div>
       </div>

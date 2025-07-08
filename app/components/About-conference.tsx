@@ -3,15 +3,15 @@ import MainImg from '@/app/images/3x.jpg';
 
 export default function AboutConferenceContent() {
   return (
-    <section className="py-16 pt-40 bg-white text-black">
+    <section className="bg-white py-16 pt-40 text-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center mb-8">About the Future PropTech Summit</h1>
-        <div className="mb-12 relative w-full h-[300px] md:h-[400px]">
+        <h1 className="mb-8 text-center text-4xl font-bold">About the Future PropTech Summit</h1>
+        <div className="relative mb-12 h-[300px] w-full md:h-[400px]">
            <Image
             src={MainImg}
              alt="Future PropTech Summit"
               fill
-               className="rounded-lg shadow-lg object-cover"
+               className="rounded-lg object-cover shadow-lg"
            />
 
           {/* <Image

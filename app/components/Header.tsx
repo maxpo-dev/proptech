@@ -58,11 +58,11 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[9999] bg-blue-950 backdrop-blur shadow">
+    <header className="fixed inset-x-0 top-0 z-[9999] bg-blue-950 shadow backdrop-blur">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4 py-4">
           {/* Left: Logo */}
-          <Link href="/" className="flex items-center min-w-0 overflow-hidden">
+          <Link href="/" className="flex min-w-0 items-center overflow-hidden">
             <Image
               src={Logo}
               alt="Proptech Expo 2025 Logo"
@@ -72,13 +72,13 @@ export default function Header() {
             />
            
           </Link>
-          <Link href="/" className="hidden md:flex items-center">
+          <Link href="/" className="hidden items-center md:flex">
             <Image
               src={logo2}
               alt="Gulf News Logo"
               width={180}
               height={30}
-              className="h-8 sm:h-10 w-auto object-contain"
+              className="h-8 w-auto object-contain sm:h-10"
               priority
             />
           </Link>
@@ -88,7 +88,7 @@ export default function Header() {
 
             {/* Register Button (Desktop Only) */}
             <Link href="/register" className="hidden lg:block">
-              <button className="bg-white text-blue-950 font-bold py-2 px-4 rounded text-sm sm:text-base">
+              <button className="rounded bg-white px-4 py-2 text-sm font-bold text-blue-950 sm:text-base">
                 Register Now
               </button>
             </Link>
@@ -96,20 +96,20 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               type="button"
-              className="lg:hidden text-white hover:text-blue-300"
+              className="text-white hover:text-blue-300 lg:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className="size-6" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="size-6" />
               )}
             </button>
           </div>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex space-x-6 items-center justify-center">
+        <div className="hidden items-center justify-center space-x-6 lg:flex">
           {navItems.map((item) =>
             item.dropdown ? (
               <div
@@ -120,7 +120,7 @@ export default function Header() {
                 }}
               >
                 <button
-                  className="relative group text-white px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1"
+                  className="group relative flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-white"
                   onClick={(e) => {
                     e.stopPropagation();
                     setDesktopDropdownOpen(
@@ -129,11 +129,11 @@ export default function Header() {
                   }}
                 >
                   {item.name}
-                  <ChevronDown className="h-4 w-4" />
-                  <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0091EB] to-[#00D4D5] rounded-md transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right"></span>
+                  <ChevronDown className="size-4" />
+                  <span className="absolute bottom-0 left-0 h-1 w-full origin-right scale-x-0 rounded-md bg-gradient-to-r from-[#0091EB] to-[#00D4D5] transition-transform duration-500 group-hover:scale-x-100"></span>
                 </button>
                 {desktopDropdownOpen === item.name && (
-                  <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+                  <div className="absolute left-0 z-50 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="py-1" role="menu">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
@@ -153,10 +153,10 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group"
+                className="group relative rounded-md px-3 py-2 text-sm font-medium text-white transition-colors duration-200"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0091EB] to-[#00D4D5] rounded-md transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right"></span>
+                <span className="absolute bottom-0 left-0 h-1 w-full origin-right scale-x-0 rounded-md bg-gradient-to-r from-[#0091EB] to-[#00D4D5] transition-transform duration-500 group-hover:scale-x-100"></span>
               </Link>
             )
           )}
@@ -165,7 +165,7 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`lg:hidden fixed top-0 left-0 w-full h-screen z-40 bg-blue-950 transition-transform duration-300 ease-in-out ${
+        className={`fixed left-0 top-0 z-40 h-screen w-full bg-blue-950 transition-transform duration-300 ease-in-out lg:hidden ${
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -175,12 +175,12 @@ export default function Header() {
             className="text-white"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <X className="h-6 w-6" />
+            <X className="size-6" />
           </button>
         </div>
 
         {/* Gulf News Logo (Mobile Only) */}
-        <div className="flex justify-center mb-4">
+        <div className="mb-4 flex justify-center">
           <Link href="/" className="flex items-center">
             <Image
               src={logo2}
@@ -194,7 +194,7 @@ export default function Header() {
         </div>
 
         {/* Nav Items */}
-        <div className="px-4 pt-4 pb-10 space-y-2 max-h-[calc(100vh-64px)] overflow-y-auto">
+        <div className="max-h-[calc(100vh-64px)] space-y-2 overflow-y-auto px-4 pb-10 pt-4">
           {navItems.map((item) =>
             item.dropdown ? (
               <div key={item.name} className="px-3 py-2">
@@ -204,17 +204,17 @@ export default function Header() {
                       mobileDropdownOpen === item.name ? null : item.name
                     )
                   }
-                  className="text-white text-base font-medium w-full text-left flex items-center justify-between"
+                  className="flex w-full items-center justify-between text-left text-base font-medium text-white"
                 >
-                  {item.name} <ChevronDown className="h-4 w-4" />
+                  {item.name} <ChevronDown className="size-4" />
                 </button>
                 {mobileDropdownOpen === item.name && (
-                  <div className="pl-4 mt-2 bg-white rounded-md shadow-md py-2 space-y-1">
+                  <div className="mt-2 space-y-1 rounded-md bg-white py-2 pl-4 shadow-md">
                     {item.dropdown.map((dropdownItem) => (
                       <Link
                         key={dropdownItem.name}
                         href={dropdownItem.href}
-                        className="text-black hover:text-blue-600 block px-3 py-2 rounded-md text-sm"
+                        className="block rounded-md px-3 py-2 text-sm text-black hover:text-blue-600"
                         onClick={() => {
                           setMobileDropdownOpen(null);
                           setMobileMenuOpen(false);
@@ -230,7 +230,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium"
+                className="block rounded-md px-3 py-2 text-base font-medium text-white hover:text-blue-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
@@ -239,11 +239,11 @@ export default function Header() {
           )}
 
           {/* CTA Buttons on Mobile */}
-          <div className="pt-6 border-t gap-4 border-white/20 space-y-3">
+          <div className="gap-4 space-y-3 border-t border-white/20 pt-6">
             <Link href="/register">
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full bg-white text-blue-950 font-bold py-2 px-4 my-2 rounded"
+                className="my-2 w-full rounded bg-white px-4 py-2 font-bold text-blue-950"
               >
                 Register Now
               </button>
@@ -251,7 +251,7 @@ export default function Header() {
             <Link href="/register?type=delegates">
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full bg-white text-blue-950 font-bold py-2 px-4 my-2 rounded"
+                className="my-2 w-full rounded bg-white px-4 py-2 font-bold text-blue-950"
               >
                 Get Delegate Pass
               </button>
@@ -259,7 +259,7 @@ export default function Header() {
             <Link href="/register?type=exhibitor">
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full bg-white text-blue-950 font-bold py-2 px-4 my-2 rounded"
+                className="my-2 w-full rounded bg-white px-4 py-2 font-bold text-blue-950"
               >
                 Book Your Stand
               </button>

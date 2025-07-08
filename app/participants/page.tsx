@@ -81,29 +81,29 @@ export default function ParticipantsPage() {
   ];
 
   return (
-    <div className="bg-[#f0f4ff] min-h-screen py-12 px-4 sm:px-6 lg:px-8 pt-40">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+    <div className="min-h-screen bg-[#f0f4ff] px-4 py-12 pt-40 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 text-center">
+          <h1 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
             Participants
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-lg text-gray-600">
             Participants at the Future Proptech Summit 2025.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center h-64 transition-all duration-300 hover:shadow-lg hover:scale-105"
+              className="flex h-64 items-center justify-center rounded-lg bg-white p-6 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={300}
                 height={300}
-                className="w-auto max-h-48 object-contain"
+                className="max-h-48 w-auto object-contain"
               />
             </div>
           ))}
@@ -112,7 +112,7 @@ export default function ParticipantsPage() {
         <div className="mt-12 flex justify-center">
           <button
             onClick={() => router.push("/register?type=participants")}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-blue-700"
+            className="rounded-lg bg-blue-600 px-6 py-3 text-lg font-semibold text-white transition-all duration-300 hover:bg-blue-700"
           >
             Enquiry Now
           </button>

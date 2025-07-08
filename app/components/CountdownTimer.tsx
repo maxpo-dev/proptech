@@ -41,15 +41,15 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
   ];
 
   return (
-    <div className="flex items-center justify-center mt-8 text-white">
+    <div className="mt-8 flex items-center justify-center text-white">
       {units.map((unit, idx) => (
         <div key={unit.label} className="flex items-center">
-          <div className="bg-blue-600 bg-opacity-90 rounded-lg flex flex-col items-center justify-center p-4 min-w-[70px]">
-            <span className="text-2xl sm:text-3xl font-bold">{unit.value.toString().padStart(2, '0')}</span>
-            <span className="text-xs uppercase mt-1">{unit.label}</span>
+          <div className="flex min-w-[70px] flex-col items-center justify-center rounded-lg bg-blue-600 bg-opacity-90 p-4">
+            <span className="text-2xl font-bold sm:text-3xl">{unit.value.toString().padStart(2, '0')}</span>
+            <span className="mt-1 text-xs uppercase">{unit.label}</span>
           </div>
           {idx < units.length - 1 && (
-            <span className="text-3xl font-bold mx-2">:</span>
+            <span className="mx-2 text-3xl font-bold">:</span>
           )}
         </div>
       ))}

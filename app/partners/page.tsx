@@ -16,23 +16,23 @@ const PartnersPage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-background text-foreground pt-32 pb-20 scroll-smooth">
+    <div className="scroll-smooth bg-background pb-20 pt-32 text-foreground">
       {/* Page Heading and Navigation */}
-      <section className="text-center mb-8 px-4 mt-12 sm:mt-16">
-        <h1 className="text-5xl font-bold text-primary border-b-4 border-accent inline-block pb-3">
+      <section className="mb-8 mt-12 px-4 text-center sm:mt-16">
+        <h1 className="inline-block border-b-4 border-accent pb-3 text-5xl font-bold text-primary">
           Partners
         </h1>
-        <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
           Collaborating with industry leaders to drive innovation in PropTech.
         </p>
         {/* Horizontal Navigation */}
         <nav className="mt-8">
-          <div className="flex flex-wrap justify-center gap-3 max-w-md mx-auto px-2">
+          <div className="mx-auto flex max-w-md flex-wrap justify-center gap-3 px-2">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm sm:text-base font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                className="whitespace-nowrap rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-accent-foreground sm:text-base"
               >
                 {item.label}
               </a>
@@ -42,13 +42,13 @@ const PartnersPage: React.FC = () => {
       </section>
 
       {/* All Partner Sections */}
-      <div className="space-y-24 max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl space-y-24">
         {/* Media Partners */}
         <section id="media" className="px-4">
-          <h2 className="text-4xl font-bold text-primary text-center mb-8">
+          <h2 className="mb-8 text-center text-4xl font-bold text-primary">
             Media Partners
           </h2>
-          <div className="bg-card rounded-lg shadow-md md:p-6">
+          <div className="rounded-lg bg-card shadow-md md:p-6">
             <MediaPartners />
           </div>
         </section>
@@ -65,21 +65,21 @@ const PartnersPage: React.FC = () => {
 
         {/* Supporting Partners */}
         <section id="association" className="px-4">
-          <h2 className="text-4xl font-bold text-primary text-center mb-8">
+          <h2 className="mb-8 text-center text-4xl font-bold text-primary">
             Supporting Partners
           </h2>
-          <div className="bg-card rounded-lg shadow-md md:p-6 text-center">
+          <div className="rounded-lg bg-card text-center shadow-md md:p-6">
             <AssociatePartners />
           </div>
         </section>
 
         {/* Government Partners */}
         <section id="government" className="px-4">
-          <h2 className="text-4xl font-bold text-primary text-center mb-8">
+          <h2 className="mb-8 text-center text-4xl font-bold text-primary">
             Government Partners
           </h2>
-          <div className="bg-card rounded-lg shadow-md p-6 text-center">
-            <p className="text-muted-foreground text-lg">Coming soon...</p>
+          <div className="rounded-lg bg-card p-6 text-center shadow-md">
+            <p className="text-lg text-muted-foreground">Coming soon...</p>
           </div>
         </section>
       </div>

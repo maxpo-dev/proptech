@@ -50,9 +50,9 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-blue-950">
+    <header className="fixed inset-x-0 top-0 z-50 bg-blue-950">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image src={Logo} alt="Proptech Expo 2025 Logo" width={150} height={30} />
@@ -62,18 +62,18 @@ export default function Header() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className="group relative">
                   {item.dropdown ? (
                     <>
                       <button
                         onClick={() => toggleDropdown(item.name)}
-                        className="text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+                        className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-white transition-colors duration-200"
                       >
                         {item.name}
-                        <ChevronDown className="ml-1 h-4 w-4" />
+                        <ChevronDown className="ml-1 size-4" />
                       </button>
                       {activeDropdown === item.name && (
-                        <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+                        <div className="absolute left-0 z-50 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                           <div
                             className="py-1"
                             role="menu"
@@ -97,10 +97,10 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group"
+                      className="group relative rounded-md px-3 py-2 text-sm font-medium text-white transition-colors duration-200"
                     >
                       {item.name}
-                      <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0091EB] to-[#00D4D5] rounded-md transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right"></span>
+                      <span className="absolute bottom-0 left-0 h-1 w-full origin-right scale-x-0 rounded-md bg-gradient-to-r from-[#0091EB] to-[#00D4D5] transition-transform duration-500 group-hover:scale-x-100"></span>
                     </Link>
                   )}
                 </div>
@@ -115,9 +115,9 @@ export default function Header() {
             >
               <span className="sr-only">Open main menu</span>
               {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
+                <X className="block size-6" aria-hidden="true" />
               ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+                <Menu className="block size-6" aria-hidden="true" />
               )}
             </button>
           </div>
@@ -125,28 +125,28 @@ export default function Header() {
       </nav>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-blue-950 h-full w-full fixed top-0 left-0 right-0 bottom-0 z-40 overflow-y-auto">
+        <div className="fixed inset-0 z-40 size-full overflow-y-auto bg-blue-950 md:hidden">
           <div className="flex justify-end p-4">
             <button
               type="button"
               className="text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <X className="block h-6 w-6" aria-hidden="true" />
+              <X className="block size-6" aria-hidden="true" />
               <span className="sr-only">Close main menu</span>
             </button>
           </div>
-          <div className="px-2 pt-8 pb-3 space-y-1 sm:px-3">
+          <div className="space-y-1 px-2 pb-3 pt-8 sm:px-3">
             {navItems.map((item) => (
               <div key={item.name}>
                 {item.dropdown ? (
                   <>
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="text-white hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium w-full text-left flex justify-between items-center"
+                      className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-medium text-white hover:text-blue-600"
                     >
                       {item.name}
-                      <ChevronDown className="h-4 w-4" />
+                      <ChevronDown className="size-4" />
                     </button>
                     {activeDropdown === item.name && (
                       <div className="pl-4">
@@ -154,7 +154,7 @@ export default function Header() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="text-white hover:text-blue-600 block px-3 py-2 rounded-md text-sm"
+                            className="block rounded-md px-3 py-2 text-sm text-white hover:text-blue-600"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {dropdownItem.name}
@@ -166,7 +166,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-white hover:text-blue-600"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}

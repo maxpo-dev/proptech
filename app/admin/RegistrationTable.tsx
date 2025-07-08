@@ -9,32 +9,32 @@ type RegistrationTableProps = {
 
 export default function RegistrationTable({ registrations }: RegistrationTableProps) {
   return (
-    <div className="overflow-x-auto bg-white shadow-md rounded">
+    <div className="overflow-x-auto rounded bg-white shadow-md">
       <table className="min-w-full leading-normal">
         <thead>
           <tr>
-            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+            <th className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">
               Name
             </th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+            <th className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">
               Job Title
             </th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+            <th className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">
               Company Name
             </th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+            <th className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">
               Email
             </th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+            <th className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">
               Phone
             </th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+            <th className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">
               Country
             </th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+            <th className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">
               Message
             </th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+            <th className="border-b-2 border-gray-200 bg-gray-100 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">
               Registration Date
             </th>
           </tr>
@@ -42,29 +42,29 @@ export default function RegistrationTable({ registrations }: RegistrationTablePr
         <tbody>
           {registrations.map((registration) => (
             <tr key={registration.id}>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-900 whitespace-no-wrap">{registration.name}</p>
+              <td className="border-b border-gray-200 bg-white p-5 text-sm">
+                <p className="whitespace-no-wrap text-gray-900">{registration.name}</p>
               </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-900 whitespace-no-wrap">{registration.jobTitle}</p>
+              <td className="border-b border-gray-200 bg-white p-5 text-sm">
+                <p className="whitespace-no-wrap text-gray-900">{registration.jobTitle}</p>
               </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-900 whitespace-no-wrap">{registration.companyName}</p>
+              <td className="border-b border-gray-200 bg-white p-5 text-sm">
+                <p className="whitespace-no-wrap text-gray-900">{registration.companyName}</p>
               </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-900 whitespace-no-wrap">{registration.email}</p>
+              <td className="border-b border-gray-200 bg-white p-5 text-sm">
+                <p className="whitespace-no-wrap text-gray-900">{registration.email}</p>
               </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-900 whitespace-no-wrap">{registration.phone}</p>
+              <td className="border-b border-gray-200 bg-white p-5 text-sm">
+                <p className="whitespace-no-wrap text-gray-900">{registration.phone}</p>
               </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-900 whitespace-no-wrap">{registration.country}</p>
+              <td className="border-b border-gray-200 bg-white p-5 text-sm">
+                <p className="whitespace-no-wrap text-gray-900">{registration.country}</p>
               </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-900 whitespace-no-wrap">{registration.message}</p>
+              <td className="border-b border-gray-200 bg-white p-5 text-sm">
+                <p className="whitespace-no-wrap text-gray-900">{registration.message}</p>
               </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-900 whitespace-no-wrap">
+              <td className="border-b border-gray-200 bg-white p-5 text-sm">
+                <p className="whitespace-no-wrap text-gray-900">
                   {new Date(registration.createdAt).toLocaleString()}
                 </p>
               </td>

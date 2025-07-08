@@ -6,16 +6,16 @@ import automatedBuildingsLogo from "@/public/image/partners/Asset-22-1024x264.pn
 export default function AutomatedBuildings() {
   return (
     <div className="bg-white text-black ">
-      <main className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <main className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <section className="flex justify-center">
-          <div className="relative w-full max-w-5xl bg-gray-100 p-6 sm:p-8 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6 box-border">
+          <div className="relative box-border flex w-full max-w-5xl flex-col items-center gap-6 rounded-2xl bg-gray-100 p-6 shadow-2xl sm:p-8 md:flex-row">
             {/* Badge */}
-            <div className="absolute top-4 right-4 bg-blue-600 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 rounded-full shadow-md z-10">
+            <div className="absolute right-4 top-4 z-10 rounded-full bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white shadow-md sm:px-4 sm:text-sm">
               Media Partner
             </div>
 
             {/* Logo Section */}
-            <div className="w-full md:w-1/3 flex justify-center items-center">
+            <div className="flex w-full items-center justify-center md:w-1/3">
               <a
                 href="https://www.automatedbuildings.com/index.htm"
                 target="_blank"
@@ -26,22 +26,22 @@ export default function AutomatedBuildings() {
                   alt="AutomatedBuildings.com Logo"
                   width={250}
                   height={100}
-                  className="object-contain max-h-24 sm:max-h-32 max-w-full"
+                  className="max-h-24 max-w-full object-contain sm:max-h-32"
                 />
               </a>
             </div>
 
             {/* Content Section */}
-            <div className="w-full md:w-2/3 text-center md:text-left">
-              <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-4 break-words max-w-full">
+            <div className="w-full text-center md:w-2/3 md:text-left">
+              <h2 className="mb-4 max-w-full break-words text-2xl font-bold text-blue-900 sm:text-3xl">
                 AutomatedBuildings.com
               </h2>
 
-              <p className="text-sm sm:text-base mb-3 break-words max-w-full">
+              <p className="mb-3 max-w-full break-words text-sm sm:text-base">
                 <span className="font-medium">Website:</span>{" "}
                 <a
                   href="https://www.automatedbuildings.com/index.htm"
-                  className="text-blue-600 hover:underline break-all max-w-full inline-block"
+                  className="inline-block max-w-full break-all text-blue-600 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -49,7 +49,7 @@ export default function AutomatedBuildings() {
                 </a>
               </p>
 
-              <p className="text-sm sm:text-base leading-relaxed text-gray-700 break-words max-w-full">
+              <p className="max-w-full break-words text-sm leading-relaxed text-gray-700 sm:text-base">
                 Since 1999, AutomatedBuildings.com has been an online magazine and web resource. We provide news and
                 connections to a global community of change agents shaping smart, intelligent, integrated, connected,
                 green, and converged large buildings. Our virtual magazine offers a searchable platform for discussion

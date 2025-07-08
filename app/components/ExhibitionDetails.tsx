@@ -42,17 +42,17 @@ export default function ExhibitionDetails() {
   ];
 
   return (
-    <section className="py-16 px-8 bg-white text-center">
-      <h2 className="text-3xl text-black font-bold mb-4">About The Exhibition!</h2>
-      <p className="text-gray-600 mb-10">
+    <section className="bg-white px-8 py-16 text-center">
+      <h2 className="mb-4 text-3xl font-bold text-black">About The Exhibition!</h2>
+      <p className="mb-10 text-gray-600">
         Discover a vast array of options with over 5000 properties, spanning across 50+ cities in India.
         Connect with 50+ reputable builders and let us guide you in transforming your property aspirations into reality.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {details.map((item, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="flex justify-center items-center mb-4">
+          <div key={index} className="rounded-lg bg-white p-6 text-center shadow-md">
+            <div className="mb-4 flex items-center justify-center">
               <Image
                 src={item.icon}
                 alt={item.title}
@@ -60,7 +60,7 @@ export default function ExhibitionDetails() {
                 height={60} // Adjust the size as needed
               />
             </div>
-            <h3 className="text-xl text-black font-semibold mb-2">{item.title}</h3>
+            <h3 className="mb-2 text-xl font-semibold text-black">{item.title}</h3>
             <p className="text-gray-600">{item.description}</p>
           </div>
         ))}

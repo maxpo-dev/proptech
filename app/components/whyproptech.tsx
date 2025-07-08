@@ -20,14 +20,14 @@ export default function ConferenceThemes() {
   ];
 
   return (
-    <section className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto my-12">
+    <section className="mx-auto my-12 flex w-full max-w-6xl flex-col lg:flex-row">
       {/* Image Section */}
-      <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
-        <div className="relative rounded-xl overflow-hidden shadow-md h-full min-h-[400px]">
+      <div className="mb-6 w-full lg:mb-0 lg:w-1/2">
+        <div className="relative h-full min-h-[400px] overflow-hidden rounded-xl shadow-md">
           <Image
             src={Img}
             alt="Conference"
-            className="object-cover w-full h-full"
+            className="size-full object-cover"
             fill
             priority
           />
@@ -35,16 +35,16 @@ export default function ConferenceThemes() {
       </div>
 
       {/* Themes List */}
-      <div className="w-full lg:w-1/2 bg-white p-6 lg:p-10 rounded-xl shadow-inner flex flex-col justify-start">
+      <div className="flex w-full flex-col justify-start rounded-xl bg-white p-6 shadow-inner lg:w-1/2 lg:p-10">
         <div>
-          <h2 className="text-3xl  font-bold text-gray-900 mb-6">
+          <h2 className="mb-6  text-3xl font-bold text-gray-900">
             Conference Themes
           </h2>
           <div className="flex flex-col gap-4">
             {themes.map((theme, idx) => (
               <div key={idx} className="flex items-center space-x-3">
-                <theme.icon className="w-5 h-5 text-blue-600" strokeWidth={1.5} />
-                <span className="text-gray-800 text-sm">
+                <theme.icon className="size-5 text-blue-600" strokeWidth={1.5} />
+                <span className="text-sm text-gray-800">
                   {theme.title}
                 </span>
               </div>

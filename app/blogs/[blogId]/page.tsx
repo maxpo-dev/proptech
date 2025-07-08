@@ -10,12 +10,12 @@ export default async function BlogPostPage({ params }: { params: { blogId: strin
   }
 
   return (
-    <section className="container px-4 md:px-16 lg:px-28 py-32 md:py-36 max-w-5xl mx-auto">
+    <section className="container mx-auto max-w-5xl px-4 py-32 md:px-16 md:py-36 lg:px-28">
       {/* Title */}
-      <h1 className="text-3xl md:text-5xl font-bold mb-6">{blog.title}</h1>
+      <h1 className="mb-6 text-3xl font-bold md:text-5xl">{blog.title}</h1>
 
       {/* Author & Date */}
-      <p className="text-gray-500 text-sm mb-8">
+      <p className="mb-8 text-sm text-gray-500">
         By {blog.author?.name || "Unknown Author"} • {new Date(blog.publishedAt).toDateString()}
       </p>
 
@@ -24,7 +24,7 @@ export default async function BlogPostPage({ params }: { params: { blogId: strin
         <img
           src={blog.mainImage}
           alt={blog.title}
-          className="w-full h-auto mb-10 rounded-md object-cover"
+          className="mb-10 h-auto w-full rounded-md object-cover"
         />
       )}
 
