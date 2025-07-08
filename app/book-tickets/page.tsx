@@ -18,7 +18,7 @@ const InputField = ({
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }) => (
   <div className="mb-5">
-    <label htmlFor={id} className="block text-base font-semibold text-gray-800 mb-2">
+    <label htmlFor={id} className="mb-2 block text-base font-semibold text-gray-800">
       {label}
     </label>
     <input
@@ -28,7 +28,7 @@ const InputField = ({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className="w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition duration-300"
+      className="w-full rounded-lg border border-gray-300 bg-white px-5 py-3 shadow-sm transition duration-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600"
       required
     />
   </div>
@@ -93,19 +93,19 @@ export default function BookTicketsForm() {
 
   return (
     <div
-      className={`relative min-h-screen bg-cover bg-center py-20 px-4 ${
+      className={`relative min-h-screen bg-cover bg-center px-4 py-20 ${
         success ? "flex items-center justify-center" : ""
       }`}
       style={{ backgroundImage: "url('/image/fpsbookback6.jpg')" }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-0" />
+      <div className="absolute inset-0 z-0 bg-black bg-opacity-40" />
 
       {!success ? (
-        <div className="relative z-10 bg-white bg-opacity-90 shadow-2xl rounded-2xl p-12 max-w-3xl mx-auto border border-gray-300 mt-12">
-          <h2 className="text-4xl  font-bold text-center text-gray-900 mb-8 tracking-wide">
+        <div className="relative z-10 mx-auto mt-12 max-w-3xl rounded-2xl border border-gray-300 bg-white bg-opacity-90 p-12 shadow-2xl">
+          <h2 className="mb-8  text-center text-4xl font-bold tracking-wide text-gray-900">
             Book Your Tickets
           </h2>
-          <p className="text-lg text-center text-gray-700 mb-8">
+          <p className="mb-8 text-center text-lg text-gray-700">
             Register now for exclusive access to the Future PropTech Summit 2025.
           </p>
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -122,27 +122,27 @@ export default function BookTicketsForm() {
                 name="consent"
                 checked={formData.consent}
                 onChange={handleChange}
-                className="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 transition duration-300"
+                className="size-5 rounded border-gray-300 text-blue-600 transition duration-300 focus:ring-blue-500"
                 required
               />
-              <label htmlFor="consent" className="ml-2 text-gray-800 text-base">
+              <label htmlFor="consent" className="ml-2 text-base text-gray-800">
                 I agree to the <a href="/terms" className="text-blue-700 underline">terms and conditions</a>.
               </label>
             </div>
 
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-blue-800 text-white text-lg font-medium rounded-xl shadow hover:bg-blue-900 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500"
+              className="w-full rounded-xl bg-blue-800 px-6 py-3 text-lg font-medium text-white shadow transition duration-300 hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-500"
             >
               Register Now
             </button>
           </form>
 
-          {error && <p className="text-red-600 mt-6 text-center font-medium">{error}</p>}
+          {error && <p className="mt-6 text-center font-medium text-red-600">{error}</p>}
         </div>
       ) : (
-        <div className="relative z-10 max-w-xl w-full p-10 bg-white bg-opacity-95 rounded-2xl shadow-2xl text-center border border-gray-200">
-          <h3 className="text-3xl  font-bold text-green-700 mb-4">🎉 Thank you for registering!</h3>
+        <div className="relative z-10 w-full max-w-xl rounded-2xl border border-gray-200 bg-white bg-opacity-95 p-10 text-center shadow-2xl">
+          <h3 className="mb-4  text-3xl font-bold text-green-700">🎉 Thank you for registering!</h3>
           <p className="text-lg text-gray-800">
             We’ve received your details and will be in touch soon with more information. <br />
             Stay tuned for updates and get ready to experience the future of PropTech!

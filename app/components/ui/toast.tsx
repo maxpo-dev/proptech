@@ -27,7 +27,7 @@ export const Toast: React.FC<ToastProps> = ({ message, type = 'info', duration =
 
   return (
     <div
-      className={`fixed bottom-4 right-4 px-4 py-2 rounded-md text-white ${bgColor[type]} shadow-lg`}
+      className={`fixed bottom-4 right-4 rounded-md px-4 py-2 text-white ${bgColor[type]} shadow-lg`}
       role="alert"
     >
       {message}

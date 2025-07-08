@@ -13,12 +13,12 @@ export default function DelgatesModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
-      <div className="relative w-full max-w-lg md:max-w-3xl  bg-white border border-blue-400 rounded-lg p-6 max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm">
+      <div className="relative max-h-[90vh] w-full max-w-lg  overflow-y-auto rounded-lg border border-blue-400 bg-white p-6 md:max-w-3xl">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-neutral-400 hover:text-black cursor-pointer"
+          className="absolute right-4 top-4 cursor-pointer text-neutral-400 hover:text-black"
         >
           <X size={20} />
         </button>

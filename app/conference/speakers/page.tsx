@@ -11,11 +11,11 @@ const SpeakersPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-12">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center text-black pt-24 relative z-10">
+        <h1 className="relative z-10 pt-24 text-center text-4xl font-bold text-black">
           Meet Our Speakers
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {speakers.map((speaker: Speaker, index: number) => (
             <SpeakerCard
               key={index}
@@ -37,7 +37,7 @@ const SpeakersPage: React.FC = () => {
         <div className="mt-12 flex justify-center">
           <button
             onClick={() => router.push("/register?type=participants")}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-blue-700"
+            className="rounded-lg bg-blue-600 px-6 py-3 text-lg font-semibold text-white transition-all duration-300 hover:bg-blue-700"
           >
             Enquire Now
           </button>

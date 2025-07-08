@@ -20,7 +20,7 @@ const PhoneInputField = ({ name }: { name: string }) => {
 
   return (
     <div className="mb-4 w-full">
-      <label className="block text-sm font-semibold text-black mb-1">
+      <label className="mb-1 block text-sm font-semibold text-black">
         Phone Number <span className="text-red-500">*</span>
       </label>
       <div className="w-full">

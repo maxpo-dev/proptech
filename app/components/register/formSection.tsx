@@ -86,7 +86,7 @@ const FormSection = ({ type }: { type: FormTypes }) => {
     >
       <Form>
         <UTMSetter />
-        <div className="flex flex-col md:flex-row gap-0 md:gap-4 w-full">
+        <div className="flex w-full flex-col gap-0 md:flex-row md:gap-4">
           <TextField
             name="name"
             label="Name"
@@ -101,7 +101,7 @@ const FormSection = ({ type }: { type: FormTypes }) => {
             required
           />
         </div>
-        <div className="flex flex-col md:flex-row gap-0 md:gap-4 w-full">
+        <div className="flex w-full flex-col gap-0 md:flex-row md:gap-4">
           <TextField
             name="email"
             label="Work Email"
@@ -112,7 +112,7 @@ const FormSection = ({ type }: { type: FormTypes }) => {
           />
           <PhoneInputField name="phone" />
         </div>
-        <div className="flex flex-col md:flex-row gap-0 md:gap-4 w-full">
+        <div className="flex w-full flex-col gap-0 md:flex-row md:gap-4">
           <TextField
             name="companyName"
             label="Company Name"
@@ -165,7 +165,7 @@ const FormSection = ({ type }: { type: FormTypes }) => {
           <ErrorMessage
             name="consent1"
             component="p"
-            className="text-xs text-red-500 mt-1"
+            className="mt-1 text-xs text-red-500"
           />
         </div>
 
@@ -184,15 +184,15 @@ const FormSection = ({ type }: { type: FormTypes }) => {
           <ErrorMessage
             name="consent2"
             component="p"
-            className="text-xs text-red-500 mt-1"
+            className="mt-1 text-xs text-red-500"
           />
         </div>
 
-        <div className="flex justify-end mt-6">
+        <div className="mt-6 flex justify-end">
           <Button
             type="submit"
             disabled={submitting}
-            className="bg-transparent text-black border border-black rounded-none hover:bg-gray-50 px-8"
+            className="rounded-none border border-black bg-transparent px-8 text-black hover:bg-gray-50"
           >
             Submit
           </Button>

@@ -1,9 +1,10 @@
 import { PortableText } from "@portabletext/react";
+import Image from "next/image";
 
 const components = {
   types: {
     image: ({ value }: any) => (
-      <img src={value.asset.url} alt={value.alt || ""} className="my-4" />
+      <Image src={value.asset.url} alt={value.alt || ""} className="my-4" />
     ),
   },
   marks: {
@@ -16,8 +17,8 @@ const components = {
     ),
   },
   block: {
-    h2: ({ children }: any) => <h2 className="text-2xl font-bold mt-8 mb-2">{children}</h2>,
-    h3: ({ children }: any) => <h3 className="text-xl font-semibold mt-6 mb-2">{children}</h3>,
+    h2: ({ children }: any) => <h2 className="mb-2 mt-8 text-2xl font-bold">{children}</h2>,
+    h3: ({ children }: any) => <h3 className="mb-2 mt-6 text-xl font-semibold">{children}</h3>,
     normal: ({ children }: any) => <p className="mb-4 text-gray-800">{children}</p>,
   },
 };

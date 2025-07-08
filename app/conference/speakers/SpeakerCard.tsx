@@ -38,9 +38,9 @@ export default function SpeakerCard({
 
   return (
     <>
-      <div className="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group h-full flex flex-col">
+      <div className="group flex h-full flex-col overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
         {/* Speaker Image with Logo Overlay */}
-        <div className="relative w-full pt-[120%] overflow-visible">
+        <div className="relative w-full overflow-visible pt-[120%]">
           <div className="absolute inset-0">
             <Image
               src={
@@ -60,7 +60,7 @@ export default function SpeakerCard({
           {/* Centered, Half-outside Logo with Margin Adjustment */}
           {logoError ? null : (
             <motion.div
-              className="absolute -bottom-8 left-1/2  ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
+              className="absolute -bottom-8 left-1/2  z-10 ml-1 flex size-16 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-white shadow-md"
               initial={{ y: 0 }}
               animate={{
                 y: [0, -10, 0],
@@ -72,7 +72,7 @@ export default function SpeakerCard({
                 },
               }}
             >
-              <div className="relative w-12 h-12">
+              <div className="relative size-12">
                 <Image
                   src={companyLogo}
                   alt={`${companyName} Logo`}
@@ -86,15 +86,15 @@ export default function SpeakerCard({
         </div>
 
         {/* Speaker Details */}
-        <div className="p-5 pt-10 flex-grow flex flex-col">
-          <div className="flex-grow">
-            <h2 className="text-lg font-bold text-gray-900 line-clamp-1">
+        <div className="flex grow flex-col p-5 pt-10">
+          <div className="grow">
+            <h2 className="line-clamp-1 text-lg font-bold text-gray-900">
               {name}
             </h2>
-            <p className="text-sm text-gray-800 font-semibold line-clamp-1">
+            <p className="line-clamp-1 text-sm font-semibold text-gray-800">
               {jobTitle}
             </p>
-            <p className="text-xs text-gray-500 mt-1 italic line-clamp-1">
+            <p className="mt-1 line-clamp-1 text-xs italic text-gray-500">
               {companyName}
             </p>
           </div>
@@ -114,7 +114,7 @@ export default function SpeakerCard({
                 href={linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 transition-transform duration-300 hover:scale-105"
+                className="text-blue-600 transition-transform duration-300 hover:scale-105 hover:text-blue-800"
               >
                 <Linkedin size={20} />
               </Link>
@@ -125,14 +125,14 @@ export default function SpeakerCard({
 
       {/* Modal with full speaker details */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-3xl max-h-[100vh] overflow-auto  z-[10000]">
+        <DialogContent className="z-[10000] max-h-screen max-w-3xl  overflow-auto">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold">{name}</DialogTitle>
           </DialogHeader>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4  z-[10000]">
+          <div className="z-[10000] mt-4 grid grid-cols-1 gap-6  md:grid-cols-3">
             <div className="flex flex-col items-center">
-              <div className="relative w-full pt-[100%] overflow-visible rounded-lg">
+              <div className="relative w-full overflow-visible rounded-lg pt-[100%]">
                 <div className="absolute inset-0">
                   <Image
                     src={
@@ -151,7 +151,7 @@ export default function SpeakerCard({
                 {/* Centered, Half-outside Logo with Margin Adjustment in Modal */}
                 {logoError ? null : (
                 <motion.div
-                  className="absolute -bottom-8 left-1/2  ml-1 w-16 h-16 rounded-full bg-white shadow-md overflow-hidden border-2 border-white flex items-center justify-center z-10"
+                  className="absolute -bottom-8 left-1/2  z-10 ml-1 flex size-16 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-white shadow-md"
                   initial={{ y: 0 }}
                   animate={{
                     y: [0, -10, 0],
@@ -163,7 +163,7 @@ export default function SpeakerCard({
                     },
                   }}
                 >
-                  <div className="relative w-12 h-12">
+                  <div className="relative size-12">
                     <Image
                       src={
                         logoError
@@ -181,17 +181,17 @@ export default function SpeakerCard({
               </div>
 
               <div className="mt-10 w-full text-center">
-                <h3 className="font-semibold text-gray-900 text-base">
+                <h3 className="text-base font-semibold text-gray-900">
                   {jobTitle}
                 </h3>
-                <p className="text-sm text-gray-600 italic">{companyName}</p>
+                <p className="text-sm italic text-gray-600">{companyName}</p>
 
                 {linkedIn && (
                   <Link
                     href={linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 text-blue-600 hover:text-blue-800 mt-4"
+                    className="mt-4 flex items-center justify-center gap-2 text-blue-600 hover:text-blue-800"
                   >
                     <Linkedin size={20} />
                     <span>LinkedIn Profile</span>
@@ -201,8 +201,8 @@ export default function SpeakerCard({
             </div>
 
             <div className="md:col-span-2">
-              <h3 className="text-lg font-semibold mb-2">Biography</h3>
-              <p className="text-gray-700 whitespace-pre-line">{fullBio}</p>
+              <h3 className="mb-2 text-lg font-semibold">Biography</h3>
+              <p className="whitespace-pre-line text-gray-700">{fullBio}</p>
             </div>
           </div>
         </DialogContent>

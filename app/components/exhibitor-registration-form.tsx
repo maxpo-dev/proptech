@@ -63,7 +63,7 @@ export function ExhibitorRegistrationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <form onSubmit={handleSubmit} className="mx-auto max-w-lg space-y-6 rounded-lg bg-white p-6 shadow-lg">
       {/* <h2 className="text-xl font-semibold text-center text-gray-800">Exhibitor Registration</h2> */}
 
       <div>
@@ -74,7 +74,7 @@ export function ExhibitorRegistrationForm() {
           value={formData.companyName}
           onChange={handleChange}
           placeholder="Company Name *"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
         />
       </div>
 
@@ -86,7 +86,7 @@ export function ExhibitorRegistrationForm() {
           value={formData.contactName}
           onChange={handleChange}
           placeholder="Contact Name *"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
         />
       </div>
 
@@ -98,7 +98,7 @@ export function ExhibitorRegistrationForm() {
           value={formData.email}
           onChange={handleChange}
           placeholder="Email *"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
         />
       </div>
 
@@ -110,7 +110,7 @@ export function ExhibitorRegistrationForm() {
           value={formData.phone}
           onChange={handleChange}
           placeholder="Phone *"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
         />
       </div>
 
@@ -121,7 +121,7 @@ export function ExhibitorRegistrationForm() {
           value={formData.website}
           onChange={handleChange}
           placeholder="Company Website"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
         />
       </div>
 
@@ -133,7 +133,7 @@ export function ExhibitorRegistrationForm() {
           value={formData.boothSize}
           onChange={handleChange}
           placeholder="Preferred Booth Size * (e.g., 3m x 3m)"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
         />
       </div>
 
@@ -145,7 +145,7 @@ export function ExhibitorRegistrationForm() {
           value={formData.productCategory}
           onChange={handleChange}
           placeholder="Product Category *"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
         />
       </div>
 
@@ -156,7 +156,7 @@ export function ExhibitorRegistrationForm() {
           value={formData.specialRequirements}
           onChange={handleChange}
           placeholder="Special Requirements or Comments"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200"
         ></textarea>
       </div>
 
@@ -168,7 +168,7 @@ export function ExhibitorRegistrationForm() {
           required
           checked={formData.termsAccepted}
           onChange={handleChange}
-          className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          className="mt-1 size-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
         />
         <label htmlFor="termsAccepted" className="ml-2 block text-sm text-gray-900">
           I confirm that I have read, understand, and accept the{" "}
@@ -182,7 +182,7 @@ export function ExhibitorRegistrationForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
+          className="flex w-full justify-center rounded-lg border border-transparent bg-indigo-600 px-4 py-3 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50"
         >
           {isSubmitting ? "Submitting..." : "Submit Registration"}
         </button>

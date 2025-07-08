@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import bg from '@/app/images/WhatsApp Image 2024-11-07 at 3.59.25 PM (1).jpeg';
+import bg from '@/public/images/WhatsApp Image 2024-11-07 at 3.59.25 PM (1).jpeg';
 import '@/app/styles/animations.css';
 // import ParticlesComponent from './Particles';
 
@@ -15,13 +15,13 @@ export default function RegisterHeroSection() {
   }, []);
 
   return (
-    <section className="text-white min-h-screen flex items-center relative overflow-hidden">
+    <section className="relative flex min-h-screen items-center overflow-hidden text-white">
       <Image
         src={bg}
         alt="Background"
         fill
         quality={100}
-        className="bg-black bg-opacity-90 animate-zoomInImage"
+        className="animate-zoomInImage bg-black bg-opacity-90"
         priority
       />
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -32,10 +32,10 @@ export default function RegisterHeroSection() {
       </div> */}
 
       {contentVisible && (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent">
+        <div className="animate-fadeInContent container relative z-20 mx-auto px-4 sm:px-6 lg:px-8">
           {/* New content with heading and paragraph */}
-          <div className="text-start max-w-2xl   p-12 rounded-lg shadow-md text-white">
-            <h1 className="text-4xl font-bold mb-4">Join the International Proptech Conference</h1>
+          <div className="max-w-2xl rounded-lg   p-12 text-start text-white shadow-md">
+            <h1 className="mb-4 text-4xl font-bold">Join the International Proptech Conference</h1>
             <p className="text-lg">
               Experience a dynamic event where industry leaders, innovators, and investors gather to shape the future of property technology. Gain insights, discover trends, and expand your network in this transformative event.
             </p>

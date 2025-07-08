@@ -5,7 +5,7 @@ import sponsorImg2 from '@/public/image/brochure/fps-b22.jpg';
 
 const SponsorshipBrochure: React.FC = () => {
   return (
-    <div className="pt-[100px] pb-20"> {/* Adjusted top padding */}
+    <div className="pb-20 pt-[100px]"> {/* Adjusted top padding */}
       <Image
         src={sponsorImg1}
         alt="Sponsorship Brochure"

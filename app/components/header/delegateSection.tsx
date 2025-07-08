@@ -11,11 +11,11 @@ const DelegateSection = () => {
   if (isThankYouPage) return null;
 
   return (
-    <div className="w-full bg-black flex justify-center items-center shadow-md divide-x divide-gray-800">
+    <div className="flex w-full items-center justify-center divide-x divide-gray-800 bg-black shadow-md">
       {/* Delegate Pass */}
       <div
-        className="flex-1 flex justify-center items-center p-3 cursor-pointer transition-all duration-300
-          bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold
+        className="flex flex-1 cursor-pointer items-center justify-center bg-gradient-to-r from-cyan-400 to-blue-600
+          p-3 font-semibold text-white transition-all duration-300
           hover:from-cyan-500 hover:to-blue-400"
         onClick={() => router.push("/register?type=delegates")}
       >
@@ -24,8 +24,8 @@ const DelegateSection = () => {
 
       {/* Book Your Stand */}
       <div
-        className="flex-1 flex justify-center items-center p-3 cursor-pointer transition-all duration-300
-          bg-white text-blue-950 font-semibold hover:bg-blue-500 hover:text-white "
+        className="flex flex-1 cursor-pointer items-center justify-center bg-white p-3 font-semibold
+          text-blue-950 transition-all duration-300 hover:bg-blue-500 hover:text-white "
         onClick={() => router.push("/register")}
       >
         <p className="text-sm">Book Your Stand</p>

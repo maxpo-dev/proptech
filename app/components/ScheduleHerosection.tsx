@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CalendarDays, MapPin } from 'lucide-react';
 import Image from 'next/image';
-import bg from '@/app/images/pixelcut-export (2).jpeg';
+import bg from '@/public/images/pixelcut-export (2).jpeg';
 import '@/app/styles/animations.css';
 // import ParticlesComponent from './Particles';
 
@@ -17,14 +17,14 @@ export default function ScheduleHeroSection() {
   }, []);
 
   return (
-    <section className="text-white min-h-screen flex items-center relative overflow-hidden">
+    <section className="relative flex min-h-screen items-center overflow-hidden text-white">
       <Image
         src={bg}
         alt="Background"
         fill
         // objectFit="cover"
         quality={100}
-        className="bg-black bg-opacity-90 animate-zoomInImage"
+        className="animate-zoomInImage bg-black bg-opacity-90"
         priority
       />
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -35,11 +35,11 @@ export default function ScheduleHeroSection() {
       </div> */}
       
       {contentVisible && (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">Event Schedule</h1>
-            <p className="text-xl mb-8">Shaping the Future of Real Estate Technology</p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+        <div className="animate-fadeInContent container relative z-20 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="mb-6 text-4xl font-bold sm:text-5xl">Event Schedule</h1>
+            <p className="mb-8 text-xl">Shaping the Future of Real Estate Technology</p>
+            <div className="mb-8 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
               <div className="flex items-center">
                 <CalendarDays className="mr-2" />
                 <span>April 2025</span>
@@ -49,7 +49,7 @@ export default function ScheduleHeroSection() {
                 <span>Dubai, UAE</span>
               </div>
             </div>
-            <Link href="/register" className="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors duration-200">
+            <Link href="/register" className="inline-block rounded-full bg-white px-8 py-3 font-semibold text-blue-600 transition-colors duration-200 hover:bg-blue-50">
               Register Now
             </Link>
           </div>

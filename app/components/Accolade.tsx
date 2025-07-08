@@ -5,42 +5,42 @@ import logo from '@/public/image/exhibitor/accolade_logo.png'; // make sure logo
 
 const Accolade = () => {
   return (
-    <div className="bg-white shadow-xl rounded-2xl overflow-hidden p-6 sm:p-8 w-full max-w-7xl mx-auto relative">
+    <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-2xl bg-white p-6 shadow-xl sm:p-8">
       {/* Startup Exhibitor Badge */}
-      <div className="bg-green-500 text-white px-4 py-1.5 text-sm font-semibold rounded-md shadow-md mb-6 sm:absolute sm:top-4 sm:right-4 sm:mb-0">
+      <div className="mb-6 rounded-md bg-green-500 px-4 py-1.5 text-sm font-semibold text-white shadow-md sm:absolute sm:right-4 sm:top-4 sm:mb-0">
         Startup Exhibitor
       </div>
 
       {/* Content Layout */}
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+      <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
         {/* Logo Section */}
-        <div className="w-40 h-40 sm:w-48 sm:h-48 flex-shrink-0 overflow-hidden rounded-xl shadow-md transform transition duration-300 hover:scale-105 bg-white">
+        <div className="size-40 shrink-0 overflow-hidden rounded-xl bg-white shadow-md transition duration-300 hover:scale-105 sm:size-48">
           <Image
             src={logo}
             alt="Accolade Logo"
             width={192}
             height={192}
-            className="object-contain w-full h-full"
+            className="size-full object-contain"
           />
         </div>
 
         {/* Text Content */}
-        <div className="text-center sm:text-left flex-1">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-blue-900 mb-3 sm:mb-4">
+        <div className="flex-1 text-center sm:text-left">
+          <h2 className="mb-3 text-2xl font-semibold text-blue-900 sm:mb-4 sm:text-3xl">
             Accolade
           </h2>
-          <p className="text-gray-700 text-base sm:text-lg mb-4">
+          <p className="mb-4 text-base text-gray-700 sm:text-lg">
             Accolade offers an Operations Centralization Platform for Multifamily. Accolade has developed a comprehensive AI-enabled solution covering the prospect and resident lifecycle, enabling top-performing property managers and developers to deliver exceptional service through a centralized operating model.
           </p>
 
 
           {/* Links */}
-          <div className="flex flex-col sm:flex-row sm:space-x-4 gap-3 sm:gap-0">
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-0 sm:space-x-4">
             <a
               href="https://www.accoladehq.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 transition text-center"
+              className="rounded-md bg-blue-600 px-5 py-2 text-center text-white shadow-md transition hover:bg-blue-700"
             >
               Visit Website
             </a>
@@ -48,7 +48,7 @@ const Accolade = () => {
               href="https://www.linkedin.com/company/accoladehq/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-100 transition text-center"
+              className="rounded-md border border-blue-600 px-5 py-2 text-center text-blue-600 transition hover:bg-blue-100"
             >
               LinkedIn
             </a>

@@ -4,10 +4,10 @@ import Image from 'next/image';
 import HeroSection from '@/app/components/Herosection';
 
 import VideoComponent from './components/VideoSection';
-import Ticket from "@/app/images/event-ticket-template.jpg"
-import Speakers from '@/app/images/speaker-big-stage.jpg';
-import Exhibitors from '@/app/images/digital-environment-scene.jpg';
-import Getintech from '@/app/images/businessman-holding-smartphone-with-message-calling-email-icon-concept-contact-support-people-contacting-information-business.jpg';
+import Ticket from "@/public/images/event-ticket-template.jpg"
+import Speakers from '@/public/images/speaker-big-stage.jpg';
+import Exhibitors from '@/public/images/digital-environment-scene.jpg';
+import Getintech from '@/public/images/businessman-holding-smartphone-with-message-calling-email-icon-concept-contact-support-people-contacting-information-business.jpg';
 import Link from 'next/link';
 import WhyProptech from './components/whyproptech';
 import ShowcaseSection from './components/showcase-section';
@@ -22,10 +22,10 @@ export default function Home() {
   return (
     <div className='bg-gray-200 '>
       <HeroSection />
-      <section className="bg-white  p-10 w-full">
-  <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+      <section className="w-full  bg-white p-10">
+  <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-start">
     <div className="lg:w-1/2">
-      <h2 className="text-3xl font-bold text-blue-900 mb-4">
+      <h2 className="mb-4 text-3xl font-bold text-blue-900">
         Welcome To The Future Of Real Estate In Dubai: Future Proptech Summit
       </h2>
       <div className="text-lg text-gray-700">
@@ -35,16 +35,16 @@ export default function Home() {
         <p className="mt-4">
           The Future PropTech Summit 2025 unites industry leaders, innovators, and investors to explore cutting-edge technologies reshaping real estate. Discover how PropTech drives efficiency, sustainability, and accessibility in the sector.
         </p>
-        <a href="/about" className="text-blue-600 hover:underline mt-4 inline-block">
+        <a href="/about" className="mt-4 inline-block text-blue-600 hover:underline">
           Know more about us
         </a>
       </div>
     </div>
 
-    <div className="lg:w-1/2 flex justify-center">
+    <div className="flex justify-center lg:w-1/2">
       <VideoComponent
         src="./video/Video_1n.mp4"
-        className="w-full h-auto rounded-lg shadow-lg"
+        className="h-auto w-full rounded-lg shadow-lg"
       />
     </div>
   </div>
@@ -52,8 +52,8 @@ export default function Home() {
 
 
 
-<section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
     {[
       { href: "/register?type=delegates", bg: "bg-black", title: "Book your tickets", image: Ticket },
 
@@ -61,8 +61,8 @@ export default function Home() {
       { href: "/register?type=exhibitors", bg: "bg-red-600", title: "Register as Exhibitor", image: Exhibitors },
       { href: "/register", bg: "bg-purple-600", title: "Get In Touch", image: Getintech },
     ].map((item, index) => (
-      <Link key={index} href={item.href} className="block group">
-        <div className="rounded-xl overflow-hidden shadow-lg transition-transform transform group-hover:scale-105">
+      <Link key={index} href={item.href} className="group block">
+        <div className="overflow-hidden rounded-xl shadow-lg transition-transform group-hover:scale-105">
           <div className={`relative h-72 sm:h-80 ${item.bg}`}>
             <Image
               src={item.image}
@@ -72,7 +72,7 @@ export default function Home() {
               className="bg-black opacity-90"
             />
           </div>
-          <div className="bg-blue-950 text-center py-4">
+          <div className="bg-blue-950 py-4 text-center">
            
             <span className="text-xl font-semibold text-white">
   {item.title}
@@ -91,7 +91,7 @@ export default function Home() {
 
 <WhyProptech />
 <div className="container mx-auto px-4 py-8">
-  <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+  <div className="overflow-hidden rounded-lg bg-white shadow-xl">
     <HighlightedSpeakersMarquee />
   </div>
 </div>

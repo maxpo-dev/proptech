@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import bg from '@/app/images/PP 2 (1).png';
+import bg from '@/public/images/PP 2 (1).png';
 import '@/app/styles/animations.css';
 import Link from 'next/link';
 // import ParticlesComponent from './Particles';
@@ -16,7 +16,7 @@ export default function AboutHeroSection() {
   }, []);
 
   return (
-    <section className="text-white min-h-screen flex items-center relative overflow-hidden">
+    <section className="relative flex min-h-screen items-center overflow-hidden text-white">
       {/* <Image
         src={bg}
         alt="Background"
@@ -30,7 +30,7 @@ export default function AboutHeroSection() {
   alt="Background"
   fill
   quality={100}
-  className="bg-black bg-opacity-90 animate-zoomInImage"
+  className="animate-zoomInImage bg-black bg-opacity-90"
   priority
 />
 
@@ -42,20 +42,20 @@ export default function AboutHeroSection() {
       </div> */}
 
       {contentVisible && (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent  p-10">
+        <div className="animate-fadeInContent container relative z-20 mx-auto p-10 px-4 sm:px-6  lg:px-8">
           {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl font-semibold  mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
+          <h1 className="mb-6 text-4xl font-semibold  transition-transform duration-200 ease-in-out hover:scale-105 sm:text-5xl">
             About
           </h1>
 
           {/* Additional info section */}
-          <div className="text-start max-w-2xl rounded-lg shadow-md text-white">
+          <div className="max-w-2xl rounded-lg text-start text-white shadow-md">
             {/* <p>
             The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and invest in the future of real estate technology. If you are passionate about innovation in the real estate and property sectors, this event is tailored for you.
             </p> */}
 
             <p>
-  The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and <Link href="/investor-pitch" className="text-blue-400 underline hover:text-blue-600 transition">invest</Link> in the future of real estate technology. If you are passionate about innovation in the real estate and property sectors, this event is tailored for you.
+  The Future Proptech Summit is designed for professionals, entrepreneurs, and organizations seeking to understand and <Link href="/investor-pitch" className="text-blue-400 underline transition hover:text-blue-600">invest</Link> in the future of real estate technology. If you are passionate about innovation in the real estate and property sectors, this event is tailored for you.
 </p>
           </div>
         </div>

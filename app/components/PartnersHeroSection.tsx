@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 // import Link from 'next/link';
 // import { CalendarDays, MapPin } from 'lucide-react';
 import Image from 'next/image';
-import bg from '@/app/images/pixelcut-export (2).jpeg';
+import bg from '@/public/images/pixelcut-export (2).jpeg';
 import '@/app/styles/animations.css';
 // import ParticlesComponent from './Particles';
 
@@ -17,14 +17,14 @@ export default function PartnersHeroSection() {
   }, []);
 
   return (
-    <section className="text-white min-h-screen flex items-center relative overflow-hidden">
+    <section className="relative flex min-h-screen items-center overflow-hidden text-white">
       <Image
         src={bg}
         alt="Background"
         fill
         // objectFit="cover"
         quality={100}
-        className="bg-black bg-opacity-90 animate-zoomInImage"
+        className="animate-zoomInImage bg-black bg-opacity-90"
         priority
       />
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -35,9 +35,9 @@ export default function PartnersHeroSection() {
       </div> */}
       
       {contentVisible && (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 animate-fadeInContent">
-          <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-semibold  mb-6 hover:scale-105 transition-transform duration-200 ease-in-out">
+        <div className="animate-fadeInContent container relative z-20 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+          <h1 className="mb-6 text-4xl font-semibold  transition-transform duration-200 ease-in-out hover:scale-105 sm:text-5xl">
   coming soon
 </h1>
 {/* <p

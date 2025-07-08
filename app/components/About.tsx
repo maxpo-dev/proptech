@@ -1,22 +1,22 @@
 import React from 'react';
 import { Building2, Users, Lightbulb, Target, Calendar, MapPin } from 'lucide-react';
-import Aboutimg from '@/app/images/zq-lee-VbDjv8-8ibc-unsplash.jpg';
+import Aboutimg from '@/public/images/zq-lee-VbDjv8-8ibc-unsplash.jpg';
 import Image from 'next/image';
 
 const AboutSection = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <div className="mb-12">
-    <h2 className="text-3xl font-bold text-gray-800 mb-4">{title}</h2>
+    <h2 className="mb-4 text-3xl font-bold text-gray-800">{title}</h2>
     {children}
   </div>
 );
 
 const FeatureCard = ({ icon: Icon, title, description }: { icon: React.ElementType; title: string; description: string }) => (
   <div className="flex items-start space-x-4">
-    <div className="flex-shrink-0">
-      <Icon className="h-6 w-6 text-blue-600" />
+    <div className="shrink-0">
+      <Icon className="size-6 text-blue-600" />
     </div>
     <div>
-      <h3 className="text-lg font-semibold text-gray-800 mb-1">{title}</h3>
+      <h3 className="mb-1 text-lg font-semibold text-gray-800">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   </div>
@@ -25,17 +25,17 @@ const FeatureCard = ({ icon: Icon, title, description }: { icon: React.ElementTy
 export default function About() {
   return (
     <div className="bg-gradient-to-b from-white to-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="text-start mb-16">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 text-center">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div className="mb-16 text-start">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-gray-900 sm:text-5xl">
             About Future Proptech Summit
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center">
+          <p className="mx-auto max-w-3xl text-center text-xl text-gray-600">
             Exploring the future of real estate technology in Dubai, October 2025
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-40">
+        <div className="my-40 grid grid-cols-1 gap-12 md:grid-cols-2">
           <div>
             <Image 
               src={Aboutimg}
@@ -45,7 +45,7 @@ export default function About() {
           </div>
           <div className="flex flex-col pl-10">
             <AboutSection title="Event Overview">
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Join us for an event that explores how technology is reshaping the real estate industry. 
                 The Future Proptech Summit, organized by Maxpo Exhibitions, 
                 brings together industry leaders, investors, and innovators to connect, collaborate, and 
@@ -60,7 +60,7 @@ export default function About() {
         </div>
 
         <AboutSection title="Our Mission">
-          <p className="text-gray-600 mb-40">
+          <p className="mb-40 text-gray-600">
             To revolutionize the real estate landscape by integrating advanced technology solutions that 
             drive efficiency, improve tenant experience, and increase investment returns. This event aims 
             to inspire and empower attendees with insights and tools for success in the fast-evolving 
@@ -69,7 +69,7 @@ export default function About() {
         </AboutSection>
 
         <AboutSection title="Why Attend?">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-40">
+          <div className="mb-40 grid grid-cols-1 gap-8 sm:grid-cols-2">
             <FeatureCard 
               icon={Lightbulb}
               title="Gain Insights"
@@ -94,71 +94,71 @@ export default function About() {
         </AboutSection>
 
         <AboutSection title="Who Should Attend?">
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-600 mb-40">
+          <ul className="mb-40 grid grid-cols-1 gap-4 text-gray-600 sm:grid-cols-2">
             <li className="flex items-center space-x-2">
-              <span className="h-2 w-2 bg-blue-600 rounded-full"></span>
+              <span className="size-2 rounded-full bg-blue-600"></span>
               <span>Real Estate Developers and Investors</span>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="h-2 w-2 bg-blue-600 rounded-full"></span>
+              <span className="size-2 rounded-full bg-blue-600"></span>
               <span>Property Management Companies</span>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="h-2 w-2 bg-blue-600 rounded-full"></span>
+              <span className="size-2 rounded-full bg-blue-600"></span>
               <span>Tech Providers and Innovators</span>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="h-2 w-2 bg-blue-600 rounded-full"></span>
+              <span className="size-2 rounded-full bg-blue-600"></span>
               <span>Financial Institutions and Government Agencies</span>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="h-2 w-2 bg-blue-600 rounded-full"></span>
+              <span className="size-2 rounded-full bg-blue-600"></span>
               <span>Legal and Consulting Professionals</span>
             </li>
           </ul>
         </AboutSection>
 
         <AboutSection title="Event Highlights">
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-600 mb-40">
+          <ul className="mb-40 grid grid-cols-1 gap-4 text-gray-600 sm:grid-cols-2">
             <li className="flex items-center space-x-2">
-              <span className="h-2 w-2 bg-blue-600 rounded-full"></span>
+              <span className="size-2 rounded-full bg-blue-600"></span>
               <span>Keynote Sessions with Industry Thought Leaders</span>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="h-2 w-2 bg-blue-600 rounded-full"></span>
+              <span className="size-2 rounded-full bg-blue-600"></span>
               <span>Panel Discussions on IoT, Blockchain, AI, and Fractional Ownership</span>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="h-2 w-2 bg-blue-600 rounded-full"></span>
+              <span className="size-2 rounded-full bg-blue-600"></span>
               <span>Networking Opportunities with Peers and Experts</span>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="h-2 w-2 bg-blue-600 rounded-full"></span>
+              <span className="size-2 rounded-full bg-blue-600"></span>
               <span>Exhibitions Showcasing Innovative Proptech Solutions</span>
             </li>
           </ul>
         </AboutSection>
 
         {/* Event Details Card */}
-        <div className="bg-blue-100 rounded-lg p-8 mt-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Event Details</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="mt-12 rounded-lg bg-blue-100 p-8">
+          <h2 className="mb-4 text-2xl font-bold text-gray-800">Event Details</h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="flex items-center space-x-2">
-              <Calendar className="h-5 w-5 text-blue-600" />
+              <Calendar className="size-5 text-blue-600" />
               <span className="text-gray-700">October 2025</span>
             </div>
             <div className="flex items-center space-x-2">
-              <MapPin className="h-5 w-5 text-blue-600" />
+              <MapPin className="size-5 text-blue-600" />
               <span className="text-gray-700">Le Méridien Dubai Hotel & Conference Centre</span>
             </div>
           </div>
         </div>
 
         {/* Register CTA Button Outside the Card */}
-        <div className="text-center mt-8">
+        <div className="mt-8 text-center">
           <a
             href="/register"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
+            className="inline-block rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-blue-700"
           >
             Register Now
           </a>

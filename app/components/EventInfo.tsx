@@ -1,22 +1,22 @@
 import Image from 'next/image';
 import { MapPin, Calendar, Users } from 'lucide-react';
-import img from "@/app/images/c(1).jpg";
+import img from "@/public/images/c(1).jpg";
 
 export default function EventContent() {
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+    <div className="bg-gradient-to-b from-gray-50 to-white px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 text-center">
+          <h1 className="mb-4 text-4xl font-extrabold text-gray-900 sm:text-5xl">
             Interested in Taking Part?
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-xl text-gray-600">
             Join us for the Future Proptech Summit.
             A unique opportunity to showcase your innovations and network with key industry players.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="relative">
             <Image
               src={img}
@@ -25,14 +25,14 @@ export default function EventContent() {
               height={400}
               className="rounded-lg shadow-2xl"
             />
-            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+            <div className="absolute -bottom-6 -right-6 rounded-lg bg-white p-4 shadow-lg">
               <p className="text-2xl font-bold text-blue-600">2025</p>
               <p className="text-gray-600">October 14-15</p>
             </div>
           </div>
 
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Exhibit?</h2>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">Why Exhibit?</h2>
             <ul className="space-y-4">
               {[
                 { icon: Users, text: "Network with 5000+ industry professionals" },
@@ -40,15 +40,15 @@ export default function EventContent() {
                 { icon: Calendar, text: "Participate in 3 days of cutting-edge discussions" },
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <item.icon className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0" />
+                  <item.icon className="mr-2 size-6 shrink-0 text-blue-600" />
                   <span className="text-gray-700">{item.text}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Stand Options</h3>
-              <p className="text-gray-600 mb-4">
+            <div className="rounded-lg border border-blue-200 bg-blue-50 p-6">
+              <h3 className="mb-2 text-xl font-semibold text-gray-900">Stand Options</h3>
+              <p className="mb-4 text-gray-600">
                 Choose from various stand sizes to suit your needs. Early bird discounts available!
               </p>
               <p>Register now</p>

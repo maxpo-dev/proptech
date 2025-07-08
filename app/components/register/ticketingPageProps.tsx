@@ -39,34 +39,34 @@ export default function TicketingPage() {
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
       />
-    <section className="max-w-5xl mx-auto px-4 py-16">
+    <section className="mx-auto max-w-5xl px-4 py-16">
       {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+      <div className="mb-12 text-center">
+        <h1 className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl">
           Secure Your <span className="text-blue-700">VIP Delegate Pass</span>
         </h1>
-        <p className="text-gray-600 text-lg mt-3">for Future PropTech Summit</p>
+        <p className="mt-3 text-lg text-gray-600">for Future PropTech Summit</p>
       </div>
 
       {/* Pricing Card */}
-      <Card className="bg-[#173A81] text-white rounded-3xl shadow-2xl overflow-hidden">
-        <div className="flex flex-col md:flex-row items-stretch justify-between p-10 gap-10">
+      <Card className="overflow-hidden rounded-3xl bg-[#173A81] text-white shadow-2xl">
+        <div className="flex flex-col items-stretch justify-between gap-10 p-10 md:flex-row">
           {/* Left Section */}
-          <div className="bg-white text-[#0B1E3F] rounded-2xl p-8 w-full md:max-w-xs shadow-md flex flex-col justify-between">
+          <div className="flex w-full flex-col justify-between rounded-2xl bg-white p-8 text-[#0B1E3F] shadow-md md:max-w-xs">
             <div>
-              <h2 className="text-xl font-bold mb-4">{vipPass.title}</h2>
+              <h2 className="mb-4 text-xl font-bold">{vipPass.title}</h2>
 
-              <div className="flex items-end flex-col md:flex-row  gap-3 mb-4">
+              <div className="mb-4 flex flex-col items-end  gap-3 md:flex-row">
                 <span className="text-6xl font-extrabold">
                   ${vipPass.discountedPrice}
                 </span>
-                <span className="text-3xl line-through text-gray-400">
+                <span className="text-3xl text-gray-400 line-through">
                   ${vipPass.originalPrice}
                 </span>
               </div>
 
               {/* Offer Strip */}
-              <div className="bg-gradient-to-r from-blue-600 to-blue-900 text-white rounded-md flex justify-between items-center px-3 py-2 mb-6 text-sm font-semibold shadow">
+              <div className="mb-6 flex items-center justify-between rounded-md bg-gradient-to-r from-blue-600 to-blue-900 px-3 py-2 text-sm font-semibold text-white shadow">
                 <span>Limited Time Offer</span>
                 <span>50% Off</span>
               </div>
@@ -75,22 +75,22 @@ export default function TicketingPage() {
             {/* CTA Button */}
             <Button
               onClick={() => setModalOpen(true)}
-              className="w-full bg-[#173A81] hover:bg-to-blue-700 text-white font-semibold py-2.5 text-sm rounded-xl shadow transition-all duration-300"
+              className="hover:bg-to-blue-700 w-full rounded-xl bg-[#173A81] py-2.5 text-sm font-semibold text-white shadow transition-all duration-300"
             >
               {vipPass.buttonText}
             </Button>
           </div>
 
           {/* Right Section */}
-          <div className="flex-1 mt-6 md:mt-0">
-            <h4 className="text-xl font-semibold mb-4">Benefits Include:</h4>
+          <div className="mt-6 flex-1 md:mt-0">
+            <h4 className="mb-4 text-xl font-semibold">Benefits Include:</h4>
             <ul className="space-y-3">
               {vipPass.benefits.map((benefit, index) => (
                 <li
                   key={index}
-                  className="flex items-start gap-3 text-white text-sm leading-relaxed"
+                  className="flex items-start gap-3 text-sm leading-relaxed text-white"
                 >
-                  <Check className="w-5 h-5 mt-1 flex-shrink-0 text-green-400" />
+                  <Check className="mt-1 size-5 shrink-0 text-green-400" />
                   <span>{benefit}</span>
                 </li>
               ))}

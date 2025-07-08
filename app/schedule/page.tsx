@@ -34,20 +34,20 @@ export default function Schedule() {
   return (
     <div>
       <ScheduleHeroSection />
-    <div className="bg-gray-50 min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-12 text-black">Event Schedule</h1>
+        <h1 className="mb-12 text-center text-4xl font-bold text-black">Event Schedule</h1>
         {scheduleData.map((day) => (
           <div key={day.day} className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-slate-800">Day {day.day} - {day.date}</h2>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <h2 className="mb-4 text-2xl font-semibold text-slate-800">Day {day.day} - {day.date}</h2>
+            <div className="overflow-hidden rounded-lg bg-white shadow-md">
               {day.sessions.map((session, index) => (
                 <div key={index} className={`p-6 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
-                  <div className="flex items-center mb-2">
+                  <div className="mb-2 flex items-center">
                     <Clock className="mr-2 text-blue-600" size={20} />
-                    <span className="text-blue-600 font-semibold">{session.time}</span>
+                    <span className="font-semibold text-blue-600">{session.time}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-slate-700">{session.title}</h3>
+                  <h3 className="mb-2 text-xl font-semibold text-slate-700">{session.title}</h3>
                   <p className="text-gray-600">Speaker(s): {session.speaker}</p>
                 </div>
               ))}

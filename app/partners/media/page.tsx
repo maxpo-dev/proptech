@@ -6,7 +6,7 @@ import React from "react";
 
 export default function MediaPage() {
   return (
-    <div className="bg-white text-black  pt-32 pb-20">
+    <div className="bg-white pb-20  pt-32 text-black">
       <MediaPartners />
     </div>
   );
