@@ -16,7 +16,7 @@ export default function HeroSection() {
     const timer = setTimeout(() => {
       setShowVideo(true);
       setContentVisible(true);
-    }, 1000); // Delay video and content loading
+    }, 700); // Delay video and content loading
     return () => clearTimeout(timer);
   }, []);
 
