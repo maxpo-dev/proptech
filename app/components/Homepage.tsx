@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <main className="bg-gray-100 text-gray-800">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-teal-600 py-20 text-white">
+    <section className="bg-gradient-to-r from-blue-900 to-teal-600 py-20 text-white">
         <div className="container mx-auto px-6 text-center">
           <h1 className="mb-4 text-4xl font-bold md:text-5xl">
             International Proptech Conference & Investment Expo

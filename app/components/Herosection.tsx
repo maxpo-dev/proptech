@@ -26,7 +26,7 @@ export default function HeroSection() {
           loop
           muted
           playsInline
-          preload="none"
+          preload="metadata"
           poster="/images/4x.jpg" // use compressed WebP or JPEG
           className="absolute left-0 top-0 z-0 size-full object-cover"
         >
