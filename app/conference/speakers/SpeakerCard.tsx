@@ -53,7 +53,6 @@ export default function SpeakerCard({
               sizes="(max-width: 768px) 100vw, 25vw"
               className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
               onError={() => setImageError(true)}
-              priority
             />
           </div>
 

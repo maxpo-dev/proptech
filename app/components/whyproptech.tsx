@@ -29,7 +29,6 @@ export default function ConferenceThemes() {
             alt="Conference"
             className="size-full object-cover"
             fill
-            priority
           />
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function DubaiSection() {
       er */}
       <div className="flex flex-col items-center justify-between gap-6 rounded-xl border border-border bg-card p-6 shadow-lg md:flex-row">
         {/* Content Section - Left Side */}
-        <div className="w-full max-w-lg md:w-1/2">
+        <div className="flex justify-center items-center">
           <h2 className="mb-2 text-3xl font-bold text-primary md:text-4xl">
             Dubai: The Ideal Catalyst for PropTech Innovation
           </h2>
@@ -26,7 +26,6 @@ export default function DubaiSection() {
             alt="Dubai Skyline"
             fill
             className="object-cover transition-transform duration-300 hover:scale-105"
-            priority
           />
         </div>
       </div>
