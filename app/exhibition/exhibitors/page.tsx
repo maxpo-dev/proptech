@@ -1,7 +1,7 @@
-import Moderlab from '@/app/components/Moderlab';
+
 import Link from 'next/link';
-import Shuttrd from '@/app/components/Shuttrd';
-import Accolade from '@/app/components/Accolade';
+import { ExhibitorsData } from '@/components/exhibitors/exhibitorsData';
+import ExhibitorCard from '@/components/exhibitors/exhibitorCard';
 
 export default function Exhibitors2025() {
   return (
@@ -18,18 +18,13 @@ export default function Exhibitors2025() {
           </Link>
         </div>
 
-                <section className="p-4">
-          <Shuttrd />
-        </section>
+        {ExhibitorsData.map((exhibitor, index) => (
+          <section key={index} className="p-4">
+            <ExhibitorCard key={index} {...exhibitor} />
+          </section>
+        ))
 
-
-        <section className="p-4">
-          <Moderlab />
-        </section>
-
-                <section className="p-4">
-          <Accolade />
-        </section>
+        }
       </div>
     </main>
   );

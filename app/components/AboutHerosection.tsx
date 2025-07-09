@@ -23,7 +23,6 @@ export default function AboutHeroSection() {
         fill
         quality={100}
         className="bg-black bg-opacity-90 animate-zoomInImage"
-        priority
       /> */}
       <Image
   src={bg}
@@ -31,7 +30,6 @@ export default function AboutHeroSection() {
   fill
   quality={100}
   className="animate-zoomInImage bg-black bg-opacity-90"
-  priority
 />
 
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>

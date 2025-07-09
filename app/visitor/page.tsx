@@ -17,7 +17,6 @@ export default function Visitor() {
           fill
           style={{ objectFit: 'cover' }}
           quality={100}
-          priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-50" />
       </div>
@@ -29,7 +28,6 @@ export default function Visitor() {
           width={500}
           height={50}
           className="h-auto w-64 sm:w-80 md:w-96 lg:w-[500px]"
-          priority
         />
         <p className="text-xl font-bold text-white sm:text-2xl md:text-3xl">
           DUBAI

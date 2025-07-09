@@ -26,7 +26,6 @@ export default function DubaiSection() {
             alt="Dubai Skyline"
             fill
             className="object-cover transition-transform duration-300 hover:scale-105"
-            priority
           />
         </div>
       </div>

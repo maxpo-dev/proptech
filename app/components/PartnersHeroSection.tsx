@@ -25,7 +25,6 @@ export default function PartnersHeroSection() {
         // objectFit="cover"
         quality={100}
         className="animate-zoomInImage bg-black bg-opacity-90"
-        priority
       />
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       
