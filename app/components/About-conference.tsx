@@ -3,7 +3,7 @@ import MainImg from '@/public/images/3x.jpg';
 
 export default function AboutConferenceContent() {
   return (
-    <section className="bg-white py-16 pt-40 text-black">
+    <section className="bg-white py-16 pt-20 text-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="mb-8 text-center text-4xl font-bold">About the Future PropTech Summit</h1>
         <div className="relative mb-12 h-[300px] w-full md:h-[400px]">

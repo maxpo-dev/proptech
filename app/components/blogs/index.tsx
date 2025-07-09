@@ -49,7 +49,7 @@ export default function BlogGridClient({ posts }: BlogGridClientProps) {
       {/* Header */}
      
       {/* Grid Layout */}
-      <div className="container mx-auto px-3 py-10 md:py-10 " style={{scrollBehavior: "smooth"}}>
+      <div className="container mx-auto px-3  " style={{scrollBehavior: "smooth"}}>
        <h1 className="mb-12 text-center text-3xl font-bold">Latest PropTech Blogs</h1>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-4 ">
           {/* Featured Post */}

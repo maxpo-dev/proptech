@@ -17,7 +17,7 @@ import HighlightedSpeakersMarquee from "./components/HighlightedSpeakersMarquee"
 
 export default function Home() {
   return (
-    <div className="bg-gray-200 ">
+    <div className="bg-gray-200">
       <HeroSection />
       <section className="w-full  bg-white p-10">
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-start">

@@ -29,6 +29,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preload" as="video" href="/video/2x.mp4" type="video/mp4" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://connect.facebook.net" />
@@ -56,7 +57,7 @@ export default function RootLayout({
         </noscript>
 
         <Header />
-        <main className="lg:pt-30 pt-16 md:pt-20">{children}</main>
+        <main className="pt-24 md:pt-28 lg:pt-32">{children}</main>
         <Footer />
 
         {/* Google Analytics (gtag.js) */}

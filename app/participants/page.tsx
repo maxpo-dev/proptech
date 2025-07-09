@@ -81,7 +81,7 @@ export default function ParticipantsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f0f4ff] px-4 py-12 pt-40 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#f0f4ff] px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
