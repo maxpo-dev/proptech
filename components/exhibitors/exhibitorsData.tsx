@@ -2,6 +2,7 @@ import shuttrdLogo from "@/public/image/exhibitor/Original Logo.png";
 import moderlab from "@/public/image/exhibitor/Moderlab LOGO (1).jpg";
 import accolade from "@/public/image/exhibitor/accolade_logo.png";
 import evMerge from "@/public/image/exhibitor/EVM.png";
+import NEWD from "@/public/image/exhibitor/NEWD.png";
 
 export const ExhibitorsData = [
   {
@@ -54,6 +55,18 @@ export const ExhibitorsData = [
       "Through our AI-powered platform, we help property owners and facility managers deploy fully compliant, zero-capex EV charging infrastructure seamlessly integrated within the existing built environment.",
 
       "Our system leverages cutting-edge load management technology to optimize grid capacity, enable dynamic energy balancing, and deliver a best-in-class user experience. EVMERGE is not just about charging. It is about future-proofing real estate for the next generation of mobility, turning parking assets into smart energy hubs.",
+    ],
+  },
+   {
+    name: "Neworld developers",
+    logo: NEWD,
+    websiteUrl: "https://www.neworlddevelopers.com",
+    linkedInUrl: "",
+    badgeLabel: "Exhibitor",
+    badgeColor: "bg-green-500",
+    description: [
+      "Neworld developers blends over 15 years of legacy trust with new-age innovation. At Neworld developers, we enter high-growth, under-supplied markets early and develop projects that reflect both elegance and foresight.",
+      "Neworld developers isn’t just selling plots—we’re shaping India’s first climate-conscious, wellness-driven countryside living corridor."
     ],
   },
 ];
