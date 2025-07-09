@@ -15,6 +15,7 @@ import DubaiSection from "./components/dubai-section";
 import SponsorsSection from "./components/SponsorsSection";
 import HighlightedSpeakersMarquee from "./components/HighlightedSpeakersMarquee";
 
+
 export default function Home() {
   return (
     <div className="bg-gray-200">
@@ -44,6 +45,7 @@ export default function Home() {
               <a
                 href="/about"
                 className="mt-4 inline-block text-blue-600 hover:underline"
+              
               >
                 Know more about us
               </a>
@@ -52,7 +54,7 @@ export default function Home() {
 
           <div className="flex justify-center lg:w-1/2">
             <VideoComponent
-              src="./video/Video_1n.mp4"
+              src="/video/Video_1n.mp4"
               className="h-auto w-full rounded-lg shadow-lg"
             />
           </div>

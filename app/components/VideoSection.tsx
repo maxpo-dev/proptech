@@ -8,7 +8,6 @@ interface VideoComponentProps {
 
 export default function VideoComponent({
   src,
-  poster,
   className = "",
 }: VideoComponentProps) {
   return (
@@ -21,11 +20,9 @@ export default function VideoComponent({
         autoPlay
         loop
         muted
-        preload="metadata"
-        poster={poster}
+        preload="auto"
       >
         <source src={src} type="video/mp4" />
-        <source src={src.replace(".mp4", ".webm")} type="video/webm" />
         Your browser does not support the video tag.
       </video>
     </div>
