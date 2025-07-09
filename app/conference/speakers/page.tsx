@@ -9,9 +9,9 @@ const SpeakersPage: React.FC = () => {
   const router = useRouter()
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12">
+    <div className="min-h-screen bg-gray-100 py-20">
       <div className="container mx-auto px-4">
-        <h1 className="relative z-10 pt-24 text-center text-4xl font-bold text-black">
+        <h1 className="relative z-10  text-center text-4xl font-bold text-black">
           Meet Our Speakers
         </h1>
 

@@ -1,7 +1,6 @@
-// app/components/CountdownTimer.tsx
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 interface TimeLeft {
   days: number;
@@ -24,14 +23,16 @@ const calculateTimeLeft = (targetDate: Date): TimeLeft => {
 };
 
 export default function CountdownTimer({ targetDate }: { targetDate: string }) {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const endDate = useMemo(() => new Date(targetDate), [targetDate]);
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => calculateTimeLeft(endDate));
 
   useEffect(() => {
-    const endDate = new Date(targetDate);
-    const timer = setInterval(() => setTimeLeft(calculateTimeLeft(endDate)), 1000);
-    setTimeLeft(calculateTimeLeft(endDate));
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft(endDate));
+    }, 1000);
+
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, [endDate]);
 
   const units = [
     { label: 'Days', value: timeLeft.days },
@@ -45,7 +46,9 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
       {units.map((unit, idx) => (
         <div key={unit.label} className="flex items-center">
           <div className="flex min-w-[70px] flex-col items-center justify-center rounded-lg bg-blue-600 bg-opacity-90 p-4">
-            <span className="text-2xl font-bold sm:text-3xl">{unit.value.toString().padStart(2, '0')}</span>
+            <span className="text-2xl font-bold sm:text-3xl">
+              {unit.value.toString().padStart(2, '0')}
+            </span>
             <span className="mt-1 text-xs uppercase">{unit.label}</span>
           </div>
           {idx < units.length - 1 && (

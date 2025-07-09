@@ -3,7 +3,7 @@ import MainImg from '@/public/images/4x.jpg';
 
 export default function AboutExhibitionContent() {
   return (
-    <section className="bg-white pb-0 pt-40 text-black"> {/* changed py-40 to pt-40 pb-0 */}
+    <section className="bg-white pb-0 pt-20 text-black"> {/* changed py-40 to pt-40 pb-0 */}
       <div className="container mx-auto p-4 sm:px-6 lg:px-8">
         <h1 className="mb-8 text-center text-4xl font-bold">Exhibit at Future PropTech Summit</h1>
         <div className="relative mb-12 h-[300px] w-full md:h-[400px]">

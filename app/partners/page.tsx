@@ -16,9 +16,9 @@ const PartnersPage: React.FC = () => {
   ];
 
   return (
-    <div className="scroll-smooth bg-background pb-20 pt-32 text-foreground">
+    <div className="scroll-smooth bg-background pb-20 py-20 text-foreground">
       {/* Page Heading and Navigation */}
-      <section className="mb-8 mt-12 px-4 text-center sm:mt-16">
+      <section className="mb-8 px-4 text-center ">
         <h1 className="inline-block border-b-4 border-accent pb-3 text-5xl font-bold text-primary">
           Partners
         </h1>
