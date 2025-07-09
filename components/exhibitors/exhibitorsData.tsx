@@ -62,7 +62,7 @@ export const ExhibitorsData = [
     logo: NEWD,
     websiteUrl: "https://www.neworlddevelopers.com",
     linkedInUrl: "",
-    badgeLabel: "Startup Exhibitor",
+    badgeLabel: "Exhibitor",
     badgeColor: "bg-green-500",
     description: [
       "Neworld developers blends over 15 years of legacy trust with new-age innovation. At Neworld developers, we enter high-growth, under-supplied markets early and develop projects that reflect both elegance and foresight.",
