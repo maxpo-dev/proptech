@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import { CalendarDays, MapPin } from "lucide-react";
-import Image from "next/image";
 import "@/app/styles/animations.css";
 import CountdownTimer from "@/app/components/CountdownTimer";
-import Poster from "@/public/image/landingPage/poster.webp";
 
 export default function HeroSection() {
   return (
@@ -17,7 +15,7 @@ export default function HeroSection() {
         muted
         playsInline
         preload="auto"
-        poster={Poster.src} // fallback image before video loads
+        poster="/image/landingPage/poster.webp" // fallback image before video loads
         className="absolute left-0 top-0 z-0 size-full object-cover"
       >
         <source src="/video/2x.mp4" type="video/mp4" />
