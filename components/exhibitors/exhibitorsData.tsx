@@ -61,7 +61,7 @@ export const ExhibitorsData = [
     name: "Neworld developers",
     logo: NEWD,
     websiteUrl: "https://www.neworlddevelopers.com",
-    linkedInUrl: "",
+    linkedInUrl: "https://www.linkedin.com/company/neworld-developers-pvt-ltd/",
     badgeLabel: "Exhibitor",
     badgeColor: "bg-green-500",
     description: [
