@@ -47,7 +47,7 @@ const ExhibitorCard: React.FC<ExhibitorCardProps> = ({
             alt={`${name} Logo`}
             width={192}
             height={192}
-            className="size-full object-contain"
+            className="size-full object-contain p-1"
           />
         </a>
 

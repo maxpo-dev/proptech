@@ -78,7 +78,8 @@ export default function ParticipantsPage() {
       alt: "JLL",
     },
     { src: "/image/partners/eyeofRiyadhLogo.jpg", alt: "EyeOfRiyadh" },
-    {src:"image/exhibitor/EVM.png", alt:"EVM"},
+    { src: "/image/exhibitor/EVM.png", alt: "EVM" },
+    { src: "/image/exhibitor/NEWD.png", alt: "NEWD" },
   ];
 
   return (
