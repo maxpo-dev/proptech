@@ -3,21 +3,23 @@
 import Image, { StaticImageData } from "next/image";
 
 interface PartnerCardProps {
-  partnerName: string;
+  name: string;
   logo: StaticImageData;
-  websiteUrl: string;
+  website: string;
+  email?: string;
   websiteDisplayText: string;
   badgeText?: string;
-  description: string;
+  description: string [];
 }
 
 export default function PartnerCard({
-  partnerName,
+  name,
   logo,
-  websiteUrl,
+  email,
+  website,
   websiteDisplayText,
   badgeText = "Media Partner",
-  description,
+  description=[],
 }: PartnerCardProps) {
   return (
     <div className="bg-white text-black ">
@@ -34,31 +36,31 @@ export default function PartnerCard({
             {/* Logo */}
             <div className="flex w-full justify-center md:w-1/3 md:justify-start">
               <a
-                href={websiteUrl}
+                href={website}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block max-w-[250px] md:max-w-full"
               >
                 <Image
                   src={logo}
-                  alt={`${partnerName} Logo`}
+                  alt={`${name} Logo`}
                   width={300}
                   height={300}
-                  className="mx-auto size-auto max-h-24 object-contain sm:max-h-32 md:mx-0"
+                  className="mx-auto size-auto max-h-30 object-contain sm:max-h-42"
                 />
               </a>
             </div>
 
             {/* Description */}
-            <div className="w-full space-y-4 text-center md:w-2/3 md:text-left">
+            <div className="w-full space-y-4 text-center md:w-2/3 p-4 md:text-left">
               <h2 className="break-words text-2xl font-bold text-[#2563EB] sm:text-3xl">
-                {partnerName}
+                {name}
               </h2>
 
               <p className="text-base sm:text-lg">
                 Website:{" "}
                 <a
-                  href={websiteUrl}
+                  href={website}
                   className="break-words text-[#2563EB] hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -67,9 +69,19 @@ export default function PartnerCard({
                 </a>
               </p>
 
-              <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-                {description}
-              </p>
+                  {description.map((text, i) => (
+            <p key={i} className="text-sm leading-relaxed text-gray-700 sm:text-base">
+              {text}
+            </p>
+          ))}
+               {email && (
+            <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
+              Email:{" "}
+              <a href={`mailto:${email}`} className="text-blue-700 hover:underline">
+                {email}
+              </a>
+            </p>
+          )}
             </div>
           </div>
         </section>
