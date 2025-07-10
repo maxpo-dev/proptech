@@ -41,7 +41,6 @@ export default function ParticipantsPage() {
     },
     { src: "/image/speakersCompanyLogo/ivankalogo.jpg", alt: "Ivanka" },
     { src: "/image/exhibitor/Moderlab LOGO (1).jpg", alt: "Moderlab" },
-    { src: "/image/exhibitor/VR logo (1).jpg", alt: "VR" },
     { src: "/image/partners/ab.jpg", alt: "AB Partner" },
     {
       src: "/image/partners/AIPressRoom_1500_1500_transparent-1.png",
