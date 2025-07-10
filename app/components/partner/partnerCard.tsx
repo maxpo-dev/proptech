@@ -29,7 +29,7 @@ export default function PartnerCard({
     <div className="bg-white text-black">
       <main className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <section className="flex justify-center">
-          <div className="hover:shadow-3xl relative flex w-full max-w-5xl flex-col items-center gap-6 rounded-2xl bg-gray-100 p-6 shadow-2xl transition-transform hover:scale-[1.01] sm:p-8 md:flex-row md:gap-12">
+          <div className="hover:shadow-3xl relative flex w-full max-w-5xl flex-col items-center gap-6 rounded-2xl bg-gray-100 p-10 shadow-2xl transition-transform hover:scale-[1.01]  md:flex-row md:gap-12">
             {/* Badge */}
             {badgeText && (
               <div className="absolute right-4 top-4 z-10 rounded-full bg-[#2563EB] px-3 py-1 text-xs font-semibold text-white shadow-md sm:text-sm">
