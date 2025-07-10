@@ -11,7 +11,7 @@ const PartnersPage: React.FC = () => {
   const navItems: { href: string; label: string }[] = [
     { href: "#media", label: "Media Partners" },
     // { href: "#strategic", label: "Strategic Partners" },
-    { href: "#association", label: "Supporting Partners" },
+    { href: "#supporting", label: "Supporting Partners" },
     { href: "#government", label: "Government Partners" },
   ];
 
@@ -64,7 +64,7 @@ const PartnersPage: React.FC = () => {
         </section> */}
 
         {/* Supporting Partners */}
-        <section id="association" className="px-4">
+        <section id="supporting" className="px-4">
           <h2 className="mb-8 text-center text-4xl font-bold text-primary">
             Supporting Partners
           </h2>

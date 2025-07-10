@@ -1,6 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
+import { useState } from "react";
 
 interface PartnerCardProps {
   name: string;
@@ -9,7 +10,7 @@ interface PartnerCardProps {
   email?: string;
   websiteDisplayText: string;
   badgeText?: string;
-  description: string [];
+  description: string[];
 }
 
 export default function PartnerCard({
@@ -19,10 +20,13 @@ export default function PartnerCard({
   website,
   websiteDisplayText,
   badgeText = "Media Partner",
-  description=[],
+  description = [],
 }: PartnerCardProps) {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = description.length > 1;
+
   return (
-    <div className="bg-white text-black ">
+    <div className="bg-white text-black">
       <main className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <section className="flex justify-center">
           <div className="hover:shadow-3xl relative flex w-full max-w-5xl flex-col items-center gap-6 rounded-2xl bg-gray-100 p-6 shadow-2xl transition-transform hover:scale-[1.01] sm:p-8 md:flex-row md:gap-12">
@@ -69,19 +73,36 @@ export default function PartnerCard({
                 </a>
               </p>
 
-                  {description.map((text, i) => (
-            <p key={i} className="text-sm leading-relaxed text-gray-700 sm:text-base">
-              {text}
-            </p>
-          ))}
-               {email && (
-            <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-              Email:{" "}
-              <a href={`mailto:${email}`} className="text-blue-700 hover:underline">
-                {email}
-              </a>
-            </p>
-          )}
+              {/* Initial paragraph */}
+              <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
+                {description[0]}
+              </p>
+
+              {/* Collapsible extra content */}
+              <div
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                  expanded ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                {description.slice(1).map((text, i) => (
+                  <p
+                    key={i}
+                    className="text-sm leading-relaxed text-gray-700 sm:text-base py-2 "
+                  >
+                    {text}
+                  </p>
+                ))}
+              </div>
+
+              {/* Read more / less toggle */}
+              {hasMore && (
+                <p
+                  className="text-sm leading-relaxed cursor-pointer text-blue-700 sm:text-base underline"
+                  onClick={() => setExpanded(!expanded)}
+                >
+                  {expanded ? "Read less" : "Read more"}
+                </p>
+              )}
             </div>
           </div>
         </section>
