@@ -80,6 +80,7 @@ export default function ParticipantsPage() {
     { src: "/image/exhibitor/EVM.png", alt: "EVM" },
     { src: "/image/exhibitor/NEWD.png", alt: "NEWD" },
     { src: "/image/partners/SBC.png", alt: "SBC" },
+    {src:"/image/speakersCompanyLogo/DarkFilled.png",alt:"DarkFilled"},
   ];
 
   return (
