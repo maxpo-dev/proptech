@@ -14,9 +14,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Future Proptech Summit",
+  title: "Future PropTech Summit 2025 | Real Estate Tech in Dubai",
   description:
-    "Join us in Dubai, October 2025 for the latest in Proptech and Fractional Ownership.",
+    "Join top real estate leaders at Future PropTech Summit 2025 in Dubai. Explore AI, IoT, VR, blockchain, and more. Connect, innovate, and transform real estate.",
 };
 
 export default function RootLayout({

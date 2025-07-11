@@ -261,10 +261,19 @@ A thought leader, he has authored four books, 200+ articles and papers, and deli
     name: "Kira Negron",
     jobTitle: "President",
     companyName: "Saudi Business Council",
-    linkedIn: "https://linkedin.com/in/saudibusinesscouncil", // Ensure this is correct
-    speakerImage: "/image/speakers/Kira.jpeg", // Replace with actual image path
-    companyLogo: "/image/partners/SBC.png", // Replace with actual logo path
+    linkedIn: "https://linkedin.com/in/saudibusinesscouncil", 
+    speakerImage: "/image/speakers/Kira.jpeg", 
+    companyLogo: "/image/partners/SBC.png", 
     fullBio: `As President of the Saudi Business Council, Kira Negron is dedicated to advancing the Kingdom of Saudi Arabia’s interests and realizing the ambitious goals of Vision 2030. Her leadership is defined by a strong commitment to diplomacy, cross-cultural collaboration, and high-level negotiations that foster mutual growth and prosperity. Under her guidance, the Council actively champions innovation, unity, and excellence, building bridges between Saudi Arabia and the global business community. Kira’s vision is to drive transformative progress, promote sustainable development, ensuring a brighter future for the Kingdom and its people, while honoring the nation’s spiritual and cultural heritage.`,
+  },
+   {
+    name: "Robert Farquhar",
+    jobTitle: "Head of MENA",
+    companyName: " Ctrl Alt",
+    linkedIn: "", 
+    speakerImage: "/image/speakers/Robert.jpeg", 
+    companyLogo: "/image/speakersCompanyLogo/DarkFilled.png",
+    fullBio: `Robert Farquhar is Head of MENA at Ctrl Alt, where he leads the firm's regional strategy and growth initiatives. He brings a solid foundation in traditional finance, having structured innovative financial products for NBFIs at Lloyds in London. Since moving to Dubai, Robert has built and scaled multiple ventures across the FinTech and PropTech sectors, developing a deep understanding of the Middle Eastern market. His experience bridges established financial systems and emerging digital asset infrastructure, positioning him at the forefront of the region's rapidly evolving financial services landscape`,
   },
 ];
 
