@@ -270,7 +270,7 @@ A thought leader, he has authored four books, 200+ articles and papers, and deli
     name: "Robert Farquhar",
     jobTitle: "Head of MENA",
     companyName: " Ctrl Alt",
-    linkedIn: "", 
+    linkedIn: "https://www.linkedin.com/in/robert-farquhar-98a417a6/", 
     speakerImage: "/image/speakers/Robert.jpeg", 
     companyLogo: "/image/speakersCompanyLogo/DarkFilled.png",
     fullBio: `Robert Farquhar is Head of MENA at Ctrl Alt, where he leads the firm's regional strategy and growth initiatives. He brings a solid foundation in traditional finance, having structured innovative financial products for NBFIs at Lloyds in London. Since moving to Dubai, Robert has built and scaled multiple ventures across the FinTech and PropTech sectors, developing a deep understanding of the Middle Eastern market. His experience bridges established financial systems and emerging digital asset infrastructure, positioning him at the forefront of the region's rapidly evolving financial services landscape`,
